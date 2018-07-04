@@ -21,6 +21,7 @@ class User extends Authenticatable
     public function menus(){
         return $this->hasMany('App\menu');
     }
+    // return $this->hasMany('App\Comment');
 
     /**
      * The attributes that should be hidden for arrays.

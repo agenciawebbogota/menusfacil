@@ -15,13 +15,13 @@ class CreateMenusTable extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('precio');
-            $table->boolean('estado');
+            $table->string('estado')->default('PUBLICADO');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
         });
     }
 

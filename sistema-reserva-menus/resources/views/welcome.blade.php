@@ -91,6 +91,5 @@
                 </div>
             </div>
         </div>
-        @csrf
     </body>
 </html>
