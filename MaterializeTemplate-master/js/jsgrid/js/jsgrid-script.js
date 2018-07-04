@@ -1,5 +1,5 @@
 $(function() {
-            
+
             // Static Data
             $("#jsGrid-static").jsGrid({
                 height: "70%",
@@ -7,8 +7,8 @@ $(function() {
                 sorting: true,
                 paging: true,
                 fields: [
-                    { name: "Name", type: "text", width: 150 },
-                    { name: "Age", type: "number", width: 50 },
+                    { name: "Name", type: "text", width: 150, title:'Nombre' },
+                    { name: "Age", type: "number", width: 50, title:'Edad' },
                     { name: "Address", type: "text", width: 200 },
                     { name: "Country", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
                     { name: "Married", type: "checkbox", title: "Is Married" }
@@ -29,9 +29,9 @@ $(function() {
                 deleteConfirm: "Do you really want to delete the client?",
                 controller: db,
                 fields: [
-                    { name: "Name", type: "text", width: 150 },
-                    { name: "Age", type: "number", width: 50 },
-                    { name: "Address", type: "text", width: 200 },
+                  { name: "Name", type: "text", width: 150, title:'Nombre' },
+                  { name: "Age", type: "number", width: 50, title:'Edad' },
+                    { name: "Address", type: "text", width: 200, title:'Dirección' },
                     { name: "Country", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
                     { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
                     { type: "control" }
@@ -71,17 +71,17 @@ $(function() {
                     }
                 ]
             });
-            
+
             // Sorting
             $("#jsGrid-sorting").jsGrid({
                 height: "80%",
                 width: "100%",
-         
+
                 autoload: true,
                 selecting: false,
-         
+
                 controller: db,
-         
+
                 fields: [
                     { name: "Name", type: "text", width: 150 },
                     { name: "Age", type: "number", width: 50 },
@@ -90,13 +90,13 @@ $(function() {
                     { name: "Married", type: "checkbox", title: "Is Married" }
                 ]
             });
-         
-         
+
+
             $("#sortingField").change(function() {
                 var field = $(this).val();
                 $("#jsGrid-sorting").jsGrid("sort", field);
             });
-            
+
             $("#jsGrid-page").jsGrid({
                 height: "70%",
                 width: "100%",
@@ -153,20 +153,20 @@ $(function() {
                 var $cb = $(this);
                 $("#jsGrid-custom").jsGrid("option", $cb.attr("id"), $cb.is(":checked"));
             });
-            
+
             // Custom Row Renderer
-            
+
             $("#jsGrid-custom-row").jsGrid({
                 height: "90%",
                 width: "100%",
-         
+
                 autoload: true,
                 paging: true,
-         
+
                 controller: {
                     loadData: function() {
                         var deferred = $.Deferred();
-         
+
                         $.ajax({
                             url: 'http://api.randomuser.me/?results=40',
                             dataType: 'json',
@@ -174,11 +174,11 @@ $(function() {
                                 deferred.resolve(data.results);
                             }
                         });
-         
+
                         return deferred.promise();
                     }
                 },
-         
+
                 rowRenderer: function(item) {
                     var user = item.user;
                     var $photo = $("<div>").addClass("client-photo").append($("<img>").attr("src", user.picture.medium));
@@ -188,16 +188,16 @@ $(function() {
                         .append($("<p>").text("Email: " + user.email))
                         .append($("<p>").text("Phone: " + user.phone))
                         .append($("<p>").text("Cell: " + user.cell));
-         
+
                     return $("<tr>").append($("<td>").append($photo).append($info));
                 },
-         
+
                 fields: [
                     { title: "Clients" }
                 ]
             });
-         
-         
+
+
             String.prototype.capitalize = function() {
                 return this.charAt(0).toUpperCase() + this.slice(1);
             };
