@@ -18,11 +18,6 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    public function menus(){
-        return $this->hasMany('App\Menu');
-        // return $this->belongsTo(Menu::class, 'user_id');
-    }
-
     /**
      * The attributes that should be hidden for arrays.
      *
