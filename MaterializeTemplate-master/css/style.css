@@ -387,133 +387,12 @@ header .brand-logo img {
   }
 }
 
-/*Search box*/
-.header-search-wrapper {
-  margin: 10px auto 0 240px;
-  width: calc(100% - 600px);
-  height: 40px;
-  display: inline-block;
-  position: relative;
-}
-
-.header-search-wrapper i {
-  position: absolute;
-  font-size: 24px;
-  top: 6px;
-  left: 24px;
-  line-height: 32px !important;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-}
-
-input.header-search-input {
-  display: block;
-  padding: 8px 8px 8px 72px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.3);
-  height: 24px;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  border: none;
-  font-size: 16px;
-  appearance: textfield;
-  font-weight: 400;
-  outline: none;
-  border-radius: 3px;
-}
-
-input.header-search-input:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-input.header-search-input:focus {
-  color: #333;
-  background: #fff;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-.header-search-wrapper-focus i {
-  color: #444;
-}
-
-.header-search-input::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input::-moz-placeholder {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input:-ms-input-placeholder {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input:focus::-webkit-input-placeholder {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input:focus::-moz-placeholder {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input:focus::placeholder {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input:focus:-ms-input-placeholder {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-search-input::placeholder {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.search-out {
-  display: none;
-}
-
-.search-out input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #fff !important;
-  box-shadow: none;
-}
-
-.search-out-text {
-  border-bottom: 1px solid #fff !important;
-}
-
-.translation-button img {
-  position: relative;
-  top: 12px;
-}
-
-#translation-dropdown .language-select {
-  position: relative;
-  top: -9px;
-}
-
 .notification-badge {
   position: relative;
   right: 5px;
   top: -20px;
   color: #ffffff;
-  background-color: #FF4081;
+  background-color: #f5b426;
   margin: 0 -.8em;
   border-radius: 50%;
   padding: 4px 5px;
@@ -556,7 +435,7 @@ input.header-search-input:focus {
     Sidebar
 ====================================================================================*/
 /*----------------------------------------
-    Sidebar Main Menu 
+    Sidebar Main Menu
 ------------------------------------------*/
 nav.top-nav {
   height: 122px;
@@ -1362,11 +1241,11 @@ th {
 }
 
 .fc-state-active {
-  color: #ff4081 !important;
+  color: #f5b426 !important;
 }
 
 .fc-state-down {
-  color: #ff4081 !important;
+  color: #f5b426 !important;
 }
 
 /*----------------------------------------
@@ -2429,4 +2308,45 @@ tr.group:hover {
 
 #polar-chart-holder {
   padding-top: 20px;
+}
+
+.ajustes-menu{
+  margin-left: 20px;
+}
+.menus-solicitados{
+  margin-left: 20px;
+}
+
+.menus-solicitados h4{
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.menus-solicitados li{
+  color:#fff;
+  font-size: 15px;
+}
+@media (min-width:320px) and (max-width:620px){
+  .menus-solicitados li{
+    font-size: 14px;
+  }
+  .menus-solicitados h4{
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
+@media (min-width:1024px) and (max-width:1200px){
+  .menus-solicitados li{
+    font-size: 12px;
+  }
+  .menus-solicitados h4{
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
+.btn,.btn-floating:hover{
+  background-color: #c81e04 !important;
 }
