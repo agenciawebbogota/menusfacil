@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/menus', 'MenuController@index')->middleware('auth');
+Route::get('/menus', 'MenuController@index');
+// ->middleware('auth');
 Route::post('/menus/crear', 'MenuController@create');
 // ->middleware('auth');

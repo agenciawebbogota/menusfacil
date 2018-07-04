@@ -19,7 +19,8 @@ class User extends Authenticatable
     ];
 
     public function menus(){
-        return $this->hasMany('App\menu');
+        return $this->hasMany('App\Menu');
+        // return $this->belongsTo(Menu::class, 'user_id');
     }
 
     /**
