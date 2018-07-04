@@ -3,17 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\menu;
+use Illuminate\Support\Facades\Auth;
+use App\Menu;
+use App\User;
+
 
 class MenuController extends Controller
 {
     //
 	public function index(){
-    	$menus = Menu::all();
-    	// $user = Auth::user();
+		$menus = Menu::all();
     	return $menus;
-    	// menu::orderBy('id', 'DESC')->get();
-    	// return $user;
+    }
+
+    public function create(Request $request){
+		// $user = $request->user();
+		$menu = menu::create([
+		            'user_id' => 1,
+		            'nombre' => $request->input('nombre'),
+		            'descripcion' => $request->input('descripcion'),
+		            'precio' => $request->input('precio'),
+		            'estado'=>'PUBLICADO'
+		        ]);
+		        return $menu;
     }
 
 
