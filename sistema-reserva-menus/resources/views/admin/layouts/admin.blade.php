@@ -59,6 +59,9 @@
     <script type="text/javascript" src="js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <!-- Vue.js -->
     <script type="text/javascript" src="js/materialize-paginacion.js"></script>
+    <script type="text/javascript">
+        
+    </script>
     <script type="text/javascript" src="js/axios.min.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/indexvue.js"></script>

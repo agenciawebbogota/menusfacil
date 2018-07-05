@@ -114,7 +114,8 @@
                                             </tr>
                                           </thead>
                                           <tbody>
-                                            <tr v-for="menu in menus">
+                                            <tr v-for="menu in menus" v-if="menu.activo == 1">
+
                                               <td> @{{ menu.nombre }} </td>
                                               <td>@{{ menu.descripcion }}</td>
                                               <td>@{{ menu.precio }}</td>
@@ -122,13 +123,13 @@
                                                   <span v-if="menu.estado > 0">PUBLICADO</span>
                                                   <span v-else>NO PUBLICADO</span>
                                               </td>
-                                              <td>
                                                 {{-- <a href="#"><i class="mdi-action-delete small"></i></a> --}}
-                                                <span>
-                                                  <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-done"></i></a>
-                                                  
-                                                </span>
+                                              <td>
+                                                  <a href="#!" class="btn-floating blue"><i class="large mdi-action-done"></i></a>
                                               </td>                                              
+                                              <td>
+                                                <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="large mdi-action-delete"></i></a>
+                                              </td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -201,7 +202,7 @@
                               <div class="card">
                                   <div class="card-content  green white-text">
                                       <p class="card-stats-title"><i class="mdi-social-group-add"></i> Menus creados</p>
-                                      <h4 class="card-stats-number">@{{ menus.length }}</h4>
+                                      <h4 class="card-stats-number">150</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
                                       </p>
                                   </div>
@@ -214,7 +215,7 @@
                               <div class="card">
                                   <div class="card-content pink lighten-1 white-text">
                                       <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Menus creados</p>
-                                      <h4 class="card-stats-number">@{{ menus.length }}</h4>
+                                      <h4 class="card-stats-number">150</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
                                       </p>
                                   </div>
