@@ -10,6 +10,7 @@ new Vue({
 		}
 	},
 	created:function(){
+
 		this.getMenus()
 		$('#tablaMenus').pageMe({
 		  pagerSelector:'#myPager',
@@ -37,11 +38,12 @@ new Vue({
 	addMenu:function(){
 		let self = this;
 		// Validar antes del envío
+
+		// Enviar los datos
 		axios.post('/menus/crear',this.add)
 		  .then(function (response){
 		  	self.getMenus()
-		  	// M.toast({html: 'I am a toast!'})
-		    console.log(response.data);
+		  	Materialize.toast('Se ha creado el menú '+response.data.id, 1000);
 		  })
 		  .catch(function (error) {
 		    console.log(error);

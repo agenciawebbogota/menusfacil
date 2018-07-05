@@ -1,5 +1,5 @@
                     <!--Incio Modal-->
-                     <div id="modal1" class="modal">
+                     <div id="editar" class="modal">
                         <div class="modal-content">
                           <div id="input-fields">
                             <h4 class="header center-align">Editar Menu</h4>
@@ -41,15 +41,15 @@
                                         </div>
                                       </div>
                                     </div>
+                                    <div class="modal-footer">
+                                      <button class="btn waves-effect waves-light " type="submit" name="action">Guardar
+                                        <i class="mdi-content-send right"></i> </button>
+                                    </div>
 
                                   </form>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn waves-effect waves-light " type="submit" name="action">Guardar
-                            <i class="mdi-content-send right"></i> </button>
                         </div>
                       </div>

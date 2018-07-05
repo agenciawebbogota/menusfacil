@@ -8,7 +8,6 @@
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
     <title>Sistema de pedidos</title>
-
     <!-- Favicons-->
     <link rel="icon" href="images/favicon/favicon.png" sizes="32x32">
     <!-- Favicons-->
@@ -17,8 +16,6 @@
     <meta name="msapplication-TileColor" content="#00bcd4">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
     <!-- Para Windows Phone -->
-
-
     <!-- CORE CSS-->
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -39,8 +36,8 @@
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">
-                Copyright © 2015 <a class="grey-text text-lighten-4" href="#" target="_blank">GeeksLabs</a> All rights reserved.
-                <span class="right"> Desarrollado por <a class="grey-text text-lighten-4" href="#">Agencia Web Bogotá</a></span>
+                Copyright © 2018 <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a> Todos los derechos reservados.
+                <span class="right"> Desarrollado por <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
             </div>
         </div>
     </footer>
@@ -50,11 +47,12 @@
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> --}}
     <!--jsgrid-->
-    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> 
+{{--     <script type="text/javascript" src="js/jsgrid/js/db.js"></script> 
     <!--data-->
     <script type="text/javascript" src="js/jsgrid/js/jsgrid.min.js"></script>
-    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script>
+    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script> --}}
     <!--plugins.js-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <!--scrollbar-->

@@ -110,6 +110,7 @@
                                                 <th>Precio</th>
                                                 <th>Estado</th>
                                                 <th>Opciones</th>
+                                                {{-- <th>Opciones 2</th> --}}
                                             </tr>
                                           </thead>
                                           <tbody>
@@ -121,12 +122,19 @@
                                                   <span v-if="menu.estado > 0">PUBLICADO</span>
                                                   <span v-else>NO PUBLICADO</span>
                                               </td>
+                                              <td>
+                                                {{-- <a href="#"><i class="mdi-action-delete small"></i></a> --}}
+                                                <span>
+                                                  <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-done"></i></a>
+                                                  
+                                                </span>
+                                              </td>                                              
                                             </tr>
                                           </tbody>
                                         </table>
                                         <div class="col-md-12 center text-center">
-                                            <span class="left" id="total_reg"></span>
-                                              <ul class="pagination pager" id="myPager"></ul>
+                                          <span class="left" id="total_reg"></span>
+                                          <ul class="pagination pager" id="myPager"></ul>
                                         </div>
                                     <!-- Fin Tabla de Menús -->
 
@@ -142,10 +150,8 @@
                                         <div class="row">
                                           <div class="col s12 m8 l9">
                                             <div class="row">
-
                                               {{-- Formulario para agregar menus --}}
                                               @include('admin.includes.formularios.agregarmenu')
-                                              
                                             </div>
                                           </div>
                                         </div>
@@ -194,8 +200,8 @@
                           <div class="col s12 m6 l3">
                               <div class="card">
                                   <div class="card-content  green white-text">
-                                      <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
-                                      <h4 class="card-stats-number">566</h4>
+                                      <p class="card-stats-title"><i class="mdi-social-group-add"></i> Menus creados</p>
+                                      <h4 class="card-stats-number">@{{ menus.length }}</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
                                       </p>
                                   </div>
@@ -207,8 +213,8 @@
                           <div class="col s12 m6 l3">
                               <div class="card">
                                   <div class="card-content pink lighten-1 white-text">
-                                      <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Invoice</p>
-                                      <h4 class="card-stats-number">1806</h4>
+                                      <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Menus creados</p>
+                                      <h4 class="card-stats-number">@{{ menus.length }}</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
                                       </p>
                                   </div>
@@ -237,6 +243,7 @@
                                       <h4 class="card-stats-number">$8990.63</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                       </p>
+                                      {{-- <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a> --}}
                                   </div>
                                   <div class="card-action purple darken-2">
                                       <div id="sales-compositebar" class="center-align"></div>
@@ -261,9 +268,9 @@
                         </a>
                         <ul>
                           <!-- <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li> -->
-                          <li><a href="#" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar PDF"><i class="large mdi-file-file-download"></i></a></li>
-                          <li><a href="#" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico Menús"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                          <li><a href="#modal1" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a></li>
+                          <li><a href="#!" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar PDF"><i class="large mdi-file-file-download"></i></a></li>
+                          <li><a href="#!" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico Menús"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                          {{-- <li><a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a></li> --}}
                         </ul>
                     </div>
                     <!-- Boton flotante derecha -->
