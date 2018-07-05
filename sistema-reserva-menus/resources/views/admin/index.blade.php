@@ -10,7 +10,7 @@
     <title>Sistema de pedidos</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="images/favicon/favicon.png" sizes="32x32">
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <!-- Para iPhone -->
@@ -84,7 +84,7 @@
                             <div class="col col s4 m4 l4">
                                 <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
                             </div>
-                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn">John Doe</a>
+                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn">{{ Auth::user()->name }}</a>
                             <p class="user-roal">Administrador</p>
                         </div>
                     </li>
@@ -97,7 +97,11 @@
                             <li><a href="#"><i class="mdi-communication-live-help"></i> Ayuda</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Salir</a>
+                            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="mdi-hardware-keyboard-tab"></i> Salir</a>
+                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                             </li>
                         </ul>
                     </div>
@@ -354,8 +358,6 @@
                 <!--fin contenedor-->
             </section>
             <!-- FIN CONTENIDO -->
-
-
         </div>
         <!-- FIN WRAPPER -->
 
@@ -372,28 +374,19 @@
         </div>
     </footer>
     <!-- FIN FOOTER -->
-
-
-    <!-- ================================================
-    Scripts
-    ================================================ -->
-
+    <!-- ========Scripts============================ -->
     <!-- Libreria jQuery -->
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
     <!--jsgrid-->
-    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> <!--data-->
+    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> 
+    <!--data-->
     <script type="text/javascript" src="js/jsgrid/js/jsgrid.min.js"></script>
     <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script>
-
-
     <!--plugins.js-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-
 </body>
-
 </html>
