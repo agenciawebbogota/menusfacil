@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
-    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>Sistema de pedidos</title>
+@extends('admin/layouts.admin')
 
-    <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- Para iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <!-- Para Windows Phone -->
+@section('contenido')
 
-
-    <!-- CORE CSS-->
-    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <!-- CSS for full screen -->
-    <link href="css/style-fullscreen.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <!--jsgrid css-->
-    <link href="js/jsgrid/css/jsgrid.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="js/jsgrid/css/jsgrid-theme.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-
-</head>
-
-<body>
     <!-- Preloader -->
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -97,11 +68,10 @@
                             <li><a href="#"><i class="mdi-communication-live-help"></i> Ayuda</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><i class="mdi-hardware-keyboard-tab"></i> Salir</a>
-                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                            <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="mdi-hardware-keyboard-tab"></i> Salir</a>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                  @csrf
+                              </form>
                             </li>
                         </ul>
                     </div>
@@ -128,12 +98,43 @@
                                       </div>
                                   </div>
                                   <div class="card-content">
+                                    <!-- Inicio Tabla de Menús -->
                                     <div style="overflow:scroll;height:350px">
                                       <div class="col s12 m12 l12">
-                                          <div id="jsGrid-basic"></div>
+                                          <!-- <div id="jsGrid-basic"></div> -->
+                                        <table id="tablaMenus">
+                                          <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Descripción</th>
+                                                <th>Precio</th>
+                                                <th>Estado</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr v-for="menu in menus">
+                                              <td> @{{ menu.nombre }} </td>
+                                              <td>@{{ menu.descripcion }}</td>
+                                              <td>@{{ menu.precio }}</td>
+                                              <td>
+                                                  <span v-if="menu.estado > 0">PUBLICADO</span>
+                                                  <span v-else>NO PUBLICADO</span>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <div class="col-md-12 center text-center">
+                                            <span class="left" id="total_reg"></span>
+                                              <ul class="pagination pager" id="myPager"></ul>
+                                        </div>
+                                    <!-- Fin Tabla de Menús -->
+
                                       </div>
+
                                     </div>
                                   </div>
+                                  
                                   <!-- Formulario -->
                                   <div class="card-reveal">
                                       <span class="card-title grey-text text-darken-4">Crear Nuevo Menu <i class="mdi-navigation-close right"></i></span>
@@ -141,55 +142,22 @@
                                         <div class="row">
                                           <div class="col s12 m8 l9">
                                             <div class="row">
-                                              <form class="col s12">
-                                                <div class="row">
-                                                  <div class="input-field col s6">
-                                                    <i class="mdi-editor-border-color prefix"></i>
-                                                    <input id="nombre" type="text" class="validate">
-                                                    <label for="nombre">Nombre</label>
-                                                  </div>
-                                                  <div class="input-field col s12">
-                                                    <i class="mdi-content-filter-list prefix"></i>
-                                                    <input id="descripcion" type="text" class="validate">
-                                                    <label for="descripcion">Descripción</label>
-                                                  </div>
-                                                </div>
-                                                <div class="row">
-                                                  <div class="input-field col s12">
-                                                    <i class="mdi-editor-attach-money prefix"></i>
-                                                    <input id="precio" type="number" class="validate">
-                                                    <label for="precio">Precio</label>
-                                                  </div>
-                                                </div>
-                                                <div id="input-switches" class="section">
-                                                  <div class="row">
-                                                    <div class="col s12 m8 l9">
-                                                      <!-- Switch -->
-                                                      <div class="switch">
-                                                        Disponible :
-                                                        <label>
-                                                          NO
-                                                          <input type="checkbox">
-                                                          <span class="lever"></span> SI
-                                                        </label>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </form>
+
+                                              {{-- Formulario para agregar menus --}}
+                                              @include('admin.includes.formularios.agregarmenu')
+                                              
                                             </div>
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="col s12 offset-s8">
-                                        <button class="btn waves-effect waves-light " type="submit" name="action">Guardar
-                                          <i class="mdi-content-send right"></i> </button>
-                                      </div>
+                                      
                                   </div>
 
                               </div>
                           </div>
-
+                                  {{-- <pre>
+                                    @{{$data}}
+                                  </pre> --}}
                           <div class="col s12 m12 l4">
                               <div class="card teal" style="height:440px">
                                   <div class="card-move-up teal waves-block waves-light">
@@ -279,65 +247,11 @@
                   </div>
                   <!--card stats end-->
 
-                  <!-- //////////////////////////////////////////////////////////////////////////// -->
+                  {{-- Modal del formulario --}}
+
+                          @include('admin.includes.formularios.editarmenu')
 
 
-
-                    <!--Incio Modal-->
-                     <div id="modal1" class="modal">
-                        <div class="modal-content">
-                          <div id="input-fields">
-                            <h4 class="header center-align">Crear Nuevo Menu</h4>
-                            <div class="row">
-                              <div class="col s12 m8 l9">
-                                <div class="row">
-                                  <form class="col s12">
-                                    <div class="row">
-                                      <div class="input-field col s6">
-                                        <i class="mdi-editor-border-color prefix"></i>
-                                        <input id="nombre" type="text" class="validate">
-                                        <label for="nombre">Nombre</label>
-                                      </div>
-                                      <div class="input-field col s12">
-                                        <i class="mdi-content-filter-list prefix"></i>
-                                        <input id="descripcion" type="text" class="validate">
-                                        <label for="descripcion">Descripción</label>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="input-field col s12">
-                                        <i class="mdi-editor-attach-money prefix"></i>
-                                        <input id="precio" type="number" class="validate">
-                                        <label for="precio">Precio</label>
-                                      </div>
-                                    </div>
-                                    <div id="input-switches" class="section">
-                                      <div class="row">
-                                        <div class="col s12 m8 l9">
-                                          <!-- Switch -->
-                                          <div class="switch">
-                                            Disponible :
-                                            <label>
-                                              NO
-                                              <input type="checkbox">
-                                              <span class="lever"></span> SI
-                                            </label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </form>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn waves-effect waves-light " type="submit" name="action">Guardar
-                            <i class="mdi-content-send right"></i> </button>
-                        </div>
-                      </div>
                       <!--Fin Modal-->
 
                     <!-- Boton flotante derecha -->
@@ -363,30 +277,4 @@
 
     </div>
     <!-- FIN PRINCIPAL -->
-
-    <!-- INCIO FOOTER -->
-    <footer class="page-footer">
-        <div class="footer-copyright">
-            <div class="container">
-                Copyright © 2015 <a class="grey-text text-lighten-4" href="#" target="_blank">GeeksLabs</a> All rights reserved.
-                <span class="right"> Desarrollado por <a class="grey-text text-lighten-4" href="#">Agencia Web Bogotá</a></span>
-            </div>
-        </div>
-    </footer>
-    <!-- FIN FOOTER -->
-    <!-- ========Scripts============================ -->
-    <!-- Libreria jQuery -->
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <!--materialize js-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--jsgrid-->
-    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> 
-    <!--data-->
-    <script type="text/javascript" src="js/jsgrid/js/jsgrid.min.js"></script>
-    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script>
-    <!--plugins.js-->
-    <script type="text/javascript" src="js/plugins.min.js"></script>
-    <!--scrollbar-->
-    <script type="text/javascript" src="js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-</body>
-</html>
+@endsection

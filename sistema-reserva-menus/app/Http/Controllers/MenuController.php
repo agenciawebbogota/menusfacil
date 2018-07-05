@@ -19,11 +19,11 @@ class MenuController extends Controller
     public function create(Request $request){
 		// $user = $request->user();
 		$menu = menu::create([
-		            'user_id' => 1,
+		            'user_id' => Auth::id(),
 		            'nombre' => $request->input('nombre'),
 		            'descripcion' => $request->input('descripcion'),
 		            'precio' => $request->input('precio'),
-		            'estado'=>'PUBLICADO'
+		            'estado'=>$request->input('estado')
 		        ]);
 		        return $menu;
     }
