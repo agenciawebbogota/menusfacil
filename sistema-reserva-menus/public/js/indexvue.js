@@ -2,6 +2,7 @@ new Vue({
 	el:'#dash',
 	data:{
 		menus:'',
+		total:0,
 		add:{
 			nombre:'',
 			descripcion:'',
@@ -25,13 +26,13 @@ new Vue({
 	},
 	methods:{
 		getMenus:function(){
-			let self = this
 			axios.get('/menus')
-			  .then(function (response) {
+			  .then((response) =>{
 			  	// Pasando los datos a la variable del modelo
-			    self.menus = response.data
+			    this.menus = response.data.menus
+			    this.total = response.data.total
 
-			    // console.log(response.data)
+			    console.log(this.total)
 
 			  })
 			  .catch(function (error) {

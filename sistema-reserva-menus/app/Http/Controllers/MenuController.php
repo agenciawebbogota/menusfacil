@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Menu;
 use App\User;
+use Barryvdh\DomPDF\Facade as PDF;
 
 
 class MenuController extends Controller
@@ -13,7 +14,10 @@ class MenuController extends Controller
     //
 	public function index(){
 		$menus = Menu::all()->where('activo', 1);
-    	return $menus;
+    	return [
+    		'menus' => $menus,
+    	 	'total'=> count($menus),
+    	];
     }
 
     public function create(Request $request){
@@ -63,6 +67,16 @@ class MenuController extends Controller
 		]);
 
 		return 'Se ha eliminado el Menu.';
+    }
+
+
+    public function pdf(){
+    	$menus = Menu::all(); 
+
+        $pdfVista = PDF::loadView('pdf.menuscreados', compact('menus'));
+        // Con esta linea descargas el pdf directo
+        // return $pdf->download('listado.pdf');
+		return $pdfVista->stream();
     }
 
 

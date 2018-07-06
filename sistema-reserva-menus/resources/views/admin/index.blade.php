@@ -162,32 +162,10 @@
 
                               </div>
                           </div>
-                                  {{-- <pre>
-                                    @{{$data}}
-                                  </pre> --}}
+                                  
                           <div class="col s12 m12 l4">
-                              <div class="card teal" style="height:440px">
-                                  <div class="card-move-up teal waves-block waves-light">
-                                      <div class="move-up">
-                                        <ul class="menus-solicitados">
-                                          <li><h4 class="center-align">Menús Solicitados</h4></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-                                          <li><span>Luis Fernando Raga</span> .............Menú <span>No. 1</span></li>
-
-                                        </ul>
-                                      </div>
-                                  </div>
-                                  <div class="card-content teal">
-                                    <a class="btn-floating btn-move-up waves-effect waves-light darken-2 center tooltipped" data-position="right" data-tooltip="Ver o imprimir pedidos"><i class="mdi-content-add activator"></i></a>
-                                  </div>
-                              </div>
+                              {{-- Card de menus solicitados --}}
+                              @include('admin.includes.recursos.solicitados')
                           </div>
                       </div>
                   </div>
@@ -215,7 +193,7 @@
                               <div class="card">
                                   <div class="card-content pink lighten-1 white-text">
                                       <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Menus creados</p>
-                                      <h4 class="card-stats-number">150</h4>
+                                      <h4 class="card-stats-number" v-model="total">@{{ total }}</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
                                       </p>
                                   </div>
@@ -241,7 +219,7 @@
                               <div class="card">
                                   <div class="card-content purple white-text">
                                       <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
-                                      <h4 class="card-stats-number">$8990.63</h4>
+                                      <h4 class="card-stats-number">150</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                       </p>
                                       {{-- <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a> --}}
@@ -269,7 +247,7 @@
                         </a>
                         <ul>
                           <!-- <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li> -->
-                          <li><a href="#!" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar PDF"><i class="large mdi-file-file-download"></i></a></li>
+                          <li><a href="/descarga/menusCreados" class="btn-floating yellow darken-1 tooltipped" target="_black" data-position="left" data-tooltip="Descargar PDF"><i class="large mdi-file-file-download"></i></a></li>
                           <li><a href="#!" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico Menús"><i class="large mdi-editor-insert-invitation"></i></a></li>
                           {{-- <li><a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a></li> --}}
                         </ul>

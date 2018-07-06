@@ -22,8 +22,8 @@
     <!-- CSS for full screen -->
     <link href="css/style-fullscreen.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!--jsgrid css-->
-    <link href="js/jsgrid/css/jsgrid.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="js/jsgrid/css/jsgrid-theme.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+{{--     <link href="js/jsgrid/css/jsgrid.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/jsgrid/css/jsgrid-theme.min.css" type="text/css" rel="stylesheet" media="screen,projection"> --}}
 </head>
 
 <body>
