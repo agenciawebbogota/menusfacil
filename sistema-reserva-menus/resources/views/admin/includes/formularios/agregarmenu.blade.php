@@ -3,7 +3,8 @@
 	                  <div class="input-field col s6">
 	                    <i class="mdi-editor-border-color prefix"></i>
 	                    <input id="nombre" type="text" class="validate" v-model="add.nombre" autocomplete="off">
-	                    <label for="nombre">Nombre</label>
+	                    <span style="color: red">@{{ noti.nombre }}</span>
+	                    <label for="nombre" data-error="" data-success="right">Nombre</label>
 	                  </div>
 	                  <div class="input-field col s12">
 	                    <i class="mdi-content-filter-list prefix"></i>
@@ -36,5 +37,11 @@
                     	<button class="btn" type="submit" name="action">Guardar
                       <i class="mdi-content-send right"></i> </button>
                   </div>
-	              </form>    
+	              <pre>
+
+	              		@{{ $data.noti }}
+
+	              </pre>
+	              </form>
+
 

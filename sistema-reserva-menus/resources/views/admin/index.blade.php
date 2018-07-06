@@ -178,7 +178,7 @@
                               <div class="card">
                                   <div class="card-content purple white-text">
                                       <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
-                                      <h4 class="card-stats-number">150</h4>
+                                      <h4 class="card-stats-number"><pre>@{{ $data.noti }}</pre></h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                       </p>
                                       {{-- <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a> --}}
