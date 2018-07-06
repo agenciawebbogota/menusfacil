@@ -31,13 +31,10 @@ new Vue({
 			  	// Pasando los datos a la variable del modelo
 			    this.menus = response.data.menus
 			    this.total = response.data.total
-
-			    console.log(this.total)
-
 			  })
 			  .catch(function (error) {
 			    // handle error
-			    // console.log(error);
+			    console.log(error);
 			  })
 		},
 		addMenu:function(){

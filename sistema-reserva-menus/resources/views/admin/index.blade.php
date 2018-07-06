@@ -1,51 +1,10 @@
 @extends('admin/layouts.admin')
 
 @section('contenido')
-
-    <!-- Preloader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-    <!-- Fin Preloader -->
-
-    <!-- INICIO HEADER -->
-    <header id="header" class="page-topbar">
-        <!-- nav barra superior-->
-        <div class="navbar-fixed">
-            <nav class="navbar-color">
-                <div class="nav-wrapper">
-                    <ul class="left">
-                      <li><h1 class="logo-wrapper"><a href="index.html" class="brand-logo center darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
-                    </ul>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
-                        </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown"><i class="mdi-social-notifications"></i>
-                        </a>
-                        </li>
-
-                    </ul>
-
-                    <!-- area de notificaciones -->
-                    <ul id="notifications-dropdown" class="dropdown-content">
-                      <li>
-                        <h5>NOTIFICATIONES</h5>
-                      </li>
-                      <li class="divider"></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!-- fin nav barra superior-->
-    </header>
-    <!-- FIN HEADER -->
-
   <!-- PRINCIPAL -->
-    <div id="main">
+    {{-- <div id="main"> --}}
         <!-- INCIO WRAPPER -->
-        <div class="wrapper">
+        {{-- <div class="wrapper"> --}}
 
             <!-- INICIO MENU IZQUIERDA-->
             <aside id="left-sidebar-nav">
@@ -258,9 +217,9 @@
                 <!--fin contenedor-->
             </section>
             <!-- FIN CONTENIDO -->
-        </div>
+        {{-- </div> --}}
         <!-- FIN WRAPPER -->
 
-    </div>
+    {{-- </div> --}}
     <!-- FIN PRINCIPAL -->
 @endsection
