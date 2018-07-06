@@ -85,7 +85,7 @@
                                                 {{-- <a href="#"><i class="mdi-action-delete small"></i></a> --}}
                                               <td>
                                                   <a href="#!" class="btn-floating blue"><i class="large mdi-action-done"></i></a>
-                                              </td>                                              
+                                              </td>
                                               <td>
                                                 <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="large mdi-action-delete"></i></a>
                                               </td>
@@ -102,7 +102,7 @@
 
                                     </div>
                                   </div>
-                                  
+
                                   <!-- Formulario -->
                                   <div class="card-reveal">
                                       <span class="card-title grey-text text-darken-4">Crear Nuevo Menu <i class="mdi-navigation-close right"></i></span>
@@ -116,12 +116,12 @@
                                           </div>
                                         </div>
                                       </div>
-                                      
+
                                   </div>
 
                               </div>
                           </div>
-                                  
+
                           <div class="col s12 m12 l4">
                               {{-- Card de menus solicitados --}}
                               @include('admin.includes.recursos.solicitados')
