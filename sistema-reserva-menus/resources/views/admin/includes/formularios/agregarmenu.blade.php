@@ -37,11 +37,11 @@
                     	<button class="btn" type="submit" name="action">Guardar
                       <i class="mdi-content-send right"></i> </button>
                   </div>
-	              <pre>
+	              {{-- <pre>
 
 	              		@{{ $data.noti }}
 
-	              </pre>
+	              </pre> --}}
 	              </form>
 
 

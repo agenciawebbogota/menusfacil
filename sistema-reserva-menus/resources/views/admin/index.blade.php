@@ -53,7 +53,10 @@
                                   <div class="card-move-up waves-effect waves-block waves-light">
                                       <div class="move-up cyan darken-1">
                                         <p></p>
+                                        
                                         <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
+                                        <a href="/descarga/menusCreados" target="_blanck" class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="large mdi-file-file-download"></i></a>
+
                                       </div>
                                   </div>
                                   <div class="card-content">
@@ -178,7 +181,7 @@
                               <div class="card">
                                   <div class="card-content purple white-text">
                                       <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
-                                      <h4 class="card-stats-number"><pre>@{{ $data.noti }}</pre></h4>
+                                      <h4 class="card-stats-number">100</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                       </p>
                                       {{-- <a href="#editar" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a> --}}
