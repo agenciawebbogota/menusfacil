@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!--================================================================================
-	Item Name: Materialize - Material Design Admin Template
-	Version: 3.1
-	Author: GeeksLabs
-	Author URL: http://www.themeforest.net/user/geekslabs
-================================================================================ -->
-
+<html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="description" content="Sistema de pedidos para restaurantes">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>Materialize - Material Design Admin Template</title>
-
+    <title>Menús - vista del usuario</title>
     <!-- Favicons-->
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
@@ -25,15 +16,14 @@
     <meta name="msapplication-TileColor" content="#00bcd4">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
     <!-- For Windows Phone -->
-
-
     <!-- CORE CSS-->
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+
     <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!-- Custome CSS-->
-    <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-
-
+    <!-- <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="js/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
 
@@ -64,7 +54,6 @@
                       <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown"><i class="mdi-social-notifications"></i>
                       </a>
                       </li>
-
                   </ul>
 
                   <!-- area de notificaciones -->
@@ -81,6 +70,7 @@
   </header>
   <!-- FIN HEADER -->
 
+
     <!-- START MAIN -->
     <div style="padding-top:147px;padding-bottom:147px;">
         <!-- START WRAPPER -->
@@ -94,6 +84,35 @@
 
 
                     <!--card widgets start-->
+
+            <div class="carousel carousel-slider center" data-indicators="true" id="carrusel">
+              <div class="carousel-fixed-item center">
+                <a class="btn waves-effect white grey-text darken-text-2">button</a>
+              </div>
+              <div class="carousel-item red white-text" href="#one!">
+                <h2>First Panel</h2>
+                <p class="white-text">This is your first panel</p>
+              </div>
+              <div class="carousel-item amber white-text" href="#two!">
+                <h2>Second Panel</h2>
+                <p class="white-text">This is your second panel</p>
+              </div>
+              <div class="carousel-item green white-text" href="#three!">
+                <h2>Third Panel</h2>
+                <p class="white-text">This is your third panel</p>
+              </div>
+              <div class="carousel-item blue white-text" href="#four!">
+                <h2>Fourth Panel</h2>
+                <p class="white-text">This is your fourth panel</p>
+              </div>
+            </div>
+
+
+
+
+
+
+
                     <div id="card-widgets">
                         <div class="row">
 
@@ -158,67 +177,75 @@
                           </div>
 
                           <div class="col s12 m6 l4">
-                              <div id="flight-card" class="card">
-                                  <div class="card-header amber darken-2">
-                                      <div class="card-title">
-                                          <h4 class="flight-card-title">Especiales y adiciones</h4>
-                                          <p class="flight-card-date">Viernes 6 de Julio</p>
-                                      </div>
-                                  </div>
-                                  <div class="card-content-bg white-text">
-                                      <div class="card-content">
-                                          <div class="row flight-state-wrapper">
-                                              <div class="col s12 m12 l12 center-align">
-                                                  <div class="flight-state">
-                                                      <h4 class="margin">Nombre del Menú</h4>
-                                                      <p class="ultra-small">Especialidad</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col s12 m12 l12 center-align flight-state-two">
-                                                  <div class="flight-info">
-                                                      <p class="small"><span class="grey-text text-lighten-4">Descripción del menú</span></p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                            <ul id="especiales-adicionales" class="collection with-header">
+                                <li class="collection-header cyan">
+                                    <h4 class="task-card-title">Especiales y adiciones</h4>
+                                    <p class="task-card-date">Viernes 6 de Julio</p>
+                                </li>
+                                <li class="collection-item dismissable">
+                                    <input type="checkbox" id="espe-adi1" />
+                                    <label for="espe-adi1">Menú No. 1 <a href="#" class="secondary-content"></a>
+                                    </label>
+                                </li>
+                                <li class="collection-item dismissable">
+                                    <input type="checkbox" id="espe-adi2" />
+                                    <label for="espe-adi2">Menú No. 2 <a href="#" class="secondary-content"></a>
+                                    </label>
+                                </li>
+                                <li class="collection-item dismissable">
+                                    <input type="checkbox" id="espe-adi3" />
+                                    <label for="espe-adi3">Menú No. 3 <a href="#" class="secondary-content"></a>
+                                    </label>
+                                </li>
+                                <li class="collection-item dismissable">
+                                    <input type="checkbox" id="espe-adi4" />
+                                    <label for="espe-adi4">Adición<a href="#" class="secondary-content"></a>
+                                    </label>
+                                </li>
+                                <li class="collection-item dismissable">
+                                    <input type="checkbox" id="espe-adi5" />
+                                    <label for="espe-adi5">Especialidad<a href="#" class="secondary-content"></a>
+                                    </label>
+                                </li>
+                            </ul>
                           </div>
 
+
+
+
+
                             <div class="col s12 m12 l4">
-                                <ul id="task-card" class="collection with-header">
-                                    <li class="collection-header cyan">
-                                        <h4 class="task-card-title">Mi selección</h4>
-                                        <p class="task-card-date">Menús, especiales y adiciones</p>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task1" />
-                                        <label for="task1">Menú No. 1 <a href="#" class="secondary-content"></a>
-                                        </label>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task2" />
-                                        <label for="task2">Menú No. 2 <a href="#" class="secondary-content"></a>
-                                        </label>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task3" />
-                                        <label for="task3">Menú No. 3 <a href="#" class="secondary-content"></a>
-                                        </label>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task3" />
-                                        <label for="task3">Adición<a href="#" class="secondary-content"></a>
-                                        </label>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task3" />
-                                        <label for="task3">Especialidad<a href="#" class="secondary-content"></a>
-                                        </label>
-                                    </li>
-                                </ul>
+                                <ul id="Menus" class="collection with-header">
+                                  <li class="collection-header cyan">
+                                      <h4 class="task-card-title">Mi selección</h4>
+                                      <p class="task-card-date">Menús, especiales y adiciones</p>
+                                  </li>
+                                  <li class="collection-item dismissable">
+                                      <input type="checkbox" id="menu1" />
+                                      <label for="menu1">Menú No. 1 <a href="#" class="secondary-content"></a>
+                                      </label>
+                                  </li>
+                                  <li class="collection-item dismissable">
+                                      <input type="checkbox" id="menu2" />
+                                      <label for="menu2">Menú No. 2 <a href="#" class="secondary-content"></a>
+                                      </label>
+                                  </li>
+                                  <li class="collection-item dismissable">
+                                      <input type="checkbox" id="menu3" />
+                                      <label for="menu3">Menú No. 3 <a href="#" class="secondary-content"></a>
+                                      </label>
+                                  </li>
+                                  <li class="collection-item dismissable">
+                                      <input type="checkbox" id="menu4" />
+                                      <label for="menu4">Adición<a href="#" class="secondary-content"></a>
+                                      </label>
+                                  </li>
+                                  <li class="collection-item dismissable">
+                                      <input type="checkbox" id="menu5" />
+                                      <label for="menu5">Especialidad<a href="#" class="secondary-content"></a>
+                                      </label>
+                                  </li>
+                                        </ul>
                             </div>
 
 
@@ -276,18 +303,24 @@
     <!-- Libreria jQuery -->
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <!--materialize js-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <!--jsgrid-->
-    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> <!--data-->
+<!--     <script type="text/javascript" src="js/jsgrid/js/db.js"></script>
     <script type="text/javascript" src="js/jsgrid/js/jsgrid.min.js"></script>
-    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script>
+    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script> -->
 
 
     <!--plugins.js-->
-    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript">
+      // $('.carousel.carousel-slider').carousel({fullWidth: true});
+      // document.getElementById('carrusel').carousel({fullWidth: true});
+    </script>
 
 </body>
 

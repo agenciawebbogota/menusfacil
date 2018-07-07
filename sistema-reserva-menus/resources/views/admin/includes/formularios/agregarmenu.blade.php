@@ -2,20 +2,22 @@
 	                <div class="row">
 	                  <div class="input-field col s6">
 	                    <i class="mdi-editor-border-color prefix"></i>
-	                    <input id="nombre" type="text" class="validate" v-model="add.nombre" autocomplete="off">
-	                    <span style="color: red">@{{ noti.nombre }}</span>
+	                    <input id="nombre" type="text" v-model="add.nombre" autocomplete="off">
+	                    <span style="color:#c91e04">@{{ noti.nombre }}</span>
 	                    <label for="nombre" data-error="" data-success="right">Nombre</label>
 	                  </div>
 	                  <div class="input-field col s12">
 	                    <i class="mdi-content-filter-list prefix"></i>
-	                    <input id="descripcion" type="text" class="validate" v-model="add.descripcion" autocomplete="off">
+	                    <textarea class="materialize-textarea" id="descripcion" v-model="add.descripcion" autocomplete="off"></textarea>
+	                    <span style="color:#c91e04">@{{ noti.descripcion }}</span>
 	                    <label for="descripcion">Descripción</label>
 	                  </div>
 	                </div>
 	                <div class="row">
 	                  <div class="input-field col s12">
 	                    <i class="mdi-editor-attach-money prefix"></i>
-	                    <input id="precio" type="number" class="validate" v-model="add.precio" autocomplete="off">
+	                    <input id="precio" type="number" v-model="add.precio" autocomplete="off">
+	                    <span style="color:#c91e04">@{{ noti.precio }}</span>
 	                    <label for="precio">Precio</label>
 	                  </div>
 	                </div>

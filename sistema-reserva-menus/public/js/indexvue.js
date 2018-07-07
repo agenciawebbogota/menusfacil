@@ -16,8 +16,6 @@ new Vue({
 		}
 	},
 	created:function(){
-		// console.log(this.add)
-
 		this.getMenus()
 		$('#tablaMenus').pageMe({
           pagerSelector:'#myPager',
@@ -28,16 +26,13 @@ new Vue({
            hidePageNumbers:false,
            perPage:10
         });
-		
 	},
 	methods:{
 		getMenus:function(){
 			axios.get('/menus')
 			  .then((response) =>{
-			  	// Pasando los datos a la variable del modelo
 			    this.menus = response.data.menus
 			    this.total = response.data.total
-			    // console.log(response.data.menus[0])
 			  })
 			  .catch(function (error) {
 			    // handle error
@@ -46,25 +41,33 @@ new Vue({
 		},
 		addMenu:function(){
 			let self = this;
-			// Validar antes del envío
 			if(this.add.nombre.length < 4){
-				this.noti.nombre = 'El nombre no es correcto'
+				this.noti.nombre = 'El nombre debe ser superior a 4 caracteres.'
+			}else if(this.add.descripcion.length < 4 ){
+				this.noti.descripcion = 'La descripción debe ser superior a 4 caracteres.'
+				this.noti.nombre = ''
+			}else if(this.add.descripcion.length >200){
+
+				this.noti.descripcion = 'La descripción no debe superar los 200 caracteres'
+				this.noti.nombre = ''
+
+
+			}else if(this.add.precio.length < 3){
+				this.noti.precio = 'El precio no es correcto'
+				this.noti.descripcion = ''
+				this.noti.nombre = ''
 			}else{
-			// Enviar los datos
+
+
 			axios.post('/menus/crear',this.add)
 			  .then((response)=>{
-
-			  	// console.log(response)
 			  	this.getMenus()
-			  	Materialize.toast('Se ha creado el menú '+response.data.id, 200);
+			  	Materialize.toast('Se ha creado el menú '+response.data.id, 1000);
 			  })
 			  .catch(function (error) {
 			    console.log(error);
-			  });
-				
+			  });	
 			}
-
-
 		},
 		updateMenu:function(menu){
 			
@@ -83,8 +86,8 @@ new Vue({
 				id:menu.id,
 			}
 			axios.put(url, data).then((resp)=>{
-				// this.getMenus()
-				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'")
+				this.getMenus()
+				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'", 1000)
 				// console.log(resp)
 			}).catch(function (error) {
 			    console.log(error);
@@ -106,7 +109,7 @@ new Vue({
 			let url = '/menus/actualizar/estado';
 			axios.put(url, menu).then((resp)=>{
 				// console.log(resp.data)
-				Materialize.toast('Se ha eliminado el menu '+"'"+menu.nombre+"'")
+				Materialize.toast('Se ha eliminado el menu '+"'"+menu.nombre+"'", 1000)
 				this.getMenus()
 			}).catch(function (error) {
 			    console.log(error);
