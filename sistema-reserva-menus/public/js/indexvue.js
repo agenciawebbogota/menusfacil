@@ -7,7 +7,7 @@ new Vue({
 			nombre:'',
 			descripcion:'',
 			precio:'',
-			estado:false
+			estado:1
 		},
 		noti:{
 			nombre:'',
@@ -16,6 +16,7 @@ new Vue({
 		}
 	},
 	created:function(){
+		// console.log(this.add)
 
 		this.getMenus()
 		$('#tablaMenus').pageMe({
@@ -36,6 +37,7 @@ new Vue({
 			  	// Pasando los datos a la variable del modelo
 			    this.menus = response.data.menus
 			    this.total = response.data.total
+			    // console.log(response.data.menus[0])
 			  })
 			  .catch(function (error) {
 			    // handle error
@@ -51,8 +53,10 @@ new Vue({
 			// Enviar los datos
 			axios.post('/menus/crear',this.add)
 			  .then((response)=>{
+
+			  	// console.log(response)
 			  	this.getMenus()
-			  	Materialize.toast('Se ha creado el menú '+response.data.id, 2000);
+			  	Materialize.toast('Se ha creado el menú '+response.data.id, 200);
 			  })
 			  .catch(function (error) {
 			    console.log(error);
@@ -64,13 +68,35 @@ new Vue({
 		},
 		updateMenu:function(menu){
 			
+			if(!menu.estado){
+				menu.estado = 1 
+			}else{
+				menu.estado = 0
+			}
+			// console.log(menu)
+			let url = '/menus/actualizar';
+			let data = {
+				nombre: menu.nombre,
+				descripcion:menu.descripcion,
+				estado:menu.estado,
+				precio:menu.precio,
+				id:menu.id,
+			}
+			axios.put(url, data).then((resp)=>{
+				// this.getMenus()
+				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'")
+				// console.log(resp)
+			}).catch(function (error) {
+			    console.log(error);
+			  });
+
 		},
 		deleteMenu:function(id){
 			// Aún no se esta llamando dentro del documento
 			let url = '/menus/eliminar/'+id
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
-				Materialize.toast(resp.data, 2000);
+				Materialize.toast(resp.data, 200);
 				console.log(resp)
 			})
 		},

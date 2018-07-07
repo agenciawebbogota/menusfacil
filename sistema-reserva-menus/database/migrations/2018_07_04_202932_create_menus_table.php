@@ -19,7 +19,7 @@ class CreateMenusTable extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('precio');
-            $table->string('estado')->default('PUBLICADO');
+            $table->boolean('estado')->default(true);
             $table->boolean('activo')->default(true);
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

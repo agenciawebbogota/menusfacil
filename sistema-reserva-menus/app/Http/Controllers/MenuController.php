@@ -37,14 +37,26 @@ class MenuController extends Controller
     }
 
     public function update(Request $request){
-    	Menu::where('id', $request->input('id'))->update([
+
+    	// dd($request->input('estado'));
+
+
+    	if ($request->input('estado')) {
+    		$estado = 1;
+    	}else{
+    		$estado = 0;
+    	}
+    	$menu = Menu::where('id', $request->input('id'))->update([
 			'nombre' => $request->input('nombre'),
 			'descripcion' => $request->input('descripcion'),
 			'precio' => $request->input('precio'),
-			'estado' => $request->input('estado'),
+			'estado' => $estado,
 			'activo' => true,
 		]);
-		return 'Se actualizó el menú.';
+		return $menu;
+
+
+
     }
 
     public function delete($id){

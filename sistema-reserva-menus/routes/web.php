@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 Route::get('/menus', 'MenuController@index');
 Route::post('/menus/crear', 'MenuController@create')->middleware('auth');
-Route::PUT('/menus/actualizar', 'MenuController@update')->middleware('auth');
+Route::PUT('/menus/actualizar', 'MenuController@update');
 Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middleware('auth');
 Route::get('/descarga/menusCreados', 'MenuController@pdf')->middleware('auth');
 

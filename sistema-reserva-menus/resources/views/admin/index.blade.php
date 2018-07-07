@@ -82,8 +82,17 @@
                                               <td>@{{ menu.descripcion }}</td>
                                               <td>@{{ menu.precio }}</td>
                                               <td>
-                                                  <span v-if="menu.estado > 0">PUBLICADO</span>
-                                                  <span v-else>NO PUBLICADO</span>
+                                                <div class="col s12 m8 l9">
+                                                  <div class="switch">
+                                                    <label>
+                                                      {{-- NO --}}
+                                                      <input type="checkbox" v-model="menu.estado" v-on:click="updateMenu(menu)">
+                                                      <span class="lever"></span> 
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                 {{--  <span v-if="menu.estado > 0">PUBLICADO</span>
+                                                  <span v-else>NO PUBLICADO</span> --}}
                                               </td>
                                                 {{-- <a href="#"><i class="mdi-action-delete small"></i></a> --}}
                                               <td>
