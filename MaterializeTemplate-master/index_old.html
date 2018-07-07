@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 3.1
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================ -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Materialize - Material Design Admin Template</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+
+
+    <!-- CORE CSS-->
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="js/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+  <!-- Fin Preloader -->
+
+  <!-- INICIO HEADER -->
+  <header id="header" class="page-topbar">
+      <!-- nav barra superior-->
+      <div class="navbar-fixed">
+          <nav class="navbar-color">
+              <div class="nav-wrapper">
+                  <ul class="left">
+                    <li><h1 class="logo-wrapper"><a href="index.html" class="brand-logo center darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                  </ul>
+                  <ul class="right hide-on-med-and-down">
+                      <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+                      </li>
+                      <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown"><i class="mdi-social-notifications"></i>
+                      </a>
+                      </li>
+
+                  </ul>
+
+                  <!-- area de notificaciones -->
+                  <ul id="notifications-dropdown" class="dropdown-content">
+                    <li>
+                      <h5>NOTIFICATIONES</h5>
+                    </li>
+                    <li class="divider"></li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+      <!-- fin nav barra superior-->
+  </header>
+  <!-- FIN HEADER -->
+
+    <!-- START MAIN -->
+    <div style="padding-top:147px;padding-bottom:147px;">
+        <!-- START WRAPPER -->
+        <div class="wrapper">
+
+            <!-- START CONTENT -->
+            <section id="content">
+
+                <!--start container-->
+                <div class="container">
+
+
+                    <!--card widgets start-->
+                    <div id="card-widgets">
+                        <div class="row">
+
+                          <div class="col s12 m6 l4">
+                              <div id="flight-card" class="card">
+                                <div class="card-header amber darken-2">
+                                    <div class="card-title">
+                                        <h4 class="flight-card-title">Menús del día</h4>
+                                        <p class="flight-card-date">Viernes 6 de Julio</p>
+                                    </div>
+                                </div>
+                                  <div class="card-content">
+                                      <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                                          <i class="mdi-action-account-circle"></i>
+                                      </a>
+
+                                      <span class="card-title activator grey-text text-darken-4">Nombre del menú</span>
+                                      <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Descripción: <br/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis nibh in lectus iaculis, quis fermentum erat venenatis. Fusce et nisl nec tellus tincidunt iaculis. Nulla id odio ullamcorper, pharetra elit in, elementum turpis. Duis mollis ante laoreet rutrum aliquam.</span></p>
+                                      <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> Precio: $10.000</p>
+
+                                  </div>
+                                  <div class="card-reveal">
+                                      <span class="card-title grey-text text-darken-4">Pedir este menu <i class="mdi-navigation-close right"></i></span>
+                                      <div class="card-panel">
+                                        <div class="row">
+                                          <form class="col s12">
+                                            <div class="row">
+                                              <div class="input-field col s12">
+                                                <i class="mdi-action-account-circle prefix"></i>
+                                                <input id="name3" type="text">
+                                                <label for="first_name">Nombre</label>
+                                              </div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="input-field col s12">
+                                                <i class="mdi-communication-email prefix"></i>
+                                                <input id="email3" type="email">
+                                                <label for="email">Email</label>
+                                              </div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="input-field col s12">
+                                                <i class="mdi-action-lock-outline prefix"></i>
+                                                <input id="password3" type="password">
+                                                <label for="password">Telefono</label>
+                                              </div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="row">
+                                                <div class="input-field col s12">
+                                                  <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Pedir
+                                                    <i class="mdi-content-send right"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col s12 m6 l4">
+                              <div id="flight-card" class="card">
+                                  <div class="card-header amber darken-2">
+                                      <div class="card-title">
+                                          <h4 class="flight-card-title">Especiales y adiciones</h4>
+                                          <p class="flight-card-date">Viernes 6 de Julio</p>
+                                      </div>
+                                  </div>
+                                  <div class="card-content-bg white-text">
+                                      <div class="card-content">
+                                          <div class="row flight-state-wrapper">
+                                              <div class="col s12 m12 l12 center-align">
+                                                  <div class="flight-state">
+                                                      <h4 class="margin">Nombre del Menú</h4>
+                                                      <p class="ultra-small">Especialidad</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col s12 m12 l12 center-align flight-state-two">
+                                                  <div class="flight-info">
+                                                      <p class="small"><span class="grey-text text-lighten-4">Descripción del menú</span></p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                            <div class="col s12 m12 l4">
+                                <ul id="task-card" class="collection with-header">
+                                    <li class="collection-header cyan">
+                                        <h4 class="task-card-title">Mi selección</h4>
+                                        <p class="task-card-date">Menús, especiales y adiciones</p>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task1" />
+                                        <label for="task1">Menú No. 1 <a href="#" class="secondary-content"></a>
+                                        </label>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task2" />
+                                        <label for="task2">Menú No. 2 <a href="#" class="secondary-content"></a>
+                                        </label>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task3" />
+                                        <label for="task3">Menú No. 3 <a href="#" class="secondary-content"></a>
+                                        </label>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task3" />
+                                        <label for="task3">Adición<a href="#" class="secondary-content"></a>
+                                        </label>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task3" />
+                                        <label for="task3">Especialidad<a href="#" class="secondary-content"></a>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+
+
+                    </div>
+                    <!--card widgets end-->
+
+                    <!-- Floating Action Button -->
+                    <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
+                        <a class="btn-floating btn-large">
+                          <i class="mdi-action-stars"></i>
+                        </a>
+                        <ul>
+                          <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
+                          <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
+                          <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                          <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Floating Action Button -->
+
+                </div>
+                <!--end container-->
+            </section>
+            <!-- END CONTENT -->
+
+        </div>
+        <!-- END WRAPPER -->
+
+    </div>
+    <!-- END MAIN -->
+
+
+
+    <!-- INCIO FOOTER -->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright © 2015 <a class="grey-text text-lighten-4" href="#" target="_blank">GeeksLabs</a> All rights reserved.
+                <span class="right"> Desarrollado por <a class="grey-text text-lighten-4" href="#">Agencia Web Bogotá</a></span>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+
+    <!-- Libreria jQuery -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!--jsgrid-->
+    <script type="text/javascript" src="js/jsgrid/js/db.js"></script> <!--data-->
+    <script type="text/javascript" src="js/jsgrid/js/jsgrid.min.js"></script>
+    <script type="text/javascript" src="js/jsgrid/js/jsgrid-script.js"></script>
+
+
+    <!--plugins.js-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+</body>
+
+</html>
