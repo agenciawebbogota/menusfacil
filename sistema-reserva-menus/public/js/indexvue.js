@@ -8,6 +8,11 @@ new Vue({
 			descripcion:'',
 			precio:'',
 			estado:false
+		},
+		noti:{
+			nombre:'',
+			descripcion:'',
+			precio:'',
 		}
 	},
 	created:function(){
@@ -40,16 +45,22 @@ new Vue({
 		addMenu:function(){
 			let self = this;
 			// Validar antes del envío
-
+			if(this.add.nombre.length < 4){
+				this.noti.nombre = 'El nombre no es correcto'
+			}else{
 			// Enviar los datos
 			axios.post('/menus/crear',this.add)
-			  .then(function (response){
-			  	self.getMenus()
+			  .then((response)=>{
+			  	this.getMenus()
 			  	Materialize.toast('Se ha creado el menú '+response.data.id, 2000);
 			  })
 			  .catch(function (error) {
 			    console.log(error);
 			  });
+				
+			}
+
+
 		},
 		updateMenu:function(menu){
 			
