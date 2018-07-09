@@ -1,3 +1,7 @@
+
+
+
+
                 <form class="col s12" v-on:submit.prevent="addMenu">
 	                <div class="row">
 	                  <div class="input-field col s6">
@@ -39,11 +43,6 @@
                     	<button class="btn" type="submit" name="action">Guardar
                       <i class="mdi-content-send right"></i> </button>
                   </div>
-	              {{-- <pre>
-
-	              		@{{ $data.noti }}
-
-	              </pre> --}}
 	              </form>
 
 

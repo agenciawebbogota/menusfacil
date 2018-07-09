@@ -19,23 +19,48 @@ new Vue({
 		terminaste:false,
 		pedido:{
 			menusPedido:[],
-			adicionalesPedido:[]
-
+			adicionalesPedido:[],
+			nombre:'',
+			correo:'',
+			telefono:'',
+		},
+		noti:{
+			nombre:'',
+			correo:'',
+			telefono:'',
 		}
 	},
 	created:function(){
 	},
 	methods:{
-		// La idea es mostrar en tiempo real el menu
-		// menusPedidos:function(menu){
-		// 	console.log(menu)
-		// },
-		// adicionalesPedidos:function(menu){
-		// 	// console.log(menu)
-		// },
-
 		enviarPedido:function(){
-
+			if (this.pedido.nombre.length < 4){
+				this.noti.nombre = 'El nombre de ser igual o superior a 4 caracteres.'
+			}else if(this.pedido.telefono.length < 6){
+				this.noti.telefono = 'El telefono de ser  mayor a 5 caracteres.'
+				this.noti.nombre = ''
+			}else if(this.pedido.telefono.length > 10){
+				this.noti.telefono = 'El telefono de ser menor a 11 caracteres.'
+				this.noti.nombre = ''
+			}else if(!this.validarCorreo(this.pedido.correo)){
+				this.noti.correo = 'Ingresa un correo valido.'
+				this.noti.telefono = ''
+				this.noti.nombre = ''
+			}else{
+				console.log('enviar el menu')
+				document.getElementById('pedido').reset()
+				this.noti.correo = ''
+				this.noti.telefono = ''
+				this.noti.nombre = ''
+			}
+		},
+		validarCorreo:function(texto) {
+			emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+		    if (emailRegex.test(texto)) {
+		      return true;
+		    } else {
+		      return false;
+		    }	
 		},
 	}
 })

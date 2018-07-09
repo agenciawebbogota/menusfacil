@@ -17,15 +17,11 @@
 		    </div>
 		  </nav>
 		</div>
-		<div style="position: relative;">
-			<!-- <pre>
-				{{ $data.pedido }}
-			</pre> -->
-			
+		<div style="position: relative;">		
 		</div>
-		<form @submit.prevent="enviarPedido()">
+		<form @submit.prevent="enviarPedido()" id="pedido">
 			<div class="row">
-				<div class="col l8 s12 offset-l2">
+				<div class="col l8 s12 m10 offset-l2 offset-m1">
 					<div class="carousel carousel-slider center">
 					    <div class="carousel-fixed-item center">
 					      <!-- <a class="btn waves-effect white grey-text darken-text-2">button</a> -->
@@ -42,9 +38,7 @@
 					      			<p>{{ menu. descripcion }}</p>
 					      			<p>
 					      				<i class="material-icons tiny">attach_money</i>12000
-					      				
 					      			</p>
-
 					      		</div>
 					      	</div>
 					      </div>
@@ -54,7 +48,7 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col l6 s12 hoverable">
+					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
 					        <li class="collection-header yellow">
 					        	<h4>Mi selección</h4>
@@ -70,7 +64,7 @@
 					        </li>
 					    </ul>
 					</div>
-					<div class="col l6 s12 hoverable">
+					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
 					        <li class="collection-header red">
 					        	<h4>Adiciones</h4>
@@ -89,34 +83,37 @@
 				</div>
 			</div>
 			<div>
-				{{pedido.adicionalesPedido}}
-				{{pedido.menusPedido}}
+				
 			</div>
 			<div class="container">
 				<div class="row">
 			        <div class="input-field col l8 offset-l2 s12 ">
 			          <i class="material-icons prefix">account_circle</i>
-			          <input id="nombre" type="text" autocomplete="off">
+			          <input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
+			          <span v-if="noti.nombre" class="red-text text-darken-2">{{noti.nombre}}</span>
 			          <label for="nombre">Nombre</label>
 			        </div>
 			        <div class="input-field col l8 offset-l2 s12">
-			          <i class="material-icons prefix" autocomplete="off">phone</i>
-			          <input id="telefono" type="tel">
+			          <i class="material-icons prefix">phone</i>
+			          <input id="telefono" type="number" v-model="pedido.telefono">
+			          <span v-if="noti.telefono" class="red-text text-darken-2">{{noti.telefono}}</span>
 			          <label for="telefono">Teléfono</label>
 			        </div>
 			        <div class="input-field col l8 offset-l2 s12">
-			          <i class="material-icons prefix" autocomplete="off">email</i>
-			          <input id="correo" type="email">
+			          <i class="material-icons prefix">email</i>
+			          <input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
+			          <span v-if="noti.correo" class="red-text text-darken-2">{{noti.correo}}</span>
 			          <label for="correo">Correo</label>
 			        </div>
-
-					<button v-if="terminaste" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
-					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Hacer pedido</button>
+					<button 
+					v-if="(pedido.adicionalesPedido.length >0 || pedido.menusPedido.length >0) && (pedido.nombre && pedido.telefono && pedido.correo)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campo</button>
 			      </div>
 			</div>
 		      <br><br><br><br><br>
 		</form>
 	</div>
+	<!-- && (pedido.nombre && pedido.telefono && pedido.correo) -->
 
 
 

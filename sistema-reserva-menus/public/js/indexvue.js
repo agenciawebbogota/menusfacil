@@ -17,14 +17,25 @@ new Vue({
 	},
 	created:function(){
 		this.getMenus()
-		$('#tablaMenus').pageMe({
-          pagerSelector:'#myPager',
-           activeColor: 'green',
-           prevText:'Anterior',
-           nextText:'Siguiente',
-           showPrevNext:true,
-           hidePageNumbers:false,
-           perPage:10
+		// $('#tablaMenus').pageMe({
+  //         pagerSelector:'#myPager',
+  //          activeColor: 'green',
+  //          prevText:'Anterior',
+  //          nextText:'Siguiente',
+  //          showPrevNext:true,
+  //          hidePageNumbers:false,
+  //          perPage:10
+  //       });
+  document.addEventListener('DOMContentLoaded', function() {
+          // Navegaci{on}
+          let sidenav = document.querySelectorAll('.sidenav');
+          M.Sidenav.init(sidenav, {});
+          // Botones flotantes
+          let fixedActionBtn = document.querySelectorAll('.fixed-action-btn');
+          let instances = M.FloatingActionButton.init(fixedActionBtn, {});
+          // Modals
+          let modal = document.querySelectorAll('.modal');
+          M.Modal.init(modal, {});
         });
 	},
 	methods:{
@@ -62,7 +73,7 @@ new Vue({
 			axios.post('/menus/crear',this.add)
 			  .then((response)=>{
 			  	this.getMenus()
-			  	Materialize.toast('Se ha creado el menú '+response.data.id, 1000);
+			  	M.toast({html: 'Se ha creado el menú '+response.data.id, outDuration:1000});
 			  })
 			  .catch(function (error) {
 			    console.log(error);
@@ -87,7 +98,7 @@ new Vue({
 			}
 			axios.put(url, data).then((resp)=>{
 				this.getMenus()
-				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'", 1000)
+				M.toast({html: 'Se ha actualizado el menu '+"'"+data.nombre+"'", outDuration:1000})
 				// console.log(resp)
 			}).catch(function (error) {
 			    console.log(error);
@@ -99,7 +110,7 @@ new Vue({
 			let url = '/menus/eliminar/'+id
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
-				Materialize.toast(resp.data, 200);
+				M.toast({html:resp.data, outDuration:200});
 				console.log(resp)
 			})
 		},
@@ -109,7 +120,7 @@ new Vue({
 			let url = '/menus/actualizar/estado';
 			axios.put(url, menu).then((resp)=>{
 				// console.log(resp.data)
-				Materialize.toast('Se ha eliminado el menu '+"'"+menu.nombre+"'", 1000)
+				M.toast({html: 'Se ha eliminado el menu '+"'"+menu.nombre+"'", outDuration: 1000})
 				this.getMenus()
 			}).catch(function (error) {
 			    console.log(error);
