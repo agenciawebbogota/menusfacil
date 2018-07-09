@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 	<div id="app">
-		
+
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
@@ -17,7 +17,7 @@
 		    </div>
 		  </nav>
 		</div>
-		<div style="position: relative;">		
+		<div style="position: relative;padding-top:30px;">		
 		</div>
 		<form @submit.prevent="enviarPedido()" id="pedido">
 			<div class="row">
@@ -43,7 +43,7 @@
 					      	</div>
 					      </div>
 					    </div>
-					</div>	
+					</div>
 				</div>
 			</div>
 			<div class="container">
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			<div>
-				
+
 			</div>
 			<div class="container">
 				<div class="row">
@@ -105,7 +105,7 @@
 			          <span v-if="noti.correo" class="red-text text-darken-2">{{noti.correo}}</span>
 			          <label for="correo">Correo</label>
 			        </div>
-					<button 
+					<button
 					v-if="(pedido.adicionalesPedido.length >0 || pedido.menusPedido.length >0) && (pedido.nombre && pedido.telefono && pedido.correo)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campo</button>
 			      </div>
@@ -133,7 +133,7 @@
 
 
 
-	
+
 </body>
     <!-- Compiled and minified JavaScript -->
     <script

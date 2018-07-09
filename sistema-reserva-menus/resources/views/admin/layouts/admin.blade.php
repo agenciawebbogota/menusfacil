@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pdidos nuevo diseño</title>
+  <title>Pedidos nuevo diseño</title>
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -56,7 +56,7 @@
       {{-- <li><a class="btn-floating blue modal-trigger" href="#actualizarMenu"><i class="material-icons">add_circle</i></a></li> --}}
     </ul>
   </div>
-  <p> 
+  <p>
     <br><br><br><br><br><br><br><br><br>
   </p>
   <footer class="page-footer">
@@ -68,7 +68,7 @@
   </footer>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
   <script type="text/javascript">
-        
+
   </script>
   <script type="text/javascript" src="js/axios.min.js"></script>
   <script type="text/javascript" src="js/vue.js"></script>
