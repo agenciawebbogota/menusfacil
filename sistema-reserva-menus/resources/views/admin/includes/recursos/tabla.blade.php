@@ -22,14 +22,14 @@
     <div class="col s12 m8 l9">
       <div class="switch">
         <label>
-          <input type="checkbox" v-model="menu.estado" v-on:click="updateMenu(menu)">
+          <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
           <span class="lever"></span> 
         </label>
       </div>
     </div>
   </td>
   <td>
-      <a href="#actualizarMenu" class="btn-floating blue modal-trigger"><i class="large material-icons">edit</i></a>
+      <a href="#actualizarMenu" class="btn-floating blue modal-trigger"><i class="large material-icons" v-on:click.prevent="llenarModal(menu)">edit</i></a>
   </td>
   <td>
     <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="large material-icons">delete</i></a>

@@ -3,11 +3,19 @@ new Vue({
 	data:{
 		menus:'',
 		total:0,
+		fecha:'',
+		estado:'',
 		add:{
 			nombre:'',
 			descripcion:'',
 			precio:'',
 			estado:1
+		},
+		update:{
+			nombre:'',
+			descripcion:'',
+			precio:'',
+			estado:''
 		},
 		noti:{
 			nombre:'',
@@ -15,8 +23,24 @@ new Vue({
 			precio:'',
 		}
 	},
+	mounted:function(){
+	},
 	created:function(){
 		this.getMenus()
+		setInterval(()=>{
+			let LaFecha=new Date();
+			let Mes=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+			let diasem=new Array('domingo','lunes','martes','miercoles','jueves','viernes','sabado');
+			let diasemana=LaFecha.getDay();
+			let FechaCompleta="";
+			let NumeroDeMes="";
+			let hora = LaFecha.getHours() 
+			let minuto = LaFecha.getMinutes() 
+			let segundo = LaFecha.getSeconds() 
+			NumeroDeMes=LaFecha.getMonth();
+			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
+			this.fecha = FechaCompleta;
+		} , 1000);
 		// $('#tablaMenus').pageMe({
   //         pagerSelector:'#myPager',
   //          activeColor: 'green',
@@ -34,8 +58,7 @@ new Vue({
           let fixedActionBtn = document.querySelectorAll('.fixed-action-btn');
           let instances = M.FloatingActionButton.init(fixedActionBtn, {});
           // Modals
-          let modal = document.querySelectorAll('.modal');
-          M.Modal.init(modal, {});
+          let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {});
         });
 	},
 	methods:{
@@ -80,12 +103,20 @@ new Vue({
 			  });	
 			}
 		},
-		updateMenu:function(menu){
-			
-			if(!menu.estado){
+		updateMenu:function(menu, q){
+			// Ajustar para que actualice el estado
+			if (q) {
+				if(!menu.estado){
 				menu.estado = 1 
+				}else{
+					menu.estado = 0
+				}
 			}else{
-				menu.estado = 0
+				if(menu.estado){
+					menu.estado = 1 
+				}else{
+					menu.estado = 0
+				}	
 			}
 			// console.log(menu)
 			let url = '/menus/actualizar';
@@ -98,8 +129,9 @@ new Vue({
 			}
 			axios.put(url, data).then((resp)=>{
 				this.getMenus()
+				// Cerrar modal
 				M.toast({html: 'Se ha actualizado el menu '+"'"+data.nombre+"'", outDuration:1000})
-				// console.log(resp)
+				
 			}).catch(function (error) {
 			    console.log(error);
 			  });
@@ -125,6 +157,9 @@ new Vue({
 			}).catch(function (error) {
 			    console.log(error);
 			  });
+		},
+		llenarModal:function(menu){
+			this.update = menu
 		}
 	}
 })
