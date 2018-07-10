@@ -2350,3 +2350,8 @@ tr.group:hover {
 .btn,.btn-floating:hover{
   background-color: #c81e04 !important;
 }
+
+/* PDF */
+.bd-bg{
+  background: url("img/bg-pdf.jpg");
+}
