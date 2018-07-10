@@ -83,12 +83,12 @@ class MenuController extends Controller
 
 
     public function pdf(){
-    	$menus = Menu::all(); 
+    	$menus = Menu::all();
 
-        $pdfVista = PDF::loadView('pdf.menuscreados', compact('menus'));
-        // Con esta linea descargas el pdf directo
-        // return $pdf->download('listado.pdf');
-		return $pdfVista->stream();
+    	$view =  \View::make('pdf.menuscreados', compact('menus'))->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->stream('Nombre_Personalizado_PDF'); 
     }
 
 

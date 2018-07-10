@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menús Creados PDF</title>
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  {{-- {!! Html::style('css/pdf.css') !!} --}}
+  <link rel="stylesheet" type="text/css" href="css/pdf.css">
+	{{-- <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"> --}}
+  {{-- <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"> --}}
 
-<style media="screen">
+{{-- <style media="screen">
 	body{
 		background-color: #2a2730;
 		width:827px;
@@ -18,14 +20,15 @@
 	.titulo h2{
 		color: #e88a10;
 	}
-</style>
+</style> --}}
+<img src="img/node.png">
 
 </head>
 <body>
-	<div class="titulo">
-		<h2>Menus</h2>
+	<div>
+		<h2>Menus sdfads</h2>
 	</div>
-	<table class="striped highlight centered" style="color:#ffffff">
+	<table>
       <thead>
         <tr>
             <th>Nombre</th>
