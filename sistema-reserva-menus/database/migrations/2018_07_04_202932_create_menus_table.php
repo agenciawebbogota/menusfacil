@@ -17,8 +17,9 @@ class CreateMenusTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('descripcion', 300);
             $table->string('precio');
+            $table->string('adicional');
             $table->boolean('estado')->default(true);
             $table->boolean('activo')->default(true);
             $table->integer('user_id')->unsigned();

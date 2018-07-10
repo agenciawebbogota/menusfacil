@@ -9,6 +9,7 @@ new Vue({
 			nombre:'',
 			descripcion:'',
 			precio:'',
+			adicional:'',
 			estado:1
 		},
 		update:{
@@ -92,18 +93,22 @@ new Vue({
 				this.noti.precio = 'El precio no es correcto'
 				this.noti.descripcion = ''
 				this.noti.nombre = ''
+
+				if(this.add.adicional){
+					this.add.adicional = 'SI'
+				}else{
+					this.add.adicional = 'NO'
+				}
 			}else{
-
-
-			axios.post('/menus/crear',this.add)
-			  .then((response)=>{
-			  	this.getMenus()
-			  	M.toast({html: 'Se ha creado el menú '+response.data.id, outDuration:1000});
-			  })
-			  .catch(function (error) {
-			    console.log(error);
-			  });
-			}
+				axios.post('/menus/crear',this.add)
+				  .then((response)=>{
+				  	this.getMenus()
+				  	M.toast({html: 'Se ha creado el menú '+response.data.id, outDuration:1000});
+				  })
+				  .catch(function (error) {
+				    console.log(error);
+				  });
+				}
 		},
 		updateMenu:function(menu, q){
 			// Ajustar para que actualice el estado

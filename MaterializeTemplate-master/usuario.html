@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>vista del usuario</title>
 </head>
-<!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materialize2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
@@ -106,7 +105,7 @@
 			          <label for="correo">Correo</label>
 			        </div>
 					<button
-					v-if="(pedido.adicionalesPedido.length >0 || pedido.menusPedido.length >0) && (pedido.nombre && pedido.telefono && pedido.correo)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					v-if="(pedido.adicionalesPedido.length >0 || pedido.menusPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campo</button>
 			      </div>
 			</div>

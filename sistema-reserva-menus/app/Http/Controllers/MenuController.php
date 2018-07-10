@@ -28,6 +28,7 @@ class MenuController extends Controller
 			            'nombre' => $request->input('nombre'),
 			            'descripcion' => $request->input('descripcion'),
 			            'precio' => $request->input('precio'),
+			            'adicional' => $request->input('adicional'),
 			            'estado'=>$request->input('estado')
 			        ]);
 	        return $menu;
@@ -37,10 +38,6 @@ class MenuController extends Controller
     }
 
     public function update(Request $request){
-
-    	// dd($request->input('estado'));
-
-
     	if ($request->input('estado')) {
     		$estado = 1;
     	}else{

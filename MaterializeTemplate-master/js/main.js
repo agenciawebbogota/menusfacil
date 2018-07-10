@@ -1,6 +1,4 @@
 // Inicialización Vue.js
-
-
 new Vue({
 	el: '#app',
 	data:{
@@ -48,10 +46,13 @@ new Vue({
 				this.noti.nombre = ''
 			}else{
 				console.log('enviar el menu')
-				document.getElementById('pedido').reset()
+				// document.getElementById('pedido').reset()
 				this.noti.correo = ''
 				this.noti.telefono = ''
 				this.noti.nombre = ''
+				this.pedido.correo = ''
+				this.pedido.telefono = ''
+				this.pedido.nombre = ''
 			}
 		},
 		validarCorreo:function(texto) {
