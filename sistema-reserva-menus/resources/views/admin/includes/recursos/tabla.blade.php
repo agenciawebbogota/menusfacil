@@ -23,7 +23,7 @@
       <div class="switch">
         <label>
           <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
-          <span class="lever"></span> 
+          <span class="lever"></span>
         </label>
       </div>
     </div>

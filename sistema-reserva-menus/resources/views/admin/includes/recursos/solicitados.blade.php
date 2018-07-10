@@ -3,19 +3,24 @@
 
 
 
-<div class="card" style="height:440px;background-color:#e88a10">
+<div class="card tabla-menus-solicitados" style="height:450px">
     <div class="card-move-up waves-block waves-light">
         <div class="move-up">
-          <ul class="collection with-header">
-            <li class="collection-header lista-menus"><h4>Menus Solicitados</h4></li>
-            <li class="collection-item lista-menus">Alvin</li>
-            <li class="collection-item lista-menus">Alvin</li>
-            <li class="collection-item lista-menus">Alvin</li>
-            <li class="collection-item lista-menus">Alvin</li>
+          <ul class="collection with-header" style="border:0px">
+            <li class="lista-menus"><h4>Menus Solicitados</h4></li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.1</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.2</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.3</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.4</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.5</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.6</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.7</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.6</li>
+            <li class="lista-menus">Luis Fernando Raga .............. Menú No.7</li>
           </ul>
         </div>
     </div>
     <div class="card-content">
-      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 center tooltipped" data-position="bottom" data-tooltip="I am a tooltip"><i class="large material-icons activator">add</i></a>
+      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 center tooltipped" data-position="right" data-tooltip="Ver o Imprimir Pedidos"><i class="large material-icons activator">add</i></a>
     </div>
 </div>

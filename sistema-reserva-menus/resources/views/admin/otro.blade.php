@@ -51,7 +51,7 @@
                                   <div class="card-move-up waves-effect waves-block waves-light">
                                       <div class="move-up cyan darken-1">
                                         <p></p>
-                                        
+
                                         <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
                                         <a href="/descarga/menusCreados" target="_blanck" class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="large mdi-file-file-download"></i></a>
 
@@ -85,7 +85,7 @@
                                                     <label>
                                                       {{-- NO --}}
                                                       <input type="checkbox" v-model="menu.estado" v-on:click="updateMenu(menu)">
-                                                      <span class="lever"></span> 
+                                                      <span class="lever"></span>
                                                     </label>
                                                   </div>
                                                 </div>
