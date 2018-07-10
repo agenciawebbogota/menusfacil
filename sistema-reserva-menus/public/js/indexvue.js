@@ -140,19 +140,24 @@ new Vue({
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
 				M.toast({html:resp.data, outDuration:200});
-				console.log(resp)
+				// console.log(resp)
 			})
 		},
 		updateEstado:function(menu){
 			// Preguntar antes de eliminar
-			let url = '/menus/actualizar/estado';
-			axios.put(url, menu).then((resp)=>{
-				// console.log(resp.data)
-				M.toast({html: 'Se ha eliminado el menu '+"'"+menu.nombre+"'", outDuration: 1000})
-				this.getMenus()
-			}).catch(function (error) {
-			    console.log(error);
-			  });
+			alertify.confirm('Confirm Title', 'Confirm Message',()=>{
+				// Acción si es confirmada
+				let url = '/menus/actualizar/estado';
+				axios.put(url, menu).then((resp)=>{
+					M.toast({html: 'Se ha eliminado el menu '+"'"+menu.nombre+"'", outDuration: 1000})
+					this.getMenus()
+				}).catch((error)=> {
+				    console.log(error);
+				});
+			},()=>{
+				// Acción si es cancelada
+				M.toast({html: 'Hemos cancelado tu solicitud.', outDuration: 1000})
+			});
 		},
 		llenarModal:function(menu){
 			this.update = menu
