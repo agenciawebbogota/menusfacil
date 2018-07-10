@@ -28,6 +28,17 @@ new Vue({
 	},
 	created:function(){
 		this.getMenus()
+		document.addEventListener('DOMContentLoaded', function() {
+		  // Navegaci{on}
+			let elems = document.querySelectorAll('.tooltipped');
+			let tooltip = M.Tooltip.init(elems, {});
+			let sidenav = document.querySelectorAll('.sidenav');
+			M.Sidenav.init(sidenav, {});
+			// Botones flotantes
+			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
+			// Modals
+			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
+		});
 		setInterval(()=>{
 			let LaFecha=new Date();
 			let Mes=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
@@ -42,27 +53,7 @@ new Vue({
 			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
 			this.fecha = FechaCompleta;
 		} , 1000);
-		// $('#tablaMenus').pageMe({
-  //         pagerSelector:'#myPager',
-  //          activeColor: 'green',
-  //          prevText:'Anterior',
-  //          nextText:'Siguiente',
-  //          showPrevNext:true,
-  //          hidePageNumbers:false,
-  //          perPage:10
-  //       });
-  document.addEventListener('DOMContentLoaded', function() {
-          // Navegaci{on}
-					let elems = document.querySelectorAll('.tooltipped');
-    			let tooltip = M.Tooltip.init(elems, {});
-          let sidenav = document.querySelectorAll('.sidenav');
-          M.Sidenav.init(sidenav, {});
-          // Botones flotantes
-          let fixedActionBtn = document.querySelectorAll('.fixed-action-btn');
-          let instances = M.FloatingActionButton.init(fixedActionBtn, {});
-          // Modals
-          let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {});
-        });
+  		
 	},
 	methods:{
 		getMenus:function(){
@@ -77,33 +68,33 @@ new Vue({
 			  })
 		},
 		addMenu:function(){
-			let self = this;
+			if(this.add.adicional){
+					this.add.adicional = 'SI'
+				}else{
+					this.add.adicional = 'NO'
+				}
 			if(this.add.nombre.length < 4){
 				this.noti.nombre = 'El nombre debe ser superior a 4 caracteres.'
 			}else if(this.add.descripcion.length < 4 ){
 				this.noti.descripcion = 'La descripción debe ser superior a 4 caracteres.'
 				this.noti.nombre = ''
 			}else if(this.add.descripcion.length >200){
-
 				this.noti.descripcion = 'La descripción no debe superar los 200 caracteres'
 				this.noti.nombre = ''
-
-
 			}else if(this.add.precio.length < 3){
 				this.noti.precio = 'El precio no es correcto'
 				this.noti.descripcion = ''
 				this.noti.nombre = ''
-
-				if(this.add.adicional){
-					this.add.adicional = 'SI'
-				}else{
-					this.add.adicional = 'NO'
-				}
 			}else{
 				axios.post('/menus/crear',this.add)
 				  .then((response)=>{
+				  	this.add.nombre = ''
+				  	this.add.descripcion = ''
+				  	this.add.precio = ''
+				  	this.add.adicional = ''
+				  	this.add.estado = ''
 				  	this.getMenus()
-				  	M.toast({html: 'Se ha creado el menú '+response.data.id, outDuration:1000});
+				  	M.toast({html: 'Se ha creado el menú co éxito', outDuration:1000});
 				  })
 				  .catch(function (error) {
 				    console.log(error);
@@ -125,7 +116,6 @@ new Vue({
 					menu.estado = 0
 				}
 			}
-			// console.log(menu)
 			let url = '/menus/actualizar';
 			let data = {
 				nombre: menu.nombre,
@@ -135,14 +125,14 @@ new Vue({
 				id:menu.id,
 			}
 			axios.put(url, data).then((resp)=>{
-				this.getMenus()
 				// Cerrar modal
+				let modalUpdate = M.Modal.getInstance(document.getElementById('actualizarMenu'));
+				modalUpdate.close()
 				M.toast({html: 'Se ha actualizado el menu '+"'"+data.nombre+"'", outDuration:1000})
 
 			}).catch(function (error) {
 			    console.log(error);
 			  });
-
 		},
 		deleteMenu:function(id){
 			// Aún no se esta llamando dentro del documento
@@ -154,7 +144,6 @@ new Vue({
 			})
 		},
 		updateEstado:function(menu){
-
 			// Preguntar antes de eliminar
 			let url = '/menus/actualizar/estado';
 			axios.put(url, menu).then((resp)=>{

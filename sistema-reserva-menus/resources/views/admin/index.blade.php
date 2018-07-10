@@ -6,10 +6,10 @@
       <div class="card-image red waves-effect waves-block waves-light" style="background: linear-gradient(-90deg, #ee7518, #f5cd6c, #ee7518)">
           <h2 class="center-align" style="color:#2a2730;font-size:28px;font-weight:700;margin:10px 0px -50px 0px">TABLA DE MENUS</h2>
           <a class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Crear Menú" style="margin: 10px"><i class="large material-icons activator">add</i></a>
-          <a href="/descarga/menusCreados" target="_blank" style="margin: 10px" class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Ver PDF"><i class="large material-icons">file_download</i></a>
+          <a href="/descarga/menus" target="_blank" style="margin: 10px" class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Ver PDF"><i class="large material-icons">file_download</i></a>
       </div>
       <div class="card-content">
-          @include('admin.includes.recursos.tabla')
+        @include('admin.includes.recursos.tabla')
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4 center-align">Crear Nuevo Menu<i class="material-icons right">close</i></span>

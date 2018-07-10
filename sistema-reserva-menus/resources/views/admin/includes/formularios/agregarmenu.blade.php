@@ -1,5 +1,5 @@
 
-<form class="col s12" v-on:submit.prevent="addMenu">
+<form class="col s6" v-on:submit.prevent="addMenu">
 	<div class="row">
 		<div class="input-field col s6">
 			<i class="mdi-editor-border-color prefix"></i>
