@@ -34,9 +34,9 @@ new Vue({
 			let diasemana=LaFecha.getDay();
 			let FechaCompleta="";
 			let NumeroDeMes="";
-			let hora = LaFecha.getHours() 
-			let minuto = LaFecha.getMinutes() 
-			let segundo = LaFecha.getSeconds() 
+			let hora = LaFecha.getHours()
+			let minuto = LaFecha.getMinutes()
+			let segundo = LaFecha.getSeconds()
 			NumeroDeMes=LaFecha.getMonth();
 			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
 			this.fecha = FechaCompleta;
@@ -52,6 +52,8 @@ new Vue({
   //       });
   document.addEventListener('DOMContentLoaded', function() {
           // Navegaci{on}
+					let elems = document.querySelectorAll('.tooltipped');
+    			let tooltip = M.Tooltip.init(elems, {});
           let sidenav = document.querySelectorAll('.sidenav');
           M.Sidenav.init(sidenav, {});
           // Botones flotantes
@@ -100,23 +102,23 @@ new Vue({
 			  })
 			  .catch(function (error) {
 			    console.log(error);
-			  });	
+			  });
 			}
 		},
 		updateMenu:function(menu, q){
 			// Ajustar para que actualice el estado
 			if (q) {
 				if(!menu.estado){
-				menu.estado = 1 
+				menu.estado = 1
 				}else{
 					menu.estado = 0
 				}
 			}else{
 				if(menu.estado){
-					menu.estado = 1 
+					menu.estado = 1
 				}else{
 					menu.estado = 0
-				}	
+				}
 			}
 			// console.log(menu)
 			let url = '/menus/actualizar';
@@ -131,7 +133,7 @@ new Vue({
 				this.getMenus()
 				// Cerrar modal
 				M.toast({html: 'Se ha actualizado el menu '+"'"+data.nombre+"'", outDuration:1000})
-				
+
 			}).catch(function (error) {
 			    console.log(error);
 			  });

@@ -1,3 +1,17 @@
 body{
-	background: red;
+	background-color: #2b2831;
+	width: 1400px;
+	margin-left: -40;
+	margin-top: -40;
+	margin-bottom: -50;
+	height: 2400px;
+}
+.container{
+	width: 400px;
+	margin-left: 100px;
+}
+
+
+.titulo-pdf h2{
+	color:#ffffff;
 }

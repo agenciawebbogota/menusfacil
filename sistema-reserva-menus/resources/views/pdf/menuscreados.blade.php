@@ -12,28 +12,31 @@
 
 </head>
 <body>
-	<div>
-		<h2>Menus sdfads</h2>
-	</div>
-	<table>
-      <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-      	@foreach($menus as $menu)
-            <tr>
-            	<td>{{ $menu->nombre }} </td>
-	        	<td>{{ $menu->descripcion }}</td>
-	        	<td>{{ $menu->precio }}</td>
-	        	{{-- <td>{{ $menu->estado }}</td> --}}
-            </tr>
-        @endforeach
+  <div class="container">
+        	<div class="titulo-pdf">
+        		<h2>Menus sdfads</h2>
+        	</div>
+        	<table>
+              <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+              	@foreach($menus as $menu)
+                    <tr>
+                    	<td>{{ $menu->nombre }} </td>
+        	        	<td>{{ $menu->descripcion }}</td>
+        	        	<td>{{ $menu->precio }}</td>
+        	        	<td>{{ $menu->estado }}</td>
+                    </tr>
+                @endforeach
 
-      </tbody>
-    </table>
+              </tbody>
+            </table>
+  </div>
 </body>
 </html>

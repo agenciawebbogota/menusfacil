@@ -5,6 +5,7 @@
   <title>Pedidos nuevo diseño</title>
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
 
 </head>
 <body>
