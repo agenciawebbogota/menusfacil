@@ -10,9 +10,11 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/asd', function () {
     return view('welcome');
 });
+
+Route::get('/', 'PedidoController@index');
 
 Auth::routes();
 
@@ -24,8 +26,8 @@ Route::PUT('/menus/actualizar', 'MenuController@update')->middleware('auth');
 Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middleware('auth');
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
 // Implementar el guardado de los pedidos
+Route::get('pedido/menus', 'PedidoController@getMenusDia');
+Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
 // Route::post('pedido/crear', 'PedidoController@crearPedido');
-
-
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
 

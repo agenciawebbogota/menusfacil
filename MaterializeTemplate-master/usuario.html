@@ -53,14 +53,21 @@
 					        	<h4>Mi selección</h4>
 					        	<p>Selecciona ti pedido</p>
 					        </li>
-					        <li class="collection-item" v-for="menu in menus">
+					        <div class="input-field col s12">
+							    <select class="menulSelect" v-model="pedido.menusPedido">
+							      <option value="" disabled selected>Toma uno</option>
+							      <option v-for="menu in menus" :value="menu.id">{{menu.nombre}}</option>
+							    </select>
+							    <label>Adicionales del día</label>
+						  	</div>
+					        <!-- <li class="collection-item" v-for="menu in menus">
 					        	<p>
 							      <label :for="menu.id">
 							        <input type="checkbox" :id="menu.id" v-model="pedido.menusPedido" :value="menu.id">
 							        <span>{{ menu.nombre }}</span>
 							      </label>
 							    </p>
-					        </li>
+					        </li> -->
 					    </ul>
 					</div>
 					<div class="col l6 s12 m8 offset-m2 hoverable">
@@ -69,14 +76,23 @@
 					        	<h4>Adiciones</h4>
 					        	<p>Selecciona algo adicional</p>
 					        </li>
-					        <li class="collection-item" v-for="menu in adicionales">
+					        <div class="input-field col s12">
+							    <select class="adicionalSelect" v-model="pedido.adicionalesPedido">
+							      <option value="" disabled selected>Toma uno</option>
+							      <option v-for="menu in adicionales" :value="menu.id">{{menu.nombre}}</option>
+							    </select>
+							    <label>Adicionales del día</label>
+						  	</div>
+
+						  
+					       <!--  <li class="collection-item" v-for="menu in adicionales">
 					        	<p>
 							      <label :for="menu.id+1000">
 							        <input type="checkbox" :id="menu.id+1000" v-model="pedido.adicionalesPedido" :value="menu.id"/>
 							        <span>{{ menu.nombre }}</span>
 							      </label>
 							    </p>
-					        </li>
+					        </li> -->
 					    </ul>
 					</div>
 				</div>

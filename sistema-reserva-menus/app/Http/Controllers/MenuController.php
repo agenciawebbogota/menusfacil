@@ -51,9 +51,6 @@ class MenuController extends Controller
 			'activo' => true,
 		]);
 		return $menu;
-
-
-
     }
 
     public function delete($id){

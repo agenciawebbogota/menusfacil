@@ -17,7 +17,7 @@ new Vue({
 		terminaste:false,
 		pedido:{
 			menusPedido:[],
-			adicionalesPedido:[],
+			adicionalesPedido:'',
 			nombre:'',
 			correo:'',
 			telefono:'',
@@ -29,8 +29,26 @@ new Vue({
 		}
 	},
 	created:function(){
+		this.getMenus()
+		document.addEventListener('DOMContentLoaded', function() {
+    		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
+    		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
+		});
+
 	},
 	methods:{
+		getMenus:function(){
+			axios.get('pedido/menus')
+			  .then((resp) =>{
+			    // this.menus = response.data.menus
+			    // this.total = response.data.total
+			    console.log(resp)
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+		},
 		enviarPedido:function(){
 			if (this.pedido.nombre.length < 4){
 				this.noti.nombre = 'El nombre de ser igual o superior a 4 caracteres.'

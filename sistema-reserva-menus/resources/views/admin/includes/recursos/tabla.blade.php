@@ -1,6 +1,3 @@
-
-
-
 <table id="tablaMenus" class="centered">
 <thead>
 <tr>
@@ -15,7 +12,7 @@
 <tbody>
 <tr v-for="menu in menus" v-if="menu.activo == 1">
 
-  <td> @{{ menu.nombre }} </td>
+  <td> @{{ menu.nombre }} (@{{ menu.adicional}})</td>
   <td>@{{ menu.descripcion }}</td>
   <td>@{{ menu.precio }}</td>
   <td>
@@ -37,7 +34,3 @@
 </tr>
 </tbody>
 </table>
-{{-- <div class="col-md-12 center text-center">
-  <span class="left" id="total_reg"></span>
-  <ul class="pagination pager" id="myPager"></ul>
-</div> --}}
