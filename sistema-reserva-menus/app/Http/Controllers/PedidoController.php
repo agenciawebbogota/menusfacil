@@ -24,7 +24,7 @@ class PedidoController extends Controller
     	// return $menus;
 
     	return view('index',[
-    		'menus' => compact($menus)
+    		'menus' => $menus,
     	]);
     }
 
