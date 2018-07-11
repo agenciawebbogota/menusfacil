@@ -7,11 +7,56 @@ body{
 	height: 2400px;
 }
 .container{
-	width: 400px;
-	margin-left: 100px;
+	font-family: 'Roboto', sans-serif;
+	width: 700px;
+	margin-left: 80px;
+	padding-top: 60px;
 }
-
-
 .titulo-pdf h2{
-	color:#ffffff;
+	color:#e88a10;
+	font-size: 35px;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+}
+.titulo-menu-pdf{
+	color:#fff;
+	font-size: 28px;
+	text-align: left;
+}
+.titulo-desc{
+	color: #e88a10;
+	font-size: 22px;
+	font-weight: 400;
+	letter-spacing: 0.1;
+	margin-top: -40;
+}
+.desc{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	margin-top: -20;
+}
+.precio{
+	color:#e88a10;
+	font-size: 23px;
+	font-weight: normal;
+	margin-top: -10px;
+	float: left;
+}
+.imagen-precio{
+	margin-top: -40;
+	margin-left: 70;
+}
+.price{
+	font-size: 30px;
+	color:#fff;
+	float: right;
+	margin-top: -50;
+}
+.estatus{
+	color:#fff;
+	text-align: left;
+	font-size: 18px;
 }

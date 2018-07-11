@@ -5,38 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menús Creados PDF</title>
-
   <link rel="stylesheet" type="text/css" href="css/pdf.css">
-
-<img src="img/node.png">
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-        	<div class="titulo-pdf">
-        		<h2>Menus sdfads</h2>
-        	</div>
-        	<table>
-              <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                    <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-              	@foreach($menus as $menu)
-                    <tr>
-                    	<td>{{ $menu->nombre }} </td>
-        	        	<td>{{ $menu->descripcion }}</td>
-        	        	<td>{{ $menu->precio }}</td>
-        	        	<td>{{ $menu->estado }}</td>
-                    </tr>
-                @endforeach
+    <div class="titulo-pdf">
+    	<h2>Menus</h2>
+    </div>
+    <div class="titulo-menu-pdf">
+      <h3>Menú No. 1</h3>
+    </div>
+    <div class="titulo-desc">
+      <h4>Descripción</h4>
+    </div>
+    <div class="desc">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum nisi eget pellentesque
+      rutrum. Pellentesque venenatis egestas porttitor. Nulla nec dignissim neque, a viverra neque.
+      Morbi laoreet id orci at mattis. Nullam maximus finibus velit. Donec quis pellentesque tortor.
+      Sed hendrerit blandit tellus in pretium.</span>
+    </div>
+    <div class="precio">
+      <h4>Precio</h4><img class="imagen-precio" src="img/image1.png">
+      <span class="price">$10.000</span>
+    </div>
+    <div class="estatus">
+      <span>Publicado</span>
+    </div>
 
-              </tbody>
-            </table>
+
   </div>
 </body>
 </html>
