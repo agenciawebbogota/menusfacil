@@ -24,13 +24,13 @@ class MenuController extends Controller
 		$user = $request->user();
 		if(Auth::id()){
 			$menu = menu::create([
-			            'user_id' => Auth::id(),
-			            'nombre' => $request->input('nombre'),
-			            'descripcion' => $request->input('descripcion'),
-			            'precio' => $request->input('precio'),
-			            'adicional' => $request->input('adicional'),
-			            'estado'=>$request->input('estado')
-			        ]);
+	            'user_id' => Auth::id(),
+	            'nombre' => $request->input('nombre'),
+	            'descripcion' => $request->input('descripcion'),
+	            'precio' => $request->input('precio'),
+	            'adicional' => $request->input('adicional'),
+	            'estado'=>$request->input('estado')
+	        ]);
 	        return $menu;
 		}else{
 			return 'No tienes acceso';
@@ -74,7 +74,6 @@ class MenuController extends Controller
 			'activo' => false,
 			'estado' => false,
 		]);
-
 		return 'Se ha eliminado el Menu.';
     }
 
