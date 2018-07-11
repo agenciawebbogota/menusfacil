@@ -143,7 +143,7 @@ new Vue({
 		},
 		updateEstado:function(menu){
 			// Preguntar antes de eliminar
-			alertify.confirm('Confirm Title', 'Confirm Message',()=>{
+			alertify.confirm('Confirmación', '¿ Seguro que quieres borrar el Menú ?',()=>{
 				// Acción si es confirmada
 				let url = '/menus/actualizar/estado';
 				axios.put(url, menu).then((resp)=>{
@@ -151,11 +151,11 @@ new Vue({
 					this.getMenus()
 				}).catch((error)=> {
 				    console.log(error);
-				});
+				})
 			},()=>{
 				// Acción si es cancelada
 				M.toast({html: 'Hemos cancelado tu solicitud.', outDuration: 1000})
-			});
+			}).set('labels',{ok:'Si',cancel:'No'});;
 		},
 		llenarModal:function(menu){
 			this.update = menu
