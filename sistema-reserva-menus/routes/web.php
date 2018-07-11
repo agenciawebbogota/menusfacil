@@ -23,7 +23,9 @@ Route::post('/menus/crear', 'MenuController@create')->middleware('auth');
 Route::PUT('/menus/actualizar', 'MenuController@update')->middleware('auth');
 Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middleware('auth');
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
+// Implementar el guardado de los pedidos
+// Route::post('pedido/crear', 'PedidoController@crearPedido');
 
-// ->middleware('auth');
+
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
 

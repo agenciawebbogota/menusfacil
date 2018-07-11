@@ -21,8 +21,8 @@ class MenuController extends Controller
     }
 
     public function create(Request $request){
-		// $user = $request->user();
-		// if(Auth::id()){
+		$user = $request->user();
+		if(Auth::id()){
 			$menu = menu::create([
 			            'user_id' => Auth::id(),
 			            'nombre' => $request->input('nombre'),
@@ -32,9 +32,9 @@ class MenuController extends Controller
 			            'estado'=>$request->input('estado')
 			        ]);
 	        return $menu;
-		// }else{
-		// 	return 'No tienes acceso';
-		// }
+		}else{
+			return 'No tienes acceso';
+		}
     }
 
     public function update(Request $request){

@@ -52,8 +52,7 @@ new Vue({
 			NumeroDeMes=LaFecha.getMonth();
 			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
 			this.fecha = FechaCompleta;
-		} , 1000);
-  		
+		} , 1000);	
 	},
 	methods:{
 		getMenus:function(){
@@ -140,7 +139,6 @@ new Vue({
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
 				M.toast({html:resp.data, outDuration:200});
-				// console.log(resp)
 			})
 		},
 		updateEstado:function(menu){
