@@ -23,7 +23,7 @@ class PedidoController extends Controller
     	$menus = Menu::all();
     	// return $menus;
 
-    	return view('index',[
+    	return view('welcome',[
     		'menus' => $menus,
     	]);
     }
