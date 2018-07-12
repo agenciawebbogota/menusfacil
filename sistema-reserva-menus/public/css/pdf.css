@@ -46,8 +46,8 @@ body{
 	float: left;
 }
 .imagen-precio{
-	margin-top: -40;
-	margin-left: 70;
+	margin-top: -47;
+	margin-left: 75;
 }
 .price{
 	font-size: 30px;
@@ -55,8 +55,9 @@ body{
 	float: right;
 	margin-top: -50;
 }
-.estatus{
+.menu-estatus{
 	color:#fff;
-	text-align: left;
 	font-size: 18px;
+	float: none;
+	margin-top: -40;
 }

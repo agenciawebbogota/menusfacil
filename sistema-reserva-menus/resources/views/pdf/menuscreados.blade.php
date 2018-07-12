@@ -10,6 +10,9 @@
 </head>
 <body>
   <div class="container">
+    <div class="logo-pdf">
+      <img src="img/logo.png" alt="">
+    </div>
     <div class="titulo-pdf">
     	<h2>Menus</h2>
     </div>
@@ -28,12 +31,8 @@
     <div class="precio">
       <h4>Precio</h4><img class="imagen-precio" src="img/image1.png">
       <span class="price">$10.000</span>
+      <h4 class="menu-estatus">Publicado</h4>
     </div>
-    <div class="estatus">
-      <span>Publicado</span>
-    </div>
-
-
   </div>
 </body>
 </html>
