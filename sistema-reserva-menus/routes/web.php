@@ -30,6 +30,8 @@ Route::get('pedido/menus', 'PedidoController@getMenusDia');
 Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
 Route::get('pedidos/', 'PedidoController@get');
 Route::post('/pedidos/crear', 'PedidoController@create');
+Route::get('/descarga/pedidos', 'PedidoController@pdf')->middleware('auth');
+// /descarga/pedidos
 // Route::post('pedido/crear', 'PedidoController@crearPedido');
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
 

@@ -5,6 +5,7 @@ new Vue({
 		total:0,
 		fecha:'',
 		estado:'',
+		pedidos:[],
 		add:{
 			nombre:'',
 			descripcion:'',
@@ -25,12 +26,12 @@ new Vue({
 		}
 	},
 	mounted:function(){
-	},
-	created:function(){
 		ref.on('value', (data) => {
-		  // console.log(data.val())
+			console.log(data.val())
 		  this.getPedidos()
 		});
+	},
+	created:function(){
 		this.getMenus()
 		document.addEventListener('DOMContentLoaded', function() {
 		  // Navegaci{on}
@@ -165,7 +166,23 @@ new Vue({
 			this.update = menu
 		},
 		getPedidos:function(){
-			console.log('Imprimir los pedidos')
+			// console.log('Imprimir los pedidos')
+			this.pedidos = []
+
+			let url = 'pedidos/'
+			axios.get(url)
+			  .then((resp) =>{
+			    resp.data.menus.map((menu)=>{
+			    	 this.pedidos.push(menu)
+			    })
+
+			    console.log(this.pedidos)
+
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
 		},
 	}
 })

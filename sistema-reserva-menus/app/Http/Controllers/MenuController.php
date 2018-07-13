@@ -80,7 +80,7 @@ class MenuController extends Controller
 
     	$view =  \View::make('pdf.menuscreados', compact('menus'))->render();
         $pdf = \App::make('dompdf.wrapper');
-        $pdf->loadHTML($view)->setPaper('a4', 'landscape');
+        $pdf->loadHTML($view);
         return $pdf->stream('Nombre_Personalizado_PDF'); 
     }
 

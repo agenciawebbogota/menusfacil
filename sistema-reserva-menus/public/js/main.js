@@ -19,7 +19,7 @@ new Vue({
 		}
 	},
 	created:function(){	
-		this.notificacion()
+		// this.notificacion()
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
@@ -41,6 +41,7 @@ new Vue({
 				this.noti.telefono = ''
 				this.noti.nombre = ''
 			}else{
+			// let self = this;
 				axios.post('/pedidos/crear',this.pedido)
 				  .then((resp)=>{
 				  	this.noti.correo = ''
@@ -49,8 +50,8 @@ new Vue({
 					this.pedido.correo = ''
 					this.pedido.telefono = ''
 					this.pedido.nombre = ''
+				  	this.notificacion()
 				  	M.toast({html: 'Hemos generado su orden', outDuration:1000});
-				  	// this.notificación
 				  })
 				  .catch(function (error) {
 				    M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
