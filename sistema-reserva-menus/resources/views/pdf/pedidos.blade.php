@@ -9,14 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-
-<body class="vista-usuario">
+<body>
   <div class="container">
     <div class="logo-pdf">
       <img src="img/logo.png" alt="">
     </div>
     <div class="titulo-menus-solicitados">
-      <h2>Menus Solicitados Hoy</h2>
+      <h2>Pedidos de Hoy</h2>
     </div>
     <table class="datos-seleccion-usuarios">
       <thead>
@@ -31,36 +30,188 @@
       </thead>
       <tbody>
         <tr>
-          <td>cell1_1</td>
-          <td>cell2_1</td>
-          <td>cell3_1</td>
-          <td>cell4_1</td>
-          <td>cell5_1</td>
-          <td>cell6_1</td>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
         </tr>
         <tr>
-          <td>cell1_2</td>
-          <td>cell2_2</td>
-          <td>cell3_2</td>
-          <td>cell4_2</td>
-          <td>cell5_2</td>
-          <td>cell6_2</td>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
         </tr>
         <tr>
-          <td>cell1_3</td>
-          <td>cell2_3</td>
-          <td>cell3_3</td>
-          <td>cell4_3</td>
-          <td>cell5_3</td>
-          <td>cell6_3</td>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
         </tr>
         <tr>
-          <td>cell1_4</td>
-          <td>cell2_4</td>
-          <td>cell3_4</td>
-          <td>cell4_4</td>
-          <td>cell5_4</td>
-          <td>cell6_4</td>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
+        </tr>
+        <tr>
+          <td>Pablo Martinez</td>
+          <td>Desarrollo de Proyectos</td>
+          <td>3168785601</td>
+          <td>pablomart81@gmail.com</td>
+          <td>Menú del día No. 1</td>
+          <td>Papas fritas</td>
         </tr>
       </tbody>
     </table>
