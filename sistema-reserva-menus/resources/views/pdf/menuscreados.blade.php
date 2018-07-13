@@ -44,13 +44,13 @@
     <div class="titulo-menus-solicitados">
       <h2>Menus Solicitados Hoy</h2>
     </div>
-    <table class="steelBlueCols">
+    <table class="datos-seleccion-usuarios">
       <thead>
         <tr>
-          <th>Nombre</th>
+          <th>Nombre Usuario</th>
           <th>Dependencia</th>
           <th>Teléfono</th>
-          <th>Email</th>
+          <th>Correo electrónico</th>
           <th>Menú Seleccionado</th>
           <th>Adicional</th>
         </tr>
