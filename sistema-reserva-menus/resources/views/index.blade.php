@@ -91,11 +91,7 @@
 				</div>
 			</div>
 			<div>
-
 			</div>
-			<pre>
-				@{{ $data.pedido.menusPedido }}
-			</pre>
 			<div class="container">
 				<div class="row">
 			        <div class="input-field col l8 offset-l2 s12 ">
@@ -121,11 +117,9 @@
 					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
-		      <br><br><br><br><br>
-		      {{-- @csrf --}}
+
 		</form>
 	</div>
-	<!-- && (pedido.nombre && pedido.telefono && pedido.correo) -->
 
 
 
@@ -152,7 +146,9 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/axios.min.js"></script>
     <script src="js2/materialize.min.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>

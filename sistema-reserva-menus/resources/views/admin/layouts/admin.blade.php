@@ -66,6 +66,8 @@
         </div>
      </div>
   </footer>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
   <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
   <script type="text/javascript">
