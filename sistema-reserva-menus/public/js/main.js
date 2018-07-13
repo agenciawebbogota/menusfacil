@@ -27,10 +27,10 @@ new Vue({
 	    storageBucket: "enredes-f8244.appspot.com",
 	    messagingSenderId: "870210169558"
 	  };
-	  firebase.initializeApp(config);
-	  let db = firebase.database();
-	  let ref = db.ref('restaurante/');
-				  	this.notificación
+		firebase.initializeApp(config);
+		let db = firebase.database();
+		let ref = db.ref('restaurante/');
+		this.notificacion
 
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
@@ -78,8 +78,10 @@ new Vue({
 		      return false;
 		    }	
 		},
-		notificación(){
-			ref.update({nuevoPedido:0000});
+		notificacion:function(){
+			ref.set({
+				nuevoPedido:'asndoiunj'
+			});
 		}
 	}
 })
