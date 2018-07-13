@@ -18,26 +18,13 @@ new Vue({
 			telefono:'',
 		}
 	},
-	created:function(){
-	  var config = {
-	    apiKey: "AIzaSyCBmTdh3gfy4SRrNxDXOmV53rpk43NtQ90",
-	    authDomain: "enredes-f8244.firebaseapp.com",
-	    databaseURL: "https://enredes-f8244.firebaseio.com",
-	    projectId: "enredes-f8244",
-	    storageBucket: "enredes-f8244.appspot.com",
-	    messagingSenderId: "870210169558"
-	  };
-		firebase.initializeApp(config);
-		let db = firebase.database();
-		let ref = db.ref('restaurante/');
-		this.notificacion
-
+	created:function(){	
+		this.notificacion()
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
     		let slider = M.Carousel.init(document.querySelector('.carousel'), {fullWidth: false,indicators: false});
 		});
-
 	},
 	methods:{
 		enviarPedido:function(){
@@ -80,7 +67,7 @@ new Vue({
 		},
 		notificacion:function(){
 			ref.set({
-				nuevoPedido:'asndoiunj'
+				nuevoPedido:Math.random()
 			});
 		}
 	}

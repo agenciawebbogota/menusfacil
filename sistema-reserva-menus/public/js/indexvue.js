@@ -27,6 +27,10 @@ new Vue({
 	mounted:function(){
 	},
 	created:function(){
+		ref.on('value', (data) => {
+		  // console.log(data.val())
+		  this.getPedidos()
+		});
 		this.getMenus()
 		document.addEventListener('DOMContentLoaded', function() {
 		  // Navegaci{on}
@@ -159,6 +163,9 @@ new Vue({
 		},
 		llenarModal:function(menu){
 			this.update = menu
-		}
+		},
+		getPedidos:function(){
+			console.log('Imprimir los pedidos')
+		},
 	}
 })
