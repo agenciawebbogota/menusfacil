@@ -152,6 +152,7 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script type="text/javascript" src="js/axios.min.js"></script>
     <script src="js2/materialize.min.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>

@@ -19,8 +19,19 @@ new Vue({
 		}
 	},
 	created:function(){
-		// this.getMenus()
-		// this.getAdicionales()
+	  var config = {
+	    apiKey: "AIzaSyCBmTdh3gfy4SRrNxDXOmV53rpk43NtQ90",
+	    authDomain: "enredes-f8244.firebaseapp.com",
+	    databaseURL: "https://enredes-f8244.firebaseio.com",
+	    projectId: "enredes-f8244",
+	    storageBucket: "enredes-f8244.appspot.com",
+	    messagingSenderId: "870210169558"
+	  };
+	  firebase.initializeApp(config);
+	  let db = firebase.database();
+	  let ref = db.ref('restaurante/');
+				  	this.notificación
+
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
@@ -52,6 +63,7 @@ new Vue({
 					this.pedido.telefono = ''
 					this.pedido.nombre = ''
 				  	M.toast({html: 'Hemos generado su orden', outDuration:1000});
+				  	// this.notificación
 				  })
 				  .catch(function (error) {
 				    M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
@@ -66,5 +78,8 @@ new Vue({
 		      return false;
 		    }	
 		},
+		notificación(){
+			ref.update({nuevoPedido:0000});
+		}
 	}
 })
