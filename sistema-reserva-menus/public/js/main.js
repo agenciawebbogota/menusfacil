@@ -6,8 +6,8 @@ new Vue({
 		adicionales:'',
 		terminaste:false,
 		pedido:{
-			menusPedido:'',
-			adicionalesPedido:'',
+			menuPedido:'',
+			adicionalPedido:'',
 			nombre:'',
 			correo:'',
 			telefono:'',
@@ -29,27 +29,6 @@ new Vue({
 
 	},
 	methods:{
-		// getMenus:function(){
-		// 	axios.get('pedido/menus')
-		// 	  .then((resp) =>{
-		// 	  	this.menus = resp.data
-		// 	  })
-		// 	  .catch(function (error) {
-		// 	    // handle error
-		// 	    console.log(error);
-		// 	  })
-		// },
-		// getAdicionales(){
-		// 	axios.get('pedido/adicionales')
-		// 	  .then((resp) =>{
-		// 	  	this.adicionales = resp.data
-		// 	    console.log(this.adicionales)
-		// 	  })
-		// 	  .catch(function (error) {
-		// 	    // handle error
-		// 	    console.log(error);
-		// 	  })
-		// },
 		enviarPedido:function(){
 			if (this.pedido.nombre.length < 4){
 				this.noti.nombre = 'El nombre de ser igual o superior a 4 caracteres.'
@@ -64,14 +43,19 @@ new Vue({
 				this.noti.telefono = ''
 				this.noti.nombre = ''
 			}else{
-				console.log('enviar el menu')
-				// document.getElementById('pedido').reset()
-				this.noti.correo = ''
-				this.noti.telefono = ''
-				this.noti.nombre = ''
-				this.pedido.correo = ''
-				this.pedido.telefono = ''
-				this.pedido.nombre = ''
+				axios.post('/pedidos/crear',this.pedido)
+				  .then((resp)=>{
+				  	this.noti.correo = ''
+					this.noti.telefono = ''
+					this.noti.nombre = ''
+					this.pedido.correo = ''
+					this.pedido.telefono = ''
+					this.pedido.nombre = ''
+				  	M.toast({html: 'Hemos generado su orden', outDuration:1000});
+				  })
+				  .catch(function (error) {
+				    M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
+				  });	
 			}
 		},
 		validarCorreo:function(texto) {

@@ -28,6 +28,8 @@ Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
 // Implementar el guardado de los pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');
 Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
+Route::get('pedidos/', 'PedidoController@get');
+Route::post('/pedidos/crear', 'PedidoController@create');
 // Route::post('pedido/crear', 'PedidoController@crearPedido');
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
 

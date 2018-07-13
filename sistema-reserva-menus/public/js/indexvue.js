@@ -98,7 +98,7 @@ new Vue({
 				  .catch(function (error) {
 				    console.log(error);
 				  });
-				}
+			}
 		},
 		updateMenu:function(menu, q){
 			// Ajustar para que actualice el estado

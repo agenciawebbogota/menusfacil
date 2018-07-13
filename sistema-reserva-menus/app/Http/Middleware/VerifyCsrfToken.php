@@ -14,6 +14,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         'menus/crear',
         'menus/actualizar/',
-        '/menus/actualizar/estado'
+        '/menus/actualizar/estado',
+        'pedidos/crear',
     ];
 }

@@ -45,9 +45,6 @@
 						    </div>
 						@endif
 						@endforeach
-
-
-
 					</div>
 				</div>
 			</div>
@@ -60,7 +57,7 @@
 					        	<p>Selecciona ti pedido</p>
 					        </li>
 					        <div class="input-field col s12">
-							    <select class="menuSelect" v-model="pedido.menusPedido">
+							    <select class="menuSelect" v-model="pedido.menuPedido">
 							      <option value="" disabled selected>Toma uno</option>
 								    @foreach ($menus as $menu)
 									@if ($menu->adicional == 'NO' AND $menu->estado == 1)
@@ -79,7 +76,7 @@
 					        	<p>Selecciona algo adicional</p>
 					        </li>
 					        <div class="input-field col s12">
-							    <select class="adicionalSelect" v-model="pedido.adicionalesPedido">
+							    <select class="adicionalSelect" v-model="pedido.adicionalPedido">
 							      <option value="" disabled selected>Toma uno</option>
 									@foreach ($menus as $menu)
 									@if ($menu->adicional == 'SI' AND $menu->estado == 1)
@@ -120,11 +117,12 @@
 			          <label for="correo">Correo</label>
 			        </div>
 					<button
-					v-if="(pedido.adicionalesPedido.length >0 || pedido.menusPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
-					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campo</button>
+					v-if="(pedido.adicionalPedido.length >0 || pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
 		      <br><br><br><br><br>
+		      {{-- @csrf --}}
 		</form>
 	</div>
 	<!-- && (pedido.nombre && pedido.telefono && pedido.correo) -->
