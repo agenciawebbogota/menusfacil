@@ -13,7 +13,7 @@
   <div class="container">
     <div class="logo-pdf">
       <img src="img/logo.png">
-      <h2 class="titulo-menus-solicitados">Pedidos de Hoy</h2>
+      <h2 class="pedidos-hoy">Pedidos de Hoy</h2>
     </div>
     <table class="datos-seleccion-usuarios">
       <thead>

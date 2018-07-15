@@ -17,26 +17,33 @@
     	<h2>Menus</h2>
     </div>
 
-
-
-
-    <div class="titulo-menu-pdf">
-      <h3>Menú No. 1</h3>
-    </div>
-    <div class="titulo-desc">
-      <h4>Descripción</h4>
-    </div>
-    <div class="desc">
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum nisi eget pellentesque
-      rutrum. Pellentesque venenatis egestas porttitor. Nulla nec dignissim neque, a viverra neque.
-      Morbi laoreet id orci at mattis. Nullam maximus finibus velit. Donec quis pellentesque tortor.
-      Sed hendrerit blandit tellus in pretium.</span>
-    </div>
-    <div class="precio">
-      <h4>Precio</h4><img class="imagen-precio" src="img/image1.png">
-      <span class="price">$10.000</span>
-      <h4 class="menu-estatus">Publicado</h4>
-    </div>
+    <table class="datos-menus-creados">
+      <thead>
+        <tr>
+          <th>Nombre del Menú</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Adicional</th>
+          <th>Publicado</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+              <td>Menú No. 1</td>
+              <td>Descripción corta del menú publicado</td>
+              <td>$10.000</td>
+              <td>NO</td>
+              <td>SI</td>
+            </tr>
+            <tr>
+              <td>Menú No. 1</td>
+              <td>Descripción corta del menú publicado</td>
+              <td>$10.000</td>
+              <td>NO</td>
+              <td>SI</td>
+            </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 

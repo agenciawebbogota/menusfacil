@@ -1,4 +1,4 @@
-/* PDF Menus Creados */
+/* PDF Menús Solicitados - Pedidos HOY */
 html{
 	margin: 0;
 }
@@ -14,58 +14,6 @@ body{
 	margin-left: 80px;
 	padding-top: 60px;
 }
-.titulo-pdf h2{
-	color:#e88a10;
-	font-size: 35px;
-	font-weight: 800;
-	text-transform: uppercase;
-	text-align: center;
-}
-.titulo-menu-pdf{
-	color:#fff;
-	font-size: 28px;
-	/* text-align: left; */
-	/* float: left; */
-}
-.titulo-desc{
-	color: #e88a10;
-	font-size: 22px;
-	font-weight: 400;
-	letter-spacing: 0.1;
-	margin-top: -40;
-}
-.desc{
-	color: #fff;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1;
-	margin-top: -20;
-}
-.precio{
-	color:#e88a10;
-	font-size: 23px;
-	font-weight: normal;
-	margin-top: -10px;
-	float: left;
-}
-.imagen-precio{
-	margin-top: -47;
-	margin-left: 75;
-}
-.price{
-	font-size: 30px;
-	color:#fff;
-	float: right;
-	margin-top: -50;
-}
-.menu-estatus{
-	color:#fff;
-	font-size: 18px;
-	float: none;
-	margin-top: -40;
-}
-
-/* PDF Menús Solicitados */
 .logo-pdf{
 	margin-top: -30;
 	width: 800px;
@@ -73,20 +21,18 @@ body{
 }
 
 .logo-pdf img{
-	width:348px;
-	height:90px;
+	width:130px;
+	height:131px;
 	float: left;
+	margin-top: -30;
 }
 
-/* .titulo-menus-solicitados{
-	width: 1400px;
-} */
-.titulo-menus-solicitados{
+.pedidos-hoy{
 	color:#e88a10;
 	font-size: 35px;
 	font-weight: 800;
 	text-transform: uppercase;
-	float: right;
+	text-align: center;
 }
 
 table.datos-seleccion-usuarios {
@@ -95,7 +41,7 @@ table.datos-seleccion-usuarios {
   width: 1000px;
   text-align: center;
   border-collapse: collapse;
-	margin-left: -20;
+	margin-left: -50;
 	margin-bottom: 50px;
 }
 table.datos-seleccion-usuarios td, table.datos-seleccion-usuarios th {

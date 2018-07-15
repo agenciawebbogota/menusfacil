@@ -14,3 +14,59 @@ body{
 	margin-left: 80px;
 	padding-top: 60px;
 }
+.logo-pdf img{
+	width:130px;
+	height:131px;
+	float: left;
+	margin-top: -30;
+}
+table.datos-menus-creados {
+  border: 2px solid #f08b2d;
+  background-color: #ffffff;
+  width: 650px;
+  text-align: center;
+  border-collapse: collapse;
+	margin-left: -20;
+	margin-bottom: 50px;
+}
+table.datos-menus-creados td, table.datos-menus-creados th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.datos-menus-creados tbody td {
+  color: #2a2730;
+	font-size: 11px;
+	font-weight: 600;
+}
+table.datos-menus-creados td:nth-child(even) {
+  background: #ffffff;
+}
+table.datos-menus-creados thead {
+  background: #2a2730;
+  border-bottom: 2px solid #ee781b;
+	text-transform: uppercase;
+}
+table.datos-menus-creados thead th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #ee781b;
+}
+table.datos-menus-creados thead th:first-child {
+  border-left: none;
+}
+
+table.datos-menus-creados tfoot td {
+  font-size: 13px;
+}
+table.datos-menus-creados tfoot .links {
+  text-align: right;
+}
+table.datos-menus-creados tfoot .links a{
+  display: inline-block;
+  background: #ffffff;
+  color: #2a2730;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
