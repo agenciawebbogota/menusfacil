@@ -38,24 +38,19 @@ table.datos-menus-creados td, table.datos-menus-creados th {
   padding: 5px 10px;
 }
 table.datos-menus-creados tbody td {
-  color: #2a2730;
-	font-size: 11px;
+  font-size: 11px;
 	font-weight: 600;
 }
 table.datos-menus-creados td:nth-child(even) {
   background: #ffffff;
 }
 table.datos-menus-creados thead {
-  background: #2a2730;
-  border-bottom: 2px solid #ee781b;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 table.datos-menus-creados thead th {
   font-size: 12px;
   font-weight: 600;
-  color: #FFFFFF;
   text-align: center;
-  border-left: 2px solid #ee781b;
 }
 table.datos-menus-creados thead th:first-child {
   border-left: none;
@@ -66,11 +61,4 @@ table.datos-menus-creados tfoot td {
 }
 table.datos-menus-creados tfoot .links {
   text-align: right;
-}
-table.datos-menus-creados tfoot .links a{
-  display: inline-block;
-  background: #ffffff;
-  color: #2a2730;
-  padding: 2px 8px;
-  border-radius: 5px;
 }

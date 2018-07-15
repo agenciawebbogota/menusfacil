@@ -8,17 +8,16 @@
   <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body style="background-color: #2b2831">
+<body>
   <div class="container">
     <div class="logo-pdf">
-      <img src="img/logo.png" alt="">
+      <img src="img/logo2.png" alt="">
     </div>
     <div class="titulo-pdf">
-    	<h2 style="color:#ffffff">Menus Disponibles</h2>
+    	<h2 style="color:#2a2730">Menus Disponibles</h2>
     </div>
-
     <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff">
-      <thead>
+      <thead style="background: #2a2730;border-bottom: 2px solid #66181a;color: #ffffff;">
         <tr>
           <th>Nombre del Menú</th>
           <th>Descripción</th>
@@ -27,7 +26,7 @@
           <th>Publicado</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="color: #2a2730">
             <tr>
               <td>Menú No. 1</td>
               <td>Descripción corta del menú publicado</td>

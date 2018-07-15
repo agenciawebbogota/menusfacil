@@ -12,12 +12,12 @@
 <body>
   <div class="container">
     <div class="logo-pdf">
-      <img src="img/logo.png">
-      <h2 class="pedidos-hoy">Pedidos de Hoy</h2>
+      <img src="img/logo2.png">
+      <h2 class="pedidos-hoy" style="color:#2a2730">Pedidos de Hoy</h2>
     </div>
-    <table class="datos-seleccion-usuarios">
-      <thead>
-        <tr>
+    <table class="datos-seleccion-usuarios" style="border: 2px solid #66181a;background-color: #ffffff;">
+      <thead style="background: #2a2730;border-bottom: 2px solid #ee781b;">
+        <tr style="border-left: 2px solid #ee781b">
           <th>Nombre Usuario</th>
           <th>Dirección</th>
           <th>Teléfono</th>
@@ -26,7 +26,7 @@
           <th>Oservaciones</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="color: #2a2730">
         @foreach ($menus as $menu)
             <tr>
               <td>{{$menu->nombre}}</td>
