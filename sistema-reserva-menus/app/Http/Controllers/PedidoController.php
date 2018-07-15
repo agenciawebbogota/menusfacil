@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Pedido;
 use App\Menu;
@@ -45,7 +46,7 @@ class PedidoController extends Controller
         return [
             'menus' => $menus,
             'adicional' => $adicional
-        ];       
+        ];
     }
 
 
@@ -53,38 +54,34 @@ class PedidoController extends Controller
         $pedido = Pedido::create([
                 'nombre' => $request->input('nombre'),
                 'correo' => $request->input('correo'),
-                'telefono' => $request->input('telefono'),
+								'telefono' => $request->input('telefono'),
+								'direccion' => $request->input('direccion'),
+                'observaciones' => $request->input('observaciones'),
                 'adicional_pedido' => $request->input('adicionalPedido'),
                 'menu_pedido'=>$request->input('menuPedido')
             ]);
             return $pedido;
     }
 
-    public function pdf( ){
+    public function pdf(){
          $menus = DB::table('pedidos')
             ->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
-            ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
-            ->orderBy('created_at', 'ASC')
-            // ->limit(10)
+						->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+            ->select('pedidos.*', 'menus.nombre as nombre_menu', 'menus.descripcion', 'menus.precio')
+            ->orderBy('id', 'ASC')
             ->get();
-        $adicional = DB::table('pedidos')
+        $adicionales = DB::table('pedidos')
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
-            ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
-            ->orderBy('created_at', 'ASC')
-            // ->limit(10)
+						->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+            ->select('pedidos.*', 'menus.nombre as nombre_adicional', 'menus.descripcion', 'menus.precio')
+            ->orderBy('id', 'ASC')
             ->get();
-
-        $data = [
-            'menus' => $menus,
-            'adicional' => $adicional
-        ];    
-
-        $view =  \View::make('pdf.pedidos', compact('data'))->render();
+        $view =  \View::make('pdf.pedidos', compact('menus', 'adicionales'))->render();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view)->setPaper('a4', 'landscape');
         return $pdf->stream('Nombre_Personalizado_PDF');
 
     }
 
-    
+
 }

@@ -1,0 +1,16 @@
+/* PDF Menus Creados */
+html{
+	margin: 0;
+}
+body{
+	background-color: #2b2831;
+	width: 1400px;
+	padding: 30 60 20 10;
+	height: 2400px;
+}
+.container{
+	font-family: 'Roboto', sans-serif;
+	width: 700px;
+	margin-left: 80px;
+	padding-top: 60px;
+}

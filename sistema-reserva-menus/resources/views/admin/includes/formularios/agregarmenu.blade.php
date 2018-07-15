@@ -34,7 +34,6 @@
 					</label>
 				</div>
 			</div>
-			@{{ add.adicional }}
 		</div>
 	</div>
 	<div id="input-switches" class="section">
@@ -56,5 +55,3 @@
 		<i class="mdi-content-send right"></i> </button>
 	</div>
 </form>
-
-

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
 	protected $fillable = [
-        'nombre', 'correo', 'telefono', 'menu_pedido', 'adicional_pedido',
+        'nombre', 'correo', 'telefono', 'menu_pedido', 'adicional_pedido', 'direccion', 'observaciones' 
     ];
-   
+
 
 
 
@@ -20,5 +20,5 @@ class Pedido extends Model
    // public function menus()
    //  {
    //      return $this->belongsToMany('App\Menu', 'menu_pedido', 'id');
-   //  } 
+   //  }
 }

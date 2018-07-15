@@ -16,10 +16,10 @@
 		    </div>
 		  </nav>
 		</div>
-		<div style="position: relative;padding-top:30px;">		
+		<div style="position: relative;padding-top:30px;">
 		</div>
 		<form @submit.prevent="enviarPedido()" id="pedido">
-			
+
 			<div class="row">
 				<div class="col l8 s12 m10 offset-l2 offset-m1">
 					<div class="carousel carousel-slider center">
@@ -112,8 +112,22 @@
 			          <span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
 			          <label for="correo">Correo</label>
 			        </div>
+							<div class="input-field col l8 offset-l2 s12">
+			          <i class="material-icons prefix">edit_location</i>
+			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
+			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
+			          <label for="direccion">Dirección</label>
+			        </div>
+							<div class="input-field col l8 offset-l2 s12">
+			          <i class="material-icons prefix">announcement
+</i>
+			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
+			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
+			          <label for="observaciones">Observaciones</label>
+			        </div>
+
 					<button
-					v-if="(pedido.adicionalPedido.length >0 || pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					v-if="(pedido.adicionalPedido.length >0 || pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>

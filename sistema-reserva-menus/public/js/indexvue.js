@@ -27,7 +27,6 @@ new Vue({
 	},
 	mounted:function(){
 		ref.on('value', (data) => {
-			console.log(data.val())
 		  this.getPedidos()
 		});
 	},
@@ -57,7 +56,7 @@ new Vue({
 			NumeroDeMes=LaFecha.getMonth();
 			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
 			this.fecha = FechaCompleta;
-		} , 1000);	
+		} , 1000);
 	},
 	methods:{
 		getMenus:function(){
@@ -67,7 +66,6 @@ new Vue({
 			    this.total = response.data.total
 			  })
 			  .catch(function (error) {
-			    // handle error
 			    console.log(error);
 			  })
 		},
@@ -175,8 +173,6 @@ new Vue({
 			    resp.data.menus.map((menu)=>{
 			    	 this.pedidos.push(menu)
 			    })
-
-			    console.log(this.pedidos)
 
 			  })
 			  .catch(function (error) {
