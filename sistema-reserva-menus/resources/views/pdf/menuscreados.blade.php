@@ -8,16 +8,16 @@
   <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #2b2831">
   <div class="container">
     <div class="logo-pdf">
       <img src="img/logo.png" alt="">
     </div>
     <div class="titulo-pdf">
-    	<h2>Menus</h2>
+    	<h2 style="color:#ffffff">Menus Disponibles</h2>
     </div>
 
-    <table class="datos-menus-creados">
+    <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff">
       <thead>
         <tr>
           <th>Nombre del Menú</th>
