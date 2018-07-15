@@ -58,7 +58,7 @@ table.datos-seleccion-usuarios thead th {
   font-size: 12px;
   font-weight: 600;
   color: #FFFFFF;
-  text-align: center;  
+  text-align: center;
 }
 table.datos-seleccion-usuarios thead th:first-child {
   border-left: none;
@@ -69,11 +69,4 @@ table.datos-seleccion-usuarios tfoot td {
 }
 table.datos-seleccion-usuarios tfoot .links {
   text-align: right;
-}
-table.datos-seleccion-usuarios tfoot .links a{
-  display: inline-block;
-  background: #ffffff;
-  color: #2a2730;
-  padding: 2px 8px;
-  border-radius: 5px;
 }
