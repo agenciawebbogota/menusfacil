@@ -32,12 +32,14 @@ class PedidoController extends Controller
     public function get(){
         $menus = DB::table('pedidos')
             ->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
+            ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
             ->orderBy('created_at', 'ASC')
             ->limit(10)
             ->get();
         $adicional = DB::table('pedidos')
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
+            ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
             ->orderBy('created_at', 'ASC')
             ->limit(10)
@@ -54,8 +56,8 @@ class PedidoController extends Controller
         $pedido = Pedido::create([
                 'nombre' => $request->input('nombre'),
                 'correo' => $request->input('correo'),
-								'telefono' => $request->input('telefono'),
-								'direccion' => $request->input('direccion'),
+				'telefono' => $request->input('telefono'),
+				'direccion' => $request->input('direccion'),
                 'observaciones' => $request->input('observaciones'),
                 'adicional_pedido' => $request->input('adicionalPedido'),
                 'menu_pedido'=>$request->input('menuPedido')
@@ -66,13 +68,13 @@ class PedidoController extends Controller
     public function pdf(){
          $menus = DB::table('pedidos')
             ->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
-						->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+			->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_menu', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'ASC')
             ->get();
         $adicionales = DB::table('pedidos')
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
-						->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+			->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_adicional', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'ASC')
             ->get();
