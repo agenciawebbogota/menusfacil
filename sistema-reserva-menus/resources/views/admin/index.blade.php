@@ -39,8 +39,8 @@
               <div class="col s12 m6 l3">
                   <div class="card">
                       <div class="card-content white-text" style="background-image:url('img/card-background.jpg')">
-                          <p style="color:#f09537;font-size:20px"><i class="mdi-social-group-add"></i> Menus solicitados hoy</p>
-                          <h4 class="card-stats-number">566</h4>
+                          <p style="color:#f09537;font-size:20px"><i class="mdi-social-group-add"></i>Solicitados hoy</p>
+                          <h4 class="card-stats-number" v-model="pedidos">@{{pedidos.length}}</h4>
                           <p class="card-stats-compare"><i class="material-icons tiny">timer</i> <span class="green-text text-lighten-5">@{{ fecha }}</span>
                           </p>
                       </div>
