@@ -12,7 +12,7 @@
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
-		      <a href="#" class="brand-logo center">Nombre de la APP</a>
+		      <a href="#" class="brand-logo center">APP</a>
 		    </div>
 		  </nav>
 		</div>
@@ -28,7 +28,7 @@
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 						    <div class="carousel-item grey lighten-5 black-text"  href="#two!">
 						      <div class="row">
-						      	<div class="col l8 offset-l2 card">
+						      	<div class="col s12 l8 offset-l2 card" style="background: linear-gradient(#ee771a, #ee771a, #f5cf6e);">
 						      		<div class="card-title">
 						      			<h4>Menu 1</h4>
 						      		</div>
@@ -94,31 +94,31 @@
 			</div>
 			<div class="container">
 				<div class="row">
-			        <div class="input-field col l8 offset-l2 s12 ">
+			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2 ">
 			          <i class="material-icons prefix">account_circle</i>
 			          <input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
 			          <span v-if="noti.nombre" class="red-text text-darken-2">@{{noti.nombre}}</span>
 			          <label for="nombre">Nombre</label>
 			        </div>
-			        <div class="input-field col l8 offset-l2 s12">
+			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">phone</i>
 			          <input id="telefono" type="number" v-model="pedido.telefono">
 			          <span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
 			          <label for="telefono">Teléfono</label>
 			        </div>
-			        <div class="input-field col l8 offset-l2 s12">
+			        <div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
 			          <i class="material-icons prefix">email</i>
 			          <input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
 			          <span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
 			          <label for="correo">Correo</label>
 			        </div>
-							<div class="input-field col l8 offset-l2 s12">
+					<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
 			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
 			          <label for="direccion">Dirección</label>
 			        </div>
-							<div class="input-field col l8 offset-l2 s12">
+							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">announcement
 </i>
 			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">

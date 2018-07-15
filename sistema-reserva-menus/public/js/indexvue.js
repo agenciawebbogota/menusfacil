@@ -27,13 +27,14 @@ new Vue({
 	},
 	mounted:function(){
 		ref.on('value', (data) => {
+			console.log(data)
 		  this.getPedidos()
 		});
 	},
 	created:function(){
 		this.getMenus()
 		document.addEventListener('DOMContentLoaded', function() {
-		  // Navegaci{on}
+		  // Navegación
 			let elems = document.querySelectorAll('.tooltipped');
 			let tooltip = M.Tooltip.init(elems, {});
 			let sidenav = document.querySelectorAll('.sidenav');
@@ -46,7 +47,7 @@ new Vue({
 		setInterval(()=>{
 			let LaFecha=new Date();
 			let Mes=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-			let diasem=new Array('domingo','lunes','martes','miercoles','jueves','viernes','sabado');
+			let diasem=new Array('Dom.','Lun.','Mar.','Mier.','Jue.','vie.','Sab.');
 			let diasemana=LaFecha.getDay();
 			let FechaCompleta="";
 			let NumeroDeMes="";
@@ -164,15 +165,14 @@ new Vue({
 			this.update = menu
 		},
 		getPedidos:function(){
-			// console.log('Imprimir los pedidos')
 			this.pedidos = []
-
 			let url = 'pedidos/'
 			axios.get(url)
 			  .then((resp) =>{
 			    resp.data.menus.map((menu)=>{
 			    	 this.pedidos.push(menu)
 			    })
+			    console.log(resp)
 
 			  })
 			  .catch(function (error) {
