@@ -3,7 +3,6 @@ html{
 	margin: 0;
 }
 body{
-	background-color: #2b2831;
 	width: 1400px;
 	padding: 30 60 20 10;
 	height: 2400px;
@@ -20,17 +19,22 @@ body{
 	float: left;
 	margin-top: -30;
 }
+.titulo-pdf{
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
 table.datos-menus-creados {
-  border: 2px solid #f08b2d;
-  background-color: #ffffff;
   width: 650px;
   text-align: center;
   border-collapse: collapse;
 	margin-left: -20;
 	margin-bottom: 50px;
+	margin-top: 30;
 }
 table.datos-menus-creados td, table.datos-menus-creados th {
-  border: 1px solid #555555;
+  border: 1px solid #66181a;
   padding: 5px 10px;
 }
 table.datos-menus-creados tbody td {
