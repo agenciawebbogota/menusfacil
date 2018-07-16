@@ -58,12 +58,12 @@
     </ul>
   </div>
   <p>
-   
+
   </p>
   <footer class="page-footer">
     <div class="footer-copyright" >
         <div class="container">
-        © 2018 EMPRESA, todos los derechos reservados.
+        © 2018 Agencia Web Bogotá - Todos los derechos reservados.
         </div>
      </div>
   </footer>
