@@ -6,6 +6,7 @@
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/media_queries.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>

@@ -27,24 +27,21 @@
         </tr>
       </thead>
       <tbody style="color: #2a2730">
+        @foreach ($menus as $menu)
             <tr>
-              <td>Menú No. 1</td>
-              <td>Descripción corta del menú publicado</td>
-              <td>$10.000</td>
-              <td>NO</td>
-              <td>SI</td>
+              <td>{{$menu->nombre}}</td>
+              <td>{{$menu->descripcion}}</td>
+              <td>{{$menu->precio}}</td>
+              <td>{{$menu->adicional}}</td>
+              @if ($menu->estado == 1)
+                 <td>SI</td>
+              @else
+                 <td>NO</td>
+              @endif
             </tr>
-            <tr>
-              <td>Menú No. 1</td>
-              <td>Descripción corta del menú publicado</td>
-              <td>$10.000</td>
-              <td>NO</td>
-              <td>SI</td>
-            </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
 </body>
-
-
 </html>
