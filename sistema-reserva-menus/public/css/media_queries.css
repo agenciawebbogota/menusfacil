@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 @media screen and (min-width:320px){
   /* body{font-size: 25px !important;}
   .card-image{font-size: 40px;}
   .material-icons{font-size: 4rem !important;}
   .btn-floating {margin: 20px;} */
+=======
+@media (max-width: 600px){
+  .container{
+    width: 200px;;
+  }
+>>>>>>> 9f312244b76ae0cb4091a29969d1ec492a49752b
 }

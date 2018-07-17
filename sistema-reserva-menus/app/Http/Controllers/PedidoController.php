@@ -53,7 +53,20 @@ class PedidoController extends Controller
 
 
     public function create(Request $request){
-        $pedido = Pedido::create([
+
+        if ($request->input('adicionalPedido') == '') {
+            $pedido = Pedido::create([
+                'nombre' => $request->input('nombre'),
+                'correo' => $request->input('correo'),
+                'telefono' => $request->input('telefono'),
+                'direccion' => $request->input('direccion'),
+                'observaciones' => $request->input('observaciones'),
+                // 'adicional_pedido' => $request->input('adicionalPedido'),
+                'menu_pedido'=>$request->input('menuPedido')
+            ]);
+            return $pedido;
+        }else{
+            $pedido = Pedido::create([
                 'nombre' => $request->input('nombre'),
                 'correo' => $request->input('correo'),
 				'telefono' => $request->input('telefono'),
@@ -62,6 +75,8 @@ class PedidoController extends Controller
                 'adicional_pedido' => $request->input('adicionalPedido'),
                 'menu_pedido'=>$request->input('menuPedido')
             ]);
+            
+        }
             return $pedido;
     }
 
