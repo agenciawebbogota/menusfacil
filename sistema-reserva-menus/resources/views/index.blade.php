@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>vista del usuario</title>
+	<title>MenusFácil</title>
 </head>
     <link rel="stylesheet" href="css2/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -119,41 +119,20 @@
 			          <label for="direccion">Dirección</label>
 			        </div>
 							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
-			          <i class="material-icons prefix">announcement
-</i>
+			          <i class="material-icons prefix">announcement</i>
 			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
 			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
 			          <label for="observaciones">Observaciones</label>
 			        </div>
 
 					<button
-					v-if="(pedido.adicionalPedido.length >0 || pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					v-if="(pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
 
 		</form>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
     <!-- Compiled and minified JavaScript -->
     <script
