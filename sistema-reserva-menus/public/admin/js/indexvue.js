@@ -27,7 +27,7 @@ new Vue({
 	},
 	mounted:function(){
 		ref.on('value', (data) => {
-			console.log(data)
+			// console.log(data)
 		  this.getPedidos()
 		});
 	},
@@ -36,13 +36,16 @@ new Vue({
 		document.addEventListener('DOMContentLoaded', function() {
 		  // Navegación
 			let elems = document.querySelectorAll('.tooltipped');
-			let tooltip = M.Tooltip.init(elems, {});
-			let sidenav = document.querySelectorAll('.sidenav');
-			M.Sidenav.init(sidenav, {});
+		// let modalUpdate = $('#actualizarMenu').modal();
+			// let tooltip = M.Tooltip.init(elems, {});
+			// let sidenav = document.querySelectorAll('.sidenav');
+			// M.Sidenav.init(sidenav, {});
+			$(".button-collapse").sideNav();
+			// $('.modal').modal();
 			// Botones flotantes
-			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
+			// let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
 			// Modals
-			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
+			// let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
 		});
 		setInterval(()=>{
 			let LaFecha=new Date();
@@ -97,7 +100,7 @@ new Vue({
 				  	this.add.adicional = ''
 				  	this.add.estado = ''
 				  	this.getMenus()
-				  	M.toast({html: 'Se ha creado el menú co éxito', outDuration:1000});
+				  	Materialize.toast('Se ha creado el menú co éxito', 1000);
 				  })
 				  .catch(function (error) {
 				    console.log(error);
@@ -129,9 +132,9 @@ new Vue({
 			}
 			axios.put(url, data).then((resp)=>{
 				// Cerrar modal
-				let modalUpdate = M.Modal.getInstance(document.getElementById('actualizarMenu'));
-				modalUpdate.close()
-				M.toast({html: 'Se ha actualizado el menu '+"'"+data.nombre+"'", outDuration:1000})
+				
+				// modalUpdate.close()
+				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'", 1000);
 
 			}).catch(function (error) {
 			    console.log(error);
@@ -142,7 +145,7 @@ new Vue({
 			let url = '/menus/eliminar/'+id
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
-				M.toast({html:resp.data, outDuration:200});
+				Materialize.toast('Se ha eliminado el menu', 1000);
 			})
 		},
 		updateEstado:function(menu){
@@ -151,7 +154,8 @@ new Vue({
 				// Acción si es confirmada
 				let url = '/menus/actualizar/estado';
 				axios.put(url, menu).then((resp)=>{
-					M.toast({html: 'Se ha eliminado el menu '+"'"+menu.nombre+"'", outDuration: 1000})
+				Materialize.toast('Se ha eliminado el menu '+"'"+menu.nombre+"'", 1000);
+
 					this.getMenus()
 				}).catch((error)=> {
 				    console.log(error);
@@ -172,7 +176,7 @@ new Vue({
 			    resp.data.menus.map((menu)=>{
 			    	 this.pedidos.push(menu)
 			    })
-			    console.log(resp)
+			    // console.log(resp)
 
 			  })
 			  .catch(function (error) {

@@ -1,7 +1,7 @@
 
 <form class="col s6" v-on:submit.prevent="addMenu">
 	<div class="row">
-		<div class="input-field col s6">
+		<div class="input-field col s12">
 			<i class="mdi-editor-border-color prefix"></i>
 			<input id="nombre" type="text" v-model="add.nombre" autocomplete="off">
 			<span style="color:#c91e04">@{{ noti.nombre }}</span>

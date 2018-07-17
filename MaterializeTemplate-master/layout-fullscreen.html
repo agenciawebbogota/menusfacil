@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--================================================================================
-	Item Name: Materialize - Material Design Admin Template
-	Version: 3.1
-	Author: GeeksLabs
-	Author URL: http://www.themeforest.net/user/geekslabs
-================================================================================ -->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -40,6 +32,13 @@
     <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="js/plugins/jvectormap/jquery-jvectormap.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <style type="text/css">
+        .scroll{
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
 
 
 </head>
@@ -417,149 +416,58 @@
                             <div class="col s12 m8 l8">
                                 <div class="card">
                                     <div class="card-move-up waves-effect waves-block waves-light">
-                                        <div class="move-up cyan darken-1">
                                             <div>
-                                                <span class="chart-title white-text">Revenue</span>
-                                                <div class="chart-revenue cyan darken-2 white-text">
-                                                    <p class="chart-revenue-total">$4,500.85</p>
-                                                    <p class="chart-revenue-per"><i class="mdi-navigation-arrow-drop-up"></i> 21.80 %</p>
-                                                </div>
-                                                <div class="switch chart-revenue-switch right">
-                                                    <label class="cyan-text text-lighten-5">
-                                                      Month
-                                                      <input type="checkbox">
-                                                      <span class="lever"></span> Year
-                                                    </label>
-                                                </div>
+                                                <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>   
                                             </div>
-                                            <div class="trending-line-chart-wrapper">
-                                                <canvas id="trending-line-chart" height="70"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
-                                        <div class="col s12 m3 l3">
-                                            <div id="doughnut-chart-wrapper">
-                                                <canvas id="doughnut-chart" height="200"></canvas>
-                                                <div class="doughnut-chart-status">4500
-                                                    <p class="ultra-small center-align">Sold</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col s12 m2 l2">
-                                            <ul class="doughnut-chart-legend">
-                                                <li class="mobile ultra-small"><span class="legend-color"></span>Mobile</li>
-                                                <li class="kitchen ultra-small"><span class="legend-color"></span> Kitchen</li>
-                                                <li class="home ultra-small"><span class="legend-color"></span> Home</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col s12 m5 l6">
-                                            <div class="trending-bar-chart-wrapper">
-                                                <canvas id="trending-bar-chart" height="90"></canvas>                                                
-                                            </div>
+                                        <div class="move-up  class="scroll"">
+                                           <table>
+                                            <thead>
+                                              <tr>
+                                                  <th>Name</th>
+                                                  <th>Item Name</th>
+                                                  <th>Item Price</th>
+                                              </tr>
+                                            </thead>
+
+                                            <tbody>
+                                              <tr>
+                                                <td>Alvin</td>
+                                                <td>Eclair</td>
+                                                <td>$0.87</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Alan</td>
+                                                <td>Jellybean</td>
+                                                <td>$3.76</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Jonathan</td>
+                                                <td>Lollipop</td>
+                                                <td>$7.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Jonathan</td>
+                                                <td>Lollipop</td>
+                                                <td>$7.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Jonathan</td>
+                                                <td>Lollipop</td>
+                                                <td>$7.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Jonathan</td>
+                                                <td>Lollipop</td>
+                                                <td>$7.00</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
                                         </div>
                                     </div>
 
                                     <div class="card-reveal">
                                         <span class="card-title grey-text text-darken-4">Revenue by Month <i class="mdi-navigation-close right"></i></span>
-                                        <table class="responsive-table">
-                                            <thead>
-                                                <tr>
-                                                    <th data-field="id">ID</th>
-                                                    <th data-field="month">Month</th>
-                                                    <th data-field="item-sold">Item Sold</th>
-                                                    <th data-field="item-price">Item Price</th>
-                                                    <th data-field="total-profit">Total Profit</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>January</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>February</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>March</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>April</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>May</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>June</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>July</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>8</td>
-                                                    <td>August</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>9</td>
-                                                    <td>Septmber</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>Octomber</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>11</td>
-                                                    <td>November</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12</td>
-                                                    <td>December</td>
-                                                    <td>122</td>
-                                                    <td>100</td>
-                                                    <td>$122,00.00</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <!-- Formulario de registro -->
                                     </div>
 
 
@@ -1292,7 +1200,7 @@
     <script type="text/javascript" src="js/plugins/sparkline/sparkline-script.js"></script>
     
     <!-- google map api -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script> -->
 
     <!--jvectormap-->
     <script type="text/javascript" src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
@@ -1317,61 +1225,6 @@
         setTimeout(function() {
             Materialize.toast('<span>You have new order.</span><a class="btn-flat yellow-text" href="#">Read<a>', 3000);
         }, 15000);
-    });
-
-
-    $(function() {
-      // Google Maps  
-      $('#map-canvas').addClass('loading');    
-      var latlng = new google.maps.LatLng(40.6700, -73.9400); // Set your Lat. Log. New York
-      var settings = {
-          zoom: 10,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          mapTypeControl: false,
-          scrollwheel: false,
-          draggable: true,
-          styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}],
-          mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-          navigationControl: false,
-          navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},            
-      };
-      var map = new google.maps.Map(document.getElementById("map-canvas"), settings);
-
-      google.maps.event.addDomListener(window, "resize", function() {
-          var center = map.getCenter();
-          google.maps.event.trigger(map, "resize");
-          map.setCenter(center);
-          $('#map-canvas').removeClass('loading');
-      });
-
-      var contentString =
-          '<div id="info-window">'+
-          '<p>18 McLuice Road, Vellyon Hills,<br /> New York, NY 10010<br /><a href="https://plus.google.com/102896039836143247306/about?gl=za&hl=en" target="_blank">Get directions</a></p>'+
-          '</div>';
-      var infowindow = new google.maps.InfoWindow({
-          content: contentString
-      });
-
-      var companyImage = new google.maps.MarkerImage('images/map-marker.png',
-          new google.maps.Size(36,62),// Width and height of the marker
-          new google.maps.Point(0,0),
-          new google.maps.Point(18,52)// Position of the marker 
-      );
-
-      var companyPos = new google.maps.LatLng(40.6700, -73.9400);
-
-      var companyMarker = new google.maps.Marker({
-          position: companyPos,
-          map: map,
-          icon: companyImage,
-          title:"Shapeshift Interactive",
-          zIndex: 3});
-
-      google.maps.event.addListener(companyMarker, 'click', function() {
-          infowindow.open(map,companyMarker);
-          pageView('/#address');
-      });
     });
     </script>
 </body>
