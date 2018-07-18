@@ -17,7 +17,7 @@
     <div class="titulo-pdf">
     	<h2 style="color:#2a2730">Menus Disponibles</h2>
     </div>
- 
+
     <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff">
       <thead style="background: #2a2730;border-bottom: 2px solid #66181a;color: #ffffff;">
         <tr>
@@ -46,9 +46,12 @@
     </table>
   </div>
 @else
-  <div>
-    <h1 class="aling-center">No hay menús para mostrar</h1>
+  <div class="no-menus">
+    <img src="img/logo-menusfacil.png" alt="">
+    <h1>No hay menús para mostrar</h1>
   </div>
+  <img class="ft-img" src="img/footer-image.png" alt="">
+
 @endif
 </body>
 </html>

@@ -1,14 +1,14 @@
 <table id="tablaMenus" class="centered">
-<thead>
+<thead style="background-color:#eaeaea">
 <tr>
-    <th>Nombre</th>
-    <th>Descripción</th>
-    <th>Precio</th>
-    <th>Estado</th>
-    <th colspan="4">Opciones</th>
+    <th style="border:1px solid #b3b3b3">Nombre</th>
+    <th style="border:1px solid #b3b3b3">Descripción</th>
+    <th style="border:1px solid #b3b3b3">Precio</th>
+    <th style="border:1px solid #b3b3b3">Estado</th>
+    <th style="border:1px solid #b3b3b3" colspan="4">Opciones</th>
 </tr>
 </thead>
-<tbody>
+<tbody style="border:1px solid #b3b3b3">
 <tr v-for="menu in menus" v-if="menu.activo == 1">
 
   <td> @{{ menu.nombre }} (@{{ menu.adicional}})</td>
@@ -19,7 +19,7 @@
       <div class="switch">
         <label>
           <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
-          <span class="lever"></span>
+          <span class="lever" style="background-color:#eaeaea;border:1px solid #b3b3b3"></span>
         </label>
       </div>
     </div>

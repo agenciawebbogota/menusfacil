@@ -26,7 +26,7 @@
 		<div class="row section">
 			<div class="col s12 m8 l9">
 				<div class="switch">
-					Es Adicional ? :
+					¿Es Adición? :
 					<label>
 					NO
 					<input type="checkbox" v-model="add.adicional">
@@ -40,7 +40,7 @@
 		<div class="row">
 			<div class="col s12 m8 l9">
 				<div class="switch">
-					Disponible :
+					Disponible:
 					<label>
 					NO
 					<input type="checkbox" v-model="add.estado">

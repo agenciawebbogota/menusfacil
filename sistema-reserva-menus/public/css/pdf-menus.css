@@ -62,3 +62,21 @@ table.datos-menus-creados tfoot td {
 table.datos-menus-creados tfoot .links {
   text-align: right;
 }
+.no-menus img{
+	width: 200px;
+	height: 199px;
+	margin:20px 270px;
+}
+.no-menus h1{
+	font-family: 'Roboto', sans-serif;
+	margin: 10px 190px;
+	color: #2a2730;
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.ft-img{
+	width: 283px;
+	height: 79px;
+	margin:20px 240px;
+}
