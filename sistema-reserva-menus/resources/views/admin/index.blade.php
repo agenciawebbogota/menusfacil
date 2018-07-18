@@ -105,7 +105,7 @@
                                       <div class="move-up cyan darken-1">
                                         <p></p>
                                         <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
-                                        <a href="/descarga/menus" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add"></i></a>
+                                        <a href="/descarga/menus" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-editor-vertical-align-bottom"></i></a>
                                       </div>
                                   </div>
                                   <div class="card-content">

@@ -26,12 +26,12 @@ new Vue({
 		}
 	},
 	mounted:function(){
+	},
+	created:function(){
 		ref.on('value', (data) => {
 			// console.log(data)
 		  this.getPedidos()
 		});
-	},
-	created:function(){
 		this.getMenus()
 		document.addEventListener('DOMContentLoaded', function() {
 		  // Navegación
@@ -75,11 +75,10 @@ new Vue({
 		},
 		addMenu:function(){
 			if(this.add.adicional){
-					this.add.adicional = 'SI'
-				}else{
-					this.add.adicional = 'NO'
-				}
-			if(this.add.nombre.length < 4){
+				this.add.adicional = 'SI'
+			}else{
+				this.add.adicional = 'NO'
+			}if(this.add.nombre.length < 4){
 				this.noti.nombre = 'El nombre debe ser superior a 4 caracteres.'
 			}else if(this.add.descripcion.length < 4 ){
 				this.noti.descripcion = 'La descripción debe ser superior a 4 caracteres.'
@@ -176,8 +175,6 @@ new Vue({
 			    resp.data.menus.map((menu)=>{
 			    	 this.pedidos.push(menu)
 			    })
-			    // console.log(resp)
-
 			  })
 			  .catch(function (error) {
 			    // handle error

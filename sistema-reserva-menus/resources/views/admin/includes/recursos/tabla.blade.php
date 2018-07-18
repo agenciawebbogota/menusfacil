@@ -26,10 +26,10 @@
     </div>
   </td>
   <td>
-      <a href="#actualizarMenu" class="btn-floating blue modal-trigger"><i class="large material-icons" v-on:click.prevent="llenarModal(menu)">edit</i></a>
+      <a href="#actualizarMenu" class="btn-floating blue modal-trigger" v-on:click.prevent="llenarModal(menu)"><i class="mdi-editor-mode-edit">edit</i></a>
   </td>
   <td>
-    <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="large material-icons">delete</i></a>
+    <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="mdi-action-delete">delete</i></a>
   </td>
 </tr>
 </tbody>
