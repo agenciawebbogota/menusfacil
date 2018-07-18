@@ -6,7 +6,6 @@
     <th>Precio</th>
     <th>Estado</th>
     <th colspan="4">Opciones</th>
-    {{-- <th>Opciones 2</th> --}}
 </tr>
 </thead>
 <tbody>
@@ -26,7 +25,9 @@
     </div>
   </td>
   <td>
-      <a href="#actualizarMenu" class="btn-floating blue modal-trigger" v-on:click.prevent="llenarModal(menu)"><i class="mdi-editor-mode-edit">edit</i></a>
+      <a href="#actualizarMenu" class="btn-floating blue modal-trigger" v-on:click="llenarModal(menu)">
+        <i class="mdi-editor-mode-edit">edit</i>
+      </a>
   </td>
   <td>
     <a v-on:click.prevent="updateEstado(menu)" class="btn-floating red"><i class="mdi-action-delete">delete</i></a>

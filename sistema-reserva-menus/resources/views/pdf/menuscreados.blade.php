@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
+@if (!count($menus)<1)
   <div class="container">
     <div class="logo-pdf">
       <img src="img/logo2.png" alt="">
@@ -16,6 +17,7 @@
     <div class="titulo-pdf">
     	<h2 style="color:#2a2730">Menus Disponibles</h2>
     </div>
+ 
     <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff">
       <thead style="background: #2a2730;border-bottom: 2px solid #66181a;color: #ffffff;">
         <tr>
@@ -43,5 +45,10 @@
       </tbody>
     </table>
   </div>
+@else
+  <div>
+    <h1 class="aling-center">Nohay menús para mostrar</h1>
+  </div>
+@endif
 </body>
 </html>

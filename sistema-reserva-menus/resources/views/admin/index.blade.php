@@ -81,7 +81,13 @@
                             <li><a href="#"><i class="mdi-communication-live-help"></i> Ayuda</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Salir</a>
+                            <li>
+                              <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                <i class="mdi-hardware-keyboard-tab"></i> Salir
+                              </a>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                  @csrf
+                              </form>
                             </li>
                         </ul>
                     <!-- </div> -->
@@ -119,15 +125,10 @@
 
 
                                         <div class="row">
-                                          <div class="col s12 m12 l12">
-                                            {{-- <div class="row"> --}}
-                                              
+                                          <div class="col s12 m12 l12">                                              
                                       			@include('admin.includes.formularios.agregarmenu')
-                                            {{-- </div> --}}
                                           </div>
-                                        </div>
-
-                        
+                                        </div>s
                                   </div>
 
                               </div>
@@ -221,7 +222,7 @@
                         <ul>
                           <li><a href="#" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar PDF"><i class="large mdi-file-file-download"></i></a></li>
                           <li><a href="#" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico Menús"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                          <li><a href="#actualizarMenu" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a></li>
+                          {{-- <li><a href="#actualizarMenu" class="btn-floating blue modal-trigger tooltipped" data-position="left" data-tooltip="Nuevo Menú"><i class="large mdi-action-assignment"></i></a></li> --}}
                         </ul>
                     </div>
 

@@ -1,23 +1,20 @@
-<div id="actualizarMenu" class="modal modal-fixed-footer" @submit.prevent="updateMenu(update)">
+<div id="actualizarMenu" class="modal modal-fixed-footer" >
     <div class="modal-content">
-    <h4 class="center-align">Nuevo producto</h4>
+    <h4 class="center-align">Editar Menú</h4>
       <div class="row">
-      <form class="col s12">
+      <form class="col s12" @submit.prevent="updateMenu(update)">
         <div class="row">
           <div class="input-field col s6">
             <i class="mdi-action-add-shopping-cart small"></i>
             <input id="nobre" type="text" class="validate" data-length="10" v-model="update.nombre">
-            {{-- <label for="nobre">Nombre</label> --}}
           </div>
           <div class="input-field col s6">
             <i class="mdi-editor-attach-money small"></i>
             <input id="precio" type="tel" class="validate" v-model="update.precio">
-            {{-- <label for="precio">Precio</label> --}}
           </div>
           <div class="input-field col s12">
               <i class="mdi-maps-restaurant-menu small"></i>
               <textarea id="descripcion" class="materialize-textarea" data-length="120" v-model="update.descripcion"></textarea>
-              {{-- <label for="descripcion">Descripción</label> --}}
           </div>
           <div class="col s12 m8 l9">
             <div class="switch">
