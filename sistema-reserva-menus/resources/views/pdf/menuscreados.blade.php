@@ -47,7 +47,7 @@
   </div>
 @else
   <div>
-    <h1 class="aling-center">Nohay menús para mostrar</h1>
+    <h1 class="aling-center">No hay menús para mostrar</h1>
   </div>
 @endif
 </body>
