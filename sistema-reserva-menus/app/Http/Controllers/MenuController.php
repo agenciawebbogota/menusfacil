@@ -74,7 +74,7 @@ class MenuController extends Controller
 
 
     public function pdf(){
-    	$menus = Menu::all()->where('activo', 1);
+    	$menus = Menu::all()->where('activo', 1)->where('user_id', \Auth::id());
 
     	$view =  \View::make('pdf.menuscreados', compact('menus'))->render();
         $pdf = \App::make('dompdf.wrapper');

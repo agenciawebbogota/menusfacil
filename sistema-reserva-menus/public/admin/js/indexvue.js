@@ -1,5 +1,6 @@
 
 
+
 new Vue({
 	el:'#dash',
 	data:{
@@ -165,10 +166,8 @@ new Vue({
 			let url = 'pedidos/pedidos'
 			axios.get(url)
 			  .then((resp) =>{
-			    resp.data.menus.map((menu)=>{
-			    	 this.pedidos.push(menu)
-			    })
-			    // console.log(resp)
+			    this.pedidos = resp.data;
+
 			  })
 			  .catch(function (error) {
 			    // handle error

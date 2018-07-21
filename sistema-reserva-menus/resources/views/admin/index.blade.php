@@ -24,14 +24,13 @@
 {{-- Color 1:  2a2730 --}}
 {{-- Color 2:  66181a --}}
 {{-- Color 3:  E88A10 --}}
-
 <body>
     <!-- INICIO HEADER -->
     <header id="header" class="page-topbar">
         <!-- nav barra superior-->
         <div class="navbar-fixed">
             <nav class="navbar-color">
-                <div class="nav-wrapper" style="background-color: #2a2730">
+                <div class="nav-wrapper" style="background-color: #{{Auth::user()->color1}}">
                     <ul class="left">
                       <li><a class="brand-logo center darken-1"><img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo"></a></li>
                     </ul>
@@ -54,7 +53,7 @@
             <!-- INICIO MENU IZQUIERDA-->
             <aside id="left-sidebar-nav">
                 <ul id="slide-out" class="side-nav leftside-navigation">
-                    <li class="user-details darken-2" style="background-color:#e88a10">
+                    <li class="user-details darken-2" style="background-color:#{{Auth::user()->color3}}">
                         <div class="row">
                             <div class="col col s4 m4 l4">
                                 <img src="admin/img/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
@@ -83,7 +82,7 @@
                         </ul>
                     <!-- </div> -->
                 </ul>
-                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light yellow"><i class="mdi-navigation-menu" style="background-color: #e88a10;color:white"></i></a>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light yellow"><i class="mdi-navigation-menu" style="background-color: #{{Auth::user()->color3}};color:white"></i></a>
             </aside>
             <!-- FIN MENU IZQUIERDA-->
 
@@ -99,10 +98,10 @@
                           <div class="col s12 m12 l8">
                               <div class="card">
                                   <div class="card-move-up waves-effect waves-block waves-light">
-                                      <div class="move-up header-tabla" style="background-color: #66181a">
+                                      <div class="move-up header-tabla" style="background-color: #{{Auth::user()->color2}}">
                                         <h2 class="titulo-tabla">Tabla de menús</h2>
-                                        <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right tooltipped" data-position="bottom" data-tooltip="Crear nuevo menú" style="background-color: #e88a10"><i class="mdi-content-add activator"></i></a>
-                                        <a href="/descarga/menus" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 right tooltipped" data-position="bottom" data-tooltip="Ver o imprimir menús" style="background-color:#e88a10"><i class="mdi-editor-vertical-align-bottom"></i></a>
+                                        <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right tooltipped" data-position="bottom" data-tooltip="Crear nuevo menú" style="background-color: #{{Auth::user()->color3}}"><i class="mdi-content-add activator"></i></a>
+                                        <a href="/descarga/menus" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 right tooltipped" data-position="bottom" data-tooltip="Ver o imprimir menús" style="background-color:#{{Auth::user()->color3}}"><i class="mdi-editor-vertical-align-bottom"></i></a>
                                       </div>
                                   </div>
                                   <div class="card-content fondo-tabla" style="background: linear-gradient(#ffffff, #ffdbad)">
@@ -125,7 +124,7 @@
                               </div>
                           </div>
                           <div class="col s12 m12 l4">
-                              <div class="card tabla-pedidos" style="height:470px;background-color: #2a2730">
+                              <div class="card tabla-pedidos" style="height:470px;background-color: #{{Auth::user()->color1}}">
                                   <div class="card-move-up waves-block waves-light">
                                     <h2 class="titulo-pedidos">Ultimas Ordenes</h2>
                                       <div class="move-up">
@@ -133,7 +132,7 @@
                                       </div>
                                   </div>
                                   <div class="card-content">
-                                    <a href="/descarga/pedidos" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 center tooltipped" data-position="right" data-tooltip="Ver o imprimir pedidos" style="background-color:#e88a10"><i class="mdi-file-file-download"></i></a>
+                                    <a href="/descarga/pedidos" target="_blank" class="btn-floating btn-move-up waves-effect waves-light darken-2 center tooltipped" data-position="right" data-tooltip="Ver o imprimir pedidos" style="background-color:#{{Auth::user()->color3}}"><i class="mdi-file-file-download"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -146,52 +145,52 @@
                       <div class="row">
                           <div class="col s12 m6 l3">
                               <div class="card">
-                                  <div class="card-content white-text" style="background-color: #66181a">
+                                  <div class="card-content white-text" style="background-color: #{{Auth::user()->color2}}">
                                       <p class="card-stats-title"><i class="mdi-social-group-add"></i> Menus Disponibles</p>
                                       <h4 class="card-stats-number">@{{ total }}</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
                                       </p>
                                   </div>
-                                  <div class="card-action darken-2" style="background-color: #66181a">
+                                  <div class="card-action darken-2" style="background-color: #{{Auth::user()->color2}}">
                                       <div id="clients-bar" class="center-align"></div>
                                   </div>
                               </div>
                           </div>
                           <div class="col s12 m6 l3">
                               <div class="card">
-                                  <div class="card-content lighten-1 white-text" style="background-color: #e88a10">
+                                  <div class="card-content lighten-1 white-text" style="background-color: #{{Auth::user()->color3}}">
                                       <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Ordenes Hoy</p>
                                       <h4 class="card-stats-number" v-model="pedidos">@{{pedidos.length}}</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">@{{ fecha }}</span>
                                       </p>
                                   </div>
-                                  <div class="card-action darken-2" style="background-color: #e88a10">
+                                  <div class="card-action darken-2" style="background-color: #{{Auth::user()->color3}}">
                                       <div id="invoice-line" class="center-align"></div>
                                   </div>
                               </div>
                           </div>
                           <div class="col s12 m6 l3">
                               <div class="card">
-                                  <div class="card-content white-text" style="background-color: #66181a">
+                                  <div class="card-content white-text" style="background-color: #{{Auth::user()->color2}}">
                                       <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Vendido Hoy</p>
                                       <h4 class="card-stats-number">$806.52</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
                                       </p>
                                   </div>
-                                  <div class="card-action darken-2" style="background-color: #66181a">
+                                  <div class="card-action darken-2" style="background-color: #{{Auth::user()->color2}}">
                                       <div id="profit-tristate" class="center-align"></div>
                                   </div>
                               </div>
                           </div>
                           <div class="col s12 m6 l3">
                               <div class="card">
-                                  <div class="card-content white-text" style="background-color:#e88a10">
+                                  <div class="card-content white-text" style="background-color:#{{Auth::user()->color3}}">
                                       <p class="card-stats-title"><i class="mdi-editor-attach-money"></i> Vendido Semana</p>
                                       <h4 class="card-stats-number">$8990.63</h4>
                                       <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                       </p>
                                   </div>
-                                  <div class="card-action darken-2" style="background-color:#e88a10">
+                                  <div class="card-action darken-2" style="background-color:#{{Auth::user()->color3}}">
                                       <div id="sales-compositebar" class="center-align"></div>
                                   </div>
                               </div>
@@ -203,7 +202,7 @@
                     <!-- Boton flotante derecha -->
                     <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
                         <a class="btn-floating btn-large">
-                          <i class="mdi-content-add" style="background-color:#66181a"></i>
+                          <i class="mdi-content-add" style="background-color:#{{Auth::user()->color2}}"></i>
                         </a>
                         <ul>
                           <li><a href="#" class="btn-floating red darken-1 tooltipped" data-position="left" data-tooltip="Descargar ordenes"><i class="large mdi-file-file-download"></i></a></li>
@@ -218,7 +217,7 @@
     <!-- INCIO FOOTER -->
     <footer class="page-footer">
         <div class="footer-copyright">
-            <div class="container" style="background-color:#2a2730">
+            <div class="container" style="background-color:#{{Auth::user()->color1}}">
               <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="#">Agencia Web Bogotá</a></span>
               <span class="right">Todos los derechos reservados ©</span>
             </div>
