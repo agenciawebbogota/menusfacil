@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>MenusFácil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
     <link rel="stylesheet" href="css2/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -134,7 +135,6 @@
 		</form>
 	</div>
 </body>
-    <!-- Compiled and minified JavaScript -->
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -147,3 +147,6 @@
     <script type="text/javascript" src="usuario/js/vue.js"></script>
     <script type="text/javascript" src="usuario/js/main.js"></script>
 </html>
+ --}}
+
+Página principal del aplicativo
