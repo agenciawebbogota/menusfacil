@@ -18,7 +18,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!-- CSS for full screen -->
     <link href="admin/css/style-fullscreen.css" type="text/css" rel="stylesheet" media="screen,projection">
-      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
 
 </head>
 
@@ -127,7 +127,7 @@
                                   <div class="card-move-up waves-block waves-light">
                                     <h2 class="titulo-pedidos">Ultimas Ordenes</h2>
                                       <div class="move-up">
-                                      	<!-- @include('admin.includes.recursos.solicitados') -->
+                                      	@include('admin.includes.recursos.solicitados')
                                       </div>
                                   </div>
                                   <div class="card-content">
@@ -227,20 +227,19 @@
             </div>
         </div>
     </footer>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
     <script type="text/javascript" src="admin/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="admin/js/materialize.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
+    <script type="text/javascript" src="admin/js/plugins.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/axios.min.js"></script>
     <script type="text/javascript" src="admin/js/indexvue.js"></script>
     <script type="text/javascript" src="admin/js/perfect-scrollbar.min.js"></script>
+
 </body>
 
 </html>
