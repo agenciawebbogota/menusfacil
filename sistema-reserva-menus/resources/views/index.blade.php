@@ -142,8 +142,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
-  <script type="text/javascript" src="js/axios.min.js"></script>
+  <script type="text/javascript" src="usuario/js/axios.min.js"></script>
     <script src="js2/materialize.min.js"></script>
-    <script type="text/javascript" src="js/vue.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="usuario/js/vue.js"></script>
+    <script type="text/javascript" src="usuario/js/main.js"></script>
 </html>

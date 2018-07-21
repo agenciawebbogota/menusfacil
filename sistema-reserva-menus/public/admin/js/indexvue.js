@@ -1,3 +1,5 @@
+
+
 new Vue({
 	el:'#dash',
 	data:{
@@ -36,16 +38,7 @@ new Vue({
 		document.addEventListener('DOMContentLoaded', function() {
 		  // Navegación
 			let elems = document.querySelectorAll('.tooltipped');
-		// let modalUpdate = $('#actualizarMenu').modal();
-			// let tooltip = M.Tooltip.init(elems, {});
-			// let sidenav = document.querySelectorAll('.sidenav');
-			// M.Sidenav.init(sidenav, {});
 			$(".button-collapse").sideNav();
-			// $('.modal').modal();
-			// Botones flotantes
-			// let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
-			// Modals
-			// let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
 		});
 		setInterval(()=>{
 			let LaFecha=new Date();
@@ -107,7 +100,6 @@ new Vue({
 			}
 		},
 		updateMenu:function(menu, q){
-			// Ajustar para que actualice el estado
 			if (q) {
 				if(!menu.estado){
 				menu.estado = 1
@@ -161,14 +153,14 @@ new Vue({
 				})
 			},()=>{
 				// Acción si es cancelada
-				M.toast({html: 'Hemos cancelado tu solicitud.', outDuration: 1000})
+				Materialize.toast('Hemos cancelado tu solicitud.',1000)
 			}).set('labels',{ok:'Si',cancel:'No'});;
 		},
 		llenarModal:function(menu){
 			this.update = menu
 		},
 		getPedidos:function(){
-			this.pedidos = []
+			// this.pedidos = []
 			let url = 'pedidos/'
 			axios.get(url)
 			  .then((resp) =>{
