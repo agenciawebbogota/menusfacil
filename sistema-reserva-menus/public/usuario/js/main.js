@@ -12,6 +12,7 @@ new Vue({
 			correo:'',
 			telefono:'',
 			direccion:'',
+			user_id:'',
 			observaciones:''
 		},
 		noti:{
@@ -23,6 +24,7 @@ new Vue({
 		}
 	},
 	created:function(){
+		this.pedido.user_id = document.getElementById('user_id').innerHTML
 		// this.notificacion()
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
@@ -89,6 +91,6 @@ new Vue({
 			ref.set({
 				nuevoPedido:Math.random()
 			});
-		}
+		},
 	}
 })

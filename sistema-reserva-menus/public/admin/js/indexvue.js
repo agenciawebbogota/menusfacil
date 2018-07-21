@@ -57,10 +57,11 @@ new Vue({
 	},
 	methods:{
 		getMenus:function(){
-			axios.get('/menus')
+			axios.get('/menus/get')
 			  .then((response) =>{
 			    this.menus = response.data.menus
 			    this.total = response.data.total
+
 			  })
 			  .catch(function (error) {
 			    console.log(error);
@@ -161,12 +162,13 @@ new Vue({
 		},
 		getPedidos:function(){
 			// this.pedidos = []
-			let url = 'pedidos/'
+			let url = 'pedidos/pedidos'
 			axios.get(url)
 			  .then((resp) =>{
 			    resp.data.menus.map((menu)=>{
 			    	 this.pedidos.push(menu)
 			    })
+			    // console.log(resp)
 			  })
 			  .catch(function (error) {
 			    // handle error

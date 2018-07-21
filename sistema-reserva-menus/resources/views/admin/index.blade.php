@@ -19,8 +19,11 @@
     <!-- CSS for full screen -->
     <link href="admin/css/style-fullscreen.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
-
 </head>
+{{-- Colores --}}
+{{-- Color 1:  2a2730 --}}
+{{-- Color 2:  66181a --}}
+{{-- Color 3:  E88A10 --}}
 
 <body>
     <!-- INICIO HEADER -->
@@ -56,7 +59,7 @@
                             <div class="col col s4 m4 l4">
                                 <img src="admin/img/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
                             </div>
-                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn">Luis Fernando</a>
+                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn">{{Auth::user()->name}}</a>
                             <p class="user-roal">Administrador</p>
                         </div>
                     </li>
@@ -121,7 +124,6 @@
 
                               </div>
                           </div>
-
                           <div class="col s12 m12 l4">
                               <div class="card tabla-pedidos" style="height:470px;background-color: #2a2730">
                                   <div class="card-move-up waves-block waves-light">
@@ -138,10 +140,7 @@
                       </div>
                   </div>
                   <!--chart dashboard end-->
-
-
                   <!-- //////////////////////////////////////////////////////////////////////////// -->
-
                   <!--card stats start-->
                   <div id="card-stats">
                       <div class="row">
@@ -201,8 +200,6 @@
                   </div>
                       {{-- Modal de editar --}}
                             @include('admin.includes.formularios.editarmenu')
-
-
                     <!-- Boton flotante derecha -->
                     <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
                         <a class="btn-floating btn-large">
@@ -232,14 +229,11 @@
     <script type="text/javascript" src="admin/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="admin/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
-
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
     <script type="text/javascript" src="admin/js/plugins.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/axios.min.js"></script>
     <script type="text/javascript" src="admin/js/indexvue.js"></script>
     <script type="text/javascript" src="admin/js/perfect-scrollbar.min.js"></script>
-
 </body>
-
 </html>

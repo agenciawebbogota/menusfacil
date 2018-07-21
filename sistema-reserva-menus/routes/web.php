@@ -19,18 +19,31 @@ Route::get('/', 'PedidoController@index');
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
-Route::get('/menus', 'MenuController@index');
+
+
+// Manejar la vista del usuario
+
+Route::get('/{url}', 'InicioController@index');
+
+// Rutas de pedidos
+Route::get('pedido/menus', 'PedidoController@getMenusDia');
+Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
+Route::get('pedidos/pedidos', 'PedidoController@get');
+Route::post('/pedidos/crear', 'PedidoController@create');
+Route::get('/descarga/pedidos', 'PedidoController@pdf')->middleware('auth');
+
+// Rutas de menús
+Route::get('/menus/get', 'MenuController@index');
 Route::post('/menus/crear', 'MenuController@create')->middleware('auth');
-// ->middleware('auth');
 Route::PUT('/menus/actualizar', 'MenuController@update')->middleware('auth');
 Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middleware('auth');
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
+
+
+
+
+// ->middleware('auth');
 // Implementar el guardado de los pedidos
-Route::get('pedido/menus', 'PedidoController@getMenusDia');
-Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
-Route::get('pedidos/', 'PedidoController@get');
-Route::post('/pedidos/crear', 'PedidoController@create');
-Route::get('/descarga/pedidos', 'PedidoController@pdf')->middleware('auth');
 // /descarga/pedidos
 // Route::post('pedido/crear', 'PedidoController@crearPedido');
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','url','color1', 'color2', 'color3'
     ];
     public function menus(){
         return $this->hasMany('App\Menu');

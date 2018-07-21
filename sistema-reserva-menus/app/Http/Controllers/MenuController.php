@@ -7,13 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use App\Menu;
 use App\User;
 use Barryvdh\DomPDF\Facade as PDF;
-
-
 class MenuController extends Controller
 {
     //
 	public function index(){
-		$menus = Menu::all()->where('activo', 1);
+		$menus = Menu::all()->where('activo', 1)->where('user_id', Auth::id());
     	return [
     		'menus' => $menus,
     	 	'total'=> count($menus),

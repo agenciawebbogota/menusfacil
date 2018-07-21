@@ -38,6 +38,63 @@
                                 @endif
                             </div>
                         </div>
+                        {{-- Columnas adicionales --}}
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Url') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="url" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="url" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="color1" class="col-md-4 col-form-label text-md-right">{{ __('Color 1') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="color1" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color1" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="color2" class="col-md-4 col-form-label text-md-right">{{ __('Color 2') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="color2" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color2" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="color3" class="col-md-4 col-form-label text-md-right">{{ __('Color 3') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="color3" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color3" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        {{-- Fin --}}
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
