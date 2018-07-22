@@ -42,10 +42,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">Regitrarme</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -75,12 +75,12 @@
             @yield('content')
         </main>
     </div>
-    {{-- <script
+    <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-    <script src="{{ asset('js/axios.min.js') }}" defer></script>
-    <script src="{{ asset('js/vue.js') }}" defer></script>
-    <script src="{{ asset('js/login.js') }}" defer></script> --}}
+    <script src="{{ asset('usuario/js/axios.min.js') }}" defer></script>
+    <script src="{{ asset('usuario/js/vue.js') }}" defer></script>
+    <script src="{{ asset('usuario/js/registro.js') }}" defer></script>
 </body>
 </html>

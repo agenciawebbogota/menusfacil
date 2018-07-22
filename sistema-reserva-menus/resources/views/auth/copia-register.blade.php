@@ -1,22 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="registrar">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Regitrarme</div>
+                <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" @keyup="urlLug()" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" v-model="datos.name" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -27,9 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Correo</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
                             <div class="col-md-6">
-                                <input id="email" type="email" v-model="datos.email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -41,9 +41,16 @@
                         {{-- Columnas adicionales --}}
 
                         <div class="form-group row">
-                           
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Url') }}</label>
+
                             <div class="col-md-6">
-                                <input id="url" type="hidden" name="url" v-model="datos.url">
+                                <input id="url" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="url" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -51,10 +58,11 @@
                             <label for="color1" class="col-md-4 col-form-label text-md-right">{{ __('Color 1') }}</label>
 
                             <div class="col-md-6">
-                                <input id="color1" type="text" class="form-control{{ $errors->has('color1') ? ' is-invalid' : '' }}" name="color1" value="{{ old('color1') }}" required autofocus v-model="datos.color1">
-                                @if ($errors->has('color1'))
+                                <input id="color1" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color1" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('color1') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -63,11 +71,11 @@
                             <label for="color2" class="col-md-4 col-form-label text-md-right">{{ __('Color 2') }}</label>
 
                             <div class="col-md-6">
-                                <input id="color2" type="text" class="form-control{{ $errors->has('color2') ? ' is-invalid' : '' }}" name="color2" value="{{ old('color2') }}" required autofocus v-model="datos.color2">
+                                <input id="color2" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color2" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('color2'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('color2') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -76,11 +84,11 @@
                             <label for="color3" class="col-md-4 col-form-label text-md-right">{{ __('Color 3') }}</label>
 
                             <div class="col-md-6">
-                                <input id="color3" type="text" class="form-control{{ $errors->has('color3') ? ' is-invalid' : '' }}" name="color3" value="{{ old('color3') }}" required autofocus v-model="datos.color3">
+                                <input id="color3" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="color3" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('color3'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('color3') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -89,10 +97,10 @@
                         {{-- Fin --}}
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required v-model="datos.password">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -103,17 +111,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirmar contraseña</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required v-model="datos.password_confirmation">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Regitrarme
+                                    {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
@@ -122,8 +130,5 @@
             </div>
         </div>
     </div>
-    {{-- <pre>
-        @{{ $data.datos }}
-    </pre> --}}
 </div>
 @endsection
