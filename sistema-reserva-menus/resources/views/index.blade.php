@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -10,7 +10,7 @@
 <body>
 	<div id="app">
 
-		<div class="navbar-fixed">
+		{{-- <div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
 		      <a href="#" class="brand-logo center">APP</a>
@@ -132,9 +132,23 @@
 			      </div>
 			</div>
 
-		</form>
+		</form> --}}
+
+		<div class="container">
+			<div class="card">
+				<div class="card-content">
+
+					<ul class="collection">
+				      <li class="collection-item"><a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a></li>
+				      <li class="collection-item"><a class="nav-link" href="{{ route('register') }}">Regitrarme</a></li>
+				    </ul>
+				</div>
+			</div>
+			
+		</div>
+
 	</div>
-</body>
+</body> 
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -147,6 +161,3 @@
     <script type="text/javascript" src="usuario/js/vue.js"></script>
     <script type="text/javascript" src="usuario/js/main.js"></script>
 </html>
- --}}
-
-Página principal del aplicativo

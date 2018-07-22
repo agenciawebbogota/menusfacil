@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Pedidos nuevo diseño</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/media_queries.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
+  {{-- <link rel="stylesheet" href="css/custom.css"> --}}
 </head>
 <body>
   <div id="dash">
-    <div>
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view">
@@ -27,11 +27,16 @@
     </ul>
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" style="background-color: #{{Auth::user()->color1}}">
+
+  
           <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger" id="menuLateral"><i class="material-icons">menu</i></div>
+            <a class="brand-logo center">
+              <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px">
+            </a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();                                                   document.getElementById('logout-form').submit();">
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                   <i class="material-icons">power_settings_new</i>
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -42,40 +47,34 @@
         </div>
       </nav>
     </div>
-  @yield('contenido', 'default')
-
-
-
-
+  @yield('contenido')
   </div>
     <!-- Botones flotantes con opciones -->
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large green darken-1">
-      <i class="large material-icons">mode_edit</i>
+  <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
+    <a class="btn-floating btn-large">
+      <i class="material-icons" style="background-color:#{{Auth::user()->color2}};">add</i>
     </a>
     <ul>
-      {{-- <li><a class="btn-floating blue modal-trigger" href="#actualizarMenu"><i class="material-icons">add_circle</i></a></li> --}}
+      <li><a href="#" class="btn-floating red darken-1 tooltipped" data-position="left" data-tooltip="Descargar ordenes"><i class="material-icons">file_download</i></a></li>
+      <li><a href="#" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar menús"><i class="material-icons">file_download</i></a></li>
+      <li><a href="#" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
     </ul>
   </div>
-  <p>
 
-  </p>
   <footer class="page-footer">
-    <div class="footer-copyright" >
-        <div class="container">
-        © 2018 Agencia Web Bogotá - Todos los derechos reservados.
-        </div>
-     </div>
+      <div class="footer-copyright">
+          <div class="container" style="background-color:#{{Auth::user()->color1}}">
+            <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
+            <span class="right">Todos los derechos reservados ©</span>
+          </div>
+      </div>
   </footer>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
-  <script type="text/javascript">
-
-  </script>
   <script type="text/javascript" src="js/axios.min.js"></script>
   <script type="text/javascript" src="js/vue.js"></script>
-  <script type="text/javascript" src="js/indexvue.js"></script>
+  <script type="text/javascript" src="admin/new/js/indexvue.js"></script>
 </body>
 </html>

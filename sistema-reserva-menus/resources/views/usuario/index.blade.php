@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>MenusFácil</title>
+	@foreach ($empresa as $el)
+		<title>{{$el->name}} || Menús Fácil</title>
+	@endforeach
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
     <link rel="stylesheet" href="css2/materialize.min.css">
