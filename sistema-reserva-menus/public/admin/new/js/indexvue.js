@@ -65,7 +65,10 @@ new Vue({
 
 			  })
 			  .catch(function (error) {
-			    console.log(error);
+			    M.toast({
+					html:'Hay un error en el servidor, contactanos.', 
+					outDuration:1000
+				});
 			  })
 		},
 		addMenu:function(){
@@ -100,7 +103,10 @@ new Vue({
 					});
 				  })
 				  .catch(function (error) {
-				    console.log(error);
+				    M.toast({
+						html:'Hay un error en el servidor, contactanos.', 
+						outDuration:1000
+					});
 				  });
 			}
 		},
@@ -135,7 +141,10 @@ new Vue({
 					outDuration:1000
 				});
 			}).catch(function (error) {
-			    console.log(error);
+			    M.toast({
+					html:'Hay un error en el servidor, contactanos.', 
+					outDuration:1000
+				});
 			  });
 		},
 		deleteMenu:function(id){
@@ -169,7 +178,10 @@ new Vue({
 
 					this.getMenus()
 				}).catch((error)=> {
-				    console.log(error);
+				    M.toast({
+					html:'Hay un error en el servidor, contactanos.', 
+					outDuration:1000
+				});
 				})
 			  } else {
 
@@ -177,7 +189,6 @@ new Vue({
 					html:'Hemos cancelado tu solicitud.', 
 					outDuration:1000
 				});
-
 			  }
 			});
 		},
@@ -191,9 +202,11 @@ new Vue({
 			  .then((resp) =>{
 			    this.pedidos = resp.data;
 			  })
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
+			  .catch((error)=>{
+			    M.toast({
+					html:'Hay un error en el servidor, contactanos.', 
+					outDuration:1000
+				});
 			  })
 		},
 	}

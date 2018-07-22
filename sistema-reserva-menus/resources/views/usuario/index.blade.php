@@ -5,10 +5,11 @@
 	@foreach ($empresa as $el)
 		<title>{{$el->name}} || Menús Fácil</title>
 	@endforeach
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
     <link rel="stylesheet" href="css2/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 <body>
 	<div id="app">
 

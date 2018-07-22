@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title>Admin nuevo diseño</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/media_queries.css">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
-  {{-- <link rel="stylesheet" href="css/custom.css"> --}}
 </head>
 <body>
   <div id="dash">
@@ -28,8 +27,6 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper" style="background-color: #{{Auth::user()->color1}}">
-
-  
           <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger" id="menuLateral"><i class="material-icons">menu</i></div>
             <a class="brand-logo center">
               <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px">
@@ -60,7 +57,6 @@
       <li><a href="#" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
     </ul>
   </div>
-
   <footer class="page-footer">
       <div class="footer-copyright">
           <div class="container" style="background-color:#{{Auth::user()->color1}}">
@@ -69,11 +65,12 @@
           </div>
       </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script type="text/javascript" src="js/config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
   <script type="text/javascript" src="js/axios.min.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript" src="admin/new/js/indexvue.js"></script>
 </body>
