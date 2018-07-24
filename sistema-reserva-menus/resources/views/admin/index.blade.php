@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col l8 s12">
     <div class="card">
-      <div class="card-image red waves-effect waves-block waves-light" style="background-color: #{{Auth::user()->color2}}">
+      <div class="card-image waves-effect waves-block waves-light" style="background-color: #{{Auth::user()->color2}}">
           <h2 class="center-align" style="color:#2a2730;font-size:28px;font-weight:700;margin:10px 0px -50px 0px">TABLA DE MENUS</h2>
           <a class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Crear Menú" style="margin: 10px"><i class="large material-icons activator">add</i></a>
           <a href="/descarga/menus" target="_blank" style="margin: 10px" class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Ver PDF"><i class="material-icons">file_download</i></a>
@@ -76,7 +76,6 @@
                 </div>
             </div>
         </div>
-        <p style="color:white;"v-model="firebase">{{Auth::user()->url}}</p>
     </div>
     {{-- <input type="hidden" v-model="firebase" value=""> --}}
 </div>

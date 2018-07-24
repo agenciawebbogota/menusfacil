@@ -34,9 +34,9 @@
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 						    <div class="carousel-item grey lighten-5 black-text"  href="#two!">
 						      <div class="row">
-						      	<div class="col s12 l8 offset-l2 card" style="background: linear-gradient(#ee771a, #ee771a, #f5cf6e);">
+						      	<div class="col s12 l8 offset-l2 card" style="background: #{{Auth::user()->color1}};">
 						      		<div class="card-title">
-						      			<h4>Menu 1</h4>
+						      			<h4>{{$menu->nombre}}</h4>
 						      		</div>
 						      		<div class="card-content" style="text-align: justify;">
 						      			<h5>{{ $menu->nombre}}</h5>
@@ -58,7 +58,7 @@
 				<div class="row">
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header yellow">
+					        <li class="collection-header" style="background:#{{Auth::user()->color2}};">
 					        	<h4>Mi selección</h4>
 					        	<p>Selecciona ti pedido</p>
 					        </li>
@@ -77,7 +77,7 @@
 					</div>
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header red">
+					        <li class="collection-header" style="background:#{{Auth::user()->color3}};">
 					        	<h4>Adiciones</h4>
 					        	<p>Selecciona algo adicional</p>
 					        </li>
@@ -136,9 +136,9 @@
 				      @endforeach
 						 {{-- @csrf --}}
 
-					<button
-					v-if="(pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect green col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
-					<button v-else class="btn waves-effect green col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
+					<button style="background:#{{Auth::user()->color1}};"
+					v-if="(pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
 
@@ -151,7 +151,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="usuario/js/axios.min.js"></script>
     <script src="js2/materialize.min.js"></script>

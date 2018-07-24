@@ -57,9 +57,9 @@
       <li><a href="#" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
     </ul>
   </div>
-  <footer class="page-footer">
+  <footer class="page-footer" style="background-color:#{{Auth::user()->color1}}">
       <div class="footer-copyright">
-          <div class="container" style="background-color:#{{Auth::user()->color1}}">
+          <div class="container">
             <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
             <span class="right">Todos los derechos reservados ©</span>
           </div>
@@ -69,7 +69,8 @@
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
-  <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+  {{-- <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script> --}}
+  <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
   <script type="text/javascript" src="js/axios.min.js"></script>
   <script type="text/javascript" src="admin/js/config.js"></script>
   <script type="text/javascript">

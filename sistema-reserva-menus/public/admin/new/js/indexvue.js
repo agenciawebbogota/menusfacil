@@ -212,11 +212,8 @@ new Vue({
 			  })
 		},
 		momentjs:function(fecha){
-			// moment.locale('es')
-			// var fecha = moment([2000, 1, 1]); // 1/1/2000
-			// ¿Cuánto tiempo ha pasado?
-			return fecha.fromNow(true); // años que han pasado desde la fecha
-
+			moment.locale('es');
+			return moment(fecha).fromNow();
 		},
 		number_format:function(amount, decimals) {
 	    amount += ''; // por si pasan un numero en vez de un string
