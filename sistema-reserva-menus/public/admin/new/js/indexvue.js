@@ -1,6 +1,7 @@
 new Vue({
 	el:'#dash',
 	data:{
+		vendidosdia:'',
 		menus:'',
 		total:0,
 		fecha:'',
@@ -29,15 +30,15 @@ new Vue({
 		document.addEventListener('DOMContentLoaded', ()=> {
 			// Botones flotantes
 			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
-			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});	
-			// let elems = document.querySelectorAll('.tooltipped');	 		
-			let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});		
-			let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});			
+			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
+			// let elems = document.querySelectorAll('.tooltipped');
+			let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
+			let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
 		})
 	},
 	created:function(){
+
 		ref.on('value', (data) => {
-			// console.log(data)
 		  this.getPedidos()
 		});
 		this.getMenus()
@@ -66,7 +67,7 @@ new Vue({
 			  })
 			  .catch(function (error) {
 			    M.toast({
-					html:'Hay un error en el servidor, contactanos.', 
+					html:'Hay un error en el servidor, contactanos.',
 					outDuration:1000
 				});
 			  })
@@ -89,25 +90,32 @@ new Vue({
 				this.noti.descripcion = ''
 				this.noti.nombre = ''
 			}else{
-				axios.post('/menus/crear',this.add)
-				  .then((response)=>{
-				  	this.add.nombre = ''
-				  	this.add.descripcion = ''
-				  	this.add.precio = ''
-				  	this.add.adicional = ''
-				  	this.add.estado = ''
-				  	this.getMenus()
-				  	M.toast({
-						html:'Se ha creado el menú co éxito.', 
-						outDuration:1000
+					axios.post('/menus/crear',this.add)
+					.then((response)=>{
+						if (this.add.adicional == 'NO') {
+							M.toast({
+								html:'Se ha creado el menú co éxito.',
+								outDuration:1000
+							});
+						}else {
+							M.toast({
+								html:'Se ha creado la adición con éxito.',
+								outDuration:1000
+							});
+						}
+						this.add.nombre = ''
+						this.add.descripcion = ''
+						this.add.precio = ''
+						this.add.adicional = ''
+						this.add.estado = ''
+						this.getMenus()
+					})
+					.catch(function (error) {
+						M.toast({
+							html:'Hay un error en el servidor, contactanos.',
+							outDuration:1000
+						});
 					});
-				  })
-				  .catch(function (error) {
-				    M.toast({
-						html:'Hay un error en el servidor, contactanos.', 
-						outDuration:1000
-					});
-				  });
 			}
 		},
 		updateMenu:function(menu, q){
@@ -137,12 +145,12 @@ new Vue({
 				let modalupdate = M.Modal.getInstance(actualizarMenu)
 				modalupdate.close()
 				M.toast({
-					html:'Se ha actualizado el menu '+"'"+data.nombre+"'.", 
+					html:'Se ha actualizado el menu '+"'"+data.nombre+"'.",
 					outDuration:1000
 				});
 			}).catch(function (error) {
 			    M.toast({
-					html:'Hay un error en el servidor, contactanos.', 
+					html:'Hay un error en el servidor, contactanos.',
 					outDuration:1000
 				});
 			  });
@@ -153,7 +161,7 @@ new Vue({
 			axios.delete(url).then((resp) =>{
 				this.getMenus()
 				M.toast({
-					html:'Se ha eliminado el menu.', 
+					html:'Se ha eliminado el menu.',
 					outDuration:1000
 				});
 			})
@@ -172,21 +180,20 @@ new Vue({
 			    let url = '/menus/actualizar/estado';
 				axios.put(url, menu).then((resp)=>{
 				M.toast({
-					html:'Se ha eliminado el menu.', 
+					html:'Se ha eliminado el menu.',
 					outDuration:1000
 				});
 
 					this.getMenus()
 				}).catch((error)=> {
 				    M.toast({
-					html:'Hay un error en el servidor, contactanos.', 
+					html:'Hay un error en el servidor, contactanos.',
 					outDuration:1000
 				});
 				})
 			  } else {
-
 			  	M.toast({
-					html:'Hemos cancelado tu solicitud.', 
+					html:'Hemos cancelado tu solicitud.',
 					outDuration:1000
 				});
 			  }
@@ -200,14 +207,31 @@ new Vue({
 			let url = 'pedidos/pedidos'
 			axios.get(url)
 			  .then((resp) =>{
-			    this.pedidos = resp.data;
-			  })
-			  .catch((error)=>{
-			    M.toast({
-					html:'Hay un error en el servidor, contactanos.', 
-					outDuration:1000
-				});
+			    this.pedidos = resp.data.pedidos;
+					this.vendidosdia = this.number_format(resp.data.total);
 			  })
 		},
-	}
+		momentjs:function(fecha){
+			// moment.locale('es')
+			// var fecha = moment([2000, 1, 1]); // 1/1/2000
+			// ¿Cuánto tiempo ha pasado?
+			return fecha.fromNow(true); // años que han pasado desde la fecha
+
+		},
+		number_format:function(amount, decimals) {
+	    amount += ''; // por si pasan un numero en vez de un string
+	    amount = parseFloat(amount.replace(/[^0-9\.]/g, '')); // elimino cualquier cosa que no sea numero o punto
+	    decimals = decimals || 0; // por si la variable no fue fue pasada
+	    // si no es un numero o es igual a cero retorno el mismo cero
+	    if (isNaN(amount) || amount === 0)
+	        return parseFloat(0).toFixed(decimals);
+			    // si es mayor o menor que cero retorno el valor formateado como numero
+			    amount = '' + amount.toFixed(decimals);
+			    var amount_parts = amount.split('.'),
+			        regexp = /(\d+)(\d{3})/;
+			    while (regexp.test(amount_parts[0]))
+			        amount_parts[0] = amount_parts[0].replace(regexp, '$1' + ',' + '$2');
+			    return amount_parts.join('.');
+			}
+		}
 })

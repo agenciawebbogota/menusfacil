@@ -33,7 +33,14 @@ class PedidoController extends Controller
             ->orderBy('created_at', 'ASC')
             ->limit(10)
             ->get();
-        return $menus;
+						$total = 0;
+						foreach ($menus as $menu) {
+							$total = $menu->precio + $total;
+						}
+		        return [
+							'pedidos' => $menus,
+							'total' => $total,
+						];
     }
     public function create(Request $request){
         if ($request->input('adicionalPedido') == '') {
@@ -52,14 +59,14 @@ class PedidoController extends Controller
             $pedido = Pedido::create([
                 'nombre' => $request->input('nombre'),
                 'correo' => $request->input('correo'),
-				'telefono' => $request->input('telefono'),
-				'direccion' => $request->input('direccion'),
+								'telefono' => $request->input('telefono'),
+								'direccion' => $request->input('direccion'),
                 'observaciones' => $request->input('observaciones'),
                 'adicional_pedido' => $request->input('adicionalPedido'),
                 'user_id' => $request->input('user_id'),
                 'menu_pedido'=>$request->input('menuPedido')
             ]);
-            
+
         }
             return $pedido;
     }

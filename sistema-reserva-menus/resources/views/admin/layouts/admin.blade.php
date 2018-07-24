@@ -69,8 +69,13 @@
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="js2/materialize.min.js"></script>
+  <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
   <script type="text/javascript" src="js/axios.min.js"></script>
-  <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript" src="admin/js/config.js"></script>
+  <script type="text/javascript">
+    let firebase = "<?php  echo Auth::user()->url ?>";
+    let ref = db.ref(firebase);
+  </script>
   <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript" src="admin/new/js/indexvue.js"></script>
 </body>

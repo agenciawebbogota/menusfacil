@@ -1,10 +1,8 @@
-
-
-
 new Vue({
 	el:'#dash',
 	data:{
 		menus:'',
+		firebase:'',
 		total:0,
 		fecha:'',
 		estado:'',
@@ -31,6 +29,7 @@ new Vue({
 	mounted:function(){
 	},
 	created:function(){
+
 		ref.on('value', (data) => {
 			// console.log(data)
 		  this.getPedidos()
@@ -125,7 +124,7 @@ new Vue({
 			}
 			axios.put(url, data).then((resp)=>{
 				// Cerrar modal
-				
+
 				// modalUpdate.close()
 				Materialize.toast('Se ha actualizado el menu '+"'"+data.nombre+"'", 1000);
 

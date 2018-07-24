@@ -54,7 +54,7 @@
             <div class="card">
                 <div class="card-content white-text" style="background-color: #{{Auth::user()->color2}}">
                     <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Vendido Hoy</p>
-                    <h4 class="card-stats-number">$806.52</h4>
+                    <h4 class="card-stats-number">@{{vendidosdia}}</h4>
                     <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
                     </p>
                 </div>
@@ -76,7 +76,9 @@
                 </div>
             </div>
         </div>
+        <p style="color:white;"v-model="firebase">{{Auth::user()->url}}</p>
     </div>
+    {{-- <input type="hidden" v-model="firebase" value=""> --}}
 </div>
   <!-- Modal editar menu -->
   @include('admin.includeco.formularios.editarmenu')

@@ -25,7 +25,6 @@ new Vue({
 	},
 	created:function(){
 		this.pedido.user_id = document.getElementById('user_id').innerHTML
-		// this.notificacion()
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});

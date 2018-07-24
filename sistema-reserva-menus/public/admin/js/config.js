@@ -8,5 +8,3 @@ let config = {
   };
 firebase.initializeApp(config);
 let db = firebase.database();
-var pathname = window.location.pathname;
-let ref = db.ref(pathname);
