@@ -4,15 +4,10 @@ new Vue({
 	data:{
 		url:'',
 		datos:{
-			// password:'',
-			// email:'',
 			'url':'',
 			'color1':'',
 			'color2':'',
 			'color3':'',
-			// password:'',
-			// 'password_confirmation':'',
-			// _token:'',
 			muestraColor1:'',
 			name:'',
 		}
@@ -33,11 +28,13 @@ new Vue({
 				}else if(letra.toLowerCase()=='í'){
 				  arrayLetras.push('i')
 				}else if(letra.toLowerCase()=='ó'){
-				  arrayLetras.push('o')   
+				  arrayLetras.push('o')
 				}else if(letra.toLowerCase()=='.'){
-			      arrayLetras.push('')   
-			    }else if(letra.toLowerCase()=='ú'){
+			      arrayLetras.push('')
+			  }else if(letra.toLowerCase()=='ú'){
 				  arrayLetras.push('u')
+				}else if(letra.toLowerCase()=='ñ'){
+				  arrayLetras.push('n')
 				}else{
 				  arrayLetras.push(letra.toLowerCase())
 				}

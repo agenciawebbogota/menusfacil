@@ -22,11 +22,11 @@ class CreatePedidosTable extends Migration
             $table->string('direccion');
             $table->string('observaciones');
             $table->integer('menu_pedido')->unsigned();
-            $table->integer('adicional_pedido')->unsigned();
+            $table->integer('adicional_pedido')->unsigned()->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('menu_pedido')->references('id')->on('menus');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('adicional_pedido')->references('id')->on('menus');
+            // $table->foreign('adicional_pedido')->references('id')->on('menus');
         });
     }
     /**

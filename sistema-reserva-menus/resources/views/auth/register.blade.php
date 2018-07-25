@@ -13,7 +13,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de la empresa</label>
 
                             <div class="col-md-6">
                                 <input id="name" @keyup="urlLug()" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" v-model="datos.name" name="name" value="{{ old('name') }}" required autofocus>
@@ -38,53 +38,57 @@
                                 @endif
                             </div>
                         </div>
+                        {{-- Colores --}}
+                        {{-- Color 1:  2a2730 --}}
+                        {{-- Color 2:  66181a --}}
+                        {{-- Color 3:  E88A10 --}}
                         {{-- Columnas adicionales --}}
 
-                        <div class="form-group row">
-                           
-                            <div class="col-md-6">
+                        {{-- <div class="form-group row">
+
+                            <div class="col-md-6"> --}}
                                 <input id="url" type="hidden" name="url" v-model="datos.url">
-                            </div>
+                            {{-- </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="color1" class="col-md-4 col-form-label text-md-right">{{ __('Color 1') }}</label>
+                        <div class="form-group row"> --}}
+                            {{-- <label for="color1" class="col-md-4 col-form-label text-md-right">{{ __('Color 1') }}</label> --}}
 
-                            <div class="col-md-6">
-                                <input id="color1" type="text" class="form-control{{ $errors->has('color1') ? ' is-invalid' : '' }}" name="color1" value="{{ old('color1') }}" required autofocus v-model="datos.color1">
-                                @if ($errors->has('color1'))
+                            {{-- <div class="col-md-6"> --}}
+                                <input id="color1" type="hidden" {{-- class="form-control{{ $errors->has('color1') ? ' is-invalid' : '' }}"--}} name="color1" value="#2a2730" {{--required autofocus v-model="datos.color1"--}}>
+                                {{-- @if ($errors->has('color1'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('color1') }}</strong>
                                     </span>
-                                @endif
-                            </div>
+                                @endif --}}
+                            {{-- </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="color2" class="col-md-4 col-form-label text-md-right">{{ __('Color 2') }}</label>
+                        <div class="form-group row"> --}}
+                            {{-- <label for="color2" class="col-md-4 col-form-label text-md-right">{{ __('Color 2') }}</label> --}}
 
-                            <div class="col-md-6">
-                                <input id="color2" type="text" class="form-control{{ $errors->has('color2') ? ' is-invalid' : '' }}" name="color2" value="{{ old('color2') }}" required autofocus v-model="datos.color2">
+                            {{-- <div class="col-md-6"> --}}
+                                 <input id="color2" type="hidden" {{--class="form-control{{ $errors->has('color2') ? ' is-invalid' : '' }}" required autofocus  v-model="datos.color2"--}} name="color2" value="#66181a">
 
-                                @if ($errors->has('color2'))
+                                {{-- @if ($errors->has('color2'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('color2') }}</strong>
                                     </span>
-                                @endif
-                            </div>
+                                @endif --}}
+                            {{-- </div>
                         </div>
-                         <div class="form-group row">
-                            <label for="color3" class="col-md-4 col-form-label text-md-right">{{ __('Color 3') }}</label>
+                         <div class="form-group row"> --}}
+                            {{-- <label for="color3" class="col-md-4 col-form-label text-md-right">{{ __('Color 3') }}</label> --}}
 
-                            <div class="col-md-6">
-                                <input id="color3" type="text" class="form-control{{ $errors->has('color3') ? ' is-invalid' : '' }}" name="color3" value="{{ old('color3') }}" required autofocus v-model="datos.color3">
+                            {{-- <div class="col-md-6"> --}}
+                                <input id="color3" type="hidden" {{--class="form-control{{ $errors->has('color3') ? ' is-invalid' : '' }}" required autofocus v-model="datos.color3"--}} name="color3" value="#E88A10">
 
-                                @if ($errors->has('color3'))
+                                {{-- @if ($errors->has('color3'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('color3') }}</strong>
                                     </span>
-                                @endif
-                            </div>
-                        </div>
+                                @endif --}}
+                            {{-- </div>
+                        </div> --}}
 
                         {{-- Fin --}}
 

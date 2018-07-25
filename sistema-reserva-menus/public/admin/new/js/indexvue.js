@@ -42,20 +42,8 @@ new Vue({
 		  this.getPedidos()
 		});
 		this.getMenus()
-		setInterval(()=>{
-			let LaFecha=new Date();
-			let Mes=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-			let diasem=new Array('Dom.','Lun.','Mar.','Mier.','Jue.','vie.','Sab.');
-			let diasemana=LaFecha.getDay();
-			let FechaCompleta="";
-			let NumeroDeMes="";
-			let hora = LaFecha.getHours()
-			let minuto = LaFecha.getMinutes()
-			let segundo = LaFecha.getSeconds()
-			NumeroDeMes=LaFecha.getMonth();
-			FechaCompleta=diasem[diasemana]+" "+LaFecha.getDate()+" de "+Mes[NumeroDeMes]+" de "+LaFecha.getFullYear()+" "+hora+":"+minuto+":"+segundo;
-			this.fecha = FechaCompleta;
-		} , 1000);
+		moment.locale('es');
+		this.fecha = moment().format('LL');
 	},
 	methods:{
 		getMenus:function(){
@@ -208,11 +196,10 @@ new Vue({
 			axios.get(url)
 			  .then((resp) =>{
 			    this.pedidos = resp.data.pedidos;
-					this.vendidosdia = this.number_format(resp.data.total);
+					this.vendidosdia = resp.data.total;
 			  })
 		},
 		momentjs:function(fecha){
-			moment.locale('es');
 			return moment(fecha).fromNow();
 		},
 		number_format:function(amount, decimals) {

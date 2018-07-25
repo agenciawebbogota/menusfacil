@@ -33,14 +33,33 @@ class PedidoController extends Controller
             ->orderBy('created_at', 'ASC')
             ->limit(10)
             ->get();
+				$adiciones = DB::table('pedidos')
+            ->where('pedidos.user_id', \Auth::id())
+            ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
+            ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+            ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio', 'menus.adicional')
+            ->orderBy('created_at', 'ASC')
+            ->limit(10)
+            ->get();
 						$total = 0;
+						$pedido = [];
 						foreach ($menus as $menu) {
-							$total = $menu->precio + $total;
+							array_push($pedido, $menu);
 						}
-		        return [
+						foreach($adiciones as $adicion){
+							array_push($pedido, $adicion);
+						}
+						foreach($pedido as $ped){
+							$total = $ped->precio + $total;
+						}
+		        return(
+							[
 							'pedidos' => $menus,
 							'total' => $total,
-						];
+						]
+
+
+							);
     }
     public function create(Request $request){
         if ($request->input('adicionalPedido') == '') {
@@ -81,7 +100,7 @@ class PedidoController extends Controller
         $adicionales = DB::table('pedidos')
             ->where('pedidos.user_id', \Auth::id())
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
-			->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+						->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_adicional', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'ASC')
             ->get();

@@ -19,14 +19,14 @@
         <div class="switch">
           <label>
             <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
-            <span class="lever" style="background-color:#{{Auth::user()->color3}};border:1px solid #b3b3b3"></span>
+            <span class="lever" style="background-color:{{Auth::user()->color3}};border:1px solid #b3b3b3"></span>
           </label>
         </div>
       </div>
     </td>
     <td>
       <a href="#actualizarMenu" class="btn-floating blue modal-trigger" v-on:click="llenarModal(menu)">
-        <i class="material-icons">edit</i> 
+        <i class="material-icons">edit</i>
       </a>
     </td>
     <td>

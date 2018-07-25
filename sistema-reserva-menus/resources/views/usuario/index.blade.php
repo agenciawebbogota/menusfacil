@@ -34,7 +34,7 @@
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 						    <div class="carousel-item grey lighten-5 black-text"  href="#two!">
 						      <div class="row">
-						      	<div class="col s12 l8 offset-l2 card" style="background: #{{Auth::user()->color1}};">
+						      	<div class="col s12 l8 offset-l2 card" style="background:{{Auth::user()->color1}};">
 						      		<div class="card-title">
 						      			<h4>{{$menu->nombre}}</h4>
 						      		</div>
@@ -58,7 +58,7 @@
 				<div class="row">
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header" style="background:#{{Auth::user()->color2}};">
+					        <li class="collection-header" style="background:{{Auth::user()->color2}};">
 					        	<h4>Mi selección</h4>
 					        	<p>Selecciona ti pedido</p>
 					        </li>
@@ -77,7 +77,7 @@
 					</div>
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header" style="background:#{{Auth::user()->color3}};">
+					        <li class="collection-header" style="background:{{Auth::user()->color3}};">
 					        	<h4>Adiciones</h4>
 					        	<p>Selecciona algo adicional</p>
 					        </li>
@@ -136,7 +136,7 @@
 				      @endforeach
 						 {{-- @csrf --}}
 
-					<button style="background:#{{Auth::user()->color1}};"
+					<button style="background:{{Auth::user()->color1}};"
 					v-if="(pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
