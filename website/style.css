@@ -31,12 +31,32 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/*Titulos*/
-.titulo2{
-  font-size: 45px;
+/*Titulo*/
+.logo-mf{ width: 200px !important; height: 197px !important; }
+/*Logo*/
+.titulo{ font-size:40px;line-height:1.2em; }
+.titulo2{ font-size:40px;line-height:1.2em; }
 }
-
+/*Botones*/
+.btn-prueba{background-color: #339642 !important;}
+.btn-conoce{background-color: #339642 !important;}
+/*Responsive Header*/
+@media screen and (max-width: 736px){
+  .logo-mf{ width: 90px !important; height: 89px !important; margin-top: 120px !important; margin-left: -40px !important}
+  .titulo{font-size: 25px;margin-top: 50px !important;}
+  .titulo2{font-size: 25px;}
+  .descp{ display:none; }
+  .btn-prueba{margin-top:-20px; }
+  .btn-conoce{margin-top:-20px;}
+}
+@media screen and (min-width:768px) and (max-width:920px){
+  .logo-mf{ width: 150px !important; height: 148px !important;}
+  .titulo{font-size: 30px;}
+  .titulo2{font-size: 30px;}
+  .descp{ display:none; }
+  .btn-prueba{margin-top:-140px; }
+  .btn-conoce{margin-top:-140px;}
+}
 
 /* Link style
 /* ------------------------------ */
