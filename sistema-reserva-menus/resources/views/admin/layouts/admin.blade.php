@@ -8,6 +8,7 @@
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="admin/css/style-fullscreen.css">
 </head>
 <body>
   <div id="dash">

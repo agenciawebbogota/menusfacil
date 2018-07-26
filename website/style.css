@@ -105,6 +105,7 @@ Slider
 .btn-download.app-download:hover {
     color: #fff;
     background-color: #ee7a1c;
+    border:2px solid #ee7a1c;
 }
 @media screen and (max-width:720px){
   .btn-download.app-download{width: 180px;padding: 15px 15px 10px 15px;margin: 0px 20px 0px 230px;}
