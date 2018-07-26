@@ -11,7 +11,7 @@
   <tbody style="border:1px solid #b3b3b3">
   <tr v-for="menu in menus" v-if="menu.activo == 1">
 
-    <td>@{{ menu.nombre }} (@{{ menu.adicional}})</td>
+    <td>@{{ menu.nombre }}</td>
     <td>@{{ menu.descripcion }}</td>
     <td>@{{ menu.precio }}</td>
     <td>

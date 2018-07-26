@@ -4,10 +4,11 @@ new Vue({
 	data:{
 		menus:'',
 		adicionales:'',
+		checked:false,
 		terminaste:false,
 		pedido:{
-			menuPedido:'',
-			adicionalPedido:'',
+			menu_pedido:'',
+			adicional_pedido:'',
 			nombre:'',
 			correo:'',
 			telefono:'',
@@ -41,42 +42,57 @@ new Vue({
 			}else if(this.pedido.telefono.length > 10){
 				this.noti.telefono = 'El telefono de ser menor a 11 caracteres.'
 				this.noti.nombre = ''
-			}else if(!this.validarCorreo(this.pedido.correo)){
-				this.noti.correo = 'Ingresa un correo valido.'
-				this.noti.telefono = ''
-				this.noti.nombre = ''
 			}else if(this.pedido.direccion.length<4){
 				this.noti.direccion = 'Debe escribir una dirección valida.'
 				this.noti.nombre = ''
 				this.noti.telefono = ''
 				this.noti.correo = ''
-			}else if(this.pedido.observaciones.length<4){
-				this.noti.observaciones = 'Escribe algo importante a tener en cuenta'
-				this.noti.nombre = ''
-				this.noti.telefono = ''
-				this.noti.correo = ''
-				this.noti.direccion = ''
-			}else{
-			// let self = this;
-				axios.post('/pedidos/crear',this.pedido)
-				  .then((resp)=>{
-				  this.noti.correo = ''
-					this.noti.telefono = ''
-					this.noti.nombre = ''
-					this.pedido.correo = ''
-					this.pedido.telefono = ''
-					this.pedido.nombre = ''
-					this.noti.direccion = ''
-					this.noti.observaciones = ''
-					this.pedido.direccion = ''
-					this.pedido.observaciones = ''
-				  	this.notificacion()
-				  	M.toast({html: 'Hemos generado su orden', outDuration:1000});
-				  })
-				  .catch(function (error) {
-				    M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
-				  });
-			}
+			}else if(this.pedido.correo.length > 0){
+					if (!this.validarCorreo(this.pedido.correo)) {
+						this.noti.correo = 'Ingresa un correo valido.'
+						this.noti.telefono = ''
+						this.noti.nombre = ''
+					}else {
+					// let self = this;
+						axios.post('/pedidos/crear',this.pedido)
+							.then((resp)=>{
+							this.noti.correo = ''
+							this.noti.telefono = ''
+							this.noti.nombre = ''
+							this.pedido.correo = ''
+							this.pedido.telefono = ''
+							this.pedido.nombre = ''
+							this.noti.direccion = ''
+							this.noti.observaciones = ''
+							this.pedido.direccion = ''
+							this.pedido.observaciones = ''
+								this.notificacion()
+								M.toast({html: 'Hemos generado su orden', outDuration:1000});
+							})
+							.catch(function (error) {
+								M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
+							});
+					}
+				}else {
+					axios.post('/pedidos/crear',this.pedido)
+						.then((resp)=>{
+						this.noti.correo = ''
+						this.noti.telefono = ''
+						this.noti.nombre = ''
+						this.pedido.correo = ''
+						this.pedido.telefono = ''
+						this.pedido.nombre = ''
+						this.noti.direccion = ''
+						this.noti.observaciones = ''
+						this.pedido.direccion = ''
+						this.pedido.observaciones = ''
+							this.notificacion()
+							M.toast({html: 'Hemos generado su orden', outDuration:1000});
+						})
+						.catch(function (error) {
+							M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
+						});
+				}
 		},
 		validarCorreo:function(texto) {
 			emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;

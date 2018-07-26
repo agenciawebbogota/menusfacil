@@ -16,9 +16,9 @@
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
-			@foreach ($empresa as $el)
+			{{-- @foreach ($empresa as $el)
 	      		<a href="#" class="brand-logo center">{{$el->name}}</a>
-			@endforeach
+			@endforeach --}}
 		    </div>
 		  </nav>
 		</div>
@@ -32,7 +32,7 @@
 
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-						    <div class="carousel-item grey lighten-5 black-text"  href="#two!">
+						    <div class="carousel-item grey lighten-5 white-text"  href="#two!">
 						      <div class="row">
 						      	<div class="col s12 l8 offset-l2 card" style="background:{{Auth::user()->color1}};">
 						      		<div class="card-title">
@@ -60,10 +60,10 @@
 						<ul class="collection with-header">
 					        <li class="collection-header" style="background:{{Auth::user()->color2}};">
 					        	<h4>Mi selección</h4>
-					        	<p>Selecciona ti pedido</p>
+					        	<p>Selecciona tu pedido</p>
 					        </li>
 					        <div class="input-field col s12">
-							    <select class="menuSelect" v-model="pedido.menuPedido">
+							    <select class="menuSelect" v-model="pedido.menu_pedido">
 							      <option value="" disabled selected>Toma uno</option>
 								    @foreach ($menus as $menu)
 									@if ($menu->adicional == 'NO' AND $menu->estado == 1)
@@ -82,7 +82,7 @@
 					        	<p>Selecciona algo adicional</p>
 					        </li>
 					        <div class="input-field col s12">
-							    <select class="adicionalSelect" v-model="pedido.adicionalPedido">
+							    <select class="adicionalSelect" v-model="pedido.adicional_pedido">
 							      <option value="" disabled selected>Toma uno</option>
 									@foreach ($menus as $menu)
 									@if ($menu->adicional == 'SI' AND $menu->estado == 1)
@@ -112,13 +112,10 @@
 			          <span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
 			          <label for="telefono">Teléfono</label>
 			        </div>
-			        <div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
-			          <i class="material-icons prefix">email</i>
-			          <input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
-			          <span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
-			          <label for="correo">Correo</label>
-			        </div>
-					<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
+
+
+
+							<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
 			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
@@ -135,9 +132,23 @@
 				      	{{-- <input id="user_id" type="text" v-model="pedido.user_id" value="{{ $el->id }}"> --}}
 				      @endforeach
 						 {{-- @csrf --}}
+						 {{-- poner swich para habilitar y deshabilitar el correo --}}
+						 <div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2" v-if="checked">
+							 <i class="material-icons prefix">email</i>
+							 <input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
+							 <span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
+							 <label for="correo">Correo</label>
+						 </div>
+						 {{-- <div class=""> --}}
+						 <br><br>
+						 <label class="col l8 s12 m8 offset-l2 m8 offset-m2">
+							 <input type="checkbox" v-model="checked"/>
+							 <span>Quieres recibir una notificación vía correo electrónico?</span>
+						 </label>
+						 {{-- </div> --}}
 
 					<button style="background:{{Auth::user()->color1}};"
-					v-if="(pedido.menuPedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.correo.length>0 && pedido.direccion.length>0 && pedido.observaciones.length>0)" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+					v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>

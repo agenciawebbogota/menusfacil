@@ -58,7 +58,7 @@ class MenuController extends Controller
 			return 'Producto Eliminado';
 			// return $id;
 		}
-		
+
     }
 
     public function updateEstado(Request $request){
@@ -76,11 +76,34 @@ class MenuController extends Controller
     public function pdf(){
     	$menus = Menu::all()->where('activo', 1)->where('user_id', \Auth::id());
 
-    	$view =  \View::make('pdf.menuscreados', compact('menus'))->render();
+    		$view =  \View::make('pdf.menuscreados', compact('menus'))->render();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view);
-        return $pdf->stream('Nombre_Personalizado_PDF'); 
+        return $pdf->stream('Nombre_Personalizado_PDF');
     }
+
+		public function historicomenus($url){
+			$empresa = User::all()->where('url', $url);
+	   	if(count($empresa)){
+	   		$menus;
+	   		foreach ($empresa as  $value) {
+	   			$menus = User::find($value->id)->menus;
+	   		}
+
+				$view =  \View::make('pdf.historicomenus', compact('menus', 'empresa'))->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->stream('Nombre_Personalizado_PDF');
+
+
+			// return view('pdf.historicomenus', [
+			// 	'empresa' => $empresa,
+			// 	'menus' => $menus,
+			// ]);
+	    }else{
+	    	dd('Enviar una vista de publicidad si la empresa no existe..');
+	    }
+		}
 
 
 }

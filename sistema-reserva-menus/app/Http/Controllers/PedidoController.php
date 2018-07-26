@@ -62,31 +62,34 @@ class PedidoController extends Controller
 							);
     }
     public function create(Request $request){
-        if ($request->input('adicionalPedido') == '') {
+
+			// $pedido = new Pedido;
+			// $pedido->create($request->all());
+        // if ($request->input('adicionalPedido') == '') {
             $pedido = Pedido::create([
                 'nombre' => $request->input('nombre'),
                 'correo' => $request->input('correo'),
                 'telefono' => $request->input('telefono'),
                 'direccion' => $request->input('direccion'),
                 'observaciones' => $request->input('observaciones'),
-                'adicional_pedido' => $request->input('adicionalPedido'),
-                'menu_pedido'=>$request->input('menuPedido'),
+                'adicional_pedido' => $request->input('adicional_pedido'),
+                'menu_pedido'=>$request->input('menu_pedido'),
                 'user_id' => $request->input('user_id'),
             ]);
-            return $pedido;
-        }else{
-            $pedido = Pedido::create([
-                'nombre' => $request->input('nombre'),
-                'correo' => $request->input('correo'),
-								'telefono' => $request->input('telefono'),
-								'direccion' => $request->input('direccion'),
-                'observaciones' => $request->input('observaciones'),
-                'adicional_pedido' => $request->input('adicionalPedido'),
-                'user_id' => $request->input('user_id'),
-                'menu_pedido'=>$request->input('menuPedido')
-            ]);
-
-        }
+        //     return $pedido;
+        // }else{
+        //     $pedido = Pedido::create([
+        //         'nombre' => $request->input('nombre'),
+        //         'correo' => $request->input('correo'),
+				// 				'telefono' => $request->input('telefono'),
+				// 				'direccion' => $request->input('direccion'),
+        //         'observaciones' => $request->input('observaciones'),
+        //         'adicional_pedido' => $request->input('adicionalPedido'),
+        //         'user_id' => $request->input('user_id'),
+        //         'menu_pedido'=>$request->input('menuPedido')
+        //     ]);
+				//
+        // }
             return $pedido;
     }
     public function pdf(){

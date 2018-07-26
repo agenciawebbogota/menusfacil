@@ -38,6 +38,7 @@ Route::post('/menus/crear', 'MenuController@create')->middleware('auth');
 Route::PUT('/menus/actualizar', 'MenuController@update')->middleware('auth');
 Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middleware('auth');
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
+Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middleware('auth');
 
 
 
@@ -47,4 +48,3 @@ Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
 // /descarga/pedidos
 // Route::post('pedido/crear', 'PedidoController@crearPedido');
 // Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
-

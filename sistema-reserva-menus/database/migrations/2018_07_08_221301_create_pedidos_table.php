@@ -18,9 +18,9 @@ class CreatePedidosTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('telefono');
-            $table->string('correo');
+            $table->string('correo')->nullable();
             $table->string('direccion');
-            $table->string('observaciones');
+            $table->string('observaciones')->nullable();
             $table->integer('menu_pedido')->unsigned();
             $table->integer('adicional_pedido')->unsigned()->nullable();
             $table->integer('user_id')->unsigned();

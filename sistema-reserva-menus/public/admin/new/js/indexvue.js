@@ -31,7 +31,6 @@ new Vue({
 			// Botones flotantes
 			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
 			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
-			// let elems = document.querySelectorAll('.tooltipped');
 			let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
 			let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
 		})
@@ -82,12 +81,12 @@ new Vue({
 					.then((response)=>{
 						if (this.add.adicional == 'NO') {
 							M.toast({
-								html:'Se ha creado el menú co éxito.',
+								html:'Se ha creado el menú con éxito.',
 								outDuration:1000
 							});
 						}else {
 							M.toast({
-								html:'Se ha creado la adición con éxito.',
+								html:'Se ha editado con éxito.',
 								outDuration:1000
 							});
 						}
