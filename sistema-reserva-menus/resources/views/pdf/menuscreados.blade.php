@@ -32,7 +32,7 @@
         @foreach ($menus as $menu)
             <tr>
               <td>{{$menu->nombre}}</td>
-              <td class="celda">{{$menu->descripcion}}</td>
+              <td class="celda" nowrap>{{$menu->descripcion}}</td>
               <td>$ {{ number_format($menu->precio)}}</td>
               <td>{{$menu->adicional}}</td>
               @if ($menu->estado == 1)

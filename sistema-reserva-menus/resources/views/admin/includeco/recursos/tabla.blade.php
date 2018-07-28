@@ -1,14 +1,14 @@
 <table id="tablaMenus" class="centered">
-<thead style="background-color:#eaeaea">
+<thead>
 <tr>
-    <th style="border:1px solid #b3b3b3">Nombre</th>
-    <th style="border:1px solid #b3b3b3">Descripción</th>
-    <th style="border:1px solid #b3b3b3">Precio</th>
-    <th style="border:1px solid #b3b3b3">Estado</th>
-    <th style="border:1px solid #b3b3b3" colspan="4">Opciones</th>
+    <th >Nombre</th>
+    <th >Descripción</th>
+    <th >Precio</th>
+    <th >Estado</th>
+    <th colspan="4">Opciones</th>
 </tr>
 </thead>
-  <tbody style="border:1px solid #b3b3b3">
+  <tbody>
   <tr v-for="menu in menus" v-if="menu.activo == 1">
 
     <td>@{{ menu.nombre }}</td>

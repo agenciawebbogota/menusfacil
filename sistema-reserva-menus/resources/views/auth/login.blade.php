@@ -15,10 +15,10 @@
         @csrf
         <div class="row">
           <div class="input-field col l12 s10 m12 offset-s2 offset-m2 center">
-            <img src="{{url('img/logo.png')}}" alt="" class="circle responsive-img valign profile-image-login">
+            <img src="{{url('admin/img/logo-menusfacil.svg')}}" alt="" class="circle responsive-img valign profile-image-login">
             <p class="center login-form-text">MenusFácil</p>
           </div>
-      
+
           <div class="input-field col l12 s10 m12 offset-s2 offset-m2">
             <i class="material-icons prefix">person</i>
             <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}">
@@ -37,7 +37,7 @@
               <span class="red-text">{{ $errors->first('password') }}</span>
             @endif
           </div>
-                  
+
           <div class="input-field col l12 s10 m12 offset-s2 offset-m2 login-text switch">
               <div class="switch">
                 <label>
@@ -49,13 +49,13 @@
           </div>
             <button type="submit" class="btn btn-primary col l12 s10 m12 offset-s2 offset-m2">
                 Iniciar
-            </button>        
+            </button>
           <div class="input-field col s4 l6 offset-s2">
             <p class="medium-small"><a href="{{ route('register') }}">Registrate Ahora!</a></p>
           </div>
           <div class="input-field col s4 l6 offset-s2">
               <p class="right-align medium-small"><a href="{{ route('password.request')}}">Perdiste tu clave ?</a></p>
-          </div>          
+          </div>
         </div>
 
       </form>
