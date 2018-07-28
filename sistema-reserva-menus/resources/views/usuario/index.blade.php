@@ -59,8 +59,8 @@
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
 					        <li class="collection-header" style="background:{{Auth::user()->color2}};">
-					        	<h4>Mi selección</h4>
-					        	<p>Selecciona tu pedido</p>
+					        	<h4 class="white-text">Mi selección</h4>
+					        	<p class="white-text">Seleccione su pedido</p>
 					        </li>
 					        <div class="input-field col s12">
 							    <select class="menuSelect" v-model="pedido.menu_pedido">
@@ -71,7 +71,7 @@
 									@endif
 									@endforeach
 							    </select>
-							    <label>Menus del día</label>
+							    <label>Menús del día</label>
 						  	</div>
 					    </ul>
 					</div>
@@ -119,13 +119,13 @@
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
 			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
-			          <label for="direccion">Dirección</label>
+			          <label for="direccion">Dirección donde llegará su pedido</label>
 			        </div>
 							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">announcement</i>
 			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
 			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
-			          <label for="observaciones">Observaciones</label>
+			          <label for="observaciones">Observaciones del pedido (Ej: con poca sal)</label>
 			        </div>
 				      @foreach ($empresa as $el)
 				      	<p style="color:white" id="user_id">{{ $el->id }}</p>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
-  <title>historico de ménus PDF</title>
+  <title>Historico de ménus PDF</title>
   <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
           <th>Descripción</th>
           <th>Precio</th>
           <th>Adicional</th>
-          <th>Publicado</th>
+          <th>Estado</th>
           <th>Eliminado</th>
         </tr>
       </thead>

@@ -8,7 +8,7 @@
   <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
-  <link rel="stylesheet" href="admin/css/style-fullscreen.css">
+  <link rel="stylesheet" href="admin/css/main.css">
 </head>
 <body>
   <div id="dash">
@@ -22,7 +22,7 @@
     </li>
     <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
     <li><div class="divider"></div></li>
-      <li><a class="sidenav-close" href="#!">Cerrar menu<i class="material-icons">keyboard_backspace</i></a></li>
+      <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
     <li><div class="divider"></div></li>
     <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
     </ul>
@@ -31,9 +31,9 @@
         <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}}">
           <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger" id="menuLateral"><i class="material-icons large">menu</i></div>
             <a class="brand-logo center">
-              <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px">
+              <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
             </a>
-          <ul class="right hide-on-med-and-down">
+            <ul class="right hide-on-med-and-down">
             <li>
               <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                   <i class="material-icons">power_settings_new</i>
@@ -63,7 +63,7 @@
       <div class="footer-copyright">
           <div class="container">
             <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
-            <span class="right">Todos los derechos reservados ©</span>
+            <span class="right">Todos los derechos reservados ®</span>
           </div>
       </div>
   </footer>

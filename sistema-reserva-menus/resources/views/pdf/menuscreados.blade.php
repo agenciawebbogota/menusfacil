@@ -9,36 +9,36 @@
   <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body>
+<body style="background-image:url(img/logo2.png)">
 @if (!count($menus)<1)
   <div class="container">
     <div class="logo-pdf">
       <img src="img/logo2.png" alt="">
     </div>
     <div class="titulo-pdf">
-    	<h2 style="color:#2a2730">Menus Disponibles</h2>
+    	<h2 style="color:#2a2730">Menús</h2>
     </div>
-    <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff">
+    <table class="datos-menus-creados" style="border: 2px solid #66181a;background-color: #ffffff" table-layout="auto">
       <thead style="background: #2a2730;border-bottom: 2px solid #66181a;color: #ffffff;">
         <tr>
           <th>Nombre del Menú</th>
           <th>Descripción</th>
           <th>Precio</th>
           <th>Adicional</th>
-          <th>Publicado</th>
+          <th>Estado</th>
         </tr>
       </thead>
       <tbody style="color: #2a2730">
         @foreach ($menus as $menu)
             <tr>
               <td>{{$menu->nombre}}</td>
-              <td>{{$menu->descripcion}}</td>
+              <td class="celda">{{$menu->descripcion}}</td>
               <td>$ {{ number_format($menu->precio)}}</td>
               <td>{{$menu->adicional}}</td>
               @if ($menu->estado == 1)
-                 <td>SI</td>
+                 <td>ACTIVO</td>
               @else
-                 <td>NO</td>
+                 <td>INACTIVO</td>
               @endif
             </tr>
         @endforeach
