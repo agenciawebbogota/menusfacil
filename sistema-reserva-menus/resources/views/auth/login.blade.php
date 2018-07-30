@@ -51,10 +51,10 @@
                 Iniciar
             </button>
           <div class="input-field col s4 l6 offset-s2">
-            <p class="medium-small"><a href="{{ route('register') }}">Registrate Ahora!</a></p>
+            <p class="medium-small"><a href="{{ route('register') }}">Registrate Ahora</a></p>
           </div>
           <div class="input-field col s4 l6 offset-s2">
-              <p class="right-align medium-small"><a href="{{ route('password.request')}}">Perdiste tu clave ?</a></p>
+              <p class="right-align medium-small"><a href="{{ route('password.request')}}">¿Perdiste tu clave?</a></p>
           </div>
         </div>
 
