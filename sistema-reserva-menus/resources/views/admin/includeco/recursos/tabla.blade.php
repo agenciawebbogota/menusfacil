@@ -13,7 +13,7 @@
 
     <td>@{{ menu.nombre }}</td>
     <td>@{{ menu.descripcion }}</td>
-    <td>@{{ menu.precio }}</td>
+    <td>$ @{{ new Intl.NumberFormat().format(menu.precio) }}</td>
     <td>
       <div class="col s12 m8 l9">
         <div class="switch">

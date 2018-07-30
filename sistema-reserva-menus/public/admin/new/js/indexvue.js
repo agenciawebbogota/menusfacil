@@ -2,7 +2,7 @@ new Vue({
 	el:'#dash',
 	data:{
 		vendidosdia:'',
-		menus:'',
+		menus:[],
 		total:0,
 		fecha:'',
 		estado:'',
@@ -18,7 +18,8 @@ new Vue({
 			nombre:'',
 			descripcion:'',
 			precio:'',
-			estado:''
+			estado:'',
+			adicional:'',
 		},
 		noti:{
 			nombre:'',
@@ -50,13 +51,13 @@ new Vue({
 			  .then((response) =>{
 			    this.menus = response.data.menus
 			    this.total = response.data.total
-
 			  })
 			  .catch(function (error) {
 			    M.toast({
-					html:'Hay un error en el servidor, contactanos.',
-					outDuration:1000
-				});
+						html:'Hay un error en el servidor, contactanos.',
+						outDuration:1000
+					});
+					console.log(error);
 			  })
 		},
 		addMenu:function(){
@@ -119,6 +120,11 @@ new Vue({
 					menu.estado = 0
 				}
 			}
+			if (menu.adicional) {
+				menu.adicional = 'SI'
+			}else{
+				menu.adicional = 'NO'
+			}
 			let url = '/menus/actualizar';
 			let data = {
 				nombre: menu.nombre,
@@ -126,6 +132,7 @@ new Vue({
 				estado:menu.estado,
 				precio:menu.precio,
 				id:menu.id,
+				adicional: menu.adicional
 			}
 			axios.put(url, data).then((resp)=>{
 				// Cerrar modal
@@ -187,7 +194,14 @@ new Vue({
 			});
 		},
 		llenarModal:function(menu){
+			if (menu.adicional == 'SI') {
+				menu.adicional = true
+			}else{
+				menu.adicional = false
+			}
 			this.update = menu
+
+			console.log(menu);
 		},
 		getPedidos:function(){
 			// this.pedidos = []

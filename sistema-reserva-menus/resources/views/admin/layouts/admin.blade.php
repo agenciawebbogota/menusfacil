@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="admin/css/main.css">
 </head>
 <body>
-  <div id="dash">
+  <div id="dash" v-cloak>
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view">
