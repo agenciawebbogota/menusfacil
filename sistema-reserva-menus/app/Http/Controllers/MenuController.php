@@ -46,6 +46,7 @@ class MenuController extends Controller
 			'descripcion' => $request->input('descripcion'),
 			'precio' => $request->input('precio'),
 			'estado' => $estado,
+			'adicional' => $request->input('adicional'),
 			'activo' => true,
 		]);
 		return $menu;

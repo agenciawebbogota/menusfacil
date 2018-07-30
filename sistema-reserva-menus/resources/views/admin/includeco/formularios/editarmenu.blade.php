@@ -10,12 +10,27 @@
           </div>
           <div class="input-field col s6">
             <i class="mdi-editor-attach-money small"></i>
-            <input id="precio" type="tel" class="validate" v-model="update.precio">
+            <input id="precio" type="text" class="validate" v-model="update.precio">
           </div>
           <div class="input-field col s12">
               <i class="mdi-maps-restaurant-menu small"></i>
               <textarea id="descripcion" class="materialize-textarea" data-length="120" v-model="update.descripcion"></textarea>
           </div>
+          <div id="input-switches1" class="section">
+        		<div class="row section">
+        			<div class="col s12 m8 l9">
+        				<div class="switch">
+        					¿Es Adición? :
+        					<label>
+        					NO
+        					<input type="checkbox" v-model="update.adicional">
+        					<span class="lever"></span> SI
+        					</label>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+
           <div class="col s12 m8 l9">
             <div class="switch">
               Disponible :
@@ -36,16 +51,3 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
     </div>
   </div>
-
-  
-
-  <!-- Modal Structure -->
-  {{-- <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div> --}}

@@ -16,9 +16,6 @@
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
-			{{-- @foreach ($empresa as $el)
-	      		<a href="#" class="brand-logo center">{{$el->name}}</a>
-			@endforeach --}}
 		    </div>
 		  </nav>
 		</div>
@@ -29,7 +26,6 @@
 			<div class="row">
 				<div class="col l8 s12 m10 offset-l2 offset-m1">
 					<div class="carousel carousel-slider center">
-
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 						    <div class="carousel-item grey lighten-5 white-text"  href="#two!">
@@ -66,10 +62,10 @@
 							    <select class="menuSelect" v-model="pedido.menu_pedido">
 							      <option value="" disabled selected>Toma uno</option>
 								    @foreach ($menus as $menu)
-									@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-							      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
-									@endif
-									@endforeach
+											@if ($menu->adicional == 'NO' AND $menu->estado == 1)
+									      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
+											@endif
+										@endforeach
 							    </select>
 							    <label>Menús del día</label>
 						  	</div>
@@ -85,9 +81,9 @@
 							    <select class="adicionalSelect" v-model="pedido.adicional_pedido">
 							      <option value="" disabled selected>Toma uno</option>
 									@foreach ($menus as $menu)
-									@if ($menu->adicional == 'SI' AND $menu->estado == 1)
-							      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
-									@endif
+										@if ($menu->adicional == 'SI' AND $menu->estado == 1)
+								      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
+										@endif
 									@endforeach
 							    </select>
 							    <label>Adicionales del día</label>

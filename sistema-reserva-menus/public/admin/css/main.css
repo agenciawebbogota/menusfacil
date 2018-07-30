@@ -30,3 +30,7 @@
   font-weight: 700;
   text-align: center;
 }
+/* Solución a Vue.js */
+[v-cloak] {
+  display: none;
+}

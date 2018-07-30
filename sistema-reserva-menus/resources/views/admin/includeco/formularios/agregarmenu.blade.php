@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="input-field col s12">
 			<i class="mdi-editor-attach-money prefix"></i>
-			<input id="precio" type="number" v-model="add.precio" autocomplete="off">
+			<input id="precio" type="text" v-model="add.precio" autocomplete="off">
 			<span style="color:#c91e04">@{{ noti.precio }}</span>
 			<label for="precio">Precio</label>
 		</div>
