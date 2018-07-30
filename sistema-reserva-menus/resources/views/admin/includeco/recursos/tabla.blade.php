@@ -1,10 +1,10 @@
 <table id="tablaMenus" class="centered">
 <thead>
 <tr>
-    <th >Nombre</th>
-    <th >Descripción</th>
-    <th >Precio</th>
-    <th >Estado</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Precio</th>
+    <th>Estado</th>
     <th colspan="4">Opciones</th>
 </tr>
 </thead>
@@ -19,7 +19,7 @@
         <div class="switch">
           <label>
             <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
-            <span class="lever" style="background-color:{{Auth::user()->color3}};border:1px solid #b3b3b3"></span>
+            <span class="lever" style="background-color:{{Auth::user()->color3}}"></span>
           </label>
         </div>
       </div>

@@ -9,6 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css2/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="usuario/css/custom.css">
 </head>
 <body>
 	<div id="app">
@@ -59,12 +61,11 @@
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
 					        <li class="collection-header" style="background:{{Auth::user()->color2}};">
-					        	<h4 class="white-text">Mi selección</h4>
-					        	<p class="white-text">Seleccione su pedido</p>
+					        	<h4 class="white-text menus-vista-usuario">Menús Disponibles</h4>
 					        </li>
 					        <div class="input-field col s12">
 							    <select class="menuSelect" v-model="pedido.menu_pedido">
-							      <option value="" disabled selected>Toma uno</option>
+							      <option value="" disabled selected>Selecciona</option>
 								    @foreach ($menus as $menu)
 									@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 							      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
@@ -78,19 +79,18 @@
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
 					        <li class="collection-header" style="background:{{Auth::user()->color3}};">
-					        	<h4>Adiciones</h4>
-					        	<p>Selecciona algo adicional</p>
+					        	<h4 class="white-text menus-vista-usuario">Adiciones Disponibles</h4>
 					        </li>
 					        <div class="input-field col s12">
 							    <select class="adicionalSelect" v-model="pedido.adicional_pedido">
-							      <option value="" disabled selected>Toma uno</option>
+							      <option value="" disabled selected>Selecciona</option>
 									@foreach ($menus as $menu)
 									@if ($menu->adicional == 'SI' AND $menu->estado == 1)
 							      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
 									@endif
 									@endforeach
 							    </select>
-							    <label>Adicionales del día</label>
+							    <label>Adiciones del día</label>
 						  	</div>
 					    </ul>
 					</div>
@@ -104,13 +104,13 @@
 			          <i class="material-icons prefix">account_circle</i>
 			          <input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
 			          <span v-if="noti.nombre" class="red-text text-darken-2">@{{noti.nombre}}</span>
-			          <label for="nombre">Nombre</label>
+			          <label for="nombre">Tu Nombre</label>
 			        </div>
 			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">phone</i>
 			          <input id="telefono" type="number" v-model="pedido.telefono">
 			          <span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
-			          <label for="telefono">Teléfono</label>
+			          <label for="telefono">Tu Teléfono</label>
 			        </div>
 
 
@@ -119,13 +119,13 @@
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
 			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
-			          <label for="direccion">Dirección donde llegará su pedido</label>
+			          <label for="direccion">Dirección donde deseas recibir tu pedido</label>
 			        </div>
 							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">announcement</i>
 			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
 			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
-			          <label for="observaciones">Observaciones del pedido (Ej: con poca sal)</label>
+			          <label for="observaciones">¿Tienes alguna observación acerca de tu pedido? (Ej: con poca sal)</label>
 			        </div>
 				      @foreach ($empresa as $el)
 				      	<p style="color:white" id="user_id">{{ $el->id }}</p>
@@ -143,7 +143,7 @@
 						 <br><br>
 						 <label class="col l8 s12 m8 offset-l2 m8 offset-m2">
 							 <input type="checkbox" v-model="checked"/>
-							 <span>Quieres recibir una notificación vía correo electrónico?</span>
+							 <span>¿Quieres recibir los detalles de tu orden en tu email?</span>
 						 </label>
 						 {{-- </div> --}}
 

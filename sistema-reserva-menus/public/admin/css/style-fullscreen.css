@@ -35,17 +35,6 @@ header .brand-logo img {
 .header-tabla{
   padding-top: 10px;
 }
-.titulo-tabla{
-  color: #ffffff;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  margin:-5px 0px 0px 0px;
-}
-@media screen and (max-width:640px){
-  .titulo-tabla{text-align:left;font-size:18px;font-weight:500;}
-}
 
 /*TABLA PEDIDOS*/
 .titulo-pedidos{

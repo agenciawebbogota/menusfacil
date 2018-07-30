@@ -13,9 +13,10 @@
   width: 200px;
 }
 @media screen and (max-width:640px){
-  .titulo-tabla{text-align:center;
+  .titulo-tabla{text-align:left;
     font-size:18px;
     font-weight:500;
+    padding-left: 20px;
   }
   .imagen-logo{
     width: 150px;
