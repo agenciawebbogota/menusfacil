@@ -20,33 +20,33 @@ a {
 
 
 /*common form style*/
-input[type=text]:focus:not([readonly]), 
-input[type=password]:focus:not([readonly]), 
-input[type=email]:focus:not([readonly]), 
-input[type=url]:focus:not([readonly]), 
-input[type=time]:focus:not([readonly]), 
-input[type=date]:focus:not([readonly]), 
-input[type=datetime-local]:focus:not([readonly]), 
-input[type=tel]:focus:not([readonly]), 
-input[type=number]:focus:not([readonly]), 
-input[type=search]:focus:not([readonly]), 
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #673ab7;
-    box-shadow: 0 1px 0 0 #673ab7; 
+    box-shadow: 0 1px 0 0 #673ab7;
 }
 
-input[type=text]:focus:not([readonly]) + label, 
-input[type=password]:focus:not([readonly]) + label, 
-input[type=email]:focus:not([readonly]) + label, 
-input[type=url]:focus:not([readonly]) + label, 
-input[type=time]:focus:not([readonly]) + label, 
-input[type=date]:focus:not([readonly]) + label, 
-input[type=datetime-local]:focus:not([readonly]) + label, 
-input[type=tel]:focus:not([readonly]) + label, 
-input[type=number]:focus:not([readonly]) + label, 
-input[type=search]:focus:not([readonly]) + label, 
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #673ab7 !important; 
+    color: #673ab7 !important;
 }
 
 
@@ -58,7 +58,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 .team-title h3 a:hover,
 .team-social-links li a:hover,
 .contact-info .mail a:hover,
-.portfolio-with-title .portfolio-title h2 a:hover, 
+.portfolio-with-title .portfolio-title h2 a:hover,
 .portfolio-with-title .portfolio-title p a:hover {
     color: #673ab7 !important; /*theme primary color*/
 }
@@ -140,13 +140,13 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 Background banner images
 ------------------------------------------------------------*/
 .creative-banner-1 {
-    background-image: url("../../img/creative/creative-banner-1.jpg");  
+    background-image: url("../../img/creative/creative-banner-1.jpg");
 }
 .creative-banner-2 {
-    background-image: url("../../img/creative/creative-banner-2.jpg");  
+    background-image: url("../../img/creative/creative-banner-2.jpg");
 }
 .creative-banner-3 {
-    background-image: url("../../img/creative/creative-banner-3.jpg");  
+    background-image: url("../../img/creative/creative-banner-3.jpg");
 }
 
 
@@ -288,7 +288,7 @@ Background banner images
 }
 
 @media screen and (max-width: 767px) {
-    .about-intro, 
+    .about-intro,
     .my-hobbies,
     .clients-say {
         padding: 60px;
@@ -298,7 +298,7 @@ Background banner images
     }
 }
 @media screen and (max-width: 530px) {
-    .about-intro, 
+    .about-intro,
     .my-hobbies,
     .clients-say {
         padding: 15px;
@@ -327,16 +327,16 @@ Background banner images
 .copy-text a:hover,
 .footer-list li a:hover,
 .twitter-widget-wrapper a {
-    color: #c5a4ff;
-}
-
-.twitter-widget-wrapper a:hover{
     color: #fff;
 }
 
+.twitter-widget-wrapper a:hover{
+    color: #e88a10;
+}
 
 
-/* 
+
+/*
 footer newsletter
 ------------------------------------------------ */
 .primary-footer .widget .form-control {
@@ -361,8 +361,8 @@ footer newsletter
    color: #c5a4ff;
 }
 .primary-footer.brand-bg .form-group input::-moz-placeholder {
-   color: #c5a4ff;  
+   color: #c5a4ff;
 }
-.primary-footer.brand-bg .form-group input:-ms-input-placeholder {  
-   color: #c5a4ff; 
+.primary-footer.brand-bg .form-group input:-ms-input-placeholder {
+   color: #c5a4ff;
 }
