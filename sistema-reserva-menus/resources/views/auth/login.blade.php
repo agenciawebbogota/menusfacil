@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>inicio</title>
-  <link href="{{ url('css/login.css') }}" rel="stylesheet">
-  <link href="{{ url('css2/materialize.min.css') }}" rel="stylesheet">
+  <link href="{{ url('sesion/css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -61,6 +60,6 @@
       </form>
     </div>
   </div>
-  <script src="{{ url('js2/materialize.min.js') }}" defer></script>
+  <script src="{{ url('sesion/js/app.js') }}" defer></script>
 </body>
 </html>

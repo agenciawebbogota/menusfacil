@@ -7,14 +7,12 @@
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="/inicio/css/materialize.min.css">
-	{{-- <link rel="stylesheet" href="/inicio/css/app.css"> --}}
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="/inicio/css/app.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link rel="stylesheet" href="/inicio/css/custom.css">
 </head>
 <body>
-	<div id="app">
+	<div id="app" v-cloak>
 
 		<div class="navbar-fixed">
 			<nav>
@@ -31,10 +29,13 @@
 					<div class="carousel carousel-slider center">
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-						    <div class="carousel-item grey lighten-5 white-text"  href="#two!">
-						      <div class="row">
+							@foreach ($empresa as $el)
+								<div class="carousel-item  white-text"  href="#two!" style="background:{{$el->color2}};">
+							@endforeach
+						    {{-- <div class="carousel-item grey  white-text"  href="#two!"> --}}
+						      <div class="row" style="padding-top: 50px">
 										@foreach ($empresa as $el)
-											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color1}};">
+											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color3}};">
 										@endforeach
 						      		<div class="card-title">
 						      			<h4>{{$menu->nombre}}</h4>
@@ -162,18 +163,9 @@
 		</form>
 	</div>
 </body>
-    <!-- Compiled and minified JavaScript -->
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script type="text/javascript" src="/inicio/js/config.js"></script>
-  <script type="text/javascript" src="/inicio/js/axios.min.js"></script>
-  <script src="/inicio/js/materialize.min.js"></script>
-  <script type="text/javascript" src="/inicio/js/vue.js"></script>
-  <script type="text/javascript" src="/inicio/js/main.js"></script>
-	{{-- <script type="text/javascript" src="/inicio/js/app.js"></script> --}}
+	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
+	<script type="text/javascript" src="/inicio/js/app.js"></script>
 </html>

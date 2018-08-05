@@ -5,10 +5,9 @@
   <title>Admin nuevo diseño</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link href="css2/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
-  <link rel="stylesheet" href="admin/css/main.css">
 </head>
 <body>
   <div id="dash" v-cloak>
@@ -69,17 +68,11 @@
   </footer>
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script type="text/javascript" src="js2/materialize.min.js"></script>
-  {{-- <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script> --}}
-  <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-  <script type="text/javascript" src="js/axios.min.js"></script>
   <script type="text/javascript" src="admin/js/config.js"></script>
   <script type="text/javascript">
-    let firebase = "<?php  echo Auth::user()->url ?>";
+    let firebase = "empresa/<?php  echo Auth::user()->url ?>";
     let ref = db.ref(firebase);
   </script>
-  <script type="text/javascript" src="js/vue.js"></script>
-  <script type="text/javascript" src="admin/new/js/indexvue.js"></script>
+  <script type="text/javascript" src="/admin/js/app.js"></script>
 </body>
 </html>

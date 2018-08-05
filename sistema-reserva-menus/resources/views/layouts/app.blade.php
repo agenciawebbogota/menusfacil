@@ -11,14 +11,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('registro/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -79,8 +79,9 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-    <script src="{{ asset('usuario/js/axios.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('usuario/js/axios.min.js') }}" defer></script>
     <script src="{{ asset('usuario/js/vue.js') }}" defer></script>
-    <script src="{{ asset('usuario/js/registro.js') }}" defer></script>
+    <script src="{{ asset('usuario/js/registro.js') }}" defer></script> --}}
+    <script type="text/javascript" src="registro/js/app.js"></script>
 </body>
 </html>
