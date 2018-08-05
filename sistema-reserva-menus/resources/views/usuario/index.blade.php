@@ -7,10 +7,10 @@
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css2/materialize.min.css">
+    <link rel="stylesheet" href="/css2/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<link rel="stylesheet" href="usuario/css/custom.css">
+		<link rel="stylesheet" href="/usuario/css/custom.css">
 </head>
 <body>
 	<div id="app">
@@ -32,7 +32,9 @@
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 						    <div class="carousel-item grey lighten-5 white-text"  href="#two!">
 						      <div class="row">
-						      	<div class="col s12 l8 offset-l2 card" style="background:{{Auth::user()->color1}};">
+										@foreach ($empresa as $el)
+											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color1}};">
+										@endforeach
 						      		<div class="card-title">
 						      			<h4>{{$menu->nombre}}</h4>
 						      		</div>
@@ -56,7 +58,10 @@
 				<div class="row">
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header" style="background:{{Auth::user()->color2}};">
+							@foreach ($empresa as $el)
+								<li class="collection-header" style="background:{{$el->color2}};">
+
+							@endforeach
 					        	<h4 class="white-text menus-vista-usuario">Menús Disponibles</h4>
 					        </li>
 					        <div class="input-field col s12">
@@ -74,7 +79,10 @@
 					</div>
 					<div class="col l6 s12 m8 offset-m2 hoverable">
 						<ul class="collection with-header">
-					        <li class="collection-header" style="background:{{Auth::user()->color3}};">
+							@foreach ($empresa as $el)
+								<li class="collection-header" style="background:{{$el->color3}};">
+
+							@endforeach
 					        	<h4 class="white-text menus-vista-usuario">Adiciones Disponibles</h4>
 					        </li>
 					        <div class="input-field col s12">
@@ -142,9 +150,10 @@
 							 <span>¿Quieres recibir los detalles de tu orden en tu email?</span>
 						 </label>
 						 {{-- </div> --}}
-
-					<button style="background:{{Auth::user()->color1}};"
-					v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+						 @foreach ($empresa as $el)
+							 <button style="background:{{$el->color1}};"
+								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+						 @endforeach
 					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
@@ -160,9 +169,9 @@
 
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script type="text/javascript" src="js/config.js"></script>
-  <script type="text/javascript" src="usuario/js/axios.min.js"></script>
-    <script src="js2/materialize.min.js"></script>
-    <script type="text/javascript" src="usuario/js/vue.js"></script>
-    <script type="text/javascript" src="usuario/js/main.js"></script>
+  <script type="text/javascript" src="/js/config.js"></script>
+  <script type="text/javascript" src="/usuario/js/axios.min.js"></script>
+    <script src="/js2/materialize.min.js"></script>
+    <script type="text/javascript" src="/usuario/js/vue.js"></script>
+    <script type="text/javascript" src="/usuario/js/main.js"></script>
 </html>

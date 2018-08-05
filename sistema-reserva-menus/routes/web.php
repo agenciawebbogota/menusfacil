@@ -23,7 +23,7 @@ Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 
 // Manejar la vista del usuario
 
-Route::get('/{url}', 'InicioController@index');
+Route::get('empresa/{url}', 'InicioController@index');
 
 // Rutas de pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');
