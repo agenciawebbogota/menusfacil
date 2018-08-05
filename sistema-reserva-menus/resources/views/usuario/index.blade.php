@@ -7,10 +7,11 @@
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css2/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<link rel="stylesheet" href="/usuario/css/custom.css">
+  <link rel="stylesheet" href="/inicio/css/materialize.min.css">
+	{{-- <link rel="stylesheet" href="/inicio/css/app.css"> --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="/inicio/css/custom.css">
 </head>
 <body>
 	<div id="app">
@@ -169,9 +170,10 @@
 
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script type="text/javascript" src="/js/config.js"></script>
-  <script type="text/javascript" src="/usuario/js/axios.min.js"></script>
-    <script src="/js2/materialize.min.js"></script>
-    <script type="text/javascript" src="/usuario/js/vue.js"></script>
-    <script type="text/javascript" src="/usuario/js/main.js"></script>
+  <script type="text/javascript" src="/inicio/js/config.js"></script>
+  <script type="text/javascript" src="/inicio/js/axios.min.js"></script>
+  <script src="/inicio/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/inicio/js/vue.js"></script>
+  <script type="text/javascript" src="/inicio/js/main.js"></script>
+	{{-- <script type="text/javascript" src="/inicio/js/app.js"></script> --}}
 </html>

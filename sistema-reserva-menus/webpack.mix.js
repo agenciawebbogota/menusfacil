@@ -11,5 +11,14 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js([
+  'resources/assets/inicio/js/config.js',
+  'resources/assets/inicio/js/materialize.min.js',
+  'resources/assets/inicio/js/axios.min.js',
+  'resources/assets/inicio/js/main.js',
+  'resources/assets/inicio/js/vue.js',
+], 'public/inicio/js/app.js')
+   mix.css([
+     'resources/assets/inicio/css/materialize.min.css',
+     'resources/assets/inicio/css/custom.css',
+   ], 'public/inicio/css/app.css');

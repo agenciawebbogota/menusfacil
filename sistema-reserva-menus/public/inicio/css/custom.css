@@ -1,0 +1,14 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menus-vista-usuario{
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width:640px){
+  .menus-vista-usuario{
+    font-size: 18px;
+  }
+}
