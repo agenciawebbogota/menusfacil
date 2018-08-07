@@ -8,7 +8,7 @@
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
   <title>Historico de ménus PDF</title>
   <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  {{-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> --}}
 </head>
 <body>
 @if (!count($menus)<1)
