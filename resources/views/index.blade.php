@@ -136,7 +136,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                     style="z-index: 7;">
-                    <a href="#" class="btn btn-prueba"><span>Pruebalo <strong>Gratis</strong></span></a>
+                    <a href="/register" class="btn btn-prueba"><span>Pruebalo <strong>Gratis</strong></span></a>
                 </div>
 
                 <!-- LAYER NR. 6 -->
@@ -152,7 +152,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                     style="z-index: 7;">
-                    <a href="#funciones" class="btn btn-conoce"><span>Conoce <strong>las funciones</strong></span></a>
+                    <a href="#funciones" class="btn btn-conoce funciones"><span>Conoce <strong>las funciones</strong></span></a>
                 </div>
 
                 <!-- LAYER NR. 7 -->
@@ -506,6 +506,18 @@
                     }
                 });
             });
+
+            // Animar la acción de los links
+            // let contacto = $('#contac-wrapper');
+            let scrolForm = $('#funciones').offset().top + 780;
+            // let servicios = $('.servicios').offset().top
+            $('.funciones').click((e) => {
+              e.preventDefault()
+              $('body,html').animate({'scrollTop':scrolForm+100}, 2000)
+            })
+            // $('.linkServicios').click((e) => {
+            //   $('body,html').animate({'scrollTop':servicios}, 2000)
+            // })
         </script>
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems! The following part can be removed on Server for On Demand Loading) -->
