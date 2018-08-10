@@ -91,16 +91,20 @@ class MenuController extends Controller
 	   			$menus = User::find($value->id)->menus;
 	   		}
 
-				$view =  \View::make('pdf.historicomenus', compact('menus', 'empresa'))->render();
-        $pdf = \App::make('dompdf.wrapper');
-        $pdf->loadHTML($view);
-        return $pdf->stream('Nombre_Personalizado_PDF');
+				// $view =  \View::make('pdf.historicomenus', compact('menus', 'empresa'))->render();
+        // $pdf = \App::make('dompdf.wrapper');
+        // $pdf->loadHTML($view);
+        // return $pdf->stream('Nombre_Personalizado_PDF');
+				// $pdf = App::make('dompdf.wrapper');
+				// $pdf->loadHTML('<h1>Test</h1>');
+				// return $pdf->stream();
 
 
-			// return view('pdf.historicomenus', [
-			// 	'empresa' => $empresa,
-			// 	'menus' => $menus,
-			// ]);
+
+				$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
+				PDF::setOptions(['adminPassword' => 123456]);
+				return $pdf->stream('invoice');
+
 	    }else{
 	    	dd('Enviar una vista de publicidad si la empresa no existe..');
 	    }
