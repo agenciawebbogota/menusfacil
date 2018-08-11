@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Admin nuevo diseño</title>
+  <title>Admin || Menús Fácil</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
