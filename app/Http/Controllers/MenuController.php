@@ -99,11 +99,11 @@ class MenuController extends Controller
 				// $pdf->loadHTML('<h1>Test</h1>');
 				// return $pdf->stream();
 
-				PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
 				$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
 				// dd($pdf);
-				PDF::setOptions(['adminPassword' => 123456]);
-				return $pdf->stream('invoice');
+				PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif', 'adminPassword' => 123456]);
+				// PDF::setOptions(['adminPassword' => 123456]);
+				return $pdf->stream('Nombre_Personalizado_PDF.pdf');
 
 	    }else{
 	    	dd('Enviar una vista de publicidad si la empresa no existe..');
