@@ -52,6 +52,7 @@ class ResetPassword extends Notification
      */
     public function toMail($notifiable)
     {
+      
         if (static::$toMailCallback) {
             return call_user_func(static::$toMailCallback, $notifiable, $this->token);
         }

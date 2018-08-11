@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\CambiarContrasena;
 
 class User extends Authenticatable
 {
@@ -17,9 +18,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password','url','color1', 'color2', 'color3'
     ];
-    public function menus(){
-        return $this->hasMany('App\Menu');
-    }
 
     /**
      * The attributes that should be hidden for arrays.
@@ -29,4 +27,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function menus(){
+      return $this->hasMany('App\Menu');
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CambiarContrasena($token));
+    }
 }
