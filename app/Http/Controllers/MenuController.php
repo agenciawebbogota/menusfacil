@@ -100,8 +100,8 @@ class MenuController extends Controller
 				// return $pdf->stream();
 
 
-
 				$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
+				dd($pdf);
 				PDF::setOptions(['adminPassword' => 123456]);
 				return $pdf->stream('invoice');
 
