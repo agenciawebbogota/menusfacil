@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
   <title>Pedidos de hoy</title>
-  <link rel="stylesheet" type="text/css" href="css/pdf.css">
+  <link rel="stylesheet" type="text/css" href="pdf/css/pdf.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
   <title>Menús Creados PDF</title>
-  <link rel="stylesheet" type="text/css" href="css/pdf-menus.css">
+  <link rel="stylesheet" type="text/css" href="pdf/css/pdf-menus.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body style="background-image:url(img/logo2.png)">

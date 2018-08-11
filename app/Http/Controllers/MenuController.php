@@ -100,9 +100,6 @@ class MenuController extends Controller
 				// return $pdf->stream();
 
 				$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
-				// dd($pdf);
-				PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif', 'adminPassword' => 123456]);
-				// PDF::setOptions(['adminPassword' => 123456]);
 				return $pdf->stream('Nombre_Personalizado_PDF.pdf');
 
 	    }else{

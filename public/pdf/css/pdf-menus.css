@@ -1,0 +1,94 @@
+/* PDF Menus Creados */
+html{
+	margin: 0;
+}
+body{
+	width: 1400px;
+	padding: 30 60 20 10;
+	height: 2400px;
+}
+.container{
+	font-family: 'Roboto', sans-serif;
+	width: 700px;
+	margin-left: 80px;
+	padding-top: 60px;
+}
+.logo-pdf img{
+	width:130px;
+	height:131px;
+	float: left;
+	margin-top: -30;
+}
+.titulo-pdf{
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+table.datos-menus-creados {
+  width: 650px;
+  text-align: center;
+  border-collapse: collapse;
+	margin-left: -20;
+	margin-bottom: 50px;
+	margin-top: 30;
+}
+table.datos-menus-creados td, table.datos-menus-creados th {
+  border: 1px solid #66181a;
+  padding: 5px 10px;
+}
+table.datos-menus-creados tbody td {
+  font-size: 11px;
+	font-weight: 600;
+}
+table.datos-menus-creados td:nth-child(even) {
+  background: #ffffff;
+}
+table.datos-menus-creados thead {
+  text-transform: uppercase;
+}
+table.datos-menus-creados thead th {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+table.datos-menus-creados thead th:first-child {
+  border-left: none;
+}
+
+table.datos-menus-creados tfoot td {
+  font-size: 13px;
+}
+table.datos-menus-creados tfoot .links {
+  text-align: right;
+}
+.no-menus img{
+	width: 200px;
+	height: 199px;
+	margin:20px 270px;
+}
+.no-menus h1{
+	font-family: 'Roboto', sans-serif;
+	margin: 10px 190px;
+	color: #2a2730;
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.ft-img{
+	width: 283px;
+	height: 79px;
+	margin:20px 240px;
+}
+.celda{
+	width: 300px;
+	float: left;
+	white-space: pre; /* CSS 2.0 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3.0 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap; /* HP */
+	word-wrap: break-word; /* IE 5+ */
+}
