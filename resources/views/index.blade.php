@@ -9,7 +9,7 @@
         <meta name="keywords" content="material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
 
-        <title>Menús Fácil</title>
+        <title>Aplicativo</title>
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/favicon.png">
         <!--  apple-touch-icon -->
