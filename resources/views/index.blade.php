@@ -8,8 +8,12 @@
         <meta name="description" content="materialize is a material design based mutipurpose responsive template">
         <meta name="keywords" content="material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
-
-        <title>Aplicativo</title>
+        {{-- Nota: Si deseas cambiar el orden en que se muestra el contenido, sólo debes cambiar el orden de de estas etiquetas --}}
+        {{-- Google --}}
+        @include('seo.google')
+        {{-- Facebook --}}
+        @include('seo.facebook')
+        <title>Menús Fácil</title>
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/favicon.png">
         <!--  apple-touch-icon -->

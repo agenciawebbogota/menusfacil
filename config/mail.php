@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'mail.menusfacil.com'),
+    'host' => env('MAIL_HOST', 'mail.agenciawebbogota.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@menusfacil.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'menusfacil@agenciawebbogota.comm'),
         'name' => env('MAIL_FROM_NAME', 'Menús Fácil'),
     ],
 
