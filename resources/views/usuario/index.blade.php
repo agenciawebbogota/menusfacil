@@ -30,12 +30,12 @@
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 							@foreach ($empresa as $el)
-								<div class="carousel-item  white-text"  href="#two!" style="background:{{$el->color2}};">
+								<div class="carousel-item  white-text"  href="#two!" style="background:{{$el->color1}};">
 							@endforeach
 						    {{-- <div class="carousel-item grey  white-text"  href="#two!"> --}}
 						      <div class="row" style="padding-top: 50px">
 										@foreach ($empresa as $el)
-											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color3}};">
+											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color1}};">
 										@endforeach
 						      		<div class="card-title">
 						      			<h4>{{$menu->nombre}}</h4>
