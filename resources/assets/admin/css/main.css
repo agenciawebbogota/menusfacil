@@ -35,3 +35,6 @@
 [v-cloak] {
   display: none;
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+}

@@ -8,6 +8,7 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="/inicio/css/app.css">
+	<link rel="stylesheet" href="/inicio/css/usuario.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -17,6 +18,9 @@
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
+					<a class="brand-logo center">
+						<img src="/admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
+					</a>
 		    </div>
 		  </nav>
 		</div>
@@ -27,81 +31,29 @@
 			<div class="row">
 				<div class="col l8 s12 m10 offset-l2 offset-m1">
 					<div class="carousel carousel-slider center">
+
+
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-							@foreach ($empresa as $el)
-								<div class="carousel-item  white-text"  href="#two!" style="background:{{$el->color1}};">
-							@endforeach
-						    {{-- <div class="carousel-item grey  white-text"  href="#two!"> --}}
-						      <div class="row" style="padding-top: 50px">
-										@foreach ($empresa as $el)
-											<div class="col s12 l8 offset-l2 card" style="background:{{$el->color1}};">
-										@endforeach
-						      		<div class="card-title">
-						      			<h4>{{$menu->nombre}}</h4>
-						      		</div>
-						      		<div class="card-content" style="text-align: justify;">
-						      			<h5>{{ $menu->nombre}}</h5>
-						      			<i class="material-icons tiny">person</i> Descripción
-						      			<p>{{ $menu->descripcion}}</p>
-						      			<p>
-						      				<i class="material-icons tiny">attach_money</i>{{ $menu->precio}}
-						      			</p>
-						      		</div>
-						      	</div>
-						      </div>
+								<div class="carousel-item  white-text"  href="#two!" style="background:gray;">
+
+
+
+
+
+
 						    </div>
 						@endif
 						@endforeach
+
+
+
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12 m8 offset-m2 hoverable">
-						<ul class="collection with-header">
-							@foreach ($empresa as $el)
-								<li class="collection-header" style="background:{{$el->color2}};">
 
-							@endforeach
-					        	<h4 class="white-text menus-vista-usuario">Menús Disponibles</h4>
-					        </li>
-					        <div class="input-field col s12">
-							    <select class="menuSelect" v-model="pedido.menu_pedido">
-							      <option value="" disabled selected>Selecciona</option>
-								    @foreach ($menus as $menu)
-											@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-									      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
-											@endif
-										@endforeach
-							    </select>
-							    <label>Menús del día</label>
-						  	</div>
-					    </ul>
-					</div>
-					<div class="col l6 s12 m8 offset-m2 hoverable">
-						<ul class="collection with-header">
-							@foreach ($empresa as $el)
-								<li class="collection-header" style="background:{{$el->color3}};">
 
-							@endforeach
-					        	<h4 class="white-text menus-vista-usuario">Adiciones Disponibles</h4>
-					        </li>
-					        <div class="input-field col s12">
-							    <select class="adicionalSelect" v-model="pedido.adicional_pedido">
-							      <option value="" disabled selected>Selecciona</option>
-									@foreach ($menus as $menu)
-										@if ($menu->adicional == 'SI' AND $menu->estado == 1)
-								      		<option value="{{$menu->id}}">{{ $menu->nombre }}</option>
-										@endif
-									@endforeach
-							    </select>
-							    <label>Adiciones del día</label>
-						  	</div>
-					    </ul>
-					</div>
-				</div>
-			</div>
+			{{-- Mi selección --}}
 			<div>
 			</div>
 			<div class="container">
@@ -118,9 +70,6 @@
 			          <span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
 			          <label for="telefono">Tu Teléfono</label>
 			        </div>
-
-
-
 							<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">

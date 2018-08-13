@@ -15,6 +15,9 @@
 body{
   font-family: 'Montserrat', sans-serif;
 }
+.imagen-logo{
+  width: 200px;
+}
 
 .menus-vista-usuario{
   font-size: 25px;

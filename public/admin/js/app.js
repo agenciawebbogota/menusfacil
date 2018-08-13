@@ -196,17 +196,17 @@ new Vue({
 			  if (willDelete) {
 			    let url = '/menus/actualizar/estado';
 				axios.put(url, menu).then((resp)=>{
-				M.toast({
-					html:'Se ha eliminado el menu.',
-					outDuration:1000
-				});
-
+					// this.tasks.splice(this.tasks.indexOf(task),1)
+					M.toast({
+						html:'Se ha eliminado el menu.',
+						outDuration:1000
+					});
 					this.getMenus()
 				}).catch((error)=> {
 				    M.toast({
-					html:'Hay un error en el servidor, contactanos.',
-					outDuration:1000
-				});
+							html:'Hay un error en el servidor, contactanos.',
+							outDuration:1000
+						});
 				})
 			  } else {
 			  	M.toast({

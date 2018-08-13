@@ -18,7 +18,8 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    Logo
                 </a>
                 <a class="btn btn-info" href="{{ route('login') }}">Iniciar Sesión</a>
             </div>
