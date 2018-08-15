@@ -1,3 +1,21 @@
 body{
-  /* background: red ; */
+  background: linear-gradient(#ffffff, #ffffff, #dedede);
+}
+.mi-seleccion{
+  background: linear-gradient(#faa638, #e88a10);
+  text-align: center;
+}
+.striped{
+  background-color: #dcdcdc;
+}
+.content{
+  padding-left: 20px;
+}
+.delete{
+  padding-right: 0px;
+}
+.confirmar{
+  background-color: #66181a;
+  font-weight: 600;
+  letter-spacing: 0.3em;  
 }

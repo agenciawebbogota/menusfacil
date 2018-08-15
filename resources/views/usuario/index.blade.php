@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	@foreach ($empresa as $el)
-		<title>{{$el->name}} || Menús Fácil</title>
+		<title>{{$el->name}} | Menús Fácil</title>
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,16 +33,12 @@
 					<div class="carousel carousel-slider center">
 
 
+
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
 								<div class="carousel-item  white-text"  href="#two!" style="background:gray;">
 
-
-
-
-
-
-						    </div>
+							  </div>
 						@endif
 						@endforeach
 
@@ -52,8 +48,49 @@
 				</div>
 			</div>
 
+			<div class="row">
+					<div class="col s12 m6">
+						<div class="card">
+							<div class="card-image">
+								<img src="/img/menu.img-1.jpg">
+								<span class="card-title">SED PORTITOIR</span>
+								<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
+							</div>
+							<div class="card-content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc metus dui, tincidunt eget dolor in, porta egestas mauris. Curabitur ac urna congue, consequat purus faucibus, sodales orci.</p>
+							</div>
+						</div>
+					</div>
+			</div>
 
 			{{-- Mi selección --}}
+			<div class="container">
+				<div class="row">
+					<div class="col12 s12 m6">
+						<div class="card blue-grey" style="border-radius:10px">
+	        			<div class="card-content white-text mi-seleccion">
+	          				<span class="card-title">MI SELECCIÓN</span>
+	        			</div>
+									<table class="striped">
+					         <tbody>
+					          <tr>
+					            <td class="content">SED PORTITOIR</td>
+											<td class="content delete"><i class="material-icons">close</i></td>
+					          </tr>
+					          <tr>
+					            <td class="content">SED PORTITOIR</td>
+											<td class="content delete"><i class="material-icons">close</i></td>
+					          </tr>
+					          <tr>
+					            <td class="content">SED PORTITOIR</td>
+											<td class="content delete"><i class="material-icons">close</i></td>
+					          </tr>
+					        </tbody>
+					      </table>
+							</div>
+					</div>
+					<a class="waves-effect waves-light btn-large confirmar">Confirmar Pedido</a>
+				</div>
 			<div>
 			</div>
 			<div class="container">
