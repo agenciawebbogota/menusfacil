@@ -20,6 +20,7 @@ mix.scripts([
 ], 'public/inicio/js/app.js')
    .styles([
      'resources/assets/inicio/css/materialize.min.css',
+     'resources/assets/inicio/css/animate.min.css',
      'resources/assets/inicio/css/custom.css',
    ], 'public/inicio/css/app.css');
 
@@ -58,5 +59,3 @@ mix.scripts([
    .styles([
      'resources/assets/registro/css/app.css',
    ], 'public/registro/css/app.css');
-
-

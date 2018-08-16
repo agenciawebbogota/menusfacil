@@ -41,8 +41,10 @@ new Vue({
 		checked:false,
 		terminaste:false,
 		pedido:{
-			menu_pedido:'',
-			adicional_pedido:'',
+			// menu_pedido:'',
+			// cantidad_menu:0,
+			// adicional_pedido:'',
+			// cantidad_adicional:0,
 			nombre:'',
 			correo:'',
 			telefono:'',
@@ -141,5 +143,9 @@ new Vue({
 				nuevoPedido:Math.random()
 			});
 		},
+		agregarPedido:function(menu){
+
+			console.log(menu);
+		}
 	}
 })
