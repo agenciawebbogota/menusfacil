@@ -41,16 +41,15 @@ new Vue({
 		checked:false,
 		terminaste:false,
 		pedido:{
-			// menu_pedido:'',
-			// cantidad_menu:0,
-			// adicional_pedido:'',
-			// cantidad_adicional:0,
+			menu_pedido:[],
+			adicional_pedido:'',
 			nombre:'',
 			correo:'',
 			telefono:'',
 			direccion:'',
 			user_id:'',
-			observaciones:''
+			observaciones:'',
+			total:0
 		},
 		noti:{
 			nombre:'',
@@ -66,6 +65,7 @@ new Vue({
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
     		let slider = M.Carousel.init(document.querySelector('.carousel'), {fullWidth: false,indicators: true});
+    		let instances = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
 		});
 	},
 	methods:{
@@ -144,8 +144,14 @@ new Vue({
 			});
 		},
 		agregarPedido:function(menu){
-
-			console.log(menu);
+			this.pedido.menu_pedido.push(menu)
+			this.pedido.total += parseInt(menu.precio)
+			M.toast({html: 'Menú agregado', outDuration:1000});
+		},
+		eliminarMenu(index, precio){
+			this.pedido.menu_pedido.splice(index, 1)
+			this.pedido.total -= parseInt(precio)
+			M.toast({html: 'Menú eliminado', outDuration:1000});
 		}
 	}
 })

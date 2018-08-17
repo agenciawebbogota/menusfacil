@@ -36,7 +36,7 @@
 
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-								<div class="carousel-item  white-text"  href="#two!" style="background:white;">
+								<div class="carousel-item white-text"  href="#two!" style="background:white;">
 
 									{{-- <div class="row">
 											<div class="col s12 m6"> --}}
@@ -63,40 +63,29 @@
 				</div>
 			</div>
 
-
-
 			{{-- Mi selección --}}
 			<div class="container">
 				<div class="row">
-					<div class="col12 s12 m6">
+					<div class="col l8 s12 m6 offset-l2">
 						<div class="card blue-grey" style="border-radius:10px">
 	        			<div class="card-content white-text mi-seleccion">
-	          				<span class="card-title">MI SELECCIÓN</span>
+	          				<span class="card-title">MI SELECCIÓN ( Total: $ @{{ new Intl.NumberFormat().format(pedido.total)}} )</span>
 	        			</div>
-									<table class="striped">
+									<table class="striped" v-if="pedido.menu_pedido.length > 0">
 					         <tbody>
-					          <tr>
-					            <td class="content">SED PORTITOIR</td>
-											<td class="content delete"><i class="material-icons">close</i></td>
-					          </tr>
-					          <tr>
-					            <td class="content">SED PORTITOIR</td>
-											<td class="content delete"><i class="material-icons">close</i></td>
-					          </tr>
-					          <tr>
-					            <td class="content">SED PORTITOIR</td>
-											<td class="content delete"><i class="material-icons">close</i></td>
+					          <tr v-for=" (menu, index) in pedido.menu_pedido">
+					            <td class="content">@{{menu.nombre}}</td>
+											<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
 					          </tr>
 					        </tbody>
 					      </table>
 							</div>
 					</div>
 						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" @click="terminaste = true">Confirmar Pedido</a>
-
 				</div>
 			<div>
 			</div>
-			<div class="container animated fadeInDownBig delay-5s" v-if="terminaste">
+			<div class="container animated fadeInDownBig" v-if="terminaste">
 				<div class="row">
 			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2 ">
 			          <i class="material-icons prefix">account_circle</i>
