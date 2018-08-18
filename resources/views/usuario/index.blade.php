@@ -62,6 +62,9 @@
 					</div>
 				</div>
 			</div>
+			{{-- <pre>
+				@{{ $data.pedido.menu_pedido}}
+			</pre> --}}
 
 			{{-- Mi selección --}}
 			<div class="container">
@@ -69,15 +72,21 @@
 					<div class="col l8 s12 m6 offset-l2">
 						<div class="card blue-grey" style="border-radius:10px">
 	        			<div class="card-content white-text mi-seleccion">
-	          				<span class="card-title">MI SELECCIÓN ( Total: $ @{{ new Intl.NumberFormat().format(pedido.total)}} )</span>
+	          				<span class="card-title">MI SELECCIÓN <br></span>
 	        			</div>
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
 					         <tbody>
-					          <tr v-for=" (menu, index) in pedido.menu_pedido">
-					            <td class="content">@{{menu.nombre}}</td>
+					          <tr v-for="(menu, index) in detalle" class="animated bounceIn">
+					            <td class="content">@{{menu.nombre}} @{{menu.id}}</td>
 											<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
 					          </tr>
 					        </tbody>
+									<tfoot>
+										<tr class="animated bounceIn red white-text">
+					            <td class="content">TOTAL</td>
+											<td>$ @{{ new Intl.NumberFormat().format(pedido.total) }}</td>
+					          </tr>
+									</tfoot>
 					      </table>
 							</div>
 					</div>
@@ -134,7 +143,7 @@
 							 <button style="background:{{$el->color1}};"
 								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
 						 @endforeach
-					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
+						 		<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
 
