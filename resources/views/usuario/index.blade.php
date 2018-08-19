@@ -36,10 +36,10 @@
 
 						@foreach ($menus as $menu)
 						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-								<div class="carousel-item white-text"  href="#two!" style="background:white;">
+								<div class="carousel-item white-text grey lighten-1"  href="#two!" >
 
-									{{-- <div class="row">
-											<div class="col s12 m6"> --}}
+									{{-- <div class="row"> --}}
+											<div class="col s12 m6 l8 offset-l2">
 												<div class="card">
 													<div class="card-image">
 														<img src="/img/menu.img-1.jpg">
@@ -50,8 +50,8 @@
 														<p>{{$menu->descripcion}}</p>
 													</div>
 												</div>
-											{{-- </div>
-									</div> --}}
+											</div>
+									{{-- </div> --}}
 
 							  </div>
 						@endif
@@ -62,9 +62,7 @@
 					</div>
 				</div>
 			</div>
-			{{-- <pre>
-				@{{ $data.pedido.menu_pedido}}
-			</pre> --}}
+
 
 			{{-- Mi selección --}}
 			<div class="container">
@@ -77,7 +75,7 @@
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
 					         <tbody>
 					          <tr v-for="(menu, index) in detalle" class="animated bounceIn">
-					            <td class="content">@{{menu.nombre}} @{{menu.id}}</td>
+					            <td class="content">@{{menu.nombre}}    ( $ @{{ new Intl.NumberFormat().format(menu.precio) }})</td>
 											<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
 					          </tr>
 					        </tbody>
