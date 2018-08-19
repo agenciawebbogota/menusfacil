@@ -121,7 +121,9 @@ p {
                             <p style="font-size:16px; text-align:left; line-height:22px ">¿Necesita ayuda? En la documentación encontrará todos los detalles de uso y configuración de la aplicación.</p></td>
                             <td align="center"><table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                                 <tr>
-                                  <td width="220" height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;"><a href="{{url("/documentacion")}}" target="blank"  class='button_link'>Ver documentación</a></td>
+                                  <td width="220" height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;">
+																		<a href="{{url("/documentacion")}}" target="blank"  style="width:250;display:block;text-decoration:none;border:0;text-align:center;font-weight:bold;font-size:18px;color: #ffffff;">Ver documentación</a>
+																	</td>
                                 </tr>
                               </table></td>
                           </tr>

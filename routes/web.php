@@ -26,9 +26,9 @@ Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 Route::get('empresa/{url}', 'InicioController@index');
 // documentación
 Route::get('documentacion', 'InicioController@doc');
-Route::get('correo', function(){
-                          return view('correos.alregistrarse');
-                      });
+// Route::get('correo', function(){
+//                           return view('correos.alregistrarse');
+//                       });
 
 // Rutas de pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');
