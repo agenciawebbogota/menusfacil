@@ -96,6 +96,7 @@ new Vue({
 							this.noti.observaciones = ''
 							this.pedido.direccion = ''
 							this.pedido.observaciones = ''
+							// this.terminaste = false
 							this.detalle = []
 							this.pedido.total = 0
 							this.terminaste = false

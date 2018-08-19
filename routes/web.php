@@ -24,6 +24,11 @@ Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 // Manejar la vista del usuario
 
 Route::get('empresa/{url}', 'InicioController@index');
+// documentación
+Route::get('documentacion', 'InicioController@doc');
+Route::get('correo', function(){
+                          return view('correos.alregistrarse');
+                      });
 
 // Rutas de pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');

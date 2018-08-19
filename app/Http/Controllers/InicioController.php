@@ -22,4 +22,7 @@ class InicioController extends Controller
 	    	dd('Enviar una vista de publicidad si la empresa no existe..');
 	    }
 	}
+  public function doc(){
+    return view('doc.index');
+  }
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
 
 class RegisterController extends Controller
 {
@@ -54,6 +55,7 @@ class RegisterController extends Controller
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
+    public $email;
 
     /**
      * Create a new user instance after a valid registration.
@@ -64,7 +66,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        return User::create([
+      $this->email = $data['email'];
+         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -74,6 +77,21 @@ class RegisterController extends Controller
             'color3' => $data['color3'],
             // 'estado_empresa' => 'GRATIS',
         ]);
+
+
+        Mail::send('correos/alregistrarse', [
+          'nombre' => $data['name'],
+          'email' => $data['email'],
+          'password' => $data['password'],
+          'url' => $data['url']
+        ], function($msj)
+        {
+          $msj->subject('Bienvenido a Menus Fácil');
+          $msj->to($this->email);
+          $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+        });
+
+        return $user;
     }
 
 }

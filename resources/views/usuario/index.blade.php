@@ -100,13 +100,12 @@
 									<tfoot>
 										<tr class="animated bounceIn red white-text" v-if="pedido.total > 0">
 					            <td colspan="2" class="content"><span class="left-align">TOTAL</span> <span class="right-align">$ @{{ new Intl.NumberFormat().format(pedido.total) }}</span>	</td>
-											{{-- <td>$ @{{ new Intl.NumberFormat().format(pedido.total) }}</td> --}}
 					          </tr>
 									</tfoot>
 					      </table>
 							</div>
 					</div>
-						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" @click="terminaste = true">Confirmar Pedido</a>
+						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" v-if="terminaste == false" @click="terminaste = true">Confirmar Pedido</a>
 				</div>
 			<div>
 			</div>
@@ -157,7 +156,7 @@
 						 {{-- </div> --}}
 						 @foreach ($empresa as $el)
 							 <button style="background:{{$el->color1}};"
-								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
 						 @endforeach
 						 		<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
