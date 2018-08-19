@@ -59,6 +59,7 @@ new Vue({
 					// let self = this;
 						axios.post('/pedidos/crear',this.pedido)
 							.then((resp)=>{
+								this.notificacion()
 								this.noti.correo = ''
 								this.noti.telefono = ''
 								this.noti.nombre = ''
@@ -69,33 +70,39 @@ new Vue({
 								this.noti.observaciones = ''
 								this.pedido.direccion = ''
 								this.pedido.observaciones = ''
-								this.notificacion()
+								this.terminaste = false
+								this.detalle = []
+								this.pedido.total = 0
 								M.toast({html: 'Hemos generado su orden', outDuration:1000});
+
 
 							})
 							.catch(function (error) {
 								M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
-								console.log(error);
+								// console.log(error);
 							});
 					}
 				}else {
 					axios.post('/pedidos/crear',this.pedido)
 						.then((resp)=>{
-							// this.noti.correo = ''
-							// this.noti.telefono = ''
-							// this.noti.nombre = ''
-							// this.pedido.correo = ''
-							// this.pedido.telefono = ''
-							// this.pedido.nombre = ''
-							// this.noti.direccion = ''
-							// this.noti.observaciones = ''
-							// this.pedido.direccion = ''
-							// this.pedido.observaciones = ''
 							this.notificacion()
-							console.log(resp.data);
+							this.noti.correo = ''
+							this.noti.telefono = ''
+							this.noti.nombre = ''
+							this.pedido.correo = ''
+							this.pedido.telefono = ''
+							this.pedido.nombre = ''
+							this.noti.direccion = ''
+							this.noti.observaciones = ''
+							this.pedido.direccion = ''
+							this.pedido.observaciones = ''
+							this.detalle = []
+							this.pedido.total = 0
+							this.terminaste = false
 							M.toast({html: 'Hemos generado su orden', outDuration:1000});
 						})
 						.catch(function (error) {
+							console.log(error);
 							M.toast({html: 'Hay un pequeño error en el servidor', outDuration:1000});
 						});
 				}
@@ -116,13 +123,13 @@ new Vue({
 		agregarPedido:function(menu){
 			this.pedido.menu_pedido.unshift(menu.id)
 			this.detalle.unshift(menu)
-			this.pedido.total += parseInt(menu.precio)
+			this.pedido.total += parseFloat(menu.precio)
 			M.toast({html: 'Menú agregado', outDuration:1000});
 		},
 		eliminarMenu(index, precio){
 			this.pedido.menu_pedido.splice(index, 1)
 			this.detalle.splice(index, 1)
-			this.pedido.total -= parseInt(precio)
+			this.pedido.total -= parseFloat(precio)
 			M.toast({html: 'Menú eliminado', outDuration:1000});
 		}
 	}

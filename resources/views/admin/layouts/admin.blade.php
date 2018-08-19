@@ -16,7 +16,7 @@
       <li>
         <div class="user-view">
         <a href="#imgusuario"><img class="circle" src="img/node.png"></a>
-        <a href="#nombre"><span class="gray-text name" style="text-transform:uppercase;">{{ Auth::user()->name }}</span></a>
+        <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">Url pública</span></a>
         <a href="#correo"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
       </div>
     </li>

@@ -7,6 +7,7 @@
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
 	<link rel="stylesheet" href="/inicio/css/app.css">
 	<link rel="stylesheet" href="/inicio/css/usuario.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,14 +29,26 @@
 		</div>
 		<form @submit.prevent="enviarPedido()" id="pedido">
 
+			{{-- @php
+			function diferenciaDias($inicio, $fin)
+			{
+			    $inicio = strtotime($inicio);
+			    $fin = strtotime($fin);
+			    $dif = $fin - $inicio;
+			    $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
+			    return ceil($diasFalt);
+			}
+			$inicio = "2018/08/01";
+			$fin = "2018/09/01";
+			echo diferenciaDias($inicio, $fin);
+			@endphp --}}
 			<div class="row">
-				<div class="col l8 s12 m10 offset-l2 offset-m1">
+				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
 
 
-
 						@foreach ($menus as $menu)
-						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
+						{{-- @if ($menu->adicional == 'NO' AND $menu->estado == 1) --}}
 								<div class="carousel-item white-text grey lighten-1"  href="#two!" >
 
 									{{-- <div class="row"> --}}
@@ -54,7 +67,7 @@
 									{{-- </div> --}}
 
 							  </div>
-						@endif
+						{{-- @endif --}}
 						@endforeach
 
 
@@ -69,10 +82,15 @@
 				<div class="row">
 					<div class="col l8 s12 m6 offset-l2">
 						<div class="card blue-grey" style="border-radius:10px">
-	        			<div class="card-content white-text mi-seleccion">
-	          				<span class="card-title">MI SELECCIÓN <br></span>
-	        			</div>
+	        			{{-- <div class="card-content white-text mi-seleccion">
+	          				<span class="card-title"> <br></span>
+	        			</div> --}}
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
+										<thead >
+											<tr>
+												<th class="center-align red" colspan="2">MI SELECCIÓN</th>
+											</tr>
+										</thead>
 					         <tbody>
 					          <tr v-for="(menu, index) in detalle" class="animated bounceIn">
 					            <td class="content">@{{menu.nombre}}    ( $ @{{ new Intl.NumberFormat().format(menu.precio) }})</td>
@@ -80,9 +98,9 @@
 					          </tr>
 					        </tbody>
 									<tfoot>
-										<tr class="animated bounceIn red white-text">
-					            <td class="content">TOTAL</td>
-											<td>$ @{{ new Intl.NumberFormat().format(pedido.total) }}</td>
+										<tr class="animated bounceIn red white-text" v-if="pedido.total > 0">
+					            <td colspan="2" class="content"><span class="left-align">TOTAL</span> <span class="right-align">$ @{{ new Intl.NumberFormat().format(pedido.total) }}</span>	</td>
+											{{-- <td>$ @{{ new Intl.NumberFormat().format(pedido.total) }}</td> --}}
 					          </tr>
 									</tfoot>
 					      </table>

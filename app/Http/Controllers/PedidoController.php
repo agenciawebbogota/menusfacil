@@ -30,16 +30,16 @@ class PedidoController extends Controller
             ->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
             ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
-            ->orderBy('created_at', 'ASC')
-            ->limit(10)
+            ->orderBy('id', 'DESC')
+            // ->limit(10)
             ->get();
 				$adiciones = DB::table('pedidos')
             ->where('pedidos.user_id', \Auth::id())
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
             ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio', 'menus.adicional')
-            ->orderBy('created_at', 'ASC')
-            ->limit(10)
+            ->orderBy('id', 'DESC')
+            // ->limit(10)
             ->get();
 						$total = 0;
 						$pedido = [];
@@ -62,18 +62,22 @@ class PedidoController extends Controller
 							);
     }
     public function create(Request $request){
-			dd($request->input('menu_pedido'));
-            $pedido = Pedido::create([
-                'nombre' => $request->input('nombre'),
-                'correo' => $request->input('correo'),
-                'telefono' => $request->input('telefono'),
-                'direccion' => $request->input('direccion'),
-                'observaciones' => $request->input('observaciones'),
-                // 'adicional_pedido' => $request->input('adicional_pedido'),
-                'menu_pedido'=>$request->input('menu_pedido'),
-                'user_id' => $request->input('user_id'),
-            ]);
-            return $pedido;
+			$menus = $request->input('menu_pedido');
+			// echo($menus);
+			foreach($menus as $menu){
+				$pedido = Pedido::create([
+					'nombre' => $request->input('nombre'),
+					'correo' => $request->input('correo'),
+					'telefono' => $request->input('telefono'),
+					'direccion' => $request->input('direccion'),
+					'observaciones' => $request->input('observaciones'),
+					// 'adicional_pedido' => $request->input('adicional_pedido'),
+					'menu_pedido'=> $menu,
+					'user_id' => $request->input('user_id'),
+				]);
+
+			}
+			return $menus;
     }
 
 
