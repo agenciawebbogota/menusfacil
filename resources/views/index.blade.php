@@ -74,7 +74,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="titulo">Suba a la web sus Menús Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><span class="titulo">Sube a la web tus Menús Fácil</span>
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -92,7 +92,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="titulo2">Reciba y atienda los pedidos<br/>de sus clientes Aún Más Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><span class="titulo2">Recibe y atiende los pedidos<br/>de tus clientes Aún Más Fácil</span>
                 </div>
 
                 <!-- LAYER NR. 3 -->
@@ -125,7 +125,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="descp">Pruébelo GRATIS durante 14 días sin compromisos<br/>Sin descargas<br/>Sin tarjeta de crédito ni datos de facturación</span>
+                    style="z-index: 5; white-space: nowrap;"><span class="descp">Pruébalo GRATIS durante 14 días sin compromisos<br/>Sin descargas<br/>Sin tarjeta de crédito ni datos de facturación</span>
                 </div>
 
                 <!-- LAYER NR. 5 -->
@@ -200,7 +200,7 @@
                     <h2 class="section-title text-uppercase text-extrabold white-text">¿De que se trata?</h2>
                     <h3 class="section-sub white-text">Menús Fácil es la aplicación ideal para la gestión de órdenes de clientes</h3>
 
-                    <div class="video-trigger"><a class="popup-video" href="https://www.youtube.com/watch?v=A1CoJKju-YI"><i class="material-icons">&#xE038;</i></a></div>
+                    <div class="video-trigger"><a class="popup-video" href="https://youtu.be/6tyetQTVPT0"><i class="material-icons">&#xE038;</i></a></div>
                 </div>
               </div>
             </div>
@@ -233,7 +233,7 @@
                           <i class="material-icons" style="color:#66181a">input</i>
                       </div>
                       <div class="desc">
-                          <h3>Cree Menús y Adiciones desde el módulo administrador en solo segundos y con pocos clics</h3>
+                          <h3>Crea Menús y Adiciones desde el módulo administrador en solo segundos y con pocos clics</h3>
                       </div>
                   </div>
 
@@ -242,7 +242,7 @@
                           <i class="material-icons" style="color:#66181a">important_devices</i>
                       </div>
                       <div class="desc">
-                          <h3>Visualice en tiempo real e imprima listas de menús y pedidos de clientes</h3>
+                          <h3>Visualiza en tiempo real e imprime listas de menús y pedidos de clientes</h3>
                       </div>
                   </div>
 
@@ -260,7 +260,7 @@
                           <i class="material-icons" style="color:#66181a">assessment</i>
                       </div>
                       <div class="desc">
-                          <h3>Estadísticas en tiempo real de sus menús creados y vendidos por día y por semana</h3>
+                          <h3>Estadísticas en tiempo real de tus menús creados y vendidos por día y por semana</h3>
                       </div>
                   </div>
 
@@ -269,7 +269,7 @@
                           <i class="material-icons" style="color:#66181a">system_update</i>
                       </div>
                       <div class="desc">
-                          <h3>Sus menús creados aparecerán disponibles al instante en el módulo cliente</h3>
+                          <h3>Tus menús creados aparecerán disponibles al instante en el módulo cliente</h3>
                       </div>
                   </div>
 
@@ -278,7 +278,7 @@
                           <i class="material-icons" style="color:#66181a">archive</i>
                       </div>
                       <div class="desc">
-                          <h3>Consulte y descargue histórico de menús creados sin importar si están habilitados o no</h3>
+                          <h3>Consulta y descarga histórico de menús creados sin importar si están habilitados o no</h3>
                       </div>
                   </div>
 
@@ -308,7 +308,7 @@
                             </div>
                             <div class="desc">
                                 <h2 class="white-text">Para Restaurantes</h2>
-                                <p class="white-text"><span style="color:#e88a10">Sus clientes consultan los menús del día y arman su pedido.</span> Funciona para domicilios o para tomar los pedidos dentro del propio establecimiento.</p>
+                                <p class="white-text"><span style="color:#e88a10">Tus clientes consultan los menús del día y arman su pedido.</span> Funciona para domicilios o para tomar los pedidos dentro del propio establecimiento.</p>
                             </div>
                           </div><!-- /.featured-item -->
                       </div><!-- /.col-sm-6 -->
@@ -320,7 +320,7 @@
                             </div>
                             <div class="desc">
                                 <h2 class="white-text">Para Comidas Rápidas</h2>
-                                <p class="white-text"><span style="color:#e88a10">No deje a sus clientes esperando un turno para tomar su orden.</span> Agilice los pedidos con este novedoso sistema ¡Sus clientes se lo agradecerán!</p>
+                                <p class="white-text"><span style="color:#e88a10">No dejes a tus clientes esperando un turno para tomar su orden.</span> Agiliza los pedidos con este novedoso sistema ¡Tus clientes te amarán!</p>
                             </div>
                           </div><!-- /.featured-item -->
                       </div><!-- /.col-sm-6 -->
@@ -331,7 +331,7 @@
                             </div>
                             <div class="desc">
                                 <h2 class="white-text">Para Hoteles</h2>
-                                <p class="white-text"><span style="color:#e88a10">No moleste a sus huespedes con complejos sistemas de reservas.</span> Asegurese horas antes de cuantos huespedes tendrá en la mesa y que menú han elegido.</p>
+                                <p class="white-text"><span style="color:#e88a10">No molestes a tus huespedes con complejos sistemas de reservas.</span> Asegurate horas antes de cuantos huespedes tendrás en la mesa y que menú han elegido.</p>
                             </div>
                           </div><!-- /.featured-item -->
                       </div><!-- /.col-sm-6 -->
@@ -363,7 +363,7 @@
 
                 <div class="text-center mb-50 wow fadeInUp">
                     <h2 class="section-title text-uppercase text-extrabold">Screenshots</h2>
-                    <h3 class="section-sub">No es necesario realizar ninguna instalación, simplemente ingresando con su usuario y contraseña tendrá acceso al módulo de administración</h3>
+                    <h3 class="section-sub">No es necesario realizar ninguna instalación, simplemente ingresando con tu usuario y contraseña tendrás acceso al módulo de administración</h3>
                 </div>
               <div class="col-md-10 col-md-offset-1 screenshot-carousel-wrapper">
 
@@ -418,10 +418,10 @@
             <div class="container">
                 <div class="text-center wow fadeInUp">
                     <!--promo box center align start-->
-                    <h1 class="text-uppercase mb-30 font-30 text-extrabold">Pruebe GRATIS Menús Fácil en su negocio</h1>
+                    <h1 class="text-uppercase mb-30 font-30 text-extrabold">Prueba GRATIS Menús Fácil en tu negocio</h1>
                     <h2 class="mb-30">Sin descargas, sin tarjeta de crédito, sin compromisos</h2>
 
-                    <a href="/register" class="btn btn-prueba"> <span>Comience <strong>AHORA</strong></span></a>
+                    <a href="/register" class="btn btn-prueba"> <span>Comienza <strong>AHORA</strong></span></a>
                     <!--promo box center align end-->
                 </div>
             </div>

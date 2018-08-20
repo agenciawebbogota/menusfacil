@@ -62,8 +62,8 @@
   <footer class="page-footer" style="background-color:{{Auth::user()->color1}}">
       <div class="footer-copyright">
           <div class="container">
-            <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="http://www.agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
-            <span class="right">Todos los derechos reservados ®</span>
+            <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="https://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
+            <span class="right">Todos los derechos reservados</span>
           </div>
       </div>
   </footer>

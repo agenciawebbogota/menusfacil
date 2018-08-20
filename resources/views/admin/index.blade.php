@@ -66,9 +66,9 @@
         <div class="col s12 m6 l3">
             <div class="card">
                 <div class="card-content white-text" style="background-color:{{Auth::user()->color3}}">
-                    <p class="card-stats-title"><i class="mdi-editor-attach-money"></i> Vendido Semana</p>
-                    <h4 class="card-stats-number">$8990.63</h4>
-                    <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
+                    <p class="card-stats-title"><i class="mdi-editor-attach-money"></i> Más Vendido Hoy</p>
+                    <h4 class="card-stats-number">menú más vendido</h4>
+                    {{-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span> --}}
                     </p>
                 </div>
                 <div class="card-action darken-2" style="background-color:{{Auth::user()->color3}}">
