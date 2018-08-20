@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Regitrarme</div>
+                <div class="card-header">Registrese</div>
 
                 <div class="card-body">
 
@@ -16,7 +16,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de la empresa</label>
 
                             <div class="col-md-6">
-                                <input id="name" @keyup="urlLug()" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" v-model="datos.name" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" @keyup="urlLug()" type="text" value="{{ old('name') }}" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" v-model="datos.name" name="name" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Correo</label>
                             <div class="col-md-6">
-                                <input id="email" type="email" v-model="datos.email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -117,7 +117,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Regitrarme
+                                    Registrese
                                 </button>
                             </div>
                         </div>

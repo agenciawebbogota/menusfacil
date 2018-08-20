@@ -7,6 +7,7 @@
 	@endforeach
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
 	<link rel="stylesheet" href="/inicio/css/app.css">
 	<link rel="stylesheet" href="/inicio/css/usuario.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,18 +29,30 @@
 		</div>
 		<form @submit.prevent="enviarPedido()" id="pedido">
 
+			{{-- @php
+			function diferenciaDias($inicio, $fin)
+			{
+			    $inicio = strtotime($inicio);
+			    $fin = strtotime($fin);
+			    $dif = $fin - $inicio;
+			    $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
+			    return ceil($diasFalt);
+			}
+			$inicio = "2018/08/01";
+			$fin = "2018/09/01";
+			echo diferenciaDias($inicio, $fin);
+			@endphp --}}
 			<div class="row">
-				<div class="col l8 s12 m10 offset-l2 offset-m1">
+				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
 
 
-
 						@foreach ($menus as $menu)
-						@if ($menu->adicional == 'NO' AND $menu->estado == 1)
-								<div class="carousel-item white-text"  href="#two!" style="background:white;">
+						{{-- @if ($menu->adicional == 'NO' AND $menu->estado == 1) --}}
+								<div class="carousel-item white-text grey lighten-1"  href="#two!" >
 
-									{{-- <div class="row">
-											<div class="col s12 m6"> --}}
+									{{-- <div class="row"> --}}
+											<div class="col s12 m6 l8 offset-l2">
 												<div class="card">
 													<div class="card-image">
 														<img src="/img/menu.img-1.jpg">
@@ -50,11 +63,11 @@
 														<p>{{$menu->descripcion}}</p>
 													</div>
 												</div>
-											{{-- </div>
-									</div> --}}
+											</div>
+									{{-- </div> --}}
 
 							  </div>
-						@endif
+						{{-- @endif --}}
 						@endforeach
 
 
@@ -63,25 +76,36 @@
 				</div>
 			</div>
 
+
 			{{-- Mi selección --}}
 			<div class="container">
 				<div class="row">
 					<div class="col l8 s12 m6 offset-l2">
 						<div class="card blue-grey" style="border-radius:10px">
-	        			<div class="card-content white-text mi-seleccion">
-	          				<span class="card-title">MI SELECCIÓN ( Total: $ @{{ new Intl.NumberFormat().format(pedido.total)}} )</span>
-	        			</div>
+	        			{{-- <div class="card-content white-text mi-seleccion">
+	          				<span class="card-title"> <br></span>
+	        			</div> --}}
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
+										<thead >
+											<tr>
+												<th class="center-align red" colspan="2">MI SELECCIÓN</th>
+											</tr>
+										</thead>
 					         <tbody>
-					          <tr v-for=" (menu, index) in pedido.menu_pedido">
-					            <td class="content">@{{menu.nombre}}</td>
+					          <tr v-for="(menu, index) in detalle" class="animated bounceIn">
+					            <td class="content">@{{menu.nombre}}    ( $ @{{ new Intl.NumberFormat().format(menu.precio) }})</td>
 											<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
 					          </tr>
 					        </tbody>
+									<tfoot>
+										<tr class="animated bounceIn red white-text" v-if="pedido.total > 0">
+					            <td colspan="2" class="content"><span class="left-align">TOTAL</span> <span class="right-align">$ @{{ new Intl.NumberFormat().format(pedido.total) }}</span>	</td>
+					          </tr>
+									</tfoot>
 					      </table>
 							</div>
 					</div>
-						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" @click="terminaste = true">Confirmar Pedido</a>
+						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" v-if="terminaste == false" @click="terminaste = true">Confirmar Pedido</a>
 				</div>
 			<div>
 			</div>
@@ -132,9 +156,9 @@
 						 {{-- </div> --}}
 						 @foreach ($empresa as $el)
 							 <button style="background:{{$el->color1}};"
-								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Hacer pedido</button>
+								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
 						 @endforeach
-					<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
+						 		<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>
 

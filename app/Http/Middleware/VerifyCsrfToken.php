@@ -16,5 +16,6 @@ class VerifyCsrfToken extends Middleware
         // 'menus/actualizar/',
         // '/menus/actualizar/estado',
         // 'pedidos/crear',
+        // 'pedido/pedidos',
     ];
 }

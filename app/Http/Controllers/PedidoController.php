@@ -30,17 +30,30 @@ class PedidoController extends Controller
             ->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
             ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
-            ->orderBy('created_at', 'ASC')
-            ->limit(10)
+            ->orderBy('id', 'DESC')
+            // ->limit(10)
             ->get();
 				$adiciones = DB::table('pedidos')
             ->where('pedidos.user_id', \Auth::id())
             ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
             ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio', 'menus.adicional')
-            ->orderBy('created_at', 'ASC')
-            ->limit(10)
+            ->orderBy('id', 'DESC')
+            // ->limit(10)
             ->get();
+
+					// Inicio de sentencias para el calculos del menú mas vendido
+						$user_id = \Auth::id();
+						$mvendidos = DB::select("SELECT menu_pedido, COUNT(menu_pedido) cantidad
+				    FROM pedidos WHERE (user_id= $user_id)
+				    GROUP BY menu_pedido
+				    ORDER BY cantidad
+				    DESC LIMIT 1");
+				    $idmvendidos = $mvendidos[0]->menu_pedido;
+				    $masvendido = DB::select("SELECT nombre FROM menus WHERE id=$idmvendidos ");
+
+						// Fin de instrucciones para obtener el más vendido de la semana
+
 						$total = 0;
 						$pedido = [];
 						foreach ($menus as $menu) {
@@ -55,6 +68,8 @@ class PedidoController extends Controller
 		        return(
 							[
 							'pedidos' => $menus,
+							'masvendido' => $masvendido[0]->nombre,
+							'cantidad_vendida' => $mvendidos[0]->cantidad,
 							'total' => $total,
 						]
 
@@ -62,36 +77,33 @@ class PedidoController extends Controller
 							);
     }
     public function create(Request $request){
+			$menus = $request->input('menu_pedido');
+			// echo($menus);
+			foreach($menus as $menu){
+				$pedido = Pedido::create([
+					'nombre' => $request->input('nombre'),
+					'correo' => $request->input('correo'),
+					'telefono' => $request->input('telefono'),
+					'direccion' => $request->input('direccion'),
+					'observaciones' => $request->input('observaciones'),
+					// 'adicional_pedido' => $request->input('adicional_pedido'),
+					'menu_pedido'=> $menu,
+					'user_id' => $request->input('user_id'),
+				]);
 
-			// $pedido = new Pedido;
-			// $pedido->create($request->all());
-        // if ($request->input('adicionalPedido') == '') {
-            $pedido = Pedido::create([
-                'nombre' => $request->input('nombre'),
-                'correo' => $request->input('correo'),
-                'telefono' => $request->input('telefono'),
-                'direccion' => $request->input('direccion'),
-                'observaciones' => $request->input('observaciones'),
-                'adicional_pedido' => $request->input('adicional_pedido'),
-                'menu_pedido'=>$request->input('menu_pedido'),
-                'user_id' => $request->input('user_id'),
-            ]);
-        //     return $pedido;
-        // }else{
-        //     $pedido = Pedido::create([
-        //         'nombre' => $request->input('nombre'),
-        //         'correo' => $request->input('correo'),
-				// 				'telefono' => $request->input('telefono'),
-				// 				'direccion' => $request->input('direccion'),
-        //         'observaciones' => $request->input('observaciones'),
-        //         'adicional_pedido' => $request->input('adicionalPedido'),
-        //         'user_id' => $request->input('user_id'),
-        //         'menu_pedido'=>$request->input('menuPedido')
-        //     ]);
-				//
-        // }
-            return $pedido;
+			}
+			return $menus;
     }
+
+
+
+
+
+
+
+
+
+
     public function pdf(){
          $menus = DB::table('pedidos')
             ->where('pedidos.user_id', \Auth::id())

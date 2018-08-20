@@ -1,0 +1,6 @@
+@media (min-width: 320px) and (max-width: 640px){
+	.logo-img img{ width: 130px; height: 132px; margin-left: 30%; }
+	.titulo-principal {text-align: center;}
+	.desc-principal {text-align: center;}
+	.menus-facil{ font-size: 16px;}
+}

@@ -22,8 +22,10 @@ Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 
 
 // Manejar la vista del usuario
-
 Route::get('empresa/{url}', 'InicioController@index');
+// documentación
+Route::get('documentacion', 'InicioController@doc');
+
 
 // Rutas de pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');
@@ -40,11 +42,5 @@ Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middlewar
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
 Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middleware('auth');
 
-
-
-
-// ->middleware('auth');
-// Implementar el guardado de los pedidos
-// /descarga/pedidos
-// Route::post('pedido/crear', 'PedidoController@crearPedido');
-// Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
+// Pruebas
+Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
