@@ -18,8 +18,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
-                    Logo
+                    <img src="{{url('/correos/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="100px" class="imagen-logo img-circle img-responsive">
                 </a>
                 <a class="btn btn-info" href="{{ route('login') }}">Iniciar Sesión</a>
             </div>

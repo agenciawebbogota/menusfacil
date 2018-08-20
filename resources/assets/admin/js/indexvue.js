@@ -2,6 +2,8 @@ new Vue({
 	el:'#dash',
 	data:{
 		vendidosdia:'',
+		masvendido: '',
+		cantidad_vendida: '',
 		menus:[],
 		total:0,
 		fecha:'',
@@ -210,6 +212,9 @@ new Vue({
 			  .then((resp) =>{
 			    this.pedidos = resp.data.pedidos;
 					this.vendidosdia = resp.data.total;
+					this.masvendido = resp.data.masvendido;
+					this.cantidad_vendida = resp.data.cantidad_vendida;
+
 			  })
 		},
 		momentjs:function(fecha){

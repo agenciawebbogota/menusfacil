@@ -42,7 +42,7 @@ new Vue({
 			this.datos.url = arrayLetras.toString().replace(/,/g,'').replace(/ /g,'-');
 		}
 	},
-	getColor:function(){
-		console.log(this.color1)
-	}
+	// getColor:function(){
+	// 	console.log(this.color1)
+	// }
 })

@@ -15,16 +15,16 @@
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view">
-        <a href="#imgusuario"><img class="circle" src="img/node.png"></a>
-        <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">Url pública</span></a>
-        <a href="#correo"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
-      </div>
-    </li>
-    <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
-    <li><div class="divider"></div></li>
-      <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
+          <a><img class="circle" width="190" src="{{url('/img/logo2.png')}}"></a>
+          <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
+          <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
+        </div>
+      </li>
+      <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
+      <li><div class="divider"></div></li>
+        <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
     </ul>
     <div class="navbar-fixed">
       <nav>
