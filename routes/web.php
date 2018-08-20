@@ -42,14 +42,5 @@ Route::PUT('/menus/actualizar/estado', 'MenuController@updateEstado')->middlewar
 Route::get('/descarga/menus', 'MenuController@pdf')->middleware('auth');
 Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middleware('auth');
 
-
 // Pruebas
 Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
-
-
-
-// ->middleware('auth');
-// Implementar el guardado de los pedidos
-// /descarga/pedidos
-// Route::post('pedido/crear', 'PedidoController@crearPedido');
-// Route::DELETE('/menus/eliminar/{id}', 'MenuController@delete')->middleware('auth');
