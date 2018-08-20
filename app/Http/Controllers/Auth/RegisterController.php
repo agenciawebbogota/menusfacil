@@ -75,21 +75,22 @@ class RegisterController extends Controller
             'color1' => $data['color1'],
             'color2' => $data['color2'],
             'color3' => $data['color3'],
+            'dias' => 1,
             // 'estado_empresa' => 'GRATIS',
         ]);
 
 
-        Mail::send('correos/alregistrarse', [
-          'nombre' => $data['name'],
-          'email' => $data['email'],
-          'password' => $data['password'],
-          'url' => $data['url']
-        ], function($msj)
-        {
-          $msj->subject('Bienvenido a Menus Fácil');
-          $msj->to($this->email);
-          $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
-        });
+        // Mail::send('correos/alregistrarse', [
+        //   'nombre' => $data['name'],
+        //   'email' => $data['email'],
+        //   'password' => $data['password'],
+        //   'url' => $data['url']
+        // ], function($msj)
+        // {
+        //   $msj->subject('Bienvenido a Menus Fácil');
+        //   $msj->to($this->email);
+        //   $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+        // });
 
         return $user;
     }
