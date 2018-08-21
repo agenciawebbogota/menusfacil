@@ -200,12 +200,11 @@
                     <h2 class="section-title text-uppercase text-extrabold white-text">¿De que se trata?</h2>
                     <h3 class="section-sub white-text">Menús Fácil es la aplicación ideal para la gestión de órdenes de clientes</h3>
 
-                    <div class="video-trigger"><a class="popup-video" href="https://youtu.be/6tyetQTVPT0"><i class="material-icons">&#xE038;</i></a></div>
+                    <div class="video-trigger"><a class="popup-video" href="https://www.youtube.com/watch?v=6tyetQTVPT0"><i class="material-icons">&#xE038;</i></a></div>
                 </div>
               </div>
             </div>
         </section>
-
 
         <section class="feature-presentation padding-top-100" style="background-color:#fcf1e2" id="funciones">
           <div class="container">
