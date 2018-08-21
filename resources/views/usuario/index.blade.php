@@ -48,7 +48,7 @@
 
 
 						@foreach ($menus as $menu)
-						{{-- @if ($menu->adicional == 'NO' AND $menu->estado == 1) --}}
+						@if ($menu->estado == 1)
 								<div class="carousel-item white-text grey lighten-1"  href="#two!" >
 
 									{{-- <div class="row"> --}}
@@ -67,7 +67,7 @@
 									{{-- </div> --}}
 
 							  </div>
-						{{-- @endif --}}
+						@endif
 						@endforeach
 
 

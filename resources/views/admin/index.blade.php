@@ -12,7 +12,7 @@
         @include('admin.includes.recursos.tabla')
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4 center-align">Crear Nuevo Menu<i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4 center-align">Crear Nuevo Menú<i class="material-icons right">close</i></span>
         @include('admin.includes.formularios.agregarmenu')
       </div>
     </div>
