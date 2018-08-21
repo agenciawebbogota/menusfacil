@@ -83,7 +83,7 @@ class InicioController extends Controller
     //
     //
     // echo('El ménu más vendido es '.$masvendido[0]->nombre.' con '.$mvendidos[0]->cantidad." ventas.");
-    // dd(DB::table('users')->get());
+    dd(DB::table('users')->get());
     // dd($mvendidos[0]->maximo);
 
 

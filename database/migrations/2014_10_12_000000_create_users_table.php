@@ -22,8 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('color1');
             $table->string('color2');
             $table->string('color3');
-            $table->string('estado_empresa')->default('GRATIS');
-            $table->string('bloqueado')->default('NO');
+            $table->string('estado_empresa')->default('GRATIS'); //PAGA
+            $table->string('tipo_usuario')->default('EMPRESA'); //ADMIN
+            $table->string('bloqueado')->default('NO'); // SI
             $table->integer('dias')->default(0)->nulleble();
             $table->rememberToken();
             $table->timestamps();

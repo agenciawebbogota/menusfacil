@@ -25,7 +25,7 @@ new Vue({
 	el:'#dash',
 	data:{
 		vendidosdia:'',
-		masvendido: '',
+		masvendido: "-------",
 		cantidad_vendida: '',
 		menus:[],
 		total:0,
