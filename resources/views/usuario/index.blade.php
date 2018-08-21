@@ -127,13 +127,13 @@
 			          <i class="material-icons prefix">edit_location</i>
 			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
 			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
-			          <label for="direccion">Dirección donde deseas recibir tu pedido</label>
+			          <label for="direccion">Dirección</label>
 			        </div>
 							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 			          <i class="material-icons prefix">announcement</i>
 			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
 			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
-			          <label for="observaciones">¿Tienes alguna observación acerca de tu pedido? (Ej: con poca sal)</label>
+			          <label for="observaciones">¿Alguna observación?</label>
 			        </div>
 				      @foreach ($empresa as $el)
 				      	<p style="color:white" id="user_id">{{ $el->id }}</p>
@@ -149,7 +149,7 @@
 						 </div>
 						 {{-- <div class=""> --}}
 						 <br><br>
-						 <label class="col l8 s12 m8 offset-l2 m8 offset-m2">
+						 <label class="col l8 s12 m8 offset-l2 m8 offset-m2" style="padding-bottom:20px">
 							 <input type="checkbox" v-model="checked"/>
 							 <span>¿Quieres recibir los detalles de tu orden en tu email?</span>
 						 </label>
