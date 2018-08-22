@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div>
-              <p style="padding-top:30px;text-align:center;font-size:12px">Menús Fácil necesita tus datos para activar el servicio. Más información en la <a href=""> política de privacidad</a></p>
+              <p style="padding-top:30px;text-align:center;font-size:12px">Menús Fácil necesita tus datos para activar el servicio. Más información en la <a href="#"> política de privacidad</a></p>
             </div>
         </div>
     </div>
