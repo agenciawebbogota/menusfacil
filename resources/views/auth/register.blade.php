@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Registrese</div>
+                <div class="card-header">Regístrate</div>
 
                 <div class="card-body">
 
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Correo</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
@@ -116,13 +116,16 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Registrese
+                                <button type="submit" class="btn btn-primary" style="background-color:#21b005;border-color:#21b005">
+                                    Crear Cuenta
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
+            <div>
+              <p style="padding-top:30px;text-align:center;font-size:12px">Menús Fácil necesita tus datos para activar el servicio. Más información en la <a href=""> política de privacidad</a></p>
             </div>
         </div>
     </div>

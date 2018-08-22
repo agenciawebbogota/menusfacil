@@ -15,12 +15,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color:#2b2831">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{url('/correos/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="100px" class="imagen-logo img-circle img-responsive">
+                    <img src="{{url('/admin/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="250px" class="imagen-logo img-circle img-responsive">
                 </a>
-                <a class="btn btn-info" href="{{ route('login') }}">Iniciar Sesión</a>
+                <a class="btn btn-info" style="background-color:#e88911;border-color:#e88911" href="{{ route('login') }}">Iniciar Sesión</a>
             </div>
         </nav>
         <main class="py-4">

@@ -5,9 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         {{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="description" content="materialize is a material design based mutipurpose responsive template">
-        <meta name="keywords" content="material design, card style, material template, portfolio, corporate, business, creative, agency">
-        <meta name="author" content="trendytheme.net">
         {{-- Nota: Si deseas cambiar el orden en que se muestra el contenido, sólo debes cambiar el orden de de estas etiquetas --}}
         {{-- Google --}}
         @include('seo.google')
@@ -52,6 +49,7 @@
     <body id="top">
         <!-- start revolution slider 5.0 -->
         <section class="rev_slider_wrapper">
+
          <div class="rev_slider materialize-slider">
           <ul>
 
