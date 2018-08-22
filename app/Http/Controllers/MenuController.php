@@ -42,13 +42,13 @@ class MenuController extends Controller
     		$estado = 0;
     	}
     	$menu = Menu::where('id', $request->input('id'))->update([
-			'nombre' => $request->input('nombre'),
-			'descripcion' => $request->input('descripcion'),
-			'precio' => $request->input('precio'),
-			'estado' => $estado,
-			'adicional' => $request->input('adicional'),
-			'activo' => true,
-		]);
+				'nombre' => $request->input('nombre'),
+				'descripcion' => $request->input('descripcion'),
+				'precio' => $request->input('precio'),
+				'estado' => $estado,
+				'adicional' => $request->input('adicional'),
+				'activo' => true,
+			]);
 		return $menu;
     }
 
