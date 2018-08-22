@@ -59,3 +59,15 @@ mix.scripts([
    .styles([
      'resources/assets/registro/css/app.css',
    ], 'public/registro/css/app.css');
+
+// Super usuario
+   mix.scripts([
+     'resources/assets/inicio/js/materialize.min.js',
+  'resources/assets/inicio/js/axios.min.js',
+  'node_modules/vue/dist/vue.min.js',
+  'resources/assets/super_usuario/js/app.js',
+], 'public/super_usuario/js/app.js')
+   .styles([
+     'resources/assets/inicio/css/materialize.min.css',
+     'resources/assets/super_usuario/css/app.css',
+   ], 'public/super_usuario/css/app.css');

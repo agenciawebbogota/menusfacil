@@ -12,14 +12,20 @@ class InicioController extends Controller
    public function index($url){
    		$usuario = User::all()->where('url', $url);
 	   	if(count($usuario)){
-	   		$menus;
-	   		foreach ($usuario as  $value) {
-	   			$menus = User::find($value->id)->menus;
-	   		}
-			return view('usuario.index', [
-				'empresa' => $usuario,
-				'menus' => $menus,
-			]);
+        // Validar si el usuaro está bloqueado.
+        if($usuario[0]->bloqueado == 'SI'){
+          return view('/');
+        }else{
+          $menus;
+          foreach ($usuario as  $value) {
+            $menus = User::find($value->id)->menus;
+          }
+          return view('usuario.index', [
+            'empresa' => $usuario,
+            'menus' => $menus,
+          ]);
+
+        }
 	    }else{
 	    	dd('Enviar una vista de publicidad si la empresa no existe..');
 	    }

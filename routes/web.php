@@ -44,3 +44,9 @@ Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middlewar
 
 // Pruebas
 Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
+
+
+// Rutas del Super Usuario
+Route::get('/superusuario', 'SuperusuarioController@index');
+Route::get('/usuarios/get', 'SuperusuarioController@get');
+Route::get('/usuarios/actualizardias', 'SuperusuarioController@actualizardias');
