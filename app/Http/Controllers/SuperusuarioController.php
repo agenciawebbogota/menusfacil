@@ -63,21 +63,21 @@ class SuperusuarioController extends Controller
             if($dias > 0){
               if($dias == 13 || $dias == 11){
                 if($usuario->estado_empresa == "GRATIS"){
-
                     // Envio de email
-                    // $this->email = $usuario->email;
-                    // $ruta = 'correos/alcumplir11dias';
-                    // if($dias=13){
-                    //   $ruta = 'correos/alcumplir13dias';
-                    // }
-                    // Mail::send($ruta, [
-                    //   'usuario' => $usuario,
-                    // ], function($msj)
-                    // {
-                    //   $msj->subject('Recordatorio Ménus Fácil');
-                    //   $msj->to($this->email);
-                    //   $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
-                    // });
+                    $this->email = $usuario->email;
+                    $ruta = 'correos/alcumplir11dias';
+                    if($dias == 13){
+                      $ruta = 'correos/alcumplir13dias';
+                    }
+                    Mail::send($ruta, [
+                      'usuario' => $usuario,
+                      'dias' => 14 - $dias,
+                    ], function($msj)
+                    {
+                      $msj->subject('Recordatorio Ménus Fácil');
+                      $msj->to($this->email);
+                      $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+                    });
                   return 'Enviar correo electrónico informando a la empresa que está llegando a la caducidad de la suscripción de prueba., han pasado '.$dias.' días.';
 
                 }else{
@@ -91,7 +91,7 @@ class SuperusuarioController extends Controller
             			]);
                   return 'Bloquear usuario, cambiar el valor de la columna bloqueado a "SI", han pasado '.$dias.' días.';
                 }
-              }else if($dias == 28){
+              }else if($dias == $dias == 27 || $dias == 29){
                 return 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de pago., han pasado '.$dias.' días.';
               }else{
                 return 'Almacenar en la base de datos el número de días, han pasado '.$dias. ' días';
