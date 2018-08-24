@@ -1,13 +1,14 @@
 new Vue({
   el:'#superadmin',
   data:{
-    usuarios: []
+    usuarios: [],
+    update:[]
   },
   mounted:function(){
 		document.addEventListener('DOMContentLoaded', ()=> {
 			// Botones flotantes
 			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
-			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarMenu'), {dismissible:false});
+			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarUser'), {dismissible:false});
 			let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
 			let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
 		})
@@ -33,6 +34,29 @@ new Vue({
 			  .catch(function (error) {
 
 			  })
+    },
+    llenarModal:function(usuario){
+      this.update = usuario;
+    },
+    vistaGuiada(){
+      // Intro de la web
+      introJs().start()
+      introJs().addStep([{
+          element: document.querySelectorAll('#historicomnus')[0],
+          intro: "Ok, wasn't that fun?",
+          position: 'left'
+      },
+      {
+        element: document.querySelectorAll('#editaruser')[0],
+        intro: "Ok, wasn't that fun?",
+        position: 'right'
+      },
+      {
+        element: document.querySelectorAll('#eliminaruser')[0],
+        intro: "Ok, wasn't that fun?",
+        position: 'right'
+      }
+    ]);
     }
   }
 })

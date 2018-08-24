@@ -91,7 +91,24 @@ class SuperusuarioController extends Controller
             			]);
                   return 'Bloquear usuario, cambiar el valor de la columna bloqueado a "SI", han pasado '.$dias.' días.';
                 }
-              }else if($dias == $dias == 27 || $dias == 29){
+              }else if($dias == 27 || $dias == 29){
+                if($usuario->estado_empresa == "PAGO"){
+                  $this->email = $usuario->email;
+                  $ruta = 'correos/alcumplir27dias';
+                  if($dias == 29){
+                    $ruta = 'correos/alcumplir29dias';
+                  }
+                  Mail::send($ruta, [
+                    'usuario' => $usuario,
+                    'dias' => 30 - $dias,
+                  ], function($msj)
+                  {
+                    $msj->subject('Recordatorio Ménus Fácil');
+                    $msj->to($this->email);
+                    $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+                  });
+                }
+
                 return 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de pago., han pasado '.$dias.' días.';
               }else{
                 return 'Almacenar en la base de datos el número de días, han pasado '.$dias. ' días';
@@ -109,10 +126,9 @@ class SuperusuarioController extends Controller
 
   public function diferenciaDias($inicio, $fin)
   {
-      $inicio = strtotime($inicio);
-      $fin = strtotime($fin);
-      $dif = $fin - $inicio;
-      $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
-      return ceil($diasFalt);
+    $datetime1 = $inicio;
+    $datetime2 = date_create($fin);
+    $interval = date_diff($datetime1, $datetime2);
+    return($interval->days);
   }
 }

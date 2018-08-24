@@ -53,28 +53,46 @@ class InicioController extends Controller
 
 // Inicio de sentencias para el bloqueo de los usuarios al momento de la suscripción.
     $user_id = \Auth::id();
-    $usuario = \App\User::where('id', $user_id)->get();
+    $usuario = \App\User::where('id', 2)->get();
     $inicio = $usuario[0]->created_at;
-    $fin = '2018/10/28';
-    #date("Y/m/d");
+    $fin = date("Y/m/d");
     $dias = $this->diferenciaDias($inicio, $fin);
-    if($dias > 0){
-      if($dias == 13){
-       if($usuario[0]->estado_empresa == "GRATIS"){
-         echo 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de prueba., han pasado '.$dias.' días.';
-       }else{
-         echo 'Almacenar en la base de datos el número de días, es un usuario que ya está pagando., han pasado '.$dias.' días.';
-       }
-      }else if($dias > 13 and $usuario[0]->estado_empresa == "GRATIS"){
-        if($usuario[0]->bloqueado == 'NO'){
-          echo 'Bloquear usuario, cambiar el valor de la columna bloqueado a "SI", han pasado '.$dias.' días.';
-        }
-      }else if($dias == 29){
-       echo 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de pago., han pasado '.$dias.' días.';
-      }else{
-       echo 'Almacenar en la base de datos el número de días, han pasado '.$dias. ' días';
-      }
-    }
+
+
+
+    // $fechaActual = date("Y-m-d H:i:s");
+    // $fechaRegistro = $usuario[0]->created_at;
+    // $segundosFechaActual = strtotime($fechaActual);
+    // $segundosFechaRegistro = strtotime($fechaRegistro);
+    // $segundosTranscurridos = $segundosFechaActual - $segundosFechaRegistro;
+    // $diasTranscurridos = $segundosTranscurridos / 86400;
+    // echo $diasTranscurridos;
+
+    $datetime1 = $usuario[0]->created_at;
+    $datetime2 = date_create(date("Y/m/d"));
+    $interval = date_diff($datetime1, $datetime2);
+    dd($interval->days);
+
+    // echo $segundosTranscurridos;
+    // echo $dias;
+
+    // if($dias > 0){
+    //   if($dias == 13){
+    //    if($usuario[0]->estado_empresa == "GRATIS"){
+    //      echo 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de prueba., han pasado '.$dias.' días.';
+    //    }else{
+    //      echo 'Almacenar en la base de datos el número de días, es un usuario que ya está pagando., han pasado '.$dias.' días.';
+    //    }
+    //   }else if($dias > 13 and $usuario[0]->estado_empresa == "GRATIS"){
+    //     if($usuario[0]->bloqueado == 'NO'){
+    //       echo 'Bloquear usuario, cambiar el valor de la columna bloqueado a "SI", han pasado '.$dias.' días.';
+    //     }
+    //   }else if($dias == 29){
+    //    echo 'Enviar correo electrónico informando a la empresa que el día siguiente se termina la suscripción de pago., han pasado '.$dias.' días.';
+    //   }else{
+    //    echo 'Almacenar en la base de datos el número de días, han pasado '.$dias. ' días';
+    //   }
+    // }
   // FIn de sentencias para el bloqueo de los usuarios al momento de la suscripción, sólo pasar estas instrucciones en donde se quieren ejecutar y tomar las acciones indicadas en los echos
 
     //
@@ -89,7 +107,7 @@ class InicioController extends Controller
     //
     //
     // echo('El ménu más vendido es '.$masvendido[0]->nombre.' con '.$mvendidos[0]->cantidad." ventas.");
-    dd(DB::table('users')->get());
+    // dd(DB::table('users')->get());
     // dd($mvendidos[0]->maximo);
 
 
