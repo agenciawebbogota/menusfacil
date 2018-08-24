@@ -53,7 +53,7 @@ new Vue({
       },
       {
         element: document.querySelectorAll('#eliminaruser')[0],
-        intro: "Ok, wasn't that fun?",
+        intro: "Ok, wasn't that fun ?",
         position: 'right'
       }
     ]);
