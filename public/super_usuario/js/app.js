@@ -31,7 +31,7 @@ new Vue({
 		document.addEventListener('DOMContentLoaded', ()=> {
 			// Botones flotantes
 			let fixedActionBtn = M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {});
-			let actualizarMenu = M.Modal.init(document.querySelectorAll('#actualizarUser'), {dismissible:false});
+			let actualizarUser = M.Modal.init(document.querySelectorAll('#actualizarUser'), {dismissible:false});
 			let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
 			let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
 		})
@@ -49,10 +49,29 @@ new Vue({
 
 			  })
     },
+    actualizarUser(){
+
+      console.log(this.update);
+      var url = '/usuarios/actualizarUsuario';
+      axios.put(url, this.update)
+			  .then((resp) =>{
+          this.getUsers()
+          let modalupdate = M.Modal.getInstance(actualizarUser)
+  				modalupdate.close()
+  				M.toast({
+  					html:'Se ha actualizado el usuario '+"'"+this.update.name+"'.",
+  					outDuration:1000
+  				});
+			  })
+			  .catch(function (error) {
+
+			  })
+    },
     actualizarDias(){
-      axios.get('usuarios/actualizardias')
+      axios.put('usuarios/actualizardias')
 			  .then((resp) =>{
           console.log(resp.data);
+          this.getUsers()
 			  })
 			  .catch(function (error) {
 
@@ -76,9 +95,14 @@ new Vue({
       },
       {
         element: document.querySelectorAll('#eliminaruser')[0],
+        intro: "Ok, wasn't that fun ?",
+        position: 'right'
+      },
+      {
+        element: document.querySelectorAll('#cerrar')[0],
         intro: "Ok, wasn't that fun?",
         position: 'right'
-      }
+      },
     ]);
     }
   }

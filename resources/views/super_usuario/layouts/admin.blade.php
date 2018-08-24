@@ -41,11 +41,6 @@
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
       <li><div class="divider"></div></li>
-      <li>
-        <button class="btn waves-effect waves-light" @click="actualizarDias()">Actualizar días
-          <i class="material-icons right">send</i>
-        </button>
-      </li>
     </ul>
     <div class="navbar-fixed">
       <nav>
@@ -74,11 +69,8 @@
       <i class="material-icons" style="background-color:{{Auth::user()->color2}};">add</i>
     </a>
     <ul>
-      {{-- <li><a href="#" class="btn-floating red darken-1 tooltipped" data-position="left" data-tooltip="Descargar ordenes"><i class="material-icons">file_download</i></a></li>
-      <li><a href="#" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar menús"><i class="material-icons">file_download</i></a></li> --}}
-
-      <li><a href="/historico/menus/{{Auth::user()->url}}" target="_blank" class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
-      <li><a @click.prevent="vistaGuiada()" class="btn-floating green tooltipped" data-position="left" data-tooltip="Vista guiada"><i class="material-icons">content_paste</i></a></li>
+      <li><a class="btn-floating tooltipped" style="background-color:{{Auth::user()->color2}};" data-tooltip="Actualiza el sistema de suscripción." data-position="left" @click="actualizarDias()"><i class="material-icons">update</i></a></li>
+      <li><a @click.prevent="vistaGuiada()" style="background-color:{{Auth::user()->color1}};" class="btn-floating tooltipped" data-position="left" data-tooltip="Vista guiada."><i class="material-icons">transfer_within_a_station</i></a></li>
     </ul>
   </div>
 </div>
@@ -91,8 +83,6 @@
       </div>
   </footer>
   <script type="text/javascript" src="/super_usuario/js/app.js"></script>
-
   </script>
-
 </body>
 </html>

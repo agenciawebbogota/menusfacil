@@ -10,25 +10,27 @@ use App\User;
 class InicioController extends Controller
 {
    public function index($url){
-   		$usuario = User::all()->where('url', $url);
-	   	if(count($usuario)){
-        // Validar si el usuaro está bloqueado.
-        if($usuario[0]->bloqueado == 'SI'){
-          return view('/');
-        }else{
-          $menus;
-          foreach ($usuario as  $value) {
-            $menus = User::find($value->id)->menus;
-          }
-          return view('usuario.index', [
-            'empresa' => $usuario,
-            'menus' => $menus,
-          ]);
+   		$usuarios = User::all()->where('url', $url);
+      foreach($usuarios as $usuario){
+        if($usuario){
+          // Validar si el usuaro está bloqueado.
+          if($usuario->bloqueado == 'SI'){
+            return view('/');
+          }else{
+            $menus;
+              $menus = User::find($usuario->id)->menus;
+            return view('usuario.index', [
+              'empresa' => $usuario,
+              'menus' => $menus,
+            ]);
 
+          }
+        }else{
+          dd('Enviar una vista de publicidad si la empresa no existe..');
         }
-	    }else{
-	    	dd('Enviar una vista de publicidad si la empresa no existe..');
-	    }
+
+
+      }
 	}
 // pruebas
 

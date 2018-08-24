@@ -124,6 +124,21 @@ class SuperusuarioController extends Controller
     }
   }
 
+  public function updateUser(Request $request){
+    $usuario = User::where('id', $request->input('id'))->update([
+      'name' => $request->input('name'),
+      'email' => $request->input('email'),
+      'url' => $request->input('url'),
+      'color1' => $request->input('color1'),
+      'color2' => $request->input('color2'),
+      'color3' => $request->input('color3'),
+      'estado_empresa' => $request->input('estado_empresa'),
+      'bloqueado' => $request->input('bloqueado'),
+      'dias' => $request->input('dias'),
+    ]);
+    return $usuario;
+  }
+
   public function diferenciaDias($inicio, $fin)
   {
     $datetime1 = $inicio;
