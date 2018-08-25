@@ -442,7 +442,11 @@
 					         <img src="assets/img/seo-info-light.png" alt="" class="img-responsive">
                 </div><!-- /.col-md-5 -->
                 </div><!-- /.row -->
-                <a href="/register" class="btn btn-prueba" style="background-color:#e88a10 !important"> <span>Actualiza <strong>AHORA</strong></span></a>
+                <div class="row">
+                  <div class="col m4 offset-m4 s4 offset-s2 l4 offset-l5">
+                    <a href="/register" class="btn btn-prueba" style="background-color:#e88a10 !important"> <span>Actualiza <strong>AHORA</strong></span></a>
+                  </div>
+                </div>
             </div><!-- /.container -->
         </section>
 
