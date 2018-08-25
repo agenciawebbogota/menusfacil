@@ -8,9 +8,11 @@ use App\User;
 class PagosController extends Controller
 {
     public function exitosa(){
+
+      $fecha = date("Y-m-d H:i:s");
       User::where('id', \Auth::id())->update([
         'bloqueado' => 'NO',
-        'created_at' => date("Y-m-d H:i:s"),
+        'created_at' => $fecha,
         'dias' => 0,
       ]);
       // dd($request);
