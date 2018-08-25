@@ -7,13 +7,13 @@ use App\User;
 
 class PagosController extends Controller
 {
-    public function exitosa(Request $request){
+    public function exitosa(){
       User::where('id', \Auth::id())->update([
         'bloqueado' => 'NO',
         'created_at' => date("Y-m-d H:i:s"),
         'dias' => 0,
       ]);
-      dd($request);
+      // dd($request);
       return view('suscripcion.exitosa');
     }
 
