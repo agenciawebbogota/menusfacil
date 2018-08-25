@@ -54,5 +54,5 @@ Route::PUT('/usuarios/actualizarUsuario', 'SuperusuarioController@updateUser');
 
 // Pagos
 Route::get('/confirmacion/suscripcion-exitosa', 'PagosController@exitosa');
-Route::get('/confirmacio/fallo', 'PagosController@fallo');
-Route::get('/confirmacio/suscripcion-pendiente', 'PagosController@pendiente');
+Route::get('/confirmacion/fallo', 'PagosController@fallo');
+Route::get('/confirmacion/suscripcion-pendiente', 'PagosController@pendiente');
