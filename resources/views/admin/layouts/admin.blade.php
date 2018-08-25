@@ -117,14 +117,17 @@
       </div>
   </footer>
 @endif
-  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script type="text/javascript" src="admin/js/config.js"></script>
-  <script type="text/javascript">
+  @if (Auth::user()->bloqueado == 'SI')
+    <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
+    <script type="text/javascript" src="admin/js/config.js"></script>
+    <script type="text/javascript">
     let firebase = "empresa/<?php  echo Auth::user()->url ?>";
     let ref = db.ref(firebase);
-  </script>
-  <script type="text/javascript" src="/admin/js/app.js"></script>
+    </script>
+    <script type="text/javascript" src="/admin/js/app.js"></script>
+
+  @endif
 
 </body>
 </html>
