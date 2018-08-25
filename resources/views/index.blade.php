@@ -424,6 +424,31 @@
             </div>
         </section>
 
+        <section class="section-padding lighten-4" style="background-color:#7c7a7a">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 light-grey-text">
+                	<h2 class="font-40 mb-30 white-text">Oferta de Lanzamiento</h2>
+                	<p>Conviertete en Usuario Premium con suscripción mensual y disfruta de todos los beneficios que tenemos para ti:</p>
+
+                	<ul class="list-icon mb-30">
+                		<li><i class="material-icons">&#xE876;</i> Aplicativo con los colores y el logo de tu negocio</li>
+                		<li><i class="material-icons">&#xE876;</i> Accede a documentación exclusiva de administración y configuración</li>
+                		<li><i class="material-icons">&#xE876;</i> Obtén increíbles descuentos por pagar por adelantado</li>
+                	</ul>
+
+                	<a href="#." class="btn btn-lg text-capitalize waves-effect waves-light">¡Actualiza Ahora!</a>
+
+                </div><!-- /.col-md-7 -->
+
+                <div class="col-md-5 mt-sm-30">
+					         <img src="assets/img/seo-info-light.png" alt="" class="img-responsive">
+                </div><!-- /.col-md-5 -->
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+
+
 
         <!--footer 4 start -->
         <footer class="footer footer-four">
