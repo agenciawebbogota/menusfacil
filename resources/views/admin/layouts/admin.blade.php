@@ -12,6 +12,7 @@
 </head>
 <body>
   <div id="dash" v-cloak>
+
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view">
@@ -46,6 +47,11 @@
         </div>
       </nav>
     </div>
+    @if (Auth::user()->bloqueado == 'SI')
+      {{-- Vista para pagar. --}}
+      <p style="text-align:center">Debes pagar aquí.</p>
+      {{-- http://drive.google.com/uc?export=view&id=0B90Lde1p9VqqM0dNYXp4Rl9jejg --}}
+    @else
   @yield('contenido')
   </div>
     <!-- Botones flotantes con opciones -->
@@ -59,6 +65,7 @@
       <li><a href="/historico/menus/{{Auth::user()->url}}" target="_blank"class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
     </ul>
   </div>
+</div>
   <footer class="page-footer" style="background-color:{{Auth::user()->color1}}">
       <div class="footer-copyright">
           <div class="container">
@@ -67,6 +74,7 @@
           </div>
       </div>
   </footer>
+@endif
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
   <script type="text/javascript" src="admin/js/config.js"></script>

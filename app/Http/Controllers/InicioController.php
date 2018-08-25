@@ -15,7 +15,7 @@ class InicioController extends Controller
         if($usuario){
           // Validar si el usuaro está bloqueado.
           if($usuario->bloqueado == 'SI'){
-            return view('/');
+            return redirect('/');
           }else{
             $menus;
               $menus = User::find($usuario->id)->menus;
@@ -32,7 +32,7 @@ class InicioController extends Controller
 
       }
 	}
-// pruebas
+// Pruebas ////////
 
     public function diferenciaDias($inicio, $fin)
     {
@@ -42,10 +42,6 @@ class InicioController extends Controller
         $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
         return ceil($diasFalt);
     }
-// $inicio = "2018/08/01";
-// $fin = "2018/09/01";
-// echo diferenciaDias($inicio, $fin);
-// }
   public function doc(){
     return view('doc.index');
   }
@@ -54,26 +50,15 @@ class InicioController extends Controller
 
 
 // Inicio de sentencias para el bloqueo de los usuarios al momento de la suscripción.
-    $user_id = \Auth::id();
-    $usuario = \App\User::where('id', 2)->get();
-    $inicio = $usuario[0]->created_at;
-    $fin = date("Y/m/d");
-    $dias = $this->diferenciaDias($inicio, $fin);
-
-
-
-    // $fechaActual = date("Y-m-d H:i:s");
-    // $fechaRegistro = $usuario[0]->created_at;
-    // $segundosFechaActual = strtotime($fechaActual);
-    // $segundosFechaRegistro = strtotime($fechaRegistro);
-    // $segundosTranscurridos = $segundosFechaActual - $segundosFechaRegistro;
-    // $diasTranscurridos = $segundosTranscurridos / 86400;
-    // echo $diasTranscurridos;
-
-    $datetime1 = $usuario[0]->created_at;
-    $datetime2 = date_create(date("Y/m/d"));
-    $interval = date_diff($datetime1, $datetime2);
-    dd($interval->days);
+    // $user_id = \Auth::id();
+    // $usuario = \App\User::where('id', 2)->get();
+    // $inicio = $usuario[0]->created_at;
+    // $fin = date("Y/m/d");
+    // $dias = $this->diferenciaDias($inicio, $fin);
+    // $datetime1 = $usuario[0]->created_at;
+    // $datetime2 = date_create(date("Y/m/d"));
+    // $interval = date_diff($datetime1, $datetime2);
+    // dd($interval->days);
 
     // echo $segundosTranscurridos;
     // echo $dias;
