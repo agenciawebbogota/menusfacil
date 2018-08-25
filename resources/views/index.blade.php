@@ -10,7 +10,7 @@
         @include('seo.google')
         {{-- Facebook --}}
         @include('seo.facebook')
-        <title>Menús Fácil</title>
+        <title>MenúsFácil</title>
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/favicon.png">
         <!--  apple-touch-icon -->
