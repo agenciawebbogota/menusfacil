@@ -130,6 +130,7 @@ class SuperusuarioController extends Controller
       'color1' => $request->input('color1'),
       'color2' => $request->input('color2'),
       'color3' => $request->input('color3'),
+      'created_at' => $request->input('created_at'),
       'estado_empresa' => $request->input('estado_empresa'),
       'bloqueado' => $request->input('bloqueado'),
       'dias' => $request->input('dias'),
