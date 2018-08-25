@@ -9,6 +9,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
+  <style media="screen">
+    .img-pago{
+        width: 280px;
+        margin: 0 auto;
+    }
+  @media screen and (min-width:320px) {
+    .img-pago{
+        /* width: 300px; */
+    }
+
+  }
+  </style>
 </head>
 <body>
   <div id="dash" v-cloak>
@@ -49,8 +61,38 @@
     </div>
     @if (Auth::user()->bloqueado == 'SI')
       {{-- Vista para pagar. --}}
-      <p style="text-align:center">Debes pagar aquí.</p>
-      {{-- http://drive.google.com/uc?export=view&id=0B90Lde1p9VqqM0dNYXp4Rl9jejg --}}
+      <p style="text-align:center">Renueva tu suscripción</p>
+
+      <div class="row">
+        <div class="img-pago">
+          <!-- Boton PayU -->
+          <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
+            <input type="image" border="0" class="{{--col m4 offset-m4 s4 offset-s1 l4 offset-l4 --}}" alt="" src="http://agenciawebbogota.com/social/boton-pagar.png" onClick="this.form.urlOrigen.value = window.location.href;"/>
+            <input name="buttonId" type="hidden" value="iTBmFbx+1Fyy7Pe4hIPsFPE3bIVkltlKm5huATupPoVNFmQFfNDpug=="/>
+            <input name="merchantId" type="hidden" value="508029"/>
+            <input name="accountId" type="hidden" value="512321"/>
+            <input name="description" type="hidden" value="Suscripción mensual MenúsFácil"/>
+            <input name="referenceCode" type="hidden" value="01"/>
+            <input name="amount" type="hidden" value="87000"/>
+            <input name="tax" type="hidden" value="0"/>
+            <input name="taxReturnBase" type="hidden" value="0"/>
+            <input name="currency" type="hidden" value="COP"/>
+            <input name="lng" type="hidden" value="es"/>
+            <input name="approvedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-exitosa"/>
+            <input name="declinedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/fallo"/>
+            <input name="pendingResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-pendiente"/>
+            <input name="displayShippingInformation" type="hidden" value="NO"/>
+            <input name="sourceUrl" id="urlOrigen" value="" type="hidden"/>
+            <input name="buttonType" value="SIMPLE" type="hidden"/>
+            <input name="signature" value="1c1c179edf191058f5a166ef2230127d6b8eb258f822977af9c5782963bbc122" type="hidden"/>
+          </form>
+          <!-- Fin Boton -->
+
+        </div>
+
+      </div>
+      <p style="text-align:center">No cierres tu sesión hasta el pago sea completado.</p>
+
     @else
   @yield('contenido')
   </div>
