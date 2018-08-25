@@ -8,8 +8,12 @@
   <link href="/super_usuario/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs-rtl.min.css"> --}}
   <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
   <style media="screen">
+    [v-cloak] {
+      display: none;
+    }
     body {
       display: flex;
       min-height: 100vh;
@@ -37,16 +41,11 @@
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
       <li><div class="divider"></div></li>
-      <li>
-        <button class="btn waves-effect waves-light" @click="actualizarDias()">Actualizar días
-          <i class="material-icons right">send</i>
-        </button>
-      </li>
     </ul>
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}}">
-          <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger" id="menuLateral"><i class="material-icons large">menu</i></div>
+          <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger menuLateral" id="menuLateral" ><i class="material-icons large" data-intro='Menú para ver opciones del usuario.' data-step="1">menu</i></div>
             <a class="brand-logo center">
               <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
             </a>
@@ -64,18 +63,17 @@
       </nav>
     </div>
   @yield('contenido')
-  </div>
     <!-- Botones flotantes con opciones -->
-  <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
+  <div class="fixed-action-btn" style="bottom: 50px; right: 19px;" id="historicomnus" data-intro='Ver más opciones.' data-step="2">
     <a class="btn-floating btn-large">
       <i class="material-icons" style="background-color:{{Auth::user()->color2}};">add</i>
     </a>
     <ul>
-      {{-- <li><a href="#" class="btn-floating red darken-1 tooltipped" data-position="left" data-tooltip="Descargar ordenes"><i class="material-icons">file_download</i></a></li>
-      <li><a href="#" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Descargar menús"><i class="material-icons">file_download</i></a></li> --}}
-      <li><a href="/historico/menus/{{Auth::user()->url}}" target="_blank"class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
+      <li><a class="btn-floating tooltipped" style="background-color:{{Auth::user()->color2}};" data-tooltip="Actualiza el sistema de suscripción." data-position="left" @click="actualizarDias()"><i class="material-icons">update</i></a></li>
+      <li><a @click.prevent="vistaGuiada()" style="background-color:{{Auth::user()->color1}};" class="btn-floating tooltipped" data-position="left" data-tooltip="Vista guiada."><i class="material-icons">transfer_within_a_station</i></a></li>
     </ul>
   </div>
+</div>
   <footer class="page-footer" style="background-color:{{Auth::user()->color1}}">
       <div class="footer-copyright">
           <div class="container">
@@ -84,13 +82,7 @@
           </div>
       </div>
   </footer>
-  {{-- <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-  <script type="text/javascript" src="admin/js/config.js"></script>
-  <script type="text/javascript">
-    let firebase = "empresa/";
-    let ref = db.ref(firebase);
-  </script> --}}
   <script type="text/javascript" src="/super_usuario/js/app.js"></script>
+  </script>
 </body>
 </html>

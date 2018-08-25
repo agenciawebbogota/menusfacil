@@ -19,13 +19,13 @@
     <td>@{{ usuario.bloqueado }}</td>
     <td>@{{ usuario.dias }}</td>
     <td>
-      <a href="#actualizarMenu" class="btn-floating blue modal-trigger" v-on:click="llenarModal(usuario)">
-        <i class="material-icons">edit</i>
+      <a href="#actualizarUser" class="btn-floating blue modal-trigger" v-on:click="llenarModal(usuario)">
+        <i class="material-icons" id="editaruser" data-step="3" data-intro="Editar Usuarios.">edit</i>
       </a>
     </td>
-    <td>
-      <a v-on:click.prevent="elimiarUsario(usuario)" class="btn-floating red"><i class="material-icons">delete</i></a>
-    </td>
+    {{-- <td>
+      <a v-on:click.prevent="elimiarUsario(usuario)" data-step="4" id="eliminaruser" data-intro="Eliminar Usuarios." class="btn-floating red"><i class="material-icons">delete</i></a>
+    </td> --}}
   </tr>
   </tbody>
 </table>

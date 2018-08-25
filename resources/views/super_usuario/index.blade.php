@@ -8,9 +8,7 @@
 
 
 
-
-
-
-
+{{--  Modal para la edicion de los usuarios --}}
+  @include('super_usuario.includes.modals.editar')
 
 @endsection

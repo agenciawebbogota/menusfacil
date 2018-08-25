@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	@foreach ($empresa as $el)
-		<title>{{$el->name}} | Menús Fácil</title>
-	@endforeach
+
+		<title>{{$empresa->name}} | Menús Fácil</title>
+
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
@@ -15,7 +15,6 @@
 </head>
 <body>
 	<div id="app" v-cloak>
-
 		<div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper">
@@ -28,20 +27,6 @@
 		<div style="position: relative;padding-top:30px;">
 		</div>
 		<form @submit.prevent="enviarPedido()" id="pedido">
-
-			{{-- @php
-			function diferenciaDias($inicio, $fin)
-			{
-			    $inicio = strtotime($inicio);
-			    $fin = strtotime($fin);
-			    $dif = $fin - $inicio;
-			    $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
-			    return ceil($diasFalt);
-			}
-			$inicio = "2018/08/01";
-			$fin = "2018/09/01";
-			echo diferenciaDias($inicio, $fin);
-			@endphp --}}
 			<div class="row">
 				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
@@ -135,10 +120,8 @@
 			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
 			          <label for="observaciones">¿Alguna observación?</label>
 			        </div>
-				      @foreach ($empresa as $el)
-				      	<p style="color:white" id="user_id">{{ $el->id }}</p>
+				      	<p style="color:white" id="user_id">{{ $empresa->id }}</p>
 				      	{{-- <input id="user_id" type="text" v-model="pedido.user_id" value="{{ $el->id }}"> --}}
-				      @endforeach
 						 {{-- @csrf --}}
 						 {{-- poner swich para habilitar y deshabilitar el correo --}}
 						 <div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2 animated bounceIn" v-if="checked" >
@@ -153,11 +136,11 @@
 							 <input type="checkbox" v-model="checked"/>
 							 <span>¿Quieres recibir los detalles de tu orden en tu email?</span>
 						 </label>
-						 {{-- </div> --}}
-						 @foreach ($empresa as $el)
-							 <button style="background:{{$el->color1}};"
+
+
+							 <button style="background:{{$empresa->color1}};"
 								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
-						 @endforeach
+
 						 		<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			      </div>
 			</div>

@@ -75,5 +75,6 @@
     let ref = db.ref(firebase);
   </script>
   <script type="text/javascript" src="/admin/js/app.js"></script>
+
 </body>
 </html>
