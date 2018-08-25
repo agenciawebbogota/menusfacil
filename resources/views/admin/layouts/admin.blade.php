@@ -66,7 +66,7 @@
       <div class="row">
         <div class="img-pago">
           <!-- Boton PayU -->
-          <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
+          <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu" accept-charset="UTF-8">
             <input type="image" border="0" class="{{--col m4 offset-m4 s4 offset-s1 l4 offset-l4 --}}" alt="" src="http://agenciawebbogota.com/social/boton-pagar.png" onClick="this.form.urlOrigen.value = window.location.href;"/>
             <input name="buttonId" type="hidden" value="iTBmFbx+1Fyy7Pe4hIPsFPE3bIVkltlKm5huATupPoVNFmQFfNDpug=="/>
             <input name="merchantId" type="hidden" value="508029"/>
@@ -78,6 +78,7 @@
             <input name="taxReturnBase" type="hidden" value="0"/>
             <input name="currency" type="hidden" value="COP"/>
             <input name="lng" type="hidden" value="es"/>
+            <input name="test" value="1" type="hidden">
             <input name="approvedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-exitosa"/>
             <input name="declinedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/fallo"/>
             <input name="pendingResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-pendiente"/>
