@@ -122,7 +122,7 @@
       </div>
   </footer>
 @endif
-  @if (Auth::user()->bloqueado == 'SI')
+  @if (Auth::user()->bloqueado == 'NO')
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
     <script type="text/javascript" src="admin/js/config.js"></script>
