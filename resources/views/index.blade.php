@@ -3,17 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        {{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        {{-- Nota: Si deseas cambiar el orden en que se muestra el contenido, sólo debes cambiar el orden de de estas etiquetas --}}
-        {{-- Google --}}
         @include('seo.google')
-        {{-- Facebook --}}
         @include('seo.facebook')
-        <title>MenúsFácil</title>
-        <!--  favicon -->
+        <title>Menús Fácil | Nuevo Manager de Pedidos y Menús</title>
         <link rel="shortcut icon" href="assets/img/favicon.png">
-        <!--  apple-touch-icon -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72-precomposed.png">
@@ -49,7 +43,7 @@
     <body id="top">
         <!-- start revolution slider 5.0 -->
         <section class="rev_slider_wrapper">
-
+          <h1 style="color:#fff;font-size:32px;display:none">Menús Fácil | manager de menus para restaurantes, hoteles, casinos y comidas rápidas</h1>
          <div class="rev_slider materialize-slider">
           <ul>
 
@@ -211,7 +205,8 @@
                   <h2 class="section-title text-uppercase text-extrabold">Características</h2>
                   <h3 class="section-sub">Menús Fácil puede ser implementado en cualquier negocio que cuente con servicio de domicilios, reservas y órdenes de clientes</h3>
               </div>
-
+              <h2 style="color:#fff;font-size:15px;display:none">menus para restaurantes, como crear un menú para restaurante</h2>
+              <p style="color:#fff;font-size:15px;display:none">menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
 
             <div class="row">
                 <div class="col-md-4 col-sm-6">
