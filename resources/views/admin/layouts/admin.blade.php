@@ -60,6 +60,10 @@
       </nav>
     </div>
     @if (Auth::user()->bloqueado == 'SI')
+      @php
+        echo date("Y-m-d H-i-s");
+        // 2018-08-08 00:00:00
+      @endphp
       {{-- Vista para pagar. --}}
       <p style="text-align:center">Renueva tu suscripción</p>
 

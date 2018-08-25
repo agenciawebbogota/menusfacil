@@ -41,8 +41,6 @@ class SuperusuarioController extends Controller
   public function actualizardias(){
     $usuario=User::where('id', '=', \Auth::id())->first();
     if($usuario->tipo_usuario === 'SUPERUSUARIO'){
-
-
       // Inicio de sentencias para el bloqueo de los usuarios al momento de la suscripción.
           $user_id = \Auth::id();
           $usuarios = \App\User::where('id','!=', $user_id)->get();
