@@ -66,11 +66,11 @@
       <div class="row">
         <div class="img-pago">
           <!-- Boton PayU -->
-          <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu" accept-charset="UTF-8">
+          <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
             <input type="image" border="0" class="{{--col m4 offset-m4 s4 offset-s1 l4 offset-l4 --}}" alt="" src="http://agenciawebbogota.com/social/boton-pagar.png" onClick="this.form.urlOrigen.value = window.location.href;"/>
             <input name="buttonId" type="hidden" value="iTBmFbx+1Fyy7Pe4hIPsFPE3bIVkltlKm5huATupPoVNFmQFfNDpug=="/>
-            <input name="merchantId" type="hidden" value="508029"/>
-            <input name="accountId" type="hidden" value="512321"/>
+            <input name="merchantId" type="hidden" value="644473"/>
+            <input name="accountId" type="hidden" value="646874"/>
             <input name="description" type="hidden" value="Suscripción mensual MenúsFácil"/>
             <input name="referenceCode" type="hidden" value="01"/>
             <input name="amount" type="hidden" value="87000"/>
