@@ -60,10 +60,6 @@
       </nav>
     </div>
     @if (Auth::user()->bloqueado == 'SI')
-      @php
-        echo date("Y-m-d H-i-s");
-        // 2018-08-08 00:00:00
-      @endphp
       {{-- Vista para pagar. --}}
       <p style="text-align:center">Renueva tu suscripción</p>
 
@@ -92,13 +88,11 @@
             <input name="signature" value="1c1c179edf191058f5a166ef2230127d6b8eb258f822977af9c5782963bbc122" type="hidden"/>
           </form>
           <!-- Fin Boton -->
-
         </div>
-
       </div>
       <p style="text-align:center">No cierres tu sesión hasta el pago sea completado.</p>
-
     @else
+
   @yield('contenido')
   </div>
     <!-- Botones flotantes con opciones -->
@@ -122,17 +116,17 @@
       </div>
   </footer>
 @endif
-  @if (Auth::user()->bloqueado == 'NO')
+
+  {{-- @if (Auth::user()->bloqueado == 'NO') --}}
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
     <script type="text/javascript" src="admin/js/config.js"></script>
     <script type="text/javascript">
-    let firebase = "empresa/<?php  echo Auth::user()->url ?>";
-    let ref = db.ref(firebase);
+      let firebase = "empresa/<?php  echo Auth::user()->url ?>";
+      let ref = db.ref(firebase);
     </script>
     <script type="text/javascript" src="/admin/js/app.js"></script>
-
-  @endif
+  {{-- @endif --}}
 
 </body>
 </html>

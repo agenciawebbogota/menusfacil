@@ -34,7 +34,7 @@
           </div>
           <div class="input-field col s12 m6">
             Creado el
-            <input id="creado" type="text" class="validate" data-length="10" v-model="update.created_at" disabled>
+            <input id="creado" type="text" class="validate" data-length="10" v-model="update.created_at">
           </div>
           <div class="input-field col s12 m6">
             Color 1

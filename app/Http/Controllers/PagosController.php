@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class PagosController extends Controller
 {
-    public function exitosa(Request $request){
+    public function exitosa(){
+
+      $fecha = date("Y-m-d H:i:s");
       User::where('id', \Auth::id())->update([
         'bloqueado' => 'NO',
-        'created_at' => date("Y-m-d H:i:s"),
+        'created_at' => $fecha,
         'dias' => 0,
       ]);
-      dd($request);
+      // dd($request);
       return view('suscripcion.exitosa');
     }
 
