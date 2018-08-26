@@ -205,8 +205,8 @@
                   <h2 class="section-title text-uppercase text-extrabold">Características</h2>
                   <h3 class="section-sub">Menús Fácil puede ser implementado en cualquier negocio que cuente con servicio de domicilios, reservas y órdenes de clientes</h3>
               </div>
-              <h2 style="color:#fff;font-size:15px;display:none">menus para restaurantes, como crear un menú para restaurante</h2>
-              <p style="color:#fff;font-size:15px;display:none">menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
+              <h2 style="color:#fff;font-size:15px;display:none">Menús Fácil - menus para restaurantes, como crear un menú para restaurante</h2>
+              <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
 
             <div class="row">
                 <div class="col-md-4 col-sm-6">
@@ -273,6 +273,7 @@
                           <h3>Consulta y descarga histórico de menús creados sin importar si están habilitados o no</h3>
                       </div>
                   </div>
+                  <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
 
                 </div><!-- /.col-md-4 -->
             </div><!-- /.row -->
@@ -404,8 +405,7 @@
 
           </div>
         </section>
-
-
+        <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
         <section class="ptb-90 gray-bg">
             <div class="container">
                 <div class="text-center wow fadeInUp">
