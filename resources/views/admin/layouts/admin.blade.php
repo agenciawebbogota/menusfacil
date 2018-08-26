@@ -79,9 +79,9 @@
             <input name="currency" type="hidden" value="COP"/>
             <input name="lng" type="hidden" value="es"/>
             <input name="test" value="1" type="hidden">
-            <input name="approvedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-exitosa"/>
-            <input name="declinedResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/fallo"/>
-            <input name="pendingResponseUrl" type="hidden" value="http://menusfacil.com/confirmacion/suscripcion-pendiente"/>
+            <input name="approvedResponseUrl" type="hidden" value="{{url('confirmacion/suscripcion-exitosa')}}"/>
+            <input name="declinedResponseUrl" type="hidden" value="{{url('confirmacion/fallo')}}"/>
+            <input name="pendingResponseUrl" type="hidden" value="{{url('confirmacion/suscripcion-pendiente')}}"/>
             <input name="displayShippingInformation" type="hidden" value="NO"/>
             <input name="sourceUrl" id="urlOrigen" value="" type="hidden"/>
             <input name="buttonType" value="SIMPLE" type="hidden"/>

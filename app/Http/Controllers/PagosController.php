@@ -7,7 +7,13 @@ use App\User;
 
 class PagosController extends Controller
 {
-    public function exitosa(){
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
+    public function exitosa(Request $request){
 
       $fecha = date("Y-m-d H:i:s");
       User::where('id', \Auth::id())->update([
@@ -15,7 +21,7 @@ class PagosController extends Controller
         'created_at' => $fecha,
         'dias' => 0,
       ]);
-      // dd($request);
+      dd($request);
       return view('suscripcion.exitosa');
     }
 
