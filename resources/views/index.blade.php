@@ -472,7 +472,7 @@
         <!-- Preloader -->
         <div id="preloader">
           <div class="preloader-position">
-            <img src="assets/img/logo.svg" width="200" height="192" alt="logo" >
+            <img src="/img/logo2.png" width="200" height="192" alt="logo" >
             <div class="progress">
               <div class="indeterminate"></div>
             </div>

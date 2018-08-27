@@ -21,7 +21,7 @@ class PagosController extends Controller
         'created_at' => $fecha,
         'dias' => 0,
       ]);
-      dd($request);
+      // dd($request);
       return view('suscripcion.exitosa');
     }
 

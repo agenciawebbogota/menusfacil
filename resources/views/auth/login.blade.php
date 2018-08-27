@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio de Sesión | MenúsFácil</title>
+  <title>Inicio de Sesión | Menús Fácil</title>
   <link href="{{ url('sesion/css/app.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body style="padding-top:60px;background:teal">
+<body style="padding-top:60px;background:#f5f5f5">
 
   <div id="login-page" class="row">
     <div class="col s10 l4 z-depth-4 offset-l4 offset-s1 card-panel">
@@ -58,12 +58,12 @@
 
 
             <button type="submit" class="btn btn-primary col l12 s8 m10 offset-m3">
-                Iniciar
+                Iniciar Sesión
             </button>
-            <div class="col l6 s5 m6">
+            <div class="col l6 s5 m6" style="padding-top:20px">
               <p class="medium-small"><a href="{{ route('register') }}">Registrate Ahora</a></p>
             </div>
-            <div class="col l6 s5 m6">
+            <div class="col l6 s5 m6" style="padding-top:20px">
               <p class="medium-small"><a href="{{ route('password.request')}}">¿Perdiste tu clave?</a></p>
             </div>
       </form>
