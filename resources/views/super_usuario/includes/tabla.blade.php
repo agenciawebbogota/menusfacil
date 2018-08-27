@@ -1,3 +1,8 @@
+{{-- <div class="row">
+  <div class="input-field col l8 s12 m6 offset-l2">
+    <input type="search" name="buscador" placeholder="Buscar usuarios.." v-model="search" @keyup="buscador">
+  </div>
+</div> --}}
 <table id="tablaMenus" class="centered">
 <thead>
 <tr>

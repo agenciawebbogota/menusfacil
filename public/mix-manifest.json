@@ -8,5 +8,7 @@
     "/registro/js/app.js": "/registro/js/app.js",
     "/registro/css/app.css": "/registro/css/app.css",
     "/super_usuario/js/app.js": "/super_usuario/js/app.js",
-    "/super_usuario/css/app.css": "/super_usuario/css/app.css"
+    "/super_usuario/css/app.css": "/super_usuario/css/app.css",
+    "/partnerts/js/app.js": "/partnerts/js/app.js",
+    "/partnerts/css/app.css": "/partnerts/css/app.css"
 }

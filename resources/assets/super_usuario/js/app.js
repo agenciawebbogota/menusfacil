@@ -2,7 +2,8 @@ new Vue({
   el:'#superadmin',
   data:{
     usuarios: [],
-    update:[]
+    update:[],
+    search:'',
   },
   mounted:function(){
 		document.addEventListener('DOMContentLoaded', ()=> {
@@ -21,14 +22,13 @@ new Vue({
       axios.get('usuarios/get')
 			  .then((resp) =>{
           this.usuarios = resp.data
+          // console.log(resp.data);
 			  })
 			  .catch(function (error) {
 
 			  })
     },
     actualizarUser(){
-
-      console.log(this.update);
       var url = '/usuarios/actualizarUsuario';
       axios.put(url, this.update)
 			  .then((resp) =>{
@@ -47,7 +47,6 @@ new Vue({
     actualizarDias(){
       axios.put('usuarios/actualizardias')
 			  .then((resp) =>{
-          console.log(resp.data);
           this.getUsers()
 			  })
 			  .catch(function (error) {
@@ -57,6 +56,12 @@ new Vue({
     llenarModal:function(usuario){
       this.update = usuario;
     },
+    // buscador: function(){
+    //   var self = this
+    //   self.usuarios.find((usuario) => {
+    //     console.log(usuario.name == self.search)
+    //   })
+    // },
     vistaGuiada(){
       // Intro de la web
       introJs().start()

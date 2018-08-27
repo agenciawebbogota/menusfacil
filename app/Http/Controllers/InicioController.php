@@ -32,6 +32,7 @@ class InicioController extends Controller
 
       }
 	}
+  
 // Pruebas ////////
 
     public function diferenciaDias($inicio, $fin)

@@ -14,14 +14,11 @@
     [v-cloak] {
       display: none;
     }
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-    main {
-      flex: 1 0 auto;
-    }
+    /* input[type=search]{
+      background-color: gray !important;
+      width: 200px !important;
+      padding: 10px !important;
+    } */
   </style>
 </head>
 <body>

@@ -26,11 +26,16 @@ class CreateUsersTable extends Migration
             $table->string('tipo_usuario')->default('EMPRESA'); //SUPERUSUARIO
             $table->string('bloqueado')->default('NO'); // SI
             $table->integer('dias')->default(0)->nulleble();
-            $table->dateTime('fecha_pago')->default(date("Y-m-d H:i:s"))->nulleble();
+            $table->unsignedInteger('partnert_id')->default(1);
+            $table->dateTime('fecha_creacion')->default(date("Y-m-d H:i:s"))->nulleble();
             $table->string('avatar')->default('http://www.menusfacil.com/admin/img/logo-menusfacil.svg')->nulleble();
+            // $table->foreign('partnert_id')->references('id')->on('partnerts');
+            // $table->integer('partnert_id')->unsigned()->unique();
+            // $table->foreign('partnert_id')->references('id')->on('partnerts');
             $table->rememberToken();
             $table->timestamps();
         });
+
     }
 
     /**

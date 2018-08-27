@@ -60,13 +60,27 @@ mix.scripts([
 // Super usuario
    mix.scripts([
      'resources/assets/inicio/js/materialize.min.js',
-  'resources/assets/inicio/js/axios.min.js',
-  'resources/assets/super_usuario/js/intro.min.js',
-  'node_modules/vue/dist/vue.min.js',
-  'resources/assets/super_usuario/js/app.js',
-], 'public/super_usuario/js/app.js')
+      'resources/assets/inicio/js/axios.min.js',
+      'resources/assets/super_usuario/js/intro.min.js',
+      'node_modules/vue/dist/vue.min.js',
+      'resources/assets/super_usuario/js/app.js',
+    ], 'public/super_usuario/js/app.js')
    .styles([
      'resources/assets/inicio/css/materialize.min.css',
      'resources/assets/super_usuario/css/introjs.min.css',
      'resources/assets/super_usuario/css/app.css',
    ], 'public/super_usuario/css/app.css');
+
+   // partners
+   mix.scripts([
+     'resources/assets/inicio/js/materialize.min.js',
+      'resources/assets/inicio/js/axios.min.js',
+      // 'resources/assets/super_usuario/js/intro.min.js',
+      'node_modules/vue/dist/vue.min.js',
+      'resources/assets/partnerts/js/main.js',
+    ], 'public/partnerts/js/app.js')
+   .styles([
+     'resources/assets/inicio/css/materialize.min.css',
+     // 'resources/assets/super_usuario/css/introjs.min.css',
+     'resources/assets/partnerts/css/main.css',
+   ], 'public/partnerts/css/app.css');

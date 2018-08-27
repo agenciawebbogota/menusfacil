@@ -32,6 +32,7 @@ class User extends Authenticatable
       return $this->hasMany('App\Menu');
     }
 
+
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CambiarContrasena($token));

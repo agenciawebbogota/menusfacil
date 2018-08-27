@@ -34,27 +34,28 @@
           </div>
           <div class="input-field col s12 m6">
             Creado el
-            <input id="creado" type="text" class="validate" data-length="10" v-model="update.created_at">
+            <input id="creado" type="text" class="validate" data-length="10" v-model="update.created_at" disabled>
           </div>
           <div class="input-field col s12 m6">
             Color 1
-            <input id="color1" type="text" class="validate" data-length="10" v-model="update.color1">
-            <spam :style="{color:update.color1}">Muestra de color</spam>
+            <input id="color1" type="text"  data-length="10" v-model="update.color1" disabled>
+            <div :style="{background:update.color1}" style="width:200px;height:3px;"></div>
           </div>
           <div class="input-field col s12 m6">
             Color 2
-            <input id="color2" type="text" class="validate" data-length="10" v-model="update.color2">
-            <spam :style="{color:update.color2}">Muestra de color</spam>
+            <input id="color2" type="text" data-length="10" v-model="update.color2" disabled>
+            <div :style="{background:update.color2}" style="width:200px;height:3px;"></div>
           </div>
           <div class="input-field col s12 m6">
             Color 3
-            <input id="color3" type="text" class="validate" data-length="10" v-model="update.color3">
-            <spam :style="{color:update.color3}">Muestra de color</spam>
+            <input id="color3" type="text" data-length="10" v-model="update.color3" disabled>
+            <div :style="{background:update.color3}" style="width:200px;height:3px;"></div>
           </div>
 
         </div>
         <button class="btn waves-effect waves-light grey darken-4" type="submit">Actualizar
       </button>
+    </form>
     </div>
     </div>
     <div class="modal-footer">

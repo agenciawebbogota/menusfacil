@@ -1,4 +1,4 @@
-->nullable();<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -21,12 +21,10 @@ class CreatePedidosTable extends Migration
             $table->string('correo')->nullable();
             $table->string('direccion');
             $table->string('observaciones')->nullable();
-            $table->integer('menu_pedido')->unsigned();
-            $table->integer('adicional_pedido')->unsigned()->nullable();
-            $table->integer('user_id')->unsigned();
+            $table->unsignedInteger('menu_pedido');
+            $table->unsignedInteger('user_id');
             $table->foreign('menu_pedido')->references('id')->on('menus');
             $table->foreign('user_id')->references('id')->on('users');
-            // $table->foreign('adicional_pedido')->references('id')->on('menus');
         });
     }
     /**
