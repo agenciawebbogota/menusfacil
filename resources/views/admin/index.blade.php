@@ -6,7 +6,7 @@
       <div class="card-image waves-effect waves-block waves-light" style="background-color:{{Auth::user()->color2}}">
           <h2 class="center-align titulo-tabla">TABLA DE MENÚS</h2>
           <a class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Crear Menú" style="margin: 10px"><i class="large material-icons activator">add</i></a>
-          <a href="/descarga/menus" target="_blank" style="margin: 10px" class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Ver PDF"><i class="material-icons">file_download</i></a>
+          <a href="{{url('/descarga/menus')}}" target="_blank" style="margin: 10px" class="btn-floating btn-move-up waves-effect waves-light right tooltipped" data-position="bottom" data-tooltip="Ver PDF"><i class="material-icons">file_download</i></a>
       </div>
       <div class="card-content" style="overflow:scroll;height:450px;background: linear-gradient(#ffffff, #e5e5e5)">
         @include('admin.includes.recursos.tabla')

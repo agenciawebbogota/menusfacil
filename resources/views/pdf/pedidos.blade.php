@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
+  <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
   <title>Pedidos de hoy</title>
   <link rel="stylesheet" type="text/css" href="pdf/css/pdf.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -39,7 +39,7 @@
             </tr>
         @endforeach
 
-        @foreach ($adicionales as $adicional)
+        {{-- @foreach ($adicionales as $adicional)
             <tr>
               <td>{{$adicional->nombre}}</td>
               <td>{{$adicional->direccion}}</td>
@@ -48,7 +48,7 @@
               <td>{{$adicional->nombre_adicional}}</td>
               <td>{{$adicional->observaciones}}</td>
             </tr>
-        @endforeach
+        @endforeach --}}
       </tbody>
     </table>
   </div>
