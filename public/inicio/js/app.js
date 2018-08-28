@@ -43,7 +43,6 @@ new Vue({
 		detalle:[],
 		pedido:{
 			menu_pedido:[],
-			// adicional_pedido:'',
 			nombre:'',
 			correo:'',
 			telefono:'',
@@ -130,7 +129,6 @@ new Vue({
 							this.noti.observaciones = ''
 							this.pedido.direccion = ''
 							this.pedido.observaciones = ''
-							// this.terminaste = false
 							this.pedido.menu_pedido = []
 							this.detalle = []
 							this.pedido.total = 0

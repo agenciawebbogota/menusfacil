@@ -2,9 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-
-		<title>{{$empresa->name}} | Menús Fácil</title>
-
+	<title>{{$empresa->name}} | Menús Fácil</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
@@ -12,6 +10,13 @@
 	<link rel="stylesheet" href="/inicio/css/usuario.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style media="screen">
+		.carrusel-menu{
+			height:auto !important;
+			min-height: auto !important;
+			/* margin: 1px; */
+		}
+	</style>
 </head>
 <body>
 	<div id="app" v-cloak>
@@ -30,15 +35,13 @@
 			<div class="row">
 				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
-
-
 						@foreach ($menus as $menu)
 						@if ($menu->estado == 1)
-								<div class="carousel-item white-text grey lighten-1"  href="#two!" >
+								<div class="carousel-item white-text grey lighten-1 carrusel-menu"  href="#two!" >
 
 									{{-- <div class="row"> --}}
-											<div class="col s12 m6 l8 offset-l2">
-												<div class="card">
+											<div class="col s12 m6 l8 offset-l2" >
+												<div class="card" style="margin-top:10px">
 													<div class="card-image">
 														<img src="/img/menu.img-1.jpg">
 														<span class="card-title">{{$menu->nombre}}</span>
@@ -50,10 +53,14 @@
 												</div>
 											</div>
 									{{-- </div> --}}
+									<div class="col s12 m6 l8 offset-l2">
+										<<< Desliza para ver más >>>
+									</div>
 
 							  </div>
 						@endif
 						@endforeach
+
 
 
 
