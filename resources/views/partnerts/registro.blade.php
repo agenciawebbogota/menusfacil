@@ -1,6 +1,5 @@
 @extends('partnerts.layouts.app')
 @section('contenido')
-
   <div class="row">
     <div class="col l8 offset-l2 center-align flow-text">
       <p>Registrate a nuestro plan de referidos y vuelvete Partnert de MenusFacil.</p>

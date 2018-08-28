@@ -12,9 +12,10 @@ class PagosController extends Controller
     {
         $this->middleware('auth');
     }
-    public function exitosa(Request $request){
-      dd($request);
+    public function exitosa(){
+      // dd($request);
       // dd($_REQUEST);
+      // return $_REQUEST['transactionState'];
       $fecha = date("Y-m-d H:i:s");
       // Restringir la entrada a este controlador estrictamente si viene de la pasarela de pago
       User::where('id', \Auth::id())->update([

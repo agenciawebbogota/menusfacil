@@ -25,4 +25,8 @@ class PartnertController extends Controller
     return $partnert;
   }
 
+  public function get(){
+    return Partnert::all();
+  }
+
 }
