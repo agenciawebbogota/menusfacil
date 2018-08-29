@@ -64,7 +64,7 @@ new Vue({
 		document.addEventListener('DOMContentLoaded', function() {
     		let adicionalSelect = M.FormSelect.init(document.querySelector('.adicionalSelect'), {});
     		let menuSelect = M.FormSelect.init(document.querySelector('.menuSelect'), {});
-    		let slider = M.Carousel.init(document.querySelector('.carousel'), {fullWidth: false,indicators: true});
+    		let slider = M.Carousel.init(document.querySelector('.carousel'), {fullWidth: false,indicators: false});
     		let instances = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {});
 		});
 	},

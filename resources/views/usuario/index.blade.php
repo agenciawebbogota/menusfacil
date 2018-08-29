@@ -14,7 +14,13 @@
 		.carrusel-menu{
 			height:auto !important;
 			min-height: auto !important;
+			width: auto !important;
 			/* margin: 1px; */
+			padding-bottom: 10px;
+		}
+		.deslizar{
+			color:#66181a;
+			margin: 10px;
 		}
 	</style>
 </head>
@@ -36,47 +42,37 @@
 				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
 						@foreach ($menus as $menu)
+
 						@if ($menu->estado == 1)
-								<div class="carousel-item white-text grey lighten-1 carrusel-menu"  href="#two!" >
-
-									{{-- <div class="row"> --}}
-											<div class="col s12 m6 l8 offset-l2" >
-												<div class="card" style="margin-top:10px">
-													<div class="card-image">
-														<img src="/img/menu.img-1.jpg">
-														<span class="card-title">{{$menu->nombre}}</span>
-														<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
-													</div>
-													<div class="card-content black-text">
-														<p>{{$menu->descripcion}}</p>
-													</div>
-												</div>
+								<div class="carousel-item white-text carrusel-menu"  href="#two!" >
+									<div class="col s12 m6 l8 offset-l2" >
+										<div class="card hoverable" style="margin-top:10px">
+											<div class="card-image">
+												<img src="{{url('img/menu.img-1.jpg')}}">
+												<span class="card-title">{{$menu->nombre}}</span>
+												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
 											</div>
-									{{-- </div> --}}
-									<div class="col s12 m6 l8 offset-l2">
-										<<< Desliza para ver más >>>
+											<div class="card-content black-text">
+												<p>{{$menu->descripcion}}</p>
+											</div>
+										</div>
 									</div>
-
+									@if (count($menus)>1)
+										<div class="col s12 m6 l8 offset-l2 deslizar">
+											<<< Desliza para ver más >>>
+										</div>
+									@endif
 							  </div>
 						@endif
 						@endforeach
-
-
-
-
 					</div>
 				</div>
 			</div>
-
-
 			{{-- Mi selección --}}
 			<div class="container">
 				<div class="row">
 					<div class="col l8 s12 m6 offset-l2">
 						<div class="card blue-grey" style="border-radius:10px">
-	        			{{-- <div class="card-content white-text mi-seleccion">
-	          				<span class="card-title"> <br></span>
-	        			</div> --}}
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
 										<thead >
 											<tr>
@@ -101,57 +97,49 @@
 				</div>
 			<div>
 			</div>
-			<div class="container animated fadeInDownBig" v-if="terminaste">
-				<div class="row">
-			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2 ">
-			          <i class="material-icons prefix">account_circle</i>
-			          <input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
-			          <span v-if="noti.nombre" class="red-text text-darken-2">@{{noti.nombre}}</span>
-			          <label for="nombre">Tu Nombre</label>
-			        </div>
-			        <div class="input-field col l8 s12 m8 offset-m2 offset-l2">
-			          <i class="material-icons prefix">phone</i>
-			          <input id="telefono" type="number" v-model="pedido.telefono">
-			          <span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
-			          <label for="telefono">Tu Teléfono</label>
-			        </div>
-							<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
-			          <i class="material-icons prefix">edit_location</i>
-			          <input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
-			          <span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
-			          <label for="direccion">Dirección</label>
-			        </div>
-							<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
-			          <i class="material-icons prefix">announcement</i>
-			          <input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
-			          <span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
-			          <label for="observaciones">¿Alguna observación?</label>
-			        </div>
-				      	<p style="color:white" id="user_id">{{ $empresa->id }}</p>
-				      	{{-- <input id="user_id" type="text" v-model="pedido.user_id" value="{{ $el->id }}"> --}}
-						 {{-- @csrf --}}
-						 {{-- poner swich para habilitar y deshabilitar el correo --}}
-						 <div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2 animated bounceIn" v-if="checked" >
-							 <i class="material-icons prefix">email</i>
-							 <input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
-							 <span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
-							 <label for="correo">Correo</label>
-						 </div>
-						 {{-- <div class=""> --}}
-						 <br><br>
-						 <label class="col l8 s12 m8 offset-l2 m8 offset-m2" style="padding-bottom:20px">
-							 <input type="checkbox" v-model="checked"/>
-							 <span>¿Quieres recibir los detalles de tu orden en tu email?</span>
-						 </label>
-
-
-							 <button style="background:{{$empresa->color1}};"
-								 v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
-
-						 		<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
-			      </div>
+		<div class="container animated fadeInDownBig" v-if="terminaste">
+			<div class="row">
+				<div class="input-field col l8 s12 m8 offset-m2 offset-l2 ">
+					<i class="material-icons prefix">account_circle</i>
+					<input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
+					<span v-if="noti.nombre" class="red-text text-darken-2">@{{noti.nombre}}</span>
+					<label for="nombre">Tu Nombre</label>
+				</div>
+				<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
+					<i class="material-icons prefix">phone</i>
+					<input id="telefono" type="number" v-model="pedido.telefono">
+					<span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
+					<label for="telefono">Tu Teléfono</label>
+				</div>
+				<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
+					<i class="material-icons prefix">edit_location</i>
+					<input id="direccion" type="text" v-model="pedido.direccion"  autocomplete="off">
+					<span v-if="noti.direccion" class="red-text text-darken-2">@{{noti.direccion}}</span>
+					<label for="direccion">Dirección</label>
+				</div>
+				<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
+					<i class="material-icons prefix">announcement</i>
+					<input id="observaciones" type="text" v-model="pedido.observaciones"  autocomplete="off">
+					<span v-if="noti.observaciones" class="red-text text-darken-2">@{{noti.observaciones}}</span>
+					<label for="observaciones">¿Alguna observación?</label>
+				</div>
+				<p style="color:white" id="user_id">{{ $empresa->id }}</p>
+				<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2 animated bounceIn" v-if="checked" >
+					<i class="material-icons prefix">email</i>
+					<input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
+					<span v-if="noti.correo" class="red-text text-darken-2">@{{noti.correo}}</span>
+					<label for="correo">Correo</label>
+				</div>
+				<br><br>
+				<label class="col l8 s12 m8 offset-l2 m8 offset-m2" style="padding-bottom:20px">
+				<input type="checkbox" v-model="checked"/>
+				<span>¿Quieres recibir los detalles de tu orden en tu email?</span>
+				</label>
+				<button style="background:{{$empresa->color1}};"
+				v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
+				<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
 			</div>
-
+		</div>
 		</form>
 	</div>
 </body>
@@ -159,5 +147,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-	<script type="text/javascript" src="/inicio/js/app.js"></script>
+	<script type="text/javascript" src="{{url('inicio/js/app.js')}}"></script>
 </html>
