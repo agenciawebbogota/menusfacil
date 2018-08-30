@@ -18,7 +18,6 @@
     .img-pago{
         /* width: 300px; */
     }
-
   }
   </style>
 </head>
@@ -28,14 +27,13 @@
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view">
-          <a><img class="circle" width="190" src="{{url('/img/logo2.png')}}"></a>
+          <a><img class="circle" width="190" src="{{Auth::user()->perfil}}"></a>
           <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
           <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
         </div>
       </li>
       @if (Auth::user()->estado_empresa == 'PAGA')
         <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
-
       @endif
 
       <li><div class="divider"></div></li>
@@ -48,7 +46,7 @@
         <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}}">
           <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger" id="menuLateral"><i class="material-icons large">menu</i></div>
             <a class="brand-logo center">
-              <img src="{{url('admin/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="100px" class="imagen-logo">
+              <img src="{{Auth::user()->cabecera}}" alt="Menus Facil Logo" width="100px" class="imagen-logo">
             </a>
             <ul class="right hide-on-med-and-down">
             <li>

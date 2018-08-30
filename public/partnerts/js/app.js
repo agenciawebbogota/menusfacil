@@ -59,11 +59,15 @@ new Vue({
         }else{
           let url = '';
           axios.post(url, this.partnert).then((resp)=>{
-            console.log(resp);
             M.toast({
               html:'Bienvenido a MenusFacil, revisa en breve tu correo para los detalles del programa.',
               outDuration:1000,
             });
+            this.partnert = {
+              nombre:'',
+              correo:'',
+              telefono:'',
+            }
           }).catch((error)=>{
             M.toast({
               html:'Parece, que tenemos problemas con nuestro servidor, estamos trabajando para solucionarlo.',
