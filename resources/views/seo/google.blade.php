@@ -1,6 +1,8 @@
+
+
 <meta name="description" content="Menús Fácil es la nueva forma online de crear menús de restaurantes, hoteles, casinos o comidas rápidas y recibir al instante pedidos de clientes" />
-<meta name="keywords" content="menús fácil, como crear menus, menus para restaurantes, domicilios, sistema de reservas, menus">
-<meta name="author" content="Menús Fácil">
+<meta name="keywords" content="menus facil, como crear menus, menus para restaurantes, domicilios, sistema de reservas, menus">
+<meta name="author" content="Agencia Web Bogotá">
 <meta name="Rating" content="General">
 <meta name="msvalidate.01" content="607F58A810BE9AAB1051493A749C22E4" />
 <meta name="Distribution" content="Local">
@@ -19,4 +21,13 @@
   "alternateName": "Nuevo Manager de Pedidos y Menús",
   "url": "http://menusfacil.com"
 }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99092885-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99092885-2');
 </script>

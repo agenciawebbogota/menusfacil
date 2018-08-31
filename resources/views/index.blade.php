@@ -50,7 +50,7 @@
             <!-- slide 1 start -->
             <li data-transition="fade" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/img/banner/banner-light.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="materialize Material" data-description="">
                 <!-- MAIN IMAGE -->
-                <img src="assets/img/banner-light.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
+                <img src="assets/img/banner-light.jpg"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
 
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme"
@@ -99,7 +99,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                     style="z-index: 6; width: 80px; height: 300px; white-space: nowrap;">
-                    <div class="rs-pulse"  data-easing="Power4.easeInOut" data-zoomstart="1" data-zoomend="0.95"><img class="logo-mf" src="assets/img/logo.svg"></div>
+                    <div class="rs-pulse"  data-easing="Power4.easeInOut" data-zoomstart="1" data-zoomend="0.95"><img class="logo-mf" src="assets/img/logo.svg" alt="logo Menús Fácil"></div>
                 </div>
 
                 <!-- LAYER NR. 4 -->
@@ -161,7 +161,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
-                        <div><img src="assets/img/banner/dummy.png" alt="" data-lazyload="assets/img/back-image-app.png">
+                        <div><img src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
                         </div>
                 </div>
 
@@ -174,7 +174,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="2200"
                     style="z-index: 4;">
-                        <div><img src="assets/img/banner/dummy.png" alt="" data-lazyload="assets/img/front-image-app.png">
+                        <div><img src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
                         </div>
                 </div>
 
@@ -242,7 +242,7 @@
                 </div><!-- /.col-md-4 -->
 
                 <div class="col-md-4 hidden-sm hidden-xs wow fadeInUp">
-                    <img class="img-responsive" src="assets/img/iphone.png" alt="">
+                    <img class="img-responsive" src="assets/img/iphone.png" alt="Menús Fácil Módulo Administrador en Iphone">
                 </div><!-- /.col-md-4 -->
 
                 <div class="col-md-4 col-sm-6">
@@ -343,7 +343,7 @@
                   </div><!-- /.process-wrapper -->
               </div>
               <div class="col-md-3 equal-height-column process-bg-wrapper">
-                <img src="assets/img/cena.jpg" alt="image">
+                <img src="assets/img/cena.jpg" alt="Dueños de restaurante usando menus facil">
               </div>
             </div>
           </div>
@@ -371,15 +371,15 @@
                         <div class="carousel-inner" role="listbox">
 
                           <div class="item active">
-                            <img src="assets/img/screenshot-1.jpg" alt="" title="" />
+                            <img src="assets/img/screenshot-1.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="assets/img/screenshot-3.jpg" alt="" title="" />
+                            <img src="assets/img/screenshot-3.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="assets/img/screenshot-2.jpg" alt="" title="" />
+                            <img src="assets/img/screenshot-2.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                         </div>
@@ -410,7 +410,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp">
                     <!--promo box center align start-->
-                    <h1 class="text-uppercase mb-30 font-30 text-extrabold">Prueba GRATIS Menús Fácil en tu negocio</h1>
+                    <h2 class="text-uppercase mb-30 font-30 text-extrabold">Prueba GRATIS Menús Fácil en tu negocio</h2>
                     <h2 class="mb-30">Sin descargas, sin tarjeta de crédito, sin compromisos</h2>
 
                     <a href="/register" class="btn btn-prueba"> <span>Comienza <strong>AHORA</strong></span></a>
@@ -423,7 +423,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-7 light-grey-text">
-                	<img src="assets/img/oferta-de-lanzamiento.png" width="400" height="112" alt="" class="img-responsive">
+                	<img src="assets/img/oferta-de-lanzamiento.png" width="400" height="112" alt="Oferta de lanzamiento Menús Fácil" class="img-responsive">
                 	<p style="color:#2b2831">Conviertete en Usuario Premium con suscripción mensual y disfruta de todos los beneficios que tenemos para ti:</p>
 
                 	<ul class="list-icon mb-30" style="color:#2b2831">
@@ -434,7 +434,7 @@
                 </div><!-- /.col-md-7 -->
 
                 <div class="col-md-5 mt-sm-30">
-					         <img src="assets/img/seo-info-light.png" alt="" class="img-responsive">
+					         <img src="assets/img/seo-info-light.png" alt="Suscripción a Menús Fácil" class="img-responsive">
                 </div><!-- /.col-md-5 -->
                 </div><!-- /.row -->
                 <div class="row">
@@ -458,7 +458,7 @@
                   <div class="row">
                     <div class="col-md-12">
                           <div class="logo-footer wow fadeInUp">
-                            <img src="assets/img/logo-fondo-oscuro.svg" alt="">
+                            <img src="assets/img/logo-fondo-oscuro.svg" alt="Logo menus facil fondo oscuro">
                           </div>
                           <span class="copy-text">Menús Fácil &copy; 2018 &nbsp; | &nbsp;  Todos los derechos reservados &nbsp; | &nbsp;  Powered By <a href="http://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
                     </div><!-- /.col-md-12 -->
