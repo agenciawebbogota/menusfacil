@@ -440,6 +440,7 @@
                 <div class="row">
                   <div class="col m4 offset-m4 s4 offset-s2 l4 offset-l5">
                     <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important"> <span>Actualiza <strong>AHORA</strong></span></a>
+                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="padding-top:10px" class="img-responsive">
                   </div>
                 </div>
             </div><!-- /.container -->
