@@ -55,7 +55,7 @@ class SuperusuarioController extends Controller
               // dd($fin);
               $dias = $this->diferenciaDias($inicio, $fin);
               // Actualización en la base de datos
-              $nuevosdias = $usuario->dias - $dias;
+              $nuevosdias = $usuario->dias - 1;
 
               // Controlar que sólo sea actualizado una vez al día, programar en el cliente un reloj que ejecute esta acción a las 10 am
               User::where('id', $usuario->id)->update([
