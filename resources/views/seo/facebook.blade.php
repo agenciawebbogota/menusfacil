@@ -2,7 +2,7 @@
 <meta property="og:site_name " content="MenúsFácil" />
 <meta property="og:title" content="Menús Fácil - Nuevo Manager de Pedidos y Menús" />
 <meta property="og:url" content="http://menusfacil.com/" />
-<meta property="og:image" content="http://agenciawebbogota.com/social/anuncio-mf.jpg" />
+<meta property="og:image" content="http://agenciawebbogota.com/social/og-image.jpg" />
 <meta property="og:description" content="Pruébalo Gratis durante 14 días" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@AgenciaBogota" />
