@@ -1,14 +1,14 @@
 {
-    "/inicio/js/app.js": "/inicio/js/app.js?id=a688f21e1c6a37b403f1",
-    "/inicio/css/app.css": "/inicio/css/app.css?id=bde05d55db2c8f74a753",
-    "/admin/js/app.js": "/admin/js/app.js?id=3a45e2584da9299fc66f",
-    "/admin/css/app.css": "/admin/css/app.css?id=9d9a63b7f342381f5d82",
-    "/sesion/js/app.js": "/sesion/js/app.js?id=176e7141708457ce88f7",
-    "/sesion/css/app.css": "/sesion/css/app.css?id=3d81ce13398b89d25017",
-    "/registro/js/app.js": "/registro/js/app.js?id=22551696fd2447f4a603",
-    "/registro/css/app.css": "/registro/css/app.css?id=0e704ebe8f6e256e3af1",
-    "/super_usuario/js/app.js": "/super_usuario/js/app.js?id=615af0e7e54632af1045",
-    "/super_usuario/css/app.css": "/super_usuario/css/app.css?id=738f9866d89be0886ec9",
-    "/partnerts/js/app.js": "/partnerts/js/app.js?id=33b5e30db1df6c07bc72",
-    "/partnerts/css/app.css": "/partnerts/css/app.css?id=61cdb1fc08080edd3e04"
+    "/inicio/js/app.js": "/inicio/js/app.js",
+    "/inicio/css/app.css": "/inicio/css/app.css",
+    "/admin/js/app.js": "/admin/js/app.js",
+    "/admin/css/app.css": "/admin/css/app.css",
+    "/sesion/js/app.js": "/sesion/js/app.js",
+    "/sesion/css/app.css": "/sesion/css/app.css",
+    "/registro/js/app.js": "/registro/js/app.js",
+    "/registro/css/app.css": "/registro/css/app.css",
+    "/super_usuario/js/app.js": "/super_usuario/js/app.js",
+    "/super_usuario/css/app.css": "/super_usuario/css/app.css",
+    "/partnerts/js/app.js": "/partnerts/js/app.js",
+    "/partnerts/css/app.css": "/partnerts/css/app.css"
 }

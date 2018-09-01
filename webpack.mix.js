@@ -98,4 +98,4 @@ mix.babel([
                 }]
             }]
         }
-    }).version()
+    })
