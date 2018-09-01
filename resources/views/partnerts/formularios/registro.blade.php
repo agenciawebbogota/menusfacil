@@ -4,8 +4,8 @@
           <div class="row">
             <div class="input-field col l8 offset-l2 m8 offset-m2">
               <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" v-model="partnert.nombre" required>
-              <label for="icon_prefix">Nombre</label>
+              <input id="nombre" type="text" v-model="partnert.nombre" required>
+              <label for="nombre">Nombre</label>
             </div>
 
             <div class="input-field col l8 offset-l2 m8 offset-m2">
