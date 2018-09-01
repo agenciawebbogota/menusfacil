@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.scripts([
+mix.babel([
   'resources/assets/inicio/js/axios.min.js',
   'resources/assets/inicio/js/materialize.min.js',
   'resources/assets/inicio/js/config.js',
@@ -25,7 +25,7 @@ mix.scripts([
    ], 'public/inicio/css/app.css');
 
 
-mix.scripts([
+mix.babel([
   'resources/assets/admin/js/sweetalert.min.js',
   'resources/assets/admin/js/materialize.min.js',
   'resources/assets/admin/js/moment-with-locales.min.js',
@@ -40,14 +40,14 @@ mix.scripts([
 
 
 
-mix.scripts([
+mix.babel([
   'resources/assets/inicio/js/materialize.min.js',
 ], 'public/sesion/js/app.js')
    .styles([
      'resources/assets/inicio/css/materialize.min.css',
      'resources/assets/sesion/css/login.css',
    ], 'public/sesion/css/app.css');
-   mix.scripts([
+   mix.babel([
   'resources/assets/inicio/js/axios.min.js',
   'resources/assets/registro/js/app.js',
   'node_modules/vue/dist/vue.min.js',
@@ -58,7 +58,7 @@ mix.scripts([
    ], 'public/registro/css/app.css');
 
 // Super usuario
-   mix.scripts([
+   mix.babel([
      'resources/assets/inicio/js/materialize.min.js',
       'resources/assets/inicio/js/axios.min.js',
       'resources/assets/super_usuario/js/intro.min.js',
@@ -72,7 +72,7 @@ mix.scripts([
    ], 'public/super_usuario/css/app.css');
 
    // partners
-   mix.scripts([
+   mix.babel([
      'resources/assets/inicio/js/materialize.min.js',
       'resources/assets/inicio/js/axios.min.js',
       // 'resources/assets/super_usuario/js/intro.min.js',
@@ -84,3 +84,18 @@ mix.scripts([
      // 'resources/assets/super_usuario/css/introjs.min.css',
      'resources/assets/partnerts/css/main.css',
    ], 'public/partnerts/css/app.css');
+
+
+// Configurando babel
+   mix.webpackConfig({
+        module: {
+            rules: [{
+                test: /\.jsx?$/,
+                exclude: /node_modules(?!\/@<redacted>)/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: Config.babel()
+                }]
+            }]
+        }
+    }).version()
