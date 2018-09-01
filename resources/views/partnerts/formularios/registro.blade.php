@@ -24,7 +24,6 @@
               <button class="btn waves-effect waves-light" type="submit">Enviar
               </button>
             </div>
-
           </div>
         </form>
       </div>

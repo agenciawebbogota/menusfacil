@@ -433,14 +433,16 @@
                 	</ul>
                 </div><!-- /.col-md-7 -->
 
-                <div class="col-md-5 mt-sm-30">
+                <div class="col m6 offset-m3 s6 offset-s3 l4 offset-l4">
 					         <img src="assets/img/seo-info-light.png" alt="Suscripción a Menús Fácil" class="img-responsive">
                 </div><!-- /.col-md-5 -->
                 </div><!-- /.row -->
                 <div class="row">
-                  <div class="col m4 offset-m4 s4 offset-s2 l4 offset-l5">
+                  <div class="col m4 offset-m4 s4 offset-s3 l4 offset-l5">
                     <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important"> <span>Actualiza <strong>AHORA</strong></span></a>
-                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" width="170" height="61" style="padding-top:10px" class="img-responsive">
+                  </div>
+                  <div class="col m5 offset-m3 s6 offset-s3 l4 offset-l4">
+                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="padding-top:10px" class="img-responsive">
                   </div>
                 </div>
             </div><!-- /.container -->
