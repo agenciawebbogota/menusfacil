@@ -17,10 +17,6 @@
             <input id="url" type="text" class="validate" data-length="10" v-model="update.url">
           </div>
           <div class="input-field col s12 m6">
-            URL
-            <input id="url" type="text" class="validate" data-length="10" v-model="update.url">
-          </div>
-          <div class="input-field col s12 m6">
             Estado de empresa (GRATIS O PAGO)
             <input id="estado" type="text" class="validate" data-length="10" v-model="update.estado_empresa">
           </div>
@@ -35,6 +31,14 @@
           <div class="input-field col s12 m6">
             Creado el
             <input id="creado" type="text" class="validate" data-length="10" v-model="update.created_at" disabled>
+          </div>
+          <div class="input-field col s12 m6">
+            Perfil
+            <input id="perfil" type="text" class="validate" data-length="10" v-model="update.perfil" disabled>
+          </div>
+          <div class="input-field col s12 m6">
+            Cabecera
+            <input id="cabecera" type="text" class="validate" data-length="10" v-model="update.cabecera" disabled>
           </div>
           <div class="input-field col s12 m6">
             Color 1

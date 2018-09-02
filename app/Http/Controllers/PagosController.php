@@ -13,9 +13,6 @@ class PagosController extends Controller
         $this->middleware('auth');
     }
     public function exitosa(){
-      // dd($request);
-      // dd($_REQUEST);
-      // return $_REQUEST['transactionState'];
       $fecha = date("Y-m-d H:i:s");
       // Restringir la entrada a este controlador estrictamente si viene de la pasarela de pago
       $user = User::where('id', '=', \Auth::id())->first();
@@ -29,12 +26,13 @@ class PagosController extends Controller
       return view('suscripcion.exitosa');
     }
     public function fallo(){
-      // return 'Tu pago falló.'
       return view('suscripcion.fallo');
     }
     public function pendiente(){
       return view('suscripcion.pendiente');
-      // return 'Tu pago está pendiente.';
+    }
+    public function respuesta(){
+      // return view('suscripcion.pendiente');
     }
 
 
