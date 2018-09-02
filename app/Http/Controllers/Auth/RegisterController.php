@@ -76,7 +76,7 @@ class RegisterController extends Controller
             'color2' => $data['color2'],
             'color3' => $data['color3'],
             'dias' => 14,
-            'partnert_id' => 1
+            'partnert_id' => 11
         ]);
 
 
