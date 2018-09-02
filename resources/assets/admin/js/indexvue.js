@@ -39,7 +39,6 @@ new Vue({
 		})
 	},
 	created:function(){
-
 		ref.on('value', (data) => {
 		  this.getPedidos()
 		});
@@ -59,7 +58,6 @@ new Vue({
 						html:'Hay un error en el servidor, contactanos.',
 						outDuration:1000
 					});
-					console.log(error);
 			  })
 		},
 		addMenu:function(){
@@ -201,9 +199,7 @@ new Vue({
 			}else{
 				menu.adicional = false
 			}
-			this.update = menu
-
-			console.log(menu);
+			this.update = menu;
 		},
 		getPedidos:function(){
 			// this.pedidos = []

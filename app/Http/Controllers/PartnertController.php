@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Partnert;
 use Illuminate\Support\Facades\Validator;
+use Mail;
 
 class PartnertController extends Controller
 {
   // Método para la vista del registro de los Partnerts
+  public $email;
   public function indexpartnerts()
   {
     return view('partnerts.registro');
@@ -22,6 +24,15 @@ class PartnertController extends Controller
         'correo' => $request->input('correo'),
         'telefono' => $request->input('telefono'),
       ]);
+      $this->email = $request->input('correo');
+      Mail::send('correos/partnert/registro', [
+        'partnert' => $partnert
+      ], function($msj)
+      {
+        $msj->subject('Ya eres Partnert');
+        $msj->to($this->email);
+        $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+      });
     return $partnert;
   }
 

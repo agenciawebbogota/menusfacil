@@ -23,7 +23,7 @@ class PagosController extends Controller
       User::where('id', \Auth::id())->update([
         'bloqueado' => 'NO',
         'created_at' => $fecha,
-        'estado_empresa' => 'PAGA'
+        'estado_empresa' => 'PAGA',
         'dias' => $dias,
       ]);
       return view('suscripcion.exitosa');

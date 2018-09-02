@@ -64,7 +64,7 @@ class SuperusuarioController extends Controller
               $dias = User::where('id','=', $usuario->id)->first()->dias;
               if($dias == 3){
                 // Notificar a todos los uausarios que le quedan tres días para que su suscripción sea bloqueada.
-                Mail::send($ruta, [
+                Mail::send('correos/alcumplir11dias', [
                   'usuario' => $usuario,
                   'dias' => $dias,
                 ], function($msj)
@@ -75,7 +75,7 @@ class SuperusuarioController extends Controller
                 });
                 return 'Se envío correo electrónico informando a la empresa que está llegando a la caducidad de la suscripción., han pasado '.$dias.' días.';
               }else if($dias == 2){
-                Mail::send($ruta, [
+                Mail::send('correos/alcumplir11dias', [
                   'usuario' => $usuario,
                   'dias' => $dias,
                 ], function($msj)
@@ -86,7 +86,7 @@ class SuperusuarioController extends Controller
                 });
                 return 'Se envío correo electrónico informando a la empresa que está llegando a la caducidad de la suscripción., han pasado '.$dias.' días.';
               }else if($dias == 1){
-                Mail::send($ruta, [
+                Mail::send('correos/alcumplir11dias', [
                   'usuario' => $usuario,
                   'dias' => $dias,
                 ], function($msj)

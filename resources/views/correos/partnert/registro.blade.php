@@ -76,7 +76,7 @@ p {
                                               <div class="column" style="width:100%;max-width:150px;display:inline-block;vertical-align:top;">
                                                 <table class="contents" style="border-spacing:0; width:100%"  >
                                                   <tr>
-                                                    <td><img src="images/logo-menusfacil.svg" alt="" width="200" height="200" /></td>
+                                                    <td><img src="{{url('/correos/img/logo-menusfacil.svg')}}" alt="" width="200" height="200" /></td>
                                                   </tr>
                                                 </table>
                                               </div>
@@ -96,14 +96,10 @@ p {
 
                 <table class="one-column" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing:0; border-left:1px solid #e8e7e5; border-right:1px solid #e8e7e5; border-bottom:1px solid #e8e7e5; border-top:1px solid #e8e7e5" bgcolor="#FFFFFF">
                   <tr>
-										<td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenido, </strong><strong style="text-transform:uppercase;">Luis Raga</strong></p>
+										<td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenido, </strong><strong style="text-transform:uppercase;">{{$partnert->nombre}}</strong></p>
                       <p style="font-size:16px; text-align:left; line-height:22px ">Estamos orgullosos porque ahora nos empezaras a recomendar. <br><br>Queremos informarte que has realizado tu registro como parnert de MenusFacil con éxito, <strong> </strong> a continuación encontrarás el id con el cual se deben registrar tu recomendados para que puedas empezar a gozar de los beneficios como partnert de MenusFacil.</p>
 											<!-- <p>Por lo tanto le recomendamos que pasados estos días realice el pago respectivo para poder seguir disfrutando de los beneficios de Menus Fácil.</p> -->
-                      <p>ID: 01</p>
-                      <!-- <p>Usuario:</p>
-                      <p>Contraseña:</p>
-                      <p>Correo electrónico:
-                      <br /> -->
+                      <p>ID: <b>{{$partnert->id}}</b></p>
                       <br />
                       </p>
                       <table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
@@ -114,14 +110,6 @@ p {
 															</td>
 														</tr>
 														<tr>
-                            <!-- <td align="center">
-															<table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
-                                <tr>
-                                  <td width="220" height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;">3043788629 - 2222222222</td>
-																	<td style="color:white">........</td>
-																	<td width="220" height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;">Pagar Aquí</td>
-                                </tr>
-                              </table> -->
 														</td>
                           </tr>
                         </tbody>
@@ -148,9 +136,9 @@ p {
                                 <tr>
                                   <td width="32%" align="center" valign="top" style="padding-top:10px"><table width="150" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                      <td width="33" align="center"><a href="#" target="_blank"><img src="images/fb.png" alt="facebook" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
-                                      <td width="34" align="center"><a href="#" target="_blank"><img src="images/tw.png" alt="twitter" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
-                                      <td width="33" align="center"><a href="#" target="_blank"><img src="images/in.png" alt="linkedin" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
+																			<td width="33" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/fb.png')}}" alt="facebook" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
+                                      <td width="34" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/tw.png')}}" alt="twitter" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
+                                      <td width="33" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/in.png')}}" alt="linkedin" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
                                     </tr>
                                   </table></td>
                                 </tr>
