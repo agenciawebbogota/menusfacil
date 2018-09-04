@@ -32,9 +32,7 @@ test: 1
 buyerEmail: test@test.com --}}
 
 
-@php
-  $referencia = 'PAGO '.time(). rand(100,1000);
-@endphp
+
 
 
 
@@ -51,7 +49,7 @@ buyerEmail: test@test.com --}}
       <input name="merchantId" type="hidden" value="644473"/>
       <input name="accountId" type="hidden" value="646874"/>
       <input name="description" type="hidden" value="Suscripción mensual MenúsFácil"/>
-      <input name="referenceCode" type="hidden" value="{{$referencia}}"/>
+      <input name="referenceCode" type="hidden" value="01"/>
       <input name="amount" type="hidden" value="87000.00"/>
       <input name="tax" type="hidden" value="0.00"/>
       <input name="taxReturnBase" type="hidden" value="0.00"/>
