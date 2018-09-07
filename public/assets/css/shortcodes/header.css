@@ -42,7 +42,7 @@ Top Bar
 
 /*light*/
 .top-bar .social-top.light a i {
-  color: #fff;  
+  color: #fff;
 }
 
 
@@ -73,7 +73,7 @@ Top Bar
 }
 
 
-.menuzord-menu.nav>li>a:focus, 
+.menuzord-menu.nav>li>a:focus,
 .menuzord-menu.nav>li>a:hover {
     background-color: transparent;
 }
@@ -140,7 +140,7 @@ Header
     float: left;
 }
 
-.tt-nav.sticky .logo-brand img, 
+.tt-nav.sticky .logo-brand img,
 .tt-nav.sticky .logo-brand img.retina  {
     height: 30px !important;
 }
@@ -184,7 +184,7 @@ Header
 @media (min-width: 769px) {
     .semi-transparent{
         background: rgba(10,10,10, .5) !important;
-    } 
+    }
 }
 
 .tt-nav .brand-header,
@@ -661,6 +661,10 @@ Nav link boxed
 
 .nav-boxed-color .menuzord-menu > li > a {
     margin: 30px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .nav-boxed-color .menuzord-menu>li>a,
@@ -673,7 +677,8 @@ Nav link boxed
 .nav-boxed-color .menuzord .menuzord-menu>li:hover>a,
 .nav-boxed-color .menuzord .menuzord-menu>li:hover>a>i {
     color: #fff !important;
-    background: #03a9f4;
+    background: #2b2831;
+    border-radius: 6px;
 }
 
 .brand-header .menuzord .menuzord-menu>li.active>a,
@@ -696,6 +701,18 @@ Nav link boxed
 
 }
 
+.ini-ses{
+  text-align: center;
+  color:#fff !important;
+  background-color: #66181a;
+  border-radius: 6px;
+}
+.ini-reg{
+  text-align: center;
+  color:#fff !important;
+  background-color: #e88a10;
+  border-radius: 6px;
+}
 
 
 
@@ -832,7 +849,7 @@ Responsive Menu
         margin: 23px 0 0 0;
     }
 
-    .menuzord-menu>li>a, 
+    .menuzord-menu>li>a,
     .tt-nav.sticky .menuzord-menu>li>a {
         padding: 0 5px;
     }
@@ -842,7 +859,7 @@ Responsive Menu
     }
 }
 
-  
+
 @media screen and (max-width: 768px) {
 
     .tt-nav {
@@ -992,9 +1009,9 @@ Responsive Menu
         border: none;
     }
 
-    .light.menuzord-menu > li > a, 
-    .light.menuzord-menu > li > a > i, 
-    .tt-nav .dark-header .menuzord-menu > li > a, 
+    .light.menuzord-menu > li > a,
+    .light.menuzord-menu > li > a > i,
+    .tt-nav .dark-header .menuzord-menu > li > a,
     .tt-nav .dark-header .menuzord-menu > li > a > i {
         color: #333;
     }
@@ -1106,7 +1123,7 @@ Alter logo visiblity
 @media screen and (min-width: 768px) {
     .transparent-header .logo-dark {
         display: none;
-    }    
+    }
 
     .transparent-header.sticky .logo-dark {
         display: inline;

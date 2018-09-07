@@ -41,8 +41,42 @@
     </head>
 
     <body id="top">
+      <!--header start-->
+      <header id="header" class="tt-nav transparent-header">
+
+          <div class="header-sticky light-header nav-boxed-color">
+
+              <div class="container">
+
+                  <div id="materialize-menu" class="menuzord">
+
+                      <!--logo start-->
+                      <a href="index.html" class="logo-brand">
+                          <img class="logo-dark" src="assets/img/logo.png" alt=""/>
+                          <img class="logo-light" src="assets/img/logo-white.png" alt=""/>
+                      </a>
+                      <!--logo end-->
+
+                      <!--mega menu start-->
+                      <ul class="nav menuzord-menu pull-right op-nav">
+                          <li class="active"><a href="#home" data-scroll>Inicio</a></li>
+                          <li><a href="#funciones" data-scroll>Funciones</a></li>
+                          <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
+                          <li><a href="#home" data-scroll>Recomendar</a></li>
+                          <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
+                          <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
+                      </ul>
+                      <!--mega menu end-->
+
+                  </div>
+              </div>
+          </div>
+      </header>
+      <!--header end-->
+
+
         <!-- start revolution slider 5.0 -->
-        <section class="rev_slider_wrapper">
+        <section class="rev_slider_wrapper" id="home">
           <h1 style="color:#fff;font-size:32px;display:none">Menús Fácil | manager de menus para restaurantes, hoteles, casinos y comidas rápidas</h1>
          <div class="rev_slider materialize-slider">
           <ul>
@@ -282,7 +316,7 @@
         </section>
 
 
-        <section class="process-section color1-bg">
+        <section class="process-section color1-bg" id="aplicaciones">
           <div class="container-fluid">
             <div class="row no-gutter equal-height-row overflow-hidden">
               <div class="col-md-9 equal-height-column">
@@ -422,7 +456,7 @@
         <section class="section-padding lighten-4" style="background-color:#f5f5f5;margin-top:-70px">
             <div class="container">
               <div class="row">
-                <div class="col-md-7 light-grey-text">
+                <div class="col l6 m6 s12 light-grey-text">
                 	<img src="assets/img/oferta-de-lanzamiento.png" width="400" height="112" alt="Oferta de lanzamiento Menús Fácil" class="img-responsive">
                 	<p style="color:#2b2831">Conviertete en Usuario Premium con suscripción mensual y disfruta de todos los beneficios que tenemos para ti:</p>
 
@@ -433,16 +467,16 @@
                 	</ul>
                 </div><!-- /.col-md-7 -->
 
-                <div class="col m6 offset-m3 s6 offset-s3 l4 offset-l4">
+                <div class="col l6 m6 s12">
 					         <img src="assets/img/seo-info-light.png" alt="Suscripción a Menús Fácil" class="img-responsive">
                 </div><!-- /.col-md-5 -->
                 </div><!-- /.row -->
                 <div class="row">
                   <div class="col m4 offset-m4 s4 offset-s3 l4 offset-l5">
-                    <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important"> <span>Actualiza <strong>AHORA</strong></span></a>
+                    <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important; margin-top:20px;"> <span>Actualiza <strong>AHORA</strong></span></a>
                   </div>
                   <div class="col m5 offset-m3 s6 offset-s3 l4 offset-l4">
-                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="padding-top:10px" class="img-responsive">
+                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
                   </div>
                 </div>
             </div><!-- /.container -->
