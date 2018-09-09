@@ -1,5 +1,5 @@
     <div class="row" style="padding:30px;">
-      <div class="col l6 offset-l3 card" style="background-color:#e9f8fd;border-radius:6px">
+      <div class="col l6 offset-l3 card" style="background-color:#fcf1e2;border-radius:6px">
         <p style="text-align:center;padding-top:20px;">Ingresa tus datos y recibirás toda la información en tu correo sobre como aplicar al programa</p>
         <form @submit.prevent="registrar()" style="padding:30px;">
           <div class="row">

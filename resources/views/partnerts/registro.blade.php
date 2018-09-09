@@ -11,7 +11,7 @@
 @include('partnerts.formularios.registro')
   <div class="row beneficios-card">
     <div class="col l12 s12 m12">
-      <div class="card-panel teal">
+      <div class="card-panel">
         <span class="center-align head">Principales Beneficios del programa de Partners</span>
         <ul class="part-list">
           <li><i class="material-icons">done</i> Obtienes un ingreso pasivo recurrente todos los meses</li>

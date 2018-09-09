@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body style="padding-top:30px;background:#2b2831">
+<body style="padding-top:30px;background-image:url(/img/bg-login.jpg);background-repeat:no-repeat">
   <div class="row">
     <div class="col-md-12">
           <div class="brand-logo center">

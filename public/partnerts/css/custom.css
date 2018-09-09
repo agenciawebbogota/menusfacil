@@ -35,6 +35,10 @@ body{
   font-weight: 600;
   padding: 20px 0 50px 0;
 }
+.card-panel{
+  background-color: #66181a;
+}
+
 @media (min-width:320px) and (max-width:740px){
   .part-title h2{ font-size: 20px; }
   .part-title h3{ font-size: 16px; }

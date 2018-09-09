@@ -1,10 +1,13 @@
 @extends('layouts.app')
-
+<body style="background-image:url(/img/bg-register.jpg);background-repeat:no-repeat">
 @section('content')
+
+
+
 <div class="container" id="registrar">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="border:1px solid #2b2831;border-radius:6px">
                 <div class="card-header">Regístrate</div>
 
                 <div class="card-body">
@@ -134,3 +137,4 @@
     </pre> --}}
 </div>
 @endsection
+</body>
