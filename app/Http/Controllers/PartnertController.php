@@ -22,7 +22,7 @@ class PartnertController extends Controller
       $partnert = Partnert::create([
         'nombre' => $request->input('nombre'),
         'correo' => $request->input('correo'),
-        'telefono' => $request->input('telefono'),
+        // 'telefono' => $request->input('telefono'),
       ]);
       $this->email = $request->input('correo');
       Mail::send('correos/partnert/registro', [

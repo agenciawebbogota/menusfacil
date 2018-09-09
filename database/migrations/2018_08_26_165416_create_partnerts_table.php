@@ -16,7 +16,7 @@ class CreatePartnertsTable extends Migration
         Schema::create('partnerts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('telefono');
+            $table->string('telefono')->nullable();
             $table->string('correo')->unique();
             $table->boolean('estado')->default(1);
             $table->timestamps();

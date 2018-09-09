@@ -23,11 +23,11 @@ new Vue({
           html:'El nombre no es válido.',
           outDuration:1000
         });
-      }else if (this.partnert.telefono.length < 5) {
-        M.toast({
-          html:'El teléfono no es válido.',
-          outDuration:1000,
-        });
+      // }else if (this.partnert.telefono.length < 5) {
+      //   M.toast({
+      //     html:'El teléfono no es válido.',
+      //     outDuration:1000,
+      //   });
       }else{
         var buscado = this.correos[this.correos.indexOf(this.partnert.correo)];
         if (buscado != undefined) {
