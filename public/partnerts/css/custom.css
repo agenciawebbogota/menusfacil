@@ -1,0 +1,53 @@
+body{
+  background-image: url(/img/1776.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.part-title h2{
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  color: #2b2831;
+}
+.part-title h3{
+  font-size: 26px;
+}
+.part-title p{
+  font-size: 16px;
+}
+.beneficios-card{
+  margin: -20px 300px 0 300px;
+  color:#fff;
+}
+.head{
+  font-size: 28px;
+  text-align: center;
+}
+.part-list{
+  font-size: 20px;
+}
+.part-list i{
+  font-size: 20px;
+}
+.part-footxt{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 0 50px 0;
+}
+@media (min-width:320px) and (max-width:740px){
+  .part-title h2{ font-size: 20px; }
+  .part-title h3{ font-size: 16px; }
+  .part-title p{ font-size: 13px; }
+  .beneficios-card{ margin: 0; }
+  .head{ font-size: 18px; }
+  .part-list{ font-size: 15px; }
+  .part-list i{ font-size: 15px; }
+  .part-footxt{ font-size: 16px; }
+}
+@media (min-width:741px) and (max-width:830px){
+  .beneficios-card{ margin: 0 30px 0 30px; }
+}
+@media (min-width:831px) and (max-width:1024px){
+  .beneficios-card{ margin: 0 80px 0 80px; }
+}

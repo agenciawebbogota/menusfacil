@@ -62,7 +62,7 @@
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
                           <li><a href="#funciones" data-scroll>Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
-                          <li><a href="#home" data-scroll>Recomendar</a></li>
+                          <li><a href="registro/partnerts" data-scroll>Conviertete en Partner</a></li>
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
                       </ul>
