@@ -60,7 +60,7 @@
                       <!--mega menu start-->
                       <ul class="nav menuzord-menu pull-right op-nav">
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
-                          <li><a class="funciones">Funciones</a></li>
+                          <li><a href="#funciones" class="funciones">Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll="500">Aplicaciones</a></li>
                           <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en Partner</a></li>
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
