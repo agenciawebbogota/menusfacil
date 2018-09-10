@@ -51,30 +51,26 @@
                   <div id="materialize-menu" class="menuzord">
 
                       <!--logo start-->
-<<<<<<< HEAD
                       <a href="index.html" class="logo-brand">
                           <img class="logo-dark" src="/admin/img/logo-2-menusfacil.svg" alt="logo menús fácil para móviles"/>
                       </a>
-=======
                       {{-- <a href="index.html" class="logo-brand">
                           <img class="logo-dark" src="{{url('assets/img/logo.png')}}" alt="Logo de MenusFacil"/>
                           <img class="logo-light" src="{{url('assets/img/logo-white.png')}}" alt="Logo de MenusFacil"/>
                       </a> --}}
->>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
                       <!--logo end-->
 
                       <!--mega menu start-->
                       <ul class="nav menuzord-menu pull-right op-nav">
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
-<<<<<<< HEAD
+{{-- <<<<<<< HEAD
                           <li><a href="#funciones" data-scroll>Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
                           <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
-=======
+======= --}}
                           <li><a href="#funciones" class="funciones">Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll="500">Aplicaciones</a></li>
                           <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en Partner</a></li>
->>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
                       </ul>
@@ -207,11 +203,11 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
-<<<<<<< HEAD
-                        <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
-=======
-                        <div><img src="{{url('assets/img/banner/dummy.png')}}" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
->>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
+
+                        {{-- <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png"> --}}
+
+                        <div><img class="ipad-img" src="{{url('assets/img/banner/dummy.png')}}" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+
                         </div>
                 </div>
 
