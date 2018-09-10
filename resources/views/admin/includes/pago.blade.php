@@ -1,44 +1,36 @@
-@php
-            // $ApiLogin = '55oW938q35lCnpu';
-            $ApiKey = '4Vj8eK4rloUd272L48hsrarnUA';
-            $merchanId = 508029;
-            $accoundId = 512326;
-            $descripcion = 'Compras para MenusFacil.';
-            $valor = 89000;
-            $moneda = 'COP';
-            $referencia = 'PAGO'.time(). rand(100,1000);
-            $signature = md5($ApiKey.'~'.$merchanId.'~'.$referencia.'~'.$valor.'~'.$moneda);
-            // echo $referencia;
-          @endphp
-
-
-          <form novalidate class="md-layout" method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
-            <input name="merchantId"    type="hidden"  value="{{$merchanId}}"   >
-            <input name="accountId"     type="hidden"  value="{{$accoundId}}" >
-            <input name="description"   type="hidden"  value="{{$descripcion}}"  >
-            <input name="referenceCode" type="hidden"  value="{{$referencia}}" >
-            <input name="amount"        type="hidden"  value="{{$valor}}"   >
-            <input name="tax"           type="hidden"  value="0"  >
-            <input name="taxReturnBase" type="hidden"  value="0" >
-            <input name="currency"      type="hidden"  value="COP" >
-            <input name="signature"     type="hidden"  value="{{$signature}}"  >
-            <input name="test"          type="hidden"  value="1" >
-            <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
-            <input name="buyerEmail"    type="hidden"  value="whary11@gmail.com" >
-            <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
-            <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
-            <button type="submit" class="md-raised md-primary">Pagar</button>
-          </form>
-
-
-
-
-
-
-
-
-{{-- <p style="text-align:center">Renueva tu suscripción</p>
-
+        @php
+          $ApiKey = 'w3Q56suC9RD1sM8WEh5wUf75ri';
+          $merchanId = 644473;
+          $accoundId = 646874;
+          $descripcion = 'Compras para MenusFacil.';
+          $valor = 89000;
+          $moneda = 'COP';
+          $referencia = 'PAGO'.time(). rand(100,1000);
+          $signature = md5($ApiKey.'~'.$merchanId.'~'.$referencia.'~'.$valor.'~'.$moneda);
+        @endphp
+        <div class="row">
+          <div style="margin-top:20px;">
+            <form novalidate class="md-layout" method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
+              <input name="merchantId"    type="hidden"  value="{{$merchanId}}"   >
+              <input name="accountId"     type="hidden"  value="{{$accoundId}}" >
+              <input name="description"   type="hidden"  value="{{$descripcion}}"  >
+              <input name="referenceCode" type="hidden"  value="{{$referencia}}" >
+              <input name="amount"        type="hidden"  value="{{$valor}}"   >
+              <input name="tax"           type="hidden"  value="0"  >
+              <input name="taxReturnBase" type="hidden"  value="0" >
+              <input name="currency"      type="hidden"  value="COP" >
+              <input name="signature"     type="hidden"  value="{{$signature}}"  >
+              {{-- <input name="test"          type="hidden"  value="1" > --}}
+              <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
+              <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
+              <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
+              <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
+              <button type="submit" class="btn col s8 l2 offset-s2 offset-l5" style="background-color:#e88a10;">Renovar</button>
+            </form>
+          </div>
+        </div>
+ <p style="text-align:center">Renueva tu suscripción</p>
+{{--
 <div class="row">
   <div class="img-pago">
     <!-- Boton PayU -->
