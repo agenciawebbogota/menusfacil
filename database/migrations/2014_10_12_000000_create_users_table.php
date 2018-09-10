@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('tipo_usuario')->default('EMPRESA'); //SUPERUSUARIO
             $table->string('bloqueado')->default('NO'); // SI
             $table->integer('dias')->default(14)->nulleble();
-            $table->unsignedInteger('partnert_id')->default(1);
+            $table->unsignedInteger('partnert_id');
             $table->dateTime('fecha_creacion')->default(date("Y-m-d H:i:s"))->nulleble();
             $table->string('cabecera')->default('http://www.menusfacil.com/admin/img/logo-menusfacil.svg')->nulleble();
             $table->string('perfil')->default('http://www.menusfacil.com/img/logo2.png')->nulleble();

@@ -41,6 +41,14 @@
                                 @endif
                             </div>
                         </div>
+
+                        {{-- Partner --}}
+                        <div class="form-group row">
+                            <label for="partnert_id" class="col-md-4 col-form-label text-md-right">ID de Partnert</label>
+                            <div class="col-md-6">
+                                <input id="partnert_id" type="number" class="form-control" name="partnert_id">
+                            </div>
+                        </div>
                         {{-- Colores --}}
                         {{-- Color 1:  2a2730 --}}
                         {{-- Color 2:  66181a --}}
