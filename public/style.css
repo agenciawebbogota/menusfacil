@@ -43,23 +43,36 @@ body {
 .btn-conoce{background-color: #e88a10 !important;}
 .descp{ font-size: 20px; font-weight: 600;}
 /*Responsive Header*/
-@media screen and (max-width: 736px){
-  .logo-mf{ width: 90px !important; height: 89px !important; margin-top: 120px !important; margin-left: -40px !important}
-  .titulo{font-size: 25px;margin-top: 50px !important;}
-  .titulo2{font-size: 25px;}
+@media screen and (max-width: 600px){
+  .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 250px !important; margin-left: -190px !important}
+  .titulo{font-size: 25px; margin-top: 100px !important;}
+  .titulo2{margin-top: 80px !important;}
+  .titulo2-1{font-size: 25px;line-height: 0.1em;}
   .descp{ display:none; }
-  .btn-prueba{margin-top:-20px; }
-  .btn-conoce{margin-top:-20px;}
+  .btn-prueba{margin-top:480px; }
+  .btn-conoce{margin-top:500px;}
+  .ipad-img{ display: none; }
 }
-@media screen and (min-width:768px) and (max-width:920px){
-  .logo-mf{ width: 150px !important; height: 148px !important;}
-  .titulo{font-size: 30px;}
-  .titulo2{font-size: 30px;}
+@media (min-width:640px) and (max-width:767px){
+  .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 220px !important; margin-left: -240px !important}
+  .titulo{font-size: 32px; margin-top: 100px !important;}
+  .titulo2{margin-top: 80px !important;}
+  .titulo2-1{font-size: 32px;line-height: 0.1em;}
   .descp{ display:none; }
-  .btn-prueba{margin-top:-140px; }
-  .btn-conoce{margin-top:-140px;}
+  .btn-prueba{margin-top:480px; }
+  .btn-conoce{margin-top:500px;}
+  .ipad-img{ display: none; }
 }
+@media (min-width:768px) and (max-width:1800px){
+  .titulo2-1{font-size:40px !important;line-height:1em !important;}
+  .logo-brand{display: none;}
+}
+
+
 .logo-footer img{ width: 180px; height: 173px; }
+
+/*menu */
+
 
 
 /* Link style

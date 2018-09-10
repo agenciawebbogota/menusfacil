@@ -52,8 +52,7 @@
 
                       <!--logo start-->
                       <a href="index.html" class="logo-brand">
-                          <img class="logo-dark" src="assets/img/logo.png" alt=""/>
-                          <img class="logo-light" src="assets/img/logo-white.png" alt=""/>
+                          <img class="logo-dark" src="/admin/img/logo-2-menusfacil.svg" alt="logo menús fácil para móviles"/>
                       </a>
                       <!--logo end-->
 
@@ -62,7 +61,7 @@
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
                           <li><a href="#funciones" data-scroll>Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
-                          <li><a href="registro/partnerts" data-scroll>Conviertete en Partner</a></li>
+                          <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
                       </ul>
@@ -87,7 +86,7 @@
                 <img src="assets/img/banner-light.jpg"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
 
                 <!-- LAYER NR. 1 -->
-                <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme"
+                <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
                     data-y="['middle','middle','top','top']" data-voffset="['-120','-120','40','40']"
                     data-whitespace="nowrap"
@@ -100,11 +99,11 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="titulo">Sube a la web tus Menús Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><span>Sube a la web tus Menús Fácil</span>
                 </div>
 
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme"
+                <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo2"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
                     data-y="['middle','middle','top','top']" data-voffset="['-50','-50','100','100']"
                     data-fontsize="['70','70','60','55']"
@@ -118,7 +117,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="titulo2">Recibe y atiende los pedidos<br/>de tus clientes Aún Más Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><span class="titulo2-1">Recibe y atiende los pedidos<br/>de tus clientes Aún Más Fácil</span>
                 </div>
 
                 <!-- LAYER NR. 3 -->
@@ -195,7 +194,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
-                        <div><img src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+                        <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
                         </div>
                 </div>
 
@@ -208,7 +207,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="2200"
                     style="z-index: 4;">
-                        <div><img src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
+                        <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
                         </div>
                 </div>
 
