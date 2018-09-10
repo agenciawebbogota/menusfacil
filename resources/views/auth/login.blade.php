@@ -17,7 +17,7 @@
   </div><!-- /.row -->
   <div id="login-page" class="row">
     <div class="col s10 l4 z-depth-4 offset-l4 offset-s1 card-panel">
-      <form class="login-form col l8 m8 offset-l2 s12 offset-s2" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" " id="login">
+      <form class="login-form col l8 m8 offset-l2 s12 offset-s2" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" id="login">
         @csrf
         {{-- <div class="row"> --}}
           <div class="input-field col l12 s8 m12 offset-m2 center">

@@ -22,16 +22,23 @@
   </style>
 </head>
 <body>
-  <div id="dash" v-cloak>
+  @if (Auth::user()->bloqueado == 'NO')
+    <div id="dash" v-cloak>
+  @else
+    <div id="dash">
+  @endif
 
     <ul id="slide-out" class="sidenav">
-      <li>
-        <div class="user-view">
-          <a><img class="circle" width="190" src="{{Auth::user()->perfil}}"></a>
-          <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
-          <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
-        </div>
-      </li>
+      @if (Auth::user()->bloqueado == 'NO')
+        <li>
+          <div class="user-view">
+            <a><img class="circle" width="190" src="{{Auth::user()->perfil}}"></a>
+            <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
+            <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
+          </div>
+        </li>
+
+      @endif
       @if (Auth::user()->estado_empresa == 'PAGA')
         <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
       @endif
@@ -89,7 +96,7 @@
   </footer>
 @endif
 
-  {{-- @if (Auth::user()->bloqueado == 'NO') --}}
+  @if (Auth::user()->bloqueado == 'NO')
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
     <script type="text/javascript" src="{{url('admin/js/config.js')}}"></script>
@@ -97,8 +104,8 @@
       let firebase = "empresa/<?php  echo Auth::user()->url ?>";
       let ref = db.ref(firebase);
     </script>
-    <script type="text/javascript" src="{{url('admin/js/app.js')}}"></script>
-  {{-- @endif --}}
+  @endif
+  <script type="text/javascript" src="{{url('admin/js/app.js')}}"></script>
 
 </body>
 </html>

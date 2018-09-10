@@ -16,28 +16,28 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- FontAwesome CSS -->
-        <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{url('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
         <!-- Material Icons CSS -->
-        <link href="assets/fonts/iconfont/material-icons.css" rel="stylesheet">
+        <link href="{{url('assets/fonts/iconfont/material-icons.css')}}" rel="stylesheet">
         <!-- animate CSS -->
-        <link href="assets/css/animate.min.css" rel="stylesheet">
+        <link href="{{url('assets/css/animate.min.css')}}" rel="stylesheet">
         <!-- magnific-popup -->
-        <link href="assets/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="{{url('assets/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
         <!-- materialize -->
-        <link href="assets/materialize/css/materialize.min.css" rel="stylesheet">
+        <link href="{{url('assets/materialize/css/materialize.min.css')}}" rel="stylesheet">
         <!-- Bootstrap -->
-        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{url('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <!-- shortcodes -->
-        <link href="assets/css/shortcodes/shortcodes.css" rel="stylesheet">
+        <link href="{{url('assets/css/shortcodes/shortcodes.css')}}" rel="stylesheet">
         <!-- Style CSS -->
-        <link href="style.css" rel="stylesheet">
+        <link href="{{url('style.css')}}" rel="stylesheet">
         <!-- Creative CSS -->
-        <link href="assets/css/skins/creative.css" rel="stylesheet">
+        <link href="{{url('assets/css/skins/creative.css')}}" rel="stylesheet">
         <!-- RS5.0 Main Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/settings.css')}}">
         <!-- RS5.0 Layers and Navigation Styles -->
-        <link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
-        <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/layers.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/navigation.css')}}">
     </head>
 
     <body id="top">
@@ -51,17 +51,30 @@
                   <div id="materialize-menu" class="menuzord">
 
                       <!--logo start-->
+<<<<<<< HEAD
                       <a href="index.html" class="logo-brand">
                           <img class="logo-dark" src="/admin/img/logo-2-menusfacil.svg" alt="logo menús fácil para móviles"/>
                       </a>
+=======
+                      {{-- <a href="index.html" class="logo-brand">
+                          <img class="logo-dark" src="{{url('assets/img/logo.png')}}" alt="Logo de MenusFacil"/>
+                          <img class="logo-light" src="{{url('assets/img/logo-white.png')}}" alt="Logo de MenusFacil"/>
+                      </a> --}}
+>>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
                       <!--logo end-->
 
                       <!--mega menu start-->
                       <ul class="nav menuzord-menu pull-right op-nav">
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
+<<<<<<< HEAD
                           <li><a href="#funciones" data-scroll>Funciones</a></li>
                           <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
                           <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
+=======
+                          <li><a href="#funciones" class="funciones">Funciones</a></li>
+                          <li><a href="#aplicaciones" data-scroll="500">Aplicaciones</a></li>
+                          <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en Partner</a></li>
+>>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
                       </ul>
@@ -83,7 +96,7 @@
             <!-- slide 1 start -->
             <li data-transition="fade" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/img/banner/banner-light.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="materialize Material" data-description="">
                 <!-- MAIN IMAGE -->
-                <img src="assets/img/banner-light.jpg"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
+                <img src="{{url('assets/img/banner-light.jpg')}}"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
 
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo"
@@ -182,7 +195,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                     style="z-index: 7;">
-                    <a href="#funciones" class="btn btn-conoce funciones"><span>Conoce <strong>las funciones</strong></span></a>
+                    <a class="btn btn-conoce funciones"><span>Conoce <strong>las funciones</strong></span></a>
                 </div>
 
                 <!-- LAYER NR. 7 -->
@@ -194,7 +207,11 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
+<<<<<<< HEAD
                         <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+=======
+                        <div><img src="{{url('assets/img/banner/dummy.png')}}" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+>>>>>>> 0334bcd7d5c5c2949a39c6f0bd1e2cac1439c2a5
                         </div>
                 </div>
 
@@ -376,7 +393,7 @@
                   </div><!-- /.process-wrapper -->
               </div>
               <div class="col-md-3 equal-height-column process-bg-wrapper">
-                <img src="assets/img/cena.jpg" alt="Dueños de restaurante usando menus facil">
+                <img src="{{url('assets/img/cena.jpg')}}" alt="Dueños de restaurante usando menus facil">
               </div>
             </div>
           </div>
@@ -404,15 +421,15 @@
                         <div class="carousel-inner" role="listbox">
 
                           <div class="item active">
-                            <img src="assets/img/screenshot-1.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="{{url('assets/img/screenshot-1.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="assets/img/screenshot-3.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="{{url('assets/img/screenshot-3.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="assets/img/screenshot-2.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="{{url('assets/img/screenshot-2.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                         </div>
@@ -519,20 +536,20 @@
 
 
         <!-- jQuery -->
-        <script src="assets/js/jquery-2.1.3.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/materialize/js/materialize.min.js"></script>
-        <script src="assets/js/jquery.easing.min.js"></script>
-        <script src="assets/js/smoothscroll.min.js"></script>
-        <script src="assets/js/imagesloaded.js"></script>
-        <script src="assets/js/jquery.stellar.min.js"></script>
-        <script src="assets/js/menuzord.js"></script>
-        <script src="assets/js/equalheight.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/jquery.shuffle.min.js"></script>
-        <script src="assets/flexSlider/jquery.flexslider-min.js"></script>
-        <script src="assets/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+        <script src="{{url('assets/js/jquery-2.1.3.min.js')}}"></script>
+        <script src="{{url('assets/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{url('assets/materialize/js/materialize.min.js')}}"></script>
+        <script src="{{url('assets/js/jquery.easing.min.js')}}"></script>
+        <script src="{{url('assets/js/smoothscroll.min.js')}}"></script>
+        <script src="{{url('assets/js/imagesloaded.js')}}"></script>
+        <script src="{{url('assets/js/jquery.stellar.min.js')}}"></script>
+        <script src="{{url('assets/js/menuzord.js')}}"></script>
+        <script src="{{url('assets/js/equalheight.js')}}"></script>
+        <script src="{{url('assets/js/wow.min.js')}}"></script>
+        <script src="{{url('assets/js/jquery.shuffle.min.js')}}"></script>
+        <script src="{{url('assets/flexSlider/jquery.flexslider-min.js')}}"></script>
+        <script src="{{url('assets/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{url('assets/js/scripts.js')}}"></script>
 
         <script>
             new WOW({
@@ -542,8 +559,8 @@
 
 
         <!-- RS5.0 Core JS Files -->
-        <script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="{{url('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+        <script src="{{url('assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
         <!-- RS5.0 Init  -->
         <script type="text/javascript">
@@ -571,6 +588,11 @@
             // let servicios = $('.servicios').offset().top
             $('.funciones').click((e) => {
               e.preventDefault()
+              alert('funciones')
+              $('body,html').animate({'scrollTop':scrolForm+100}, 2000)
+            })
+            $('.funcion').click((e) => {
+              e.preventDefault()
               $('body,html').animate({'scrollTop':scrolForm+100}, 2000)
             })
             // $('.linkServicios').click((e) => {
@@ -580,14 +602,14 @@
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems! The following part can be removed on Server for On Demand Loading) -->
 
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
 
     </body>
 

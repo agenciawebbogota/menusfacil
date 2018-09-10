@@ -1,45 +1,36 @@
-{{-- @php
-echo  md5(12345);
-@endphp
-
-<form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu">
-  <input name="merchantId"    type="hidden"  value="508029"   >
-  <input name="accountId"     type="hidden"  value="646874" >
-  <input name="description"   type="hidden"  value="Test PAYU"  >
-  <input name="referenceCode" type="hidden"  value="TestPayU 10" >
-  <input name="amount"        type="hidden"  value="3"   >
-  <input name="tax"           type="hidden"  value="0"  >
-  <input name="taxReturnBase" type="hidden"  value="16806" >
-  <input name="currency"      type="hidden"  value="COP" >
-  <input name="signature"     type="hidden"  value="cea0d8e7a6099c09dc555512ed5ea463"  >
-  <input name="test"          type="hidden"  value="1" >
-  <input name="buyerEmail"    type="hidden"  value="agenciawebbogota@gmail.com" >
-  <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/repuesta')}}" >
-  <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/suscripcion-exitosa')}}" >
-  <input name="Submit"        type="submit"  value="Enviar" >
-</form> --}}
-{{-- merchantId: 508029
-ApiKey: 4Vj8eK4rloUd272L48hsrarnUA
-referenceCode: TestPayU
-accountId: 512326
-description: Test PAYU
-amount: 3
-tax: 0
-taxReturnBase: 0
-currency: USD
-signature: ba9ffa71559580175585e45ce70b6c37
-test: 1
-buyerEmail: test@test.com --}}
-
-
-
-
-
-
-
-
-<p style="text-align:center">Renueva tu suscripción</p>
-
+        @php
+          $ApiKey = 'w3Q56suC9RD1sM8WEh5wUf75ri';
+          $merchanId = 644473;
+          $accoundId = 646874;
+          $descripcion = 'Compras para MenusFacil.';
+          $valor = 89000;
+          $moneda = 'COP';
+          $referencia = 'PAGO'.time(). rand(100,1000);
+          $signature = md5($ApiKey.'~'.$merchanId.'~'.$referencia.'~'.$valor.'~'.$moneda);
+        @endphp
+        <div class="row">
+          <div style="margin-top:20px;">
+            <form novalidate class="md-layout" method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
+              <input name="merchantId"    type="hidden"  value="{{$merchanId}}"   >
+              <input name="accountId"     type="hidden"  value="{{$accoundId}}" >
+              <input name="description"   type="hidden"  value="{{$descripcion}}"  >
+              <input name="referenceCode" type="hidden"  value="{{$referencia}}" >
+              <input name="amount"        type="hidden"  value="{{$valor}}"   >
+              <input name="tax"           type="hidden"  value="0"  >
+              <input name="taxReturnBase" type="hidden"  value="0" >
+              <input name="currency"      type="hidden"  value="COP" >
+              <input name="signature"     type="hidden"  value="{{$signature}}"  >
+              {{-- <input name="test"          type="hidden"  value="1" > --}}
+              <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
+              <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
+              <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
+              <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
+              <button type="submit" class="btn col s8 l2 offset-s2 offset-l5" style="background-color:#e88a10;">Renovar</button>
+            </form>
+          </div>
+        </div>
+ <p style="text-align:center">Renueva tu suscripción</p>
+{{--
 <div class="row">
   <div class="img-pago">
     <!-- Boton PayU -->
@@ -64,5 +55,5 @@ buyerEmail: test@test.com --}}
     </form>
     <!-- Fin Boton -->
   </div>
-</div>
+</div> --}}
 <p style="text-align:center">No cierres tu sesión hasta el pago sea completado.</p>

@@ -18,11 +18,7 @@ class PedidoController extends Controller
     	return $adicionales;
     }
     public function index(){
-        $menus = Menu::all();
-        // return $menus;
-        return view('index',[
-            'menus' => $menus,
-        ]);
+        return view('index');
     }
     public function get(){
         $menus = DB::table('pedidos')
@@ -31,16 +27,7 @@ class PedidoController extends Controller
             ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'DESC')
-            // ->limit(10)
             ->get();
-				// $adiciones = DB::table('pedidos')
-        //     ->where('pedidos.user_id', \Auth::id())
-        //     ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
-        //     ->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
-        //     ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
-        //     ->orderBy('id', 'DESC')
-        //     // ->limit(10)
-        //     ->get();
 
 					// Inicio de sentencias para el calculos del menú mas vendido
 						$user_id = \Auth::id();
@@ -59,9 +46,6 @@ class PedidoController extends Controller
 						foreach ($menus as $menu) {
 							array_push($pedido, $menu);
 						}
-						// foreach($adiciones as $adicion){
-						// 	array_push($pedido, $adicion);
-						// }
 						foreach($pedido as $ped){
 							$total = $ped->precio + $total;
 						}
@@ -95,15 +79,6 @@ class PedidoController extends Controller
 			return $menus;
     }
 
-
-
-
-
-
-
-
-
-
     public function pdf(){
          $menus = DB::table('pedidos')
             ->where('pedidos.user_id', \Auth::id())
@@ -112,19 +87,10 @@ class PedidoController extends Controller
             ->select('pedidos.*', 'menus.nombre as nombre_menu', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'ASC')
             ->get();
-        // $adicionales = DB::table('pedidos')
-        //     ->where('pedidos.user_id', \Auth::id())
-        //     ->join('menus', 'pedidos.adicional_pedido', '=', 'menus.id')
-				// 		->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
-        //     ->select('pedidos.*', 'menus.nombre as nombre_adicional', 'menus.descripcion', 'menus.precio')
-        //     ->orderBy('id', 'ASC')
-        //     ->get();
+						// Retornando la vista con el PDF
         $view =  \View::make('pdf.pedidos', compact('menus'))->render();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view)->setPaper('a4', 'landscape');
         return $pdf->stream('Nombre_Personalizado_PDF');
-
     }
-
-
 }
