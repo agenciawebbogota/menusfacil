@@ -9,10 +9,10 @@ use App\User;
 class PagosController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function confirmacion(){
       // $fecha = date("Y-m-d H:i:s");
       // // Restringir la entrada a este controlador estrictamente si viene de la pasarela de pago
