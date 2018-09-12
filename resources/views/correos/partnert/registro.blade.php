@@ -96,17 +96,20 @@ p {
 
                 <table class="one-column" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing:0; border-left:1px solid #e8e7e5; border-right:1px solid #e8e7e5; border-bottom:1px solid #e8e7e5; border-top:1px solid #e8e7e5" bgcolor="#FFFFFF">
                   <tr>
-										<td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenido, </strong><strong style="text-transform:uppercase;">{{$partnert->nombre}}</strong></p>
-                      <p style="font-size:16px; text-align:left; line-height:22px ">Estamos orgullosos porque ahora nos empezaras a recomendar. <br><br>Queremos informarte que has realizado tu registro como parnert de MenusFacil con éxito, <strong> </strong> a continuación encontrarás el id con el cual se deben registrar tu recomendados para que puedas empezar a gozar de los beneficios como partnert de MenusFacil.</p>
-											<!-- <p>Por lo tanto le recomendamos que pasados estos días realice el pago respectivo para poder seguir disfrutando de los beneficios de Menus Fácil.</p> -->
-                      <p>ID: <b>{{$partnert->id}}</b></p>
+										<td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenid@, </strong><strong style="text-transform:uppercase;">{{$partnert->nombre}}</strong></p>
+                      <p style="font-size:16px; text-align:left; line-height:22px "><strong>Gracias por registrate como Partner de Menús Fácil.</strong><br><br>Juntos lograremos ser la plataforma tecnológica para gestión de órdenes más importante de Latinoamérica<br>
+											A continuación encontrarás tu ID de socio que te identificará a ti y a tus rerefidos en el sistema:</p>
+                      <p>TU ID DE SOCIO: <b>{{$partnert->id}}</b>
+											 <i>Recuerda indicarles a tus referidos que se deben registrar en nuestro sistema con tu ID de socio.</i></p>
                       <br />
                       </p>
+											<p><strong>¿Ahora que viene?</strong><br>Con el fin de confirmar tus datos y programar el pago de tus comisiones mensuales, por favor envíanos un mensaje a <a href="mailto:socios@menusfacil.com">socios@menusfacil.com</a> con los siguientes datos:<br/>
+											Nombre completo<br>Número de identificación<br>Télefono de contacto<br>Dirección de residencia y ciudad<br>Adjúnta a tu correo una certifiación bancaria donde aparezca el número de cuenta en la que quieres recibir tus pagos periódicos</p>
                       <table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                         <tbody>
 														<tr>
 															<td>
-																<p style="font-size:16px; text-align:left; line-height:22px ">Cordialmente. <br><br> Equipo de MenusFacil.</p></td>
+																<p style="font-size:16px; text-align:left; line-height:22px ">Cordialmente,<br><br>Equipo de MenusFacil</p></td>
 															</td>
 														</tr>
 														<tr>

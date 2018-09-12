@@ -106,29 +106,29 @@ p {
 
                 <table class="one-column" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing:0; border-left:1px solid #e8e7e5; border-right:1px solid #e8e7e5; border-bottom:1px solid #e8e7e5; border-top:1px solid #e8e7e5" bgcolor="#FFFFFF">
                   <tr>
-                    <td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenido a Menús Fácil</strong>,</p>
-                      <p style="font-size:16px; text-align:left; line-height:22px ">Queremos confirmarle que su cuenta de prueba ha sido habilitada. Puede comenzar a usar nuestra aplicación con los siguientes datos de acceso:</p>
-                      <p>Link para pedidos: {{ url("/empresa/".$url) }}</p>
-                      <p>Usuario: {{$email}}</p>
-                      <p>Contraseña: {{$password}}</p>
-                      <p>Correo electrónico: {{$email}}</p>
-                      <br/>
-                      <br/>
-                      </p>
-                      <table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
+                    <td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>¡Casi estamos listos!</strong>,</p>
+                      <p style="font-size:16px; text-align:left; line-height:22px ">>Confirma tu suscripción a Menús Fácil para comenzar a disfrutar de tu periodo gratuito:</p>
+											<table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                         <tbody>
                           <tr>
-                            <p style="font-size:16px; text-align:left; line-height:22px ">¿Necesita ayuda? En la documentación encontrará todos los detalles de uso y configuración de la aplicación.</p></td>
                             <td align="center"><table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                                 <tr>
                                   <td height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;padding:10px">
-																		<a href="{{url("/documentacion")}}" target="blank"  style="width:250;display:block;text-decoration:none;border:0;text-align:center;font-weight:bold;font-size:18px;color: #ffffff;">Ver documentación</a>
+																		<a href="{{url("/documentacion")}}" target="blank"  style="width:250;display:block;text-decoration:none;border:0;text-align:center;font-weight:bold;font-size:18px;color: #ffffff;">Confirmar suscripción</a>
 																	</td>
                                 </tr>
                               </table></td>
                           </tr>
                         </tbody>
                       </table>
+											{{-- <p>Link para pedidos: {{ url("/empresa/".$url) }}</p>
+                      <p>Usuario: {{$email}}</p>
+                      <p>Contraseña: ******</p>
+                      <p>Correo electrónico: {{$email}}</p> --}}
+                      <br/>
+                      <br/>
+											<i>Luego de confirmar tus suscripción recibirás un correo con tus datos de acceso y todas las instrucciones para implementar con éxito Menús Fácil en tu negocio</i></p>
+
                   </tr>
                 </table>
 
@@ -138,7 +138,7 @@ p {
                     <td height="30">&nbsp;</td>
                   </tr>
                   <tr>
-                    <td style="text-align: center;">Únase a nuestra comunidad</td>
+                    <td style="text-align: center;">Síguenos en Facebook</td>
                   </tr>
 
                   <tr>
@@ -151,9 +151,7 @@ p {
                                 <tr>
                                   <td width="32%" align="center" valign="top" style="padding-top:10px"><table width="150" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                      <td width="33" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/fb.png')}}" alt="facebook" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
-                                      <td width="34" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/tw.png')}}" alt="twitter" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
-                                      <td width="33" align="center"><a href="#" target="_blank"><img src="{{url('correos/img/in.png')}}" alt="linkedin" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
+                                      <td width="33" align="center"><a href="https://www.facebook.com/Menús-Fácil-236578603662891/" target="_blank"><img src="{{url('correos/img/fb.png')}}" alt="facebook" width="36" height="36" border="0" style="border-width:0; max-width:36px;height:auto; display:block; max-height:36px"/></a></td>
                                     </tr>
                                   </table></td>
                                 </tr>
