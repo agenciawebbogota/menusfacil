@@ -31,7 +31,7 @@ class PartnertController extends Controller
       {
         $msj->subject('Ya eres Partnert');
         $msj->to($this->email);
-        $msj->bcc(['whary11@gmail.com', 'pablomart81@gmail.com']);
+        $msj->bcc(['app.menusfacil@gmail.com']);
       });
     return $partnert;
   }

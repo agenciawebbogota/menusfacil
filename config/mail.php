@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'mail.agenciawebbogota.com'),
+    'host' => env('MAIL_HOST', 'iron.vivawebhost.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'menusfacil@agenciawebbogota.comm'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@menusfacil.com'),
         'name' => env('MAIL_FROM_NAME', 'Menús Fácil'),
     ],
 
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------

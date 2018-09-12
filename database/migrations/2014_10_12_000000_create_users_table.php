@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('color3');
             $table->string('estado_empresa')->default('GRATIS'); //PAGA
             $table->string('tipo_usuario')->default('EMPRESA'); //SUPERUSUARIO
-            $table->string('bloqueado')->default('NO'); // SI
+            $table->string('bloqueado')->default('NO');
+            $table->string('confirmado')->default('NO');
             $table->integer('dias')->default(14)->nulleble();
             $table->unsignedInteger('partnert_id');
             $table->dateTime('fecha_creacion')->default(date("Y-m-d H:i:s"))->nulleble();

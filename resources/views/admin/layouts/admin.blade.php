@@ -1,3 +1,5 @@
+@if (Auth::user()->confirmado == 'SI')
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +7,7 @@
   <title>Admin || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
@@ -109,3 +111,9 @@
 
 </body>
 </html>
+@else
+  <link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <div>
+    <h1 class="center-align">Debe activar su cuenta vía email.</h1>
+  </div>
+@endif

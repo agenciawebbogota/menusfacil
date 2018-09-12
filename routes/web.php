@@ -22,7 +22,7 @@ Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 
 
 // Manejar la vista del usuario
-Route::get('empresa/{url}', 'InicioController@index');
+Route::get('cliente/{url}', 'InicioController@index');
 // documentación
 Route::get('documentacion', 'InicioController@doc');
 
@@ -61,3 +61,6 @@ Route::get('/confirmacion/respuesta', 'PagosController@respuesta');
 Route::get('/registro/partnerts', 'PartnertController@indexpartnerts');
 Route::post('/registro/partnerts', 'PartnertController@create');
 Route::get('/partnerts/get', 'PartnertController@get');
+
+// Confirmación de registration
+Route::get('/confimacliente/{correo}/{id}', 'InicioController@confirmacion');

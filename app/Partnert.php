@@ -8,7 +8,7 @@ class Partnert extends Model
 {
     //
     protected $fillable = [
-        'nombre', 'estado', 'correo', 'telefono'
+        'nombre', 'estado', 'correo', 'telefono', 'id'
     ];
 
 

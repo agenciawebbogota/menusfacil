@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'url'      => 'required|string|max:255|unique:users'
         ]);
     }
     public $email;
@@ -73,8 +74,6 @@ class RegisterController extends Controller
       }else{
         $partnert = $data['partnert_id'];
       }
-
-
         $user = User::create([
           'name' => $data['name'],
           'email' => $data['email'],
@@ -86,19 +85,11 @@ class RegisterController extends Controller
           'dias' => 14,
           'partnert_id' => $partnert,
         ]);
-
-
-        Mail::send('correos/alregistrarse', [
-          'nombre' => $data['name'],
-          'email' => $data['email'],
-          'password' => $data['password'],
-          'url' => $data['url']
-        ], function($msj)
+        Mail::send('correos/alregistrarse', ['user' => $user], function($msj)
         {
-          $msj->subject('Bienvenido a Menus Fácil');
+          $msj->subject('Por favor confirma tu suscripción a Menús Fácil.');
           $msj->to($this->email);
-          $msj->bcc(['whary11@gmail.com']);
-          $msj->cc(['agenciawebbogota@gmail.com']);
+          $msj->bcc(['app.menusfacil@gmail.com']);
         });
 
         return $user;

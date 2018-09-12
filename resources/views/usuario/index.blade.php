@@ -1,3 +1,5 @@
+@if ($empresa->confirmado == 'SI')
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -149,3 +151,9 @@
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
 	<script type="text/javascript" src="{{url('inicio/js/app.js')}}"></script>
 </html>
+@else
+	<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <div>
+    <h1 class="center-align">El cliente aún no está activo.</h1>
+  </div>
+@endif
