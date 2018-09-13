@@ -44,25 +44,21 @@ class InicioController extends Controller
   public function doc(){
     return view('doc.index');
   }
-
+// Funció para confirmación de los usuarios vía email
   public function confirmacion($correo, $id){
-    $user = User::all()->where('id', $id)->where('email', $correo);
-    if(count($user) == 1 AND $user[0]->confirmado == 'NO'){
-      $userupdate = User::where('id', $user[0]->id)->update([
+    $user = User::all()->where('id', $id)->where('email', $correo)->first();
+    if($user->confirmado == 'NO'){
+      $userupdate = User::where('id', $user->id)->update([
         'confirmado' => 'SI'
       ]);
-      Mail::send('correos/confirmacionsuscripcion', ['user' => $user[0]], function($msj)
+      Mail::send('correos/confirmacionsuscripcion', ['user' => $user], function($msj)
       {
         $msj->subject('Notificar a usuario Menús Fácil.');
         $msj->to('app.menusfacil@gmail.com');
       });
-      return redirect('/dashboard');
+      return view('usuario.confirmacion', ['user' => $user]);
     }else{
-      return redirect('/dashboard');
+      return abort(404);
     }
-
   }
-
-
-
 }

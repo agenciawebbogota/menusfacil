@@ -99,8 +99,8 @@ p {
 										<td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Bienvenid@, </strong><strong style="text-transform:uppercase;">{{$partnert->nombre}}</strong></p>
                       <p style="font-size:16px; text-align:left; line-height:22px "><strong>Gracias por registrate como Partner de Menús Fácil.</strong><br><br>Juntos lograremos ser la plataforma tecnológica para gestión de órdenes más importante de Latinoamérica<br>
 											A continuación encontrarás tu ID de socio que te identificará a ti y a tus rerefidos en el sistema:</p>
-                      <p>TU ID DE SOCIO: <b>{{$partnert->id}}</b>
-											 <i>Recuerda indicarles a tus referidos que se deben registrar en nuestro sistema con tu ID de socio.</i></p>
+                      <p>TU ID DE SOCIO: <b>{{$partnert->code_partnert}}</b></p>
+											 <p><i>Recuerda indicarles a tus referidos que se deben registrar en nuestro sistema con tu ID de socio.</i></p>
                       <br />
                       </p>
 											<p><strong>¿Ahora que viene?</strong><br>Con el fin de confirmar tus datos y programar el pago de tus comisiones mensuales, por favor envíanos un mensaje a <a href="mailto:socios@menusfacil.com">socios@menusfacil.com</a> con los siguientes datos:<br/>

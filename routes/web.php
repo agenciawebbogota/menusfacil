@@ -53,8 +53,8 @@ Route::PUT('/usuarios/actualizardias', 'SuperusuarioController@actualizardias');
 Route::PUT('/usuarios/actualizarUsuario', 'SuperusuarioController@updateUser');
 
 // Pagos
-Route::post('/confirmacion/confirmacion', 'PagosController@confirmacion');
-Route::get('/confirmacion/respuesta', 'PagosController@respuesta');
+Route::post('/confirmacion/confirmacion', 'PagoController@confirmacion');
+Route::get('/confirmacion/respuesta', 'PagoController@respuesta');
 // Route::get('/confirmacion/suscripcion-pendiente', 'PagosController@pendiente');
 
 // Partnerts

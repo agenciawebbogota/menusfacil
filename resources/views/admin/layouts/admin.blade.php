@@ -35,7 +35,7 @@
         <li>
           <div class="user-view">
             <a><img class="circle" width="190" src="{{Auth::user()->perfil}}"></a>
-            <a href="{{ url('empresa')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
+            <a href="{{ url('cliente')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
             <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
           </div>
         </li>
@@ -112,8 +112,7 @@
 </body>
 </html>
 @else
+  <title>Confirmar Cuenta || Menús Fácil</title>
   <link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
-  <div>
-    <h1 class="center-align">Debe activar su cuenta vía email.</h1>
-  </div>
+  @include('admin.includes.activar')
 @endif

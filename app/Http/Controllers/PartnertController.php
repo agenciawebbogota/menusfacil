@@ -24,16 +24,19 @@ class PartnertController extends Controller
         'correo' => $request->input('correo'),
         // 'telefono' => $request->input('telefono'),
       ]);
+
+      Partnert::where('id', $partnert->id)->update([
+        'code_partnert' => 1000+$partnert->id,
+      ]);
       $this->email = $request->input('correo');
       Mail::send('correos/partnert/registro', [
-        'partnert' => $partnert
+        'partnert' => Partnert::all()->where('id', $partnert->id)->first(),
       ], function($msj)
       {
         $msj->subject('Ya eres Partnert');
         $msj->to($this->email);
         $msj->bcc(['app.menusfacil@gmail.com']);
       });
-    return $partnert;
   }
 
   public function get(){

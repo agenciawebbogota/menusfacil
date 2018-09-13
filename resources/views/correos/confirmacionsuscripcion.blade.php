@@ -92,27 +92,23 @@ p {
                       </table></td>
                   </tr>
                 </table>
-
-
                 <table class="one-column" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing:0; border-left:1px solid #e8e7e5; border-right:1px solid #e8e7e5; border-bottom:1px solid #e8e7e5; border-top:1px solid #e8e7e5" bgcolor="#FFFFFF">
                   <tr>
                     <td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>Hola, </strong><strong style="text-transform:uppercase;">Menús Fácil</strong></p>
                       <p style="font-size:16px; text-align:left; line-height:22px ">Aviso importante. <br></p>
 											<p>Un usuario acaba de suscribirse, estos son sus datos.</p>
+											<p>Nombre de la Empresa: {{$user->name}}</p>
                       <p>Link: {{url("cliente/$user->url")}}</p>
-                      <p>Usuario: {{$user->email}}</p>
-                      <p>Contraseña:</p>
+                      <p>Correo: {{$user->email}}</p>
+                      <p>Partnert: {{$user->partnert_id}}</p>
                       <br />
                       </p>
                   </tr>
                 </table>
-
-
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-bottom: 30px">
                   <tr>
                     <td height="30">&nbsp;</td>
                   </tr>
-
                   <tr>
                     <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0">
 
