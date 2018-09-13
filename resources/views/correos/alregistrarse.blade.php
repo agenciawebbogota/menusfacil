@@ -122,8 +122,8 @@ p {
                               </table></td>
                           </tr>
 													<tr>
-														<td>
-															<i>Luego de confirmar tus suscripción recibirás un correo con tus datos de acceso y todas las instrucciones para implementar con éxito Menús Fácil en tu negocio</i></p>
+														<td style="padding-top:20px">
+															<p>Luego de confirmar tus suscripción recibirás un correo con tus datos de acceso y todas las instrucciones para implementar con éxito Menús Fácil en tu negocio.</p>
 														</td>
 													</tr>
                         </tbody>

@@ -16,7 +16,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de la empresa</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de tu negocio</label>
 
                             <div class="col-md-6">
                                 <input id="name" @keyup="urlLug()" type="text" value="{{ old('name') }}" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" v-model="datos.name" name="name" required autofocus>
@@ -44,7 +44,7 @@
 
                         {{-- Partner --}}
                         <div class="form-group row">
-                            <label for="partnert_id" class="col-md-4 col-form-label text-md-right">ID de Partnert</label>
+                            <label for="partnert_id" class="col-md-4 col-form-label text-md-right">ID de Partnert (opcional)</label>
                             <div class="col-md-6">
                                 <input id="partnert_id" type="number" class="form-control" name="partnert_id">
                             </div>
