@@ -22,7 +22,7 @@
         {{-- <div class="row"> --}}
           <div class="input-field col l12 s8 m12 offset-m2 center">
             {{-- <img src="{{url('admin/img/logo-menusfacil.svg')}}" alt="" class="circle responsive-img valign profile-image-login"> --}}
-            <p class="center login-form-text">MenusFácil</p>
+            <p class="center login-form-text">Bienvenid@</p>
           </div>
 
 
@@ -30,7 +30,7 @@
             <div class="input-field col l12 s8 m10 offset-m3">
               <i class="material-icons prefix">person</i>
               <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}">
-              <label for="email">Correo</label>
+              <label for="email">Correo Electrónico</label>
                @if ($errors->has('email'))
                 <span class="red-text">{{ $errors->first('email') }}</span>
               @endif
