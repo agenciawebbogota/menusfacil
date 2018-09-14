@@ -58,7 +58,8 @@ class InicioController extends Controller
       });
       return view('usuario.confirmacion', ['user' => $user]);
     }else{
-      return abort(404);
+      return view('usuario.confirmacion', ['user' => $user]);
+      // return abort(404);
     }
   }
 }
