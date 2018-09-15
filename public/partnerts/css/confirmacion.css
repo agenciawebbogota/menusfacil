@@ -1,0 +1,46 @@
+/*Página de confirmación*/
+.body-conf{
+  background-color: #2b2831;
+}
+body{
+  background-image: url(/img/bg-confirmar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.conf-susc-title{
+  margin-top: 100px;
+}
+@media (min-width:320px) and (max-width:740px){
+  .conf-susc-title{ margin-top: 20px; }
+}
+
+.conf-susc-title h3{
+  text-align: center;
+  color:#2b2830;
+  font-size: 35px;
+}
+.conf-susc-title h4{
+  text-align: center;
+  font-size: 20px;
+  color: #2b2b2b;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1.5em;
+}
+.warn-conf{
+  background-color: #66181a;
+  padding: 10px 20px 10px 20px;
+  margin: 80px 250px 80px 250px;
+  border-radius: 6px;
+}
+.follow-fb{
+background-color: #043c57;   
+}
+
+.warn-conf p{
+  color: #fff;
+  text-align: center;
+}
+@media (min-width:320px) and (max-width:768px){
+  .warn-conf{ margin: 20px; }
+}

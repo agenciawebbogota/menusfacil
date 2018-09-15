@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col l8 offset-l2 center-align flow-text part-title">
       <h2>Conviértete en Socio de Menús Fácil y genera una fuente de ingresos permanente</h2>
-        <h3>Obten hasta un 10% del valor que pague cada usuario referido por ti</h3>
+        <h3>Obten un 10% del valor que pague cada usuario referido por ti</h3>
         <p>Lo mejor es que te pagamos este valor mientras que el usuario esté activo en nuestro sistema de Menús Fácil</p>
     </div>
   </div>
