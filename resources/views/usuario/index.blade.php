@@ -1,5 +1,15 @@
-@if ($empresa->confirmado == 'SI')
+@if ($empresa->confirmado != 'SI')
+<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <div>
+    <h3 class="center-align">El cliente aún no está activo./h3>
+</div>
 
+@elseif(count($menus) < 1)
+<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <div>
+    <h3 class="center-align">No hay menús disponibles en el momento</h3>
+  </div>
+@else
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -126,6 +136,7 @@
 					<label for="observaciones">¿Alguna observación?</label>
 				</div>
 				<p style="color:white" id="user_id">{{ $empresa->id }}</p>
+				@if ($empresa->estado == 'PAGA')
 				<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2 animated bounceIn" v-if="checked" >
 					<i class="material-icons prefix">email</i>
 					<input id="correo" type="text" v-model="pedido.correo"  autocomplete="off">
@@ -137,6 +148,7 @@
 				<input type="checkbox" v-model="checked"/>
 				<span>¿Quieres recibir los detalles de tu orden en tu email?</span>
 				</label>
+				@endif
 				<button style="background:{{$empresa->color1}};"
 				v-if="(pedido.menu_pedido.length >0) && (pedido.nombre.length >0 && pedido.telefono.length >0 && pedido.direccion.length>0 )" class="btn waves-effect col l6 s10 offset-l3 offset-s1" type="submit">Enviar Pedido</button>
 				<button v-else class="btn waves-effect col l6 s10 offset-l3 offset-s1 disabled" type="submit">Llena todos los campos</button>
@@ -151,9 +163,5 @@
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
 	<script type="text/javascript" src="{{url('inicio/js/app.js')}}"></script>
 </html>
-@else
-	<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
-  <div>
-    <h1 class="center-align">El cliente aún no está activo.</h1>
-  </div>
+
 @endif
