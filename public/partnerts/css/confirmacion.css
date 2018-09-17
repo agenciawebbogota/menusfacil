@@ -8,10 +8,10 @@ body{
   background-size: cover;
 }
 .conf-susc-title{
-  margin-top: 100px;
+  margin-top: 90px;
 }
 @media (min-width:320px) and (max-width:740px){
-  .conf-susc-title{ margin-top: 20px; }
+  .conf-susc-title{ margin-top: 10px; }
 }
 
 .conf-susc-title h3{
@@ -30,13 +30,20 @@ body{
 .warn-conf{
   background-color: #66181a;
   padding: 10px 20px 10px 20px;
-  margin: 80px 250px 80px 250px;
+  margin: 40px 0px 150px 0px;
   border-radius: 6px;
 }
 .follow-fb{
-background-color: #043c57;   
+background-color: #043c57;
+text-align: center;
+padding: 10px 20px 10px 20px;
+  margin: 40px 0px 150px 0px;
+  border-radius: 6px;
+  color: #fff;
 }
-
+@media (min-width:320px) and (max-width:768px){
+  .follow-fb{ margin: 20px; }
+}
 .warn-conf p{
   color: #fff;
   text-align: center;

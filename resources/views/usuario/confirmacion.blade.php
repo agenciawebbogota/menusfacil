@@ -24,13 +24,14 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="conf-susc-title">
-              <h3>Bienvenid@ a Menús Fácil {{$user->id}}</h3>
+              <h3>Bienvenid@ a Menús Fácil</h3>
               <h4>Tu suscripción ha sido confirmada<br>En solo unos segundos recibirás en tu correo electrónico todos los detalles de tu suscripción</h4>
-            </div>
-            <div class="follow-fb">
-              <p>Síguenos en Facebook<br/>Encontrarás videos tutoriales, documentación y toda la información sobre como usar la mejor aplicación de gestión de menús y pedidos, Menús Fácil</p>
-            </div>
-        </div>
+          </div>
+          </div>
+          
+          <div class="follow-fb col s10 offset-s1">
+            <p> <a href="https://www.facebook.com/Men%C3%BAs-F%C3%A1cil-236578603662891/" target="_blank">Síguenos en Facebook</a><br/>Encontrarás videos tutoriales, documentación y toda la información sobre como usar la mejor aplicación de gestión de menús y pedidos, Menús Fácil</p>
+          </div>
     </div>
 </body>
 </html>

@@ -28,11 +28,11 @@
               <h4>Hemos enviado un mensaje a tu correo electrónico para completar tu suscripción<br>
                 Por favor revisa tu bandeja de entrada</h4>
             </div>
-            <div class="warn-conf">
-              <p>Si no ves el mensaje de confirmación en tu bandeja de entrada, revisa tu carpeta de spam (correo no deseado).
-              No debería estar allí, pero a veces ¡estas cosas pasan!</p>
-            </div>
-        </div>
+          </div>
+          <div class="warn-conf col s10 offset-s1">
+            <p>Si no ves el mensaje de confirmación en tu bandeja de entrada, revisa tu carpeta de spam (correo no deseado).
+            No debería estar allí, pero a veces ¡estas cosas pasan!</p>
+          </div>
     </div>
 </body>
 </html>
