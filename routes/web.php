@@ -15,6 +15,9 @@ Route::get('/asd', function () {
 });
 
 Route::get('/', 'PedidoController@index');
+Route::get('/carga', 'MenuController@carga');
+Route::post('/cargafin', 'MenuController@cargafin');
+		
 
 Auth::routes();
 

@@ -22,6 +22,14 @@
 			<label for="precio">Precio</label>
 		</div>
 	</div>
+	<div class="row">
+		<div class="input-field col s12">
+			<i class="mdi-editor-attach-money prefix"></i>
+			<input id="imagen" type="file" v-model="add.imagen" @change="getImagen">
+			<span style="color:#c91e04">@{{ noti.imagen }}</span>
+			{{-- <label for="precio">Carga una imagen</label> --}}
+		</div>
+	</div>
 	<div id="input-switches1" class="section">
 		<div class="row section">
 			<div class="col s12 m8 l9">

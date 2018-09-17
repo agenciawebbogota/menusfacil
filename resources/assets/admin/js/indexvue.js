@@ -14,7 +14,8 @@ new Vue({
 			descripcion:'',
 			precio:'',
 			adicional:'',
-			estado:1
+			estado:1,
+			imagen: ''
 		},
 		update:{
 			nombre:'',
@@ -60,6 +61,17 @@ new Vue({
 					});
 			  })
 		},
+		getImagen(e){
+			let image = e.target.files[0];
+			let reader = new FileReader();
+			reader.readAsDataURL(image);
+			reader.onload = e => {
+				this.imagen = e.target.result;
+			}
+
+			console.log(this.add);
+			
+		},
 		addMenu:function(){
 			if(this.add.adicional){
 				this.add.adicional = 'SI'
@@ -78,32 +90,35 @@ new Vue({
 				this.noti.descripcion = ''
 				this.noti.nombre = ''
 			}else{
-					axios.post('/menus/crear',this.add)
-					.then((response)=>{
-						if (this.add.adicional == 'NO') {
-							M.toast({
-								html:'Se ha creado el menú con éxito.',
-								outDuration:1000
-							});
-						}else {
-							M.toast({
-								html:'Se ha editado con éxito.',
-								outDuration:1000
-							});
-						}
-						this.add.nombre = ''
-						this.add.descripcion = ''
-						this.add.precio = ''
-						this.add.adicional = ''
-						this.add.estado = ''
-						this.getMenus()
-					})
-					.catch(function (error) {
+				axios.post('/menus/crear',this.add)
+				.then((response)=>{
+					if (this.add.adicional == 'NO') {
 						M.toast({
-							html:'Hay un error en el servidor, contactanos.',
+							html:'Se ha creado el menú con éxito.',
 							outDuration:1000
 						});
+					}else {
+						M.toast({
+							html:'Se ha editado con éxito.',
+							outDuration:1000
+						});
+					}
+					this.add.nombre = ''
+					this.add.descripcion = ''
+					this.add.precio = ''
+					this.add.adicional = ''
+					this.add.estado = ''
+					this.getMenus()
+					console.log(response);
+					
+				})
+				.catch(function (error) {
+					M.toast({
+						html:'Hay un error en el servidor, contactanos.',
+						outDuration:1000
 					});
+					console.log(error)
+				});
 			}
 		},
 		updateMenu:function(menu, q){

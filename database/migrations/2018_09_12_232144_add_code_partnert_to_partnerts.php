@@ -16,6 +16,7 @@ class AddCodePartnertToPartnerts extends Migration
        Schema::table('partnerts', function (Blueprint $table) {
            $table->string('code_partnert', 50)->nullable();
        });
+       
      }
 
      /**

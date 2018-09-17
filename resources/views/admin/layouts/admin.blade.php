@@ -107,8 +107,8 @@
       let ref = db.ref(firebase);
     </script>
   @endif
-  <script type="text/javascript" src="{{url('admin/js/app.js')}}"></script>
-
+  
+  <script type="text/javascript" src="{{url('admin/js/app.min.js')}}"></script>
 </body>
 </html>
 @else
