@@ -11,7 +11,7 @@
       <div class="card-content" style="overflow:scroll;height:450px;background: linear-gradient(#ffffff, #e5e5e5)">
         @include('admin.includes.recursos.tabla')
       </div>
-      <div class="card-reveal">
+      <div class="card-reveal container">
         <span class="card-title grey-text text-darken-4 center-align">Crear Nuevo Menú<i class="material-icons right">close</i></span>
         @include('admin.includes.formularios.agregarmenu')
       </div>

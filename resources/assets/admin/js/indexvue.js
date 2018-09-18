@@ -15,7 +15,7 @@ new Vue({
 			precio:'',
 			adicional:'',
 			estado:1,
-			imagen: ''
+			// imagen: ''
 		},
 		update:{
 			nombre:'',
@@ -62,14 +62,44 @@ new Vue({
 			  })
 		},
 		getImagen(e){
-			let image = e.target.files[0];
-			let reader = new FileReader();
-			reader.readAsDataURL(image);
-			reader.onload = e => {
-				this.imagen = e.target.result;
-			}
 
-			console.log(this.add);
+			this.add.imagen = e.target.files[0]
+
+			let fd = new FormData();
+			fd.append('imagen', this.add.imagen, this.add.imagen.name)
+
+
+
+			this.add.imagen = fd;
+			// fd.append('id', 10)
+			// let fileReader = new FileReader();
+
+			// console.log(fd);
+
+			// axios.post('/cargafin', fd)
+			// .then(resp => {
+			// 	console.log(resp)
+			// })
+			// .catch(error => {
+			// 	console.log(error);
+				
+			// })
+
+			
+			
+
+			// fileReader.readAsDataURL(e.target.files[0])
+
+			// fileReader.onload = (a) => {
+			// 	this.add.imagen = a.target.result
+			// }
+			// let reader = new FileReader();
+			// reader.readAsDataURL(image);
+			// reader.onload = e => {
+			// }
+
+			// console.log(this.add.imagen);
+			// return fd;
 			
 		},
 		addMenu:function(){
@@ -90,7 +120,19 @@ new Vue({
 				this.noti.descripcion = ''
 				this.noti.nombre = ''
 			}else{
-				axios.post('/menus/crear',this.add)
+				let fd;
+				if(this.add.imagen){
+					fd = this.add.imagen;
+					fd.append('nombre', this.add.nombre)
+					fd.append('descripcion', this.add.descripcion)
+					fd.append('precio', this.add.precio)
+					fd.append('adicional', this.add.adicional)
+					fd.append('estado', this.add.estado)
+				}else{
+					fd = this.add;
+				}
+				// fd.append('precio', this.add.precio)
+				axios.post('/menus/crear',fd)
 				.then((response)=>{
 					if (this.add.adicional == 'NO') {
 						M.toast({
@@ -108,9 +150,7 @@ new Vue({
 					this.add.precio = ''
 					this.add.adicional = ''
 					this.add.estado = ''
-					this.getMenus()
-					console.log(response);
-					
+					this.getMenus()					
 				})
 				.catch(function (error) {
 					M.toast({

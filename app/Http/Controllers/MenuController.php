@@ -18,24 +18,25 @@ class MenuController extends Controller
 
 	{
 		$filename = $request->imagen;
+		$id = $request->id;
 		$publicId = null;
 		$options = [];
 		$tags = ['Menus', 'subida'];
 
 		// Cloudder::upload($request->input('imagen'), null, array ("public_id" => "my_dog",), ['comidas', 'servicios']);
 		// return Cloudder::getResult();
-		\Cloudinary::config(array( 
-			"cloud_name" => "menusfacil", 
-			"api_key" => "182214799745955", 
-			"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
-		));
-		$result = \Cloudinary\Uploader::upload($filename, 
-			array("folder" => "menusfacil/", "public_id" => "menusfacil", "overwrite" => TRUE, 
-			"notification_url" => "https://requestb.in/12345abcd", "width" => 400, "height" => 300, 'tags' => $tags));
+		// \Cloudinary::config(array( 
+		// 	"cloud_name" => "menusfacil", 
+		// 	"api_key" => "182214799745955", 
+		// 	"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
+		// ));
+		// $result = \Cloudinary\Uploader::upload($filename, 
+		// 	array("folder" => "menusfacil/", "public_id" => "menusfacil".Auth::id(), "overwrite" => TRUE, "width" => 400, "height" => 300, 'tags' => $tags));
 
 		// $result = \Cloudinary\Uploader::add_tag($tags, $result['public_id'], $options = array());
+		
 
-		dd($result);
+		return($id);
 
 		// \Cloudinary::upload($filename, $publicId, $options, $tags);
 		
@@ -52,27 +53,52 @@ class MenuController extends Controller
 
     public function create(Request $request){
 		// subir Imagen a Cloudinary
-
-		
-
-
-		$user = $request->user();
 		if(Auth::id()){
-			$menu = menu::create([
-	            'user_id' => Auth::id(),
-	            'nombre' => $request->input('nombre'),
-	            'descripcion' => $request->input('descripcion'),
-	            'precio' => $request->input('precio'),
-	            'adicional' => $request->input('adicional'),
-	            'estado'=>$request->input('estado')
-	        ]);
-	        // return Cloudder::getResult();
+			if(!$request->imagen){
+				$menu = menu::create([
+					'user_id' => Auth::id(),
+					'nombre' => $request->input('nombre'),
+					'descripcion' => $request->input('descripcion'),
+					'precio' => $request->input('precio'),
+					'adicional' => $request->input('adicional'),
+					'estado'=>$request->input('estado'),
+					// 'imagen' => $url,
+				]);
+				return $menu;
+			}else{
+
+				$filename = $request->imagen;
+				$publicId = null;
+				$options = [];
+				$tags = ['Menus', 'subida', 'clientes', 'MenúsFácil'];
+				// return $request->all();
+				\Cloudinary::config(array( 
+					"cloud_name" => "menusfacil", 
+					"api_key" => "182214799745955", 
+					"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
+				));
+				$result = \Cloudinary\Uploader::upload($filename, 
+					array("folder" => "menusfacil/", "public_id" => "menusfacil".Auth::id(), "overwrite" => TRUE, "width" => 400, "height" => 300, 'tags' => $tags));
+	
+			if(isset($result['url'])){
+				$url = $result['url'];
+				$user = $request->user();
+					$menu = menu::create([
+						'user_id' => Auth::id(),
+						'nombre' => $request->input('nombre'),
+						'descripcion' => $request->input('descripcion'),
+						'precio' => $request->input('precio'),
+						'adicional' => $request->input('adicional'),
+						'estado'=>$request->input('estado'),
+						'imagen' => $url,
+					]);
+					return $menu;
+				}
+			}
+			
 		}else{
 			return 'No tienes acceso';
 		}
-
-
-		
 	}
 	
 
