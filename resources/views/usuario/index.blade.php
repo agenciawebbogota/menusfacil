@@ -60,7 +60,11 @@
 									<div class="col s12 m6 l8 offset-l2" >
 										<div class="card hoverable" style="margin-top:10px">
 											<div class="card-image">
-												<img src="{{url('img/menu.img-1.jpg')}}">
+												@if ($empresa->estado_empresa == 'PAGA' && $menu->imagen != null)
+												<img src="{{$menu->imagen}}" >													
+												@else
+												<img src="{{url('img/menu.img-1.jpg')}}" >
+												@endif
 												<span class="card-title">{{$menu->nombre}}</span>
 												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
 											</div>
@@ -94,7 +98,7 @@
 					         <tbody>
 					          <tr v-for="(menu, index) in detalle" class="animated bounceIn">
 					            <td class="content">@{{menu.nombre}}    ( $ @{{ new Intl.NumberFormat().format(menu.precio) }})</td>
-											<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
+								<td class="content delete"><i class="material-icons" @click="eliminarMenu(index, menu.precio)" style="cursor:pointer;">close</i></td>
 					          </tr>
 					        </tbody>
 									<tfoot>

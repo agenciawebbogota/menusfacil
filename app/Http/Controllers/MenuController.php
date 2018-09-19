@@ -78,7 +78,7 @@ class MenuController extends Controller
 					"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
 				));
 				$result = \Cloudinary\Uploader::upload($filename, 
-					array("folder" => "menusfacil/", "public_id" => "menusfacil".Auth::id(), "overwrite" => TRUE, "width" => 400, "height" => 300, 'tags' => $tags));
+					array("folder" => "menusfacil/", "overwrite" => TRUE, "width" => 800, "height" => 248, 'tags' => $tags));
 	
 			if(isset($result['url'])){
 				$url = $result['url'];

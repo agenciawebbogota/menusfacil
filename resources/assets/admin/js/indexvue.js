@@ -28,6 +28,7 @@ new Vue({
 			nombre:'',
 			descripcion:'',
 			precio:'',
+			imagen:""
 		}
 	},
 	mounted:function(){
@@ -56,50 +57,30 @@ new Vue({
 			  })
 			  .catch(function (error) {
 			    M.toast({
-						html:'Hay un error en el servidor, contactanos.',
-						outDuration:1000
-					});
+					html:'Hay un error en el servidor, contactanos.',
+					outDuration:1000
+				});
 			  })
 		},
 		getImagen(e){
 
 			this.add.imagen = e.target.files[0]
 
+			// Validar la imagen del menú
+
+			console.log(this.add.imagen);
+
+			if(this.add.imagen.size > 30000){
+				console.log('El tamaño de la imagen supera el limite permitido de 29KB, tu imagen pesa: ',this.add.imagen.size );	
+			}else{
+				console.info("Tu imagen se puede cargar, recuerda conservar las dimensiones en el diseño, ( ancho: 800px y alto:248px )")
+			}
+			
+
 			let fd = new FormData();
 			fd.append('imagen', this.add.imagen, this.add.imagen.name)
 
-
-
 			this.add.imagen = fd;
-			// fd.append('id', 10)
-			// let fileReader = new FileReader();
-
-			// console.log(fd);
-
-			// axios.post('/cargafin', fd)
-			// .then(resp => {
-			// 	console.log(resp)
-			// })
-			// .catch(error => {
-			// 	console.log(error);
-				
-			// })
-
-			
-			
-
-			// fileReader.readAsDataURL(e.target.files[0])
-
-			// fileReader.onload = (a) => {
-			// 	this.add.imagen = a.target.result
-			// }
-			// let reader = new FileReader();
-			// reader.readAsDataURL(image);
-			// reader.onload = e => {
-			// }
-
-			// console.log(this.add.imagen);
-			// return fd;
 			
 		},
 		addMenu:function(){
@@ -150,6 +131,7 @@ new Vue({
 					this.add.precio = ''
 					this.add.adicional = ''
 					this.add.estado = ''
+					this.add.imagen = ''
 					this.getMenus()					
 				})
 				.catch(function (error) {
