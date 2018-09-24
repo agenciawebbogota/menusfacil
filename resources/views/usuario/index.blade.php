@@ -68,8 +68,10 @@
 												<span class="card-title">{{$menu->nombre}}</span>
 												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
 											</div>
-											<div class="card-content black-text">
-												<p>{{$menu->descripcion}}</p>
+											<div class="card-content black-text" >
+												<div>
+													<p id="normald">{{$menu->descripcion}} <strong>($ {{$menu->precio}})</strong></p>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -109,11 +111,11 @@
 					      </table>
 							</div>
 					</div>
-						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" v-if="terminaste == false" @click="terminaste = true">Confirmar Pedido</a>
+						<a class="waves-effect waves-light btn-large confirmar col l6 s10 offset-l3 offset-s1" v-if="(terminaste == false) && (pedido.menu_pedido.length >0)" @click="terminaste = true">Confirmar Pedido</a>
 				</div>
 			<div>
 			</div>
-		<div class="container animated fadeInDownBig" v-if="terminaste">
+		<div class="container animated fadeInDownBig" v-if="(terminaste === true) && (pedido.menu_pedido.length >0)">
 			<div class="row">
 				<div class="input-field col l8 s12 m8 offset-m2 offset-l2 ">
 					<i class="material-icons prefix">account_circle</i>

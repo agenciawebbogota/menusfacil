@@ -40,22 +40,22 @@ mix.babel([
 
 
 
-// mix.babel([
-//   'resources/assets/inicio/js/materialize.min.js',
-// ], 'public/sesion/js/app.min.js')
-//    .babel([
-//      'resources/assets/inicio/css/materialize.min.css',
-//      'resources/assets/sesion/css/login.css',
-//    ], 'public/sesion/css/app.min.css');
-//    mix.babel([
-//   'resources/assets/inicio/js/axios.min.js',
-//   'resources/assets/registro/js/app.js',
-//   'node_modules/vue/dist/vue.min.js',
-//   'resources/assets/registro/js/registro.js',
-// ], 'public/registro/js/app.min.js')
-//    .babel([
-//      'resources/assets/registro/css/app.css',
-//    ], 'public/registro/css/app.min.css');
+mix.babel([
+  'resources/assets/inicio/js/materialize.min.js',
+], 'public/sesion/js/app.min.js')
+   .babel([
+     'resources/assets/inicio/css/materialize.min.css',
+     'resources/assets/sesion/css/login.css',
+   ], 'public/sesion/css/app.min.css');
+   mix.babel([
+  'resources/assets/inicio/js/axios.min.js',
+  'resources/assets/registro/js/app.js',
+  'node_modules/vue/dist/vue.min.js',
+  'resources/assets/registro/js/registro.js',
+], 'public/registro/js/app.min.js')
+   .babel([
+     'resources/assets/registro/css/app.css',
+   ], 'public/registro/css/app.min.css');
 
 // Super usuario
    mix.babel([
@@ -71,31 +71,31 @@ mix.babel([
      'resources/assets/super_usuario/css/app.css',
    ], 'public/super_usuario/css/app.min.css');
 
-   // partners
-  //  mix.babel([
-  //    'resources/assets/inicio/js/materialize.min.js',
-  //     'resources/assets/inicio/js/axios.min.js',
-  //     // 'resources/assets/super_usuario/js/intro.min.js',
-  //     'node_modules/vue/dist/vue.min.js',
-  //     'resources/assets/partnerts/js/main.js',
-  //   ], 'public/partnerts/js/app.min.js')
-  //  .babel([
-  //    'resources/assets/inicio/css/materialize.min.css',
-  //    // 'resources/assets/super_usuario/css/introjs.min.css',
-  //    'resources/assets/partnerts/css/main.css',
-  //  ], 'public/partnerts/css/app.min.css');
+  //  partners
+   mix.babel([
+     'resources/assets/inicio/js/materialize.min.js',
+      'resources/assets/inicio/js/axios.min.js',
+      // 'resources/assets/super_usuario/js/intro.min.js',
+      'node_modules/vue/dist/vue.min.js',
+      'resources/assets/partnerts/js/main.js',
+    ], 'public/partnerts/js/app.min.js')
+   .babel([
+     'resources/assets/inicio/css/materialize.min.css',
+     // 'resources/assets/super_usuario/css/introjs.min.css',
+     'resources/assets/partnerts/css/main.css',
+   ], 'public/partnerts/css/app.min.css');
 
 
 // Configurando babel
-  //  mix.webpackConfig({
-  //       module: {
-  //           rules: [{
-  //               test: /\.jsx?$/,
-  //               exclude: /node_modules(?!\/@<redacted>)/,
-  //               use: [{
-  //                   loader: 'babel-loader',
-  //                   options: Config.babel()
-  //               }]
-  //           }]
-  //       }
-  //   }).version()
+   mix.webpackConfig({
+        module: {
+            rules: [{
+                test: /\.jsx?$/,
+                exclude: /node_modules(?!\/@<redacted>)/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: Config.babel()
+                }]
+            }]
+        }
+    }).version()

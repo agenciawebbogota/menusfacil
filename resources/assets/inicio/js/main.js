@@ -124,13 +124,16 @@ new Vue({
 			this.pedido.menu_pedido.unshift(menu.id)
 			this.detalle.unshift(menu)
 			this.pedido.total += parseFloat(menu.precio)
-			M.toast({html: 'Menú agregado', outDuration:1000});
+			// M.toast({html: 'Menú agregado', outDuration:1000});
 		},
 		eliminarMenu(index, precio){
 			this.pedido.menu_pedido.splice(index, 1)
 			this.detalle.splice(index, 1)
 			this.pedido.total -= parseFloat(precio)
-			M.toast({html: 'Menú eliminado', outDuration:1000});
+			if(this.pedido.menu_pedido.length < 1){
+				this.terminaste = false
+			}
+			// M.toast({html: 'Menú eliminado', outDuration:1000});
 		}
 	}
 })
