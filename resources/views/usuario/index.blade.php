@@ -34,6 +34,9 @@
 			color:#66181a;
 			margin: 10px;
 		}
+    /* .altodes{
+      height: 50px;
+    } */
 	</style>
 </head>
 <body>
@@ -53,36 +56,30 @@
 			<div class="row">
 				<div class="col l6 s12 m10 offset-l3 offset-m1">
 					<div class="carousel carousel-slider center">
-						@foreach ($menus as $menu)
+            @foreach ($menus as $menu)
 
-						@if ($menu->estado == 1)
-								<div class="carousel-item white-text carrusel-menu"  href="#two!" >
-									<div class="col s12 m6 l8 offset-l2" >
-										<div class="card hoverable" style="margin-top:10px">
-											<div class="card-image">
-												@if ($empresa->estado_empresa == 'PAGA' && $menu->imagen != null)
-												<img src="{{$menu->imagen}}" >													
-												@else
-												<img src="{{url('img/menu.img-1.jpg')}}" >
-												@endif
-												<span class="card-title">{{$menu->nombre}}</span>
-												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
-											</div>
-											<div class="card-content black-text" >
-												<div>
-													<p id="normald">{{$menu->descripcion}} <strong>($ {{$menu->precio}})</strong></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									@if (count($menus)>1)
-										<div class="col s12 m6 l8 offset-l2 deslizar">
-											<<< Desliza para ver más >>>
-										</div>
-									@endif
-							  </div>
-						@endif
-						@endforeach
+  						@if ($menu->estado == 1)
+  								<div class="carousel-item white-text carrusel-menu"  href="#two!" >
+  									<div class="col s12 m6 l8 offset-l2" >
+  										<div class="card hoverable" style="margin-top:10px">
+  											<div class="card-image">
+  												<img src="{{url('img/menu.img-1.jpg')}}">
+  												<span class="card-title">{{$menu->nombre}}</span>
+  												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
+  											</div>
+  											<div class="card-content black-text altodes">
+  												<p>{{$menu->descripcion}} ($ {{$menu->precio}})</p>
+  											</div>
+  										</div>
+  									</div>
+  									@if (count($menus)>1)
+  										<div class="col s12 m6 l8 offset-l2 deslizar">
+  											<<< Desliza para ver más >>>
+  										</div>
+  									@endif
+  							  </div>
+  						@endif
+  						@endforeach
 					</div>
 				</div>
 			</div>
