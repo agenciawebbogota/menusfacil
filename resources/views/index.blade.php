@@ -41,7 +41,7 @@
     </head>
 
     <body id="top">
-      
+
       <script>
         fbq('track', 'Lead');
       </script>
@@ -73,9 +73,9 @@
                           <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
                           <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
 ======= --}}
-                          <li><a href="#funciones" class="funciones">Funciones</a></li>
-                          <li><a href="#aplicaciones" data-scroll="500">Aplicaciones</a></li>
-                          <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en Partner</a></li>
+                          <li><a href="#funciones" class="funciones">Caracteristicas</a></li>
+                          <li><a href="#planes" data-scroll="500">Planes</a></li>
+                          <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en socio</a></li>
                           <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
                       </ul>
@@ -90,7 +90,6 @@
 
         <!-- start revolution slider 5.0 -->
         <section class="rev_slider_wrapper" id="home">
-          <h1 style="color:#fff;font-size:32px;display:none">Menús Fácil | manager de menus para restaurantes, hoteles, casinos y comidas rápidas</h1>
          <div class="rev_slider materialize-slider">
           <ul>
 
@@ -102,7 +101,7 @@
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
-                    data-y="['middle','middle','top','top']" data-voffset="['-120','-120','40','40']"
+                    data-y="['middle','middle','top','top']" data-voffset="['-90','-120','40','40']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:900;e:Power4.easeInOut;"
@@ -113,13 +112,13 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span>Sube a la web tus Menús Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><h1>Menús Fácil es la nueva forma<br> de recibir y atender<br>los pedidos de tus clientes</h1>
                 </div>
 
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo2"
+                <div class="tp-caption rev-heading dark-text tp-resizeme titulo2"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
-                    data-y="['middle','middle','top','top']" data-voffset="['-50','-50','100','100']"
+                    data-y="['middle','middle','top','top']" data-voffset="['40','-50','100','100']"
                     data-fontsize="['70','70','60','55']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
@@ -131,13 +130,13 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                    style="z-index: 5; white-space: nowrap;"><span class="titulo2-1">Recibe y atiende los pedidos<br/>de tus clientes Aún Más Fácil</span>
+                    style="z-index: 5; white-space: nowrap;"><h2 class="titulo2-1">"Sube a la web tus Menús Fácil<br>Recibe y atiende los pedidos de tus clientes<br>Aún Más Fácil"</h2>
                 </div>
 
                 <!-- LAYER NR. 3 -->
                 <div class="tp-caption tp-resizeme rs-parallaxlevel-3"
                     data-x="['left','left','right','right']" data-hoffset="['20','20','100','0']"
-                    data-y="['middle','middle','top','top']" data-voffset="['-200','-170','50','0']"
+                    data-y="['middle','middle','top','top']" data-voffset="['-220','-170','50','0']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
                     data-transform_in="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:1000;transformOrigin:50% 50%;"
@@ -152,7 +151,7 @@
                 <!-- LAYER NR. 4 -->
                 <div class="tp-caption tp-resizeme dark-text"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','30','30']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['150','50','-190','-190']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['250','50','-190','-190']"
                     data-fontsize="['16','16','16','16']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
@@ -170,7 +169,7 @@
                 <!-- LAYER NR. 5 -->
                 <div class="tp-caption"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['60','170','-100','-100']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['150','170','-100','-100']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:900;e:Power4.easeInOut;"
@@ -186,7 +185,7 @@
                 <!-- LAYER NR. 6 -->
                 <div class="tp-caption"
                     data-x="['left','left','center','center']" data-hoffset="['250','290','0','0']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['60','170','0','0']"
+                    data-y="['middle','middle','middle','middle']" data-voffset="['150','170','0','0']"
                     data-whitespace="nowrap"
                     data-transform_idle="o:1;"
                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:900;e:Power4.easeInOut;"
@@ -240,9 +239,9 @@
               <div class="container">
 
                 <div class="text-center wow fadeInUp">
-                    <h2 class="section-title text-uppercase text-extrabold white-text">¿De que se trata?</h2>
-                    <h3 class="section-sub white-text">Menús Fácil es la aplicación ideal para la gestión de órdenes de clientes</h3>
-
+                    <h2 class="section-title text-uppercase text-extrabold white-text">¿Qué es Menús Fácil?</h2>
+                    <h3 class="section-sub white-text">Menús Fácil es el nuevo aplicativo que gestiona, automatiza y agiliza el despacho de órdenes y pedidos de
+                     clientes en tiempo real. Va genial para servicio a domicilio o en punto de venta
                     <div class="video-trigger"><a class="popup-video" href="https://www.youtube.com/watch?v=6tyetQTVPT0"><i class="material-icons">&#xE038;</i></a></div>
                 </div>
               </div>
@@ -256,9 +255,6 @@
                   <h2 class="section-title text-uppercase text-extrabold">Características</h2>
                   <h3 class="section-sub">Menús Fácil puede ser implementado en cualquier negocio que cuente con servicio de domicilios, reservas y órdenes de clientes</h3>
               </div>
-              <h2 style="color:#fff;font-size:15px;display:none">Menús Fácil - menus para restaurantes, como crear un menú para restaurante</h2>
-              <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
-
             <div class="row">
                 <div class="col-md-4 col-sm-6">
 
@@ -276,13 +272,13 @@
                           <i class="material-icons" style="color:#66181a">input</i>
                       </div>
                       <div class="desc">
-                          <h3>Crea Menús y Adiciones desde el módulo administrador en solo segundos y con pocos clics</h3>
+                          <h3>Crea Menús y Adiciones en solo unos segundos y con pocos clics</h3>
                       </div>
                   </div>
 
                   <div class="featured-item feature-icon icon-hover right-icon wow fadeInLeft" data-wow-delay=".6s">
                       <div class="icon radius-4" style="border-color:#66181a">
-                          <i class="material-icons" style="color:#66181a">important_devices</i>
+                          <i class="material-icons" style="color:#66181a">inbox</i>
                       </div>
                       <div class="desc">
                           <h3>Visualiza en tiempo real e imprime listas de menús y pedidos de clientes</h3>
@@ -303,29 +299,27 @@
                           <i class="material-icons" style="color:#66181a">assessment</i>
                       </div>
                       <div class="desc">
-                          <h3>Estadísticas en tiempo real de tus menús creados y vendidos por día y por semana</h3>
+                          <h3>Estadísticas en tiempo real del total de tus ventas diarias por día</h3>
                       </div>
                   </div>
 
                   <div class="featured-item feature-icon icon-hover mb-80 wow fadeInRight" data-wow-delay=".4s">
                       <div class="icon radius-4" style="border-color:#66181a">
-                          <i class="material-icons" style="color:#66181a">system_update</i>
+                          <i class="material-icons" style="color:#66181a">phonelink_erase</i>
                       </div>
                       <div class="desc">
-                          <h3>Tus menús creados aparecerán disponibles al instante en el módulo cliente</h3>
+                          <h3>No necesitas descargar ninguna App ni manejar ningún software</h3>
                       </div>
                   </div>
 
                   <div class="featured-item feature-icon icon-hover wow fadeInRight" data-wow-delay=".6s">
                       <div class="icon radius-4" style="border-color:#66181a">
-                          <i class="material-icons" style="color:#66181a">archive</i>
+                          <i class="material-icons" style="color:#66181a">http</i>
                       </div>
                       <div class="desc">
-                          <h3>Consulta y descarga histórico de menús creados sin importar si están habilitados o no</h3>
+                          <h3>Tus clientes acceden a tus menús desde tu url personalizada o código QR</h3>
                       </div>
                   </div>
-                  <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
-
                 </div><!-- /.col-md-4 -->
             </div><!-- /.row -->
 
@@ -456,21 +450,140 @@
 
           </div>
         </section>
-        <p style="color:#fff;font-size:15px;display:none">Menús Fácil para crear menus para restaurantes, menus de restaurantes, como crear un menú para un restaurante, como crear un sistema de reservas para hoteles</p>
-        <section class="ptb-90 gray-bg">
+
+        <section class="ptb-30 ctabg">
             <div class="container">
                 <div class="text-center wow fadeInUp">
                     <!--promo box center align start-->
-                    <h2 class="text-uppercase mb-30 font-30 text-extrabold">Prueba GRATIS Menús Fácil en tu negocio</h2>
-                    <h2 class="mb-30">Sin descargas, sin tarjeta de crédito, sin compromisos</h2>
-
-                    <a href="/register" class="btn btn-prueba"> <span>Comienza <strong>AHORA</strong></span></a>
+                    <h2 class="text-uppercase mb-30 font-30 text-extrabold white-text">Prueba GRATIS Menús Fácil en tu negocio</h2>
+                    <h2 class="mb-30 white-text">Sin descargas, sin tarjeta de crédito, sin compromisos</h2>
+                    <a href="/register" class="btn btncta"> <span>Comienza <strong>AHORA</strong></span></a>
                     <!--promo box center align end-->
                 </div>
             </div>
         </section>
 
-        <section class="section-padding lighten-4" style="background-color:#f5f5f5;margin-top:-70px">
+        <section class="ptb-30 gray-bg" id="planes">
+            <div class="container">
+              <div class="text-center mb-80 wow fadeInUp">
+                  <h2 class="section-title text-uppercase text-extrabold">Nuestros Planes</h2>
+                  <h3 class="section-sub">Actualiza a usuario Premium y ahorra el 20% de tu suscripción mensual</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-table">
+                        <div class="table-contents text-center">
+                            <div class="table-header brand-hover pbasic">
+                                <div class="package-name">
+                                    <span class="white-text">Básico</span>
+                                    <p class="prdesc">Para pequeños establecimientos</p>
+                                    <div class="precio">
+                                      <span class="delrprice"><del>$170.000</del></span><br>
+                                      <span class="price">$136.000/mes</span>
+                                    </div>
+                                </div>
+                            </div> <!-- /.table-header -->
+
+                            <div class="table-info">
+                                <ul>
+                                    <li>Hasta 30 órdenes por día</li>
+                                    <li>Colores y logotipo del negocio</li>
+                                    <li>URL y código QR personalizados</li>
+                                    <li class="refil"><br><br><br><br><br></li>
+                                </ul>
+                            </div><!-- /.table-info -->
+                        </div> <!-- /.table-contents -->
+                    </div><!-- /.pricing-table -->
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="pricing-table">
+                        <div class="table-contents text-center">
+                            <div class="table-header brand-hover pmedium">
+                                <div class="package-name">
+                                  <span class="white-text">Profesional</span>
+                                  <p class="prdesc">Para negocios en crecimiento</p>
+                                  <div class="precio">
+                                    <span class="delrprice"><del>$359.000</del></span><br>
+                                    <span class="price">$287.000/mes</span>
+                                  </div>
+                                </div>
+                            </div> <!-- /.table-header -->
+
+                            <div class="table-info">
+                                <ul>
+                                    <li>Hasta 50 órdenes por día</li>
+                                    <li>Colores y logotipo del negocio</li>
+                                    <li>URL y código QR personalizados</li>
+                                    <li>Subir imágenes de platos</li>
+                                    <li>Agregar tiempo de espera de orden</li>
+                                    <li>Escoger punto de venta o domicilios</li>
+                                    <li>Check órdenes despachadas</li>
+                                    <br>
+                                </ul>
+                            </div><!-- /.table-info -->
+                        </div> <!-- /.table-contents -->
+                    </div><!-- /.pricing-table -->
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="pricing-table">
+                        <div class="table-contents text-center">
+                            <div class="table-header brand-hover pfull">
+                                <div class="package-name">
+                                  <span class="white-text">Empresarial</span>
+                                  <p class="prdesc">Para grandes hoteles y restaurantes</p>
+                                  <div class="precio">
+                                    <span class="delrprice"><del>$699.000</del></span><br>
+                                    <span class="price">$559.000/mes</span>
+                                  </div>
+                                </div>
+                            </div> <!-- /.table-header -->
+
+                            <div class="table-info">
+                                <ul>
+                                    <li>Hasta 200 órdenes por día</li>
+                                    <li>Colores y logotipo del negocio</li>
+                                    <li>URL y código QR personalizados</li>
+                                    <li>Subir imágenes de platos</li>
+                                    <li>Horario apertura y cierre de órdenes</li>
+                                    <li>Limitar número de platos</li>
+                                    <li>Escoger punto de venta o domicilio</li>
+                                    <li>Check para órdenes despachadas</li>
+                                </ul>
+                            </div><!-- /.table-info -->
+
+                        </div> <!-- /.table-contents -->
+                    </div><!-- /.pricing-table -->
+                </div><!-- /.col-md-4 -->
+              </div><!-- /.row -->
+              <div class="row">
+                <div class="col m4 offset-m4 s4 offset-s3 l4 offset-l5">
+                  <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important; margin-top:20px;"> <span>Actualiza <strong>AHORA</strong></span></a>
+                </div>
+                <div class="col m5 offset-m3 s6 offset-s3 l4 offset-l4">
+                  <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
+                </div>
+              </div>
+            </div><!-- /.container -->
+        </section>
+
+        <section class="content-promo-box banner padding-top-100 padding-bottom-120 gray-bg" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 s12 inscsoc">
+                        <h2 class="font-30 text-extrabold mb-30 text-uppercase">Pero puedes usarlo en tu negocio<br>¡Totalmente Gratis!</h2>
+                        <h3>Es más...Te pagamos por usarlo</h3>
+                        <p>Solo inscríbete en nuestro Programa de Socios y obten el 10% del valor mensual del plan que tus referidos paguen.</p>
+                        <a href="{{url('registro/partnerts')}}" target="_blank" class="btn btncta btn-lg waves-effect waves-light"> Conviertete en <strong>Socio</strong></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="section-padding lighten-4" style="background-color:#f5f5f5;margin-top:-70px">
             <div class="container">
               <div class="row">
                 <div class="col l6 m6 s12 light-grey-text">
@@ -488,17 +601,10 @@
 					         <img src="assets/img/seo-info-light.png" alt="Suscripción a Menús Fácil" class="img-responsive">
                 </div><!-- /.col-md-5 -->
                 </div><!-- /.row -->
-                <div class="row">
-                  <div class="col m4 offset-m4 s4 offset-s3 l4 offset-l5">
-                    <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important; margin-top:20px;"> <span>Actualiza <strong>AHORA</strong></span></a>
-                  </div>
-                  <div class="col m5 offset-m3 s6 offset-s3 l4 offset-l4">
-                    <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
-                  </div>
-                </div>
+
             </div><!-- /.container -->
 
-        </section>
+        </section> --}}
 
         <footer class="footer footer-four">
             <div class="primary-footer color1-bg text-center" style="padding-bottom:30px">

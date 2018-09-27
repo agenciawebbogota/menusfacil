@@ -2,7 +2,7 @@
 @import url("assets/fonts/flaticon/flaticon.css");
 
 /* Google Web Fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 
 
@@ -10,7 +10,7 @@
 /* ================= General ==================== */
 
 body{
-    font-family: 'Montserrat', sans-serif; !important;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 29px;
     font-weight: 500;
@@ -23,7 +23,7 @@ body{
 }
 
 html {
-    font-family: 'Raleway', sans-serif!important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -35,8 +35,7 @@ body {
 .logo-mf{ width: 200px !important; height: 197px !important; }
 /*Logo*/
 .titulo{ font-size:40px;line-height:1.2em; }
-.titulo2{ font-size:40px;line-height:1.2em; }
-}
+.titulo2-1{font-size: 28px;line-height: 1em;font-style: italic;}
 .section-title h3{ color:#fff !important; font-family: 'Montserrat', sans-serif !important; }
 /*Botones*/
 .btn-prueba{background-color: #339642 !important;}
@@ -45,9 +44,9 @@ body {
 /*Responsive Header*/
 @media screen and (max-width: 600px){
   .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 250px !important; margin-left: -190px !important}
-  .titulo{font-size: 25px; margin-top: 100px !important;}
-  .titulo2{margin-top: 80px !important;}
-  .titulo2-1{font-size: 25px;line-height: 0.1em;}
+  .titulo{font-size: 22px; margin-top: 60px !important;text-align: center;}
+  .titulo2{margin-top: 95px !important;text-align:center;}
+  .titulo2-1{font-size: 22px;line-height: 1em;}
   .descp{ display:none; }
   .btn-prueba{margin-top:480px; }
   .btn-conoce{margin-top:500px;}
@@ -55,24 +54,44 @@ body {
 }
 @media (min-width:640px) and (max-width:767px){
   .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 220px !important; margin-left: -240px !important}
-  .titulo{font-size: 32px; margin-top: 100px !important;}
-  .titulo2{margin-top: 80px !important;}
-  .titulo2-1{font-size: 32px;line-height: 0.1em;}
+  .titulo{font-size: 25px; margin-top: 40px !important;text-align: center;}
+  .titulo2{margin-top: 80px !important;text-align: center;}
+  .titulo2-1{font-size: 20px;line-height:1em;font-style:italic;}
   .descp{ display:none; }
   .btn-prueba{margin-top:480px; }
   .btn-conoce{margin-top:500px;}
   .ipad-img{ display: none; }
 }
 @media (min-width:768px) and (max-width:1800px){
-  .titulo2-1{font-size:40px !important;line-height:1em !important;}
   .logo-brand{display: none;}
 }
-
-
+@media (min-width:768px) and (max-width:1023px){
+  .titulo2-1{font-size:25px !important;line-height:1em !important;}
+  .btn-prueba{ margin-top: 20px; }
+  .btn-conoce{ margin-top: 150px; margin-left: -200px;}
+  .descp{ display:none; }
+  .titulo{font-size: 20px; margin-top: 120px !important;}
+  .titulo2{margin-top: 200px !important;}
+  .titulo2-1{font-size: 18px !important;}
+}
 .logo-footer img{ width: 180px; height: 173px; }
 
-/*menu */
-
+/*Call to Action*/
+.ctabg{background-color:#2b2831; }
+.btncta{background-color: #339642 !important;}
+/*Precios Planes*/
+.pbasic{ background-color: #2b2831; }
+.pmedium{ background-color: #66181a; }
+.pfull{ background-color: #339642; }
+.precio{ padding-bottom: 20px;}
+.prdesc{text-transform: none;color:#fff;font-size:15px;line-height:normal;font-weight:300;}
+.delrprice{ color:#fff;font-size: 20px;}
+.price{ color:#fff; }
+.btnconso{ background-color: }
+@media screen and (max-width: 768px){
+  .refil{display: none;}
+  .inscsoc{ text-align: center; }
+}
 
 
 /* Link style
@@ -88,7 +107,7 @@ a > * {
 }
 a:focus,
 a:hover {
-    color: #03a9f4;
+    color: #d08e09;
     outline: none;
     text-decoration: none;
 }
@@ -110,7 +129,7 @@ a,
 /* ================ Typography ================== */
 
 h1, h2, h4, h5, h6{
-    font-family: 'Raleway', sans-serif!important;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #202020;
     margin: 0 0 15px;
@@ -123,7 +142,7 @@ h2 {
     font-size: 20px;
 }
 h3 {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #202020;
@@ -160,7 +179,7 @@ hr {
     font-size: 16px;
     line-height: 26px;
     border-radius: 2px;
-    background-color: #03a9f4; /*brand primary color*/
+    background-color: #d08e09; /*brand primary color*/
     border: 0;
 }
 
@@ -178,7 +197,7 @@ hr {
 }
 
 .btn:hover{
-    background-color: #03a9f4;
+    background-color: #d08e09;
 }
 
 .btn.active,
@@ -190,7 +209,7 @@ hr {
 .btn.white,
 .btn.white:hover,
 .btn.white:focus {
-    color: #03a9f4;
+    color: #d08e09;
 }
 
 .btn i.material-icons {
@@ -280,7 +299,7 @@ thead {
     color: #999;
 }
 .contact-info .mail a:hover {
-    color: #03a9f4;
+    color: #d08e09;
 }
 
 #mapcontent p {
@@ -574,16 +593,6 @@ thead {
     border-radius: 4px;
 }
 
-
-/*Font Family*/
-.font-roboto {
-    font-family: 'Roboto', sans-serif !important;
-}
-.font-greatvibes {
-    font-family: 'Great Vibes', cursive !important;
-}
-
-
 /*Font Size*/
 .font-20 {
     font-size: 20px
@@ -686,21 +695,21 @@ thead {
 
 /* ================= Color Presets ==================== */
 .brand-color {
-    color: #03a9f4 !important; /*theme primary color*/
+    color: #d08e09 !important; /*theme primary color*/
 }
 .brand-color.darken-2 {
-    color: #0288d1 !important;
+    color: #d08e09 !important;
 }
 .brand-bg {
     background-color: #2b2831 !important; /*theme primary background color*/
 }
 
 .brand-bg.darken-2 {
-    background-color: #0288d1 !important;
+    background-color: #d08e09 !important;
 }
 
 .brand-hover:hover {
-	background-color: #03a9f4 !important; /*theme primary hover color*/
+	background-color: #d08e09 !important; /*theme primary hover color*/
 }
 
 
@@ -914,7 +923,7 @@ thead {
     margin-bottom: 20px;
 }
 .section-sub {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
 }
 @media (min-width: 992px){
@@ -1257,7 +1266,7 @@ button.mfp-arrow {
     color: #999;
 }
 .profile .available a:hover{
-    color: #03a9f4;
+    color: #d08e09;
 }
 
 @media screen and (max-width: 991px) {
@@ -1337,7 +1346,7 @@ button.mfp-arrow {
     content: "";
     width: 20px;
     height: 20px;
-    background-color: #03a9f4;
+    background-color: #d08e09;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1518,7 +1527,7 @@ Gallery Thumb
 }
 .food-menu-label {
     background: #fff8f1;
-    color: #03a9f4;
+    color: #d08e09;
     display: inline-block;
     padding: 0 10px;
     font-style: italic;
@@ -2024,7 +2033,7 @@ KEY FRAME
 }
 
 .search-trigger i:hover {
-    color: #03a9f4;
+    color: #d08e09;
 }
 .tt-nav.sticky .search-trigger i.material-icons {
     line-height: 62px;

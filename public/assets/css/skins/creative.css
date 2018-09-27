@@ -55,7 +55,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 .brand-bg,
 .brand-hover:hover,
 .icon-hover-brand:hover .icon {
-    background-color: #673ab7 !important; /*theme primary background color*/
+    background-color: #d08e09 !important; /*theme primary background color*/
 }
 
 
