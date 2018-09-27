@@ -74,10 +74,10 @@
                           <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
 ======= --}}
                           <li><a href="#funciones" class="funciones">Caracteristicas</a></li>
-                          <li><a href="#planes" data-scroll="500">Planes</a></li>
+                          <li><a href="#planes">Planes</a></li>
                           <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en socio</a></li>
-                          <li><a class="ini-ses" href="/login" data-scroll>Inicia Sesion</a></li>
-                          <li><a class="ini-reg" href="/register" data-scroll>Registrate</a></li>
+                          <li><a class="ini-ses" href="/login">Inicia Sesion</a></li>
+                          <li><a class="ini-reg" href="/register">Registrate</a></li>
                       </ul>
                       <!--mega menu end-->
 
@@ -559,10 +559,10 @@
                 </div><!-- /.col-md-4 -->
               </div><!-- /.row -->
               <div class="row">
-                <div class="col m4 offset-m4 s4 offset-s3 l4 offset-l5">
+                <div class="col m4 offset-m4 s4 offset-s2 l4 offset-l5">
                   <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important; margin-top:20px;"> <span>Actualiza <strong>AHORA</strong></span></a>
                 </div>
-                <div class="col m5 offset-m3 s6 offset-s3 l4 offset-l4">
+                <div class="col m6 offset-m3 s8 offset-s2 l4 offset-l4">
                   <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
                 </div>
               </div>
@@ -694,11 +694,6 @@
             let scrolForm = $('#funciones').offset().top + 780;
             // let servicios = $('.servicios').offset().top
             $('.funciones').click((e) => {
-              e.preventDefault()
-              alert('funciones')
-              $('body,html').animate({'scrollTop':scrolForm+100}, 2000)
-            })
-            $('.funcion').click((e) => {
               e.preventDefault()
               $('body,html').animate({'scrollTop':scrolForm+100}, 2000)
             })

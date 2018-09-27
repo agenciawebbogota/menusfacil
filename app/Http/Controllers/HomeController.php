@@ -26,6 +26,10 @@ class HomeController extends Controller
         return view('admin.index');
     }
 
+    public function facturacion(){
+      return view('admin.facturacion');
+    }
+
 
 
 }

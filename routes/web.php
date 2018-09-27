@@ -17,12 +17,13 @@ Route::get('/asd', function () {
 Route::get('/', 'PedidoController@index');
 Route::get('/carga', 'MenuController@carga');
 Route::post('/cargafin', 'MenuController@cargafin');
-		
+
 
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
-
+// Ruta de facturacióne
+Route::get('/admin/facturacion', 'HomeController@facturacion');
 
 // Manejar la vista del usuario
 Route::get('cliente/{url}', 'InicioController@index');

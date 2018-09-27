@@ -21,6 +21,7 @@
         /* width: 300px; */
     }
   }
+  #slide-out{background-color: #ebebeb;}
   </style>
 </head>
 <body>
@@ -35,8 +36,8 @@
         <li>
           <div class="user-view">
             <a><img class="circle" width="190" src="{{Auth::user()->perfil}}"></a>
-            <a href="{{ url('cliente')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">VISTA PÚBLICA</span></a>
-            <a href="#"><span class="gray-text email" style="text-transform:uppercase;">{{ Auth::user()->email }}</span></a>
+            <a href="{{ url('cliente')."/".Auth::user()->url}}" target="_blank"><span class="gray-text name">Vista Pública</span></a>
+            <a href="#"><span class="gray-text email">{{ Auth::user()->email }}</span></a>
           </div>
         </li>
 
@@ -49,6 +50,9 @@
         <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">attach_money</i></a></li>
+      <li><div class="divider"></div></li>
     </ul>
     <div class="navbar-fixed">
       <nav>
@@ -91,8 +95,8 @@
   <footer class="page-footer" style="background-color:{{Auth::user()->color1}}">
       <div class="footer-copyright">
           <div class="container">
-            <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="https://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
-            <span class="right">Todos los derechos reservados</span>
+            {{-- <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="https://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span> --}}
+            <h6 class="center-align">Menús Fácil - Manager de Pedidos y Menús © Todos los derechos reservados</h6>
           </div>
       </div>
   </footer>
@@ -107,7 +111,7 @@
       let ref = db.ref(firebase);
     </script>
   @endif
-  
+
   <script type="text/javascript" src="{{url('admin/js/app.min.js')}}"></script>
 </body>
 </html>
