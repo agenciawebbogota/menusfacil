@@ -2236,3 +2236,18 @@ KEY FRAME
 #preloader .progress .indeterminate{
     background:#66181a;
 }
+
+/*Pagina facturacion*/
+.imagen-logo{
+  width: 140px;
+}
+.bgbar{
+  background-color: #2b2831;
+}
+.text-medpago{
+  text-align: center;
+  font-size: 22px;
+}
+.text-medpago span{
+  font-size: 18px;
+}

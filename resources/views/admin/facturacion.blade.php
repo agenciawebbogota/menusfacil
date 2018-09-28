@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Partnert || Menús Fácil</title>
+  <title>Actualizar Cuenta || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="csrf-token" content="IKjGR54bAHYIfZadImuhOCJF7QhLZSqXWqQGKd21">
   <link href="http://127.0.0.1:8000/partnerts/css/app.min.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -11,29 +11,144 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="{{url('admin/css/facturacion.css')}}">
+  <link href="{{url('assets/css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/materialize/css/materialize.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/css/shortcodes/shortcodes.css')}}" rel="stylesheet">
+  <link href="{{url('style.css')}}" rel="stylesheet">
+  <link href="{{url('assets/css/skins/creative.css')}}" rel="stylesheet">
   <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
-  <style media="screen">
-    [v-cloak] {
-      display: none;
-    }
-    .imagen-logo{
-      width: 140px;
-      /* text-align:  */
-    }
-  </style>
 </head>
 <body>
-  <div id="partnerts" v-cloak>
-    <div class="navbar-fixed">
+  <div>
+    <div class="bgbar">
       <nav>
         <a class="brand-logo center">
           <img src="{{url('admin/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="100px" class="imagen-logo">
         </a>
       </nav>
     </div>
-    <div class="">
-      <h2>titulo de la página facturacion<br>Mensaje de bienvenida<br></h2>
-    </div>
+    <section class="ptb-30 gray-bg">
+        <div class="container">
+          <div class="text-center mb-80 wow fadeInUp">
+              <h2 class="section-title text-uppercase text-extrabold">Actualiza tu cuenta</h2>
+              <h3 class="section-sub">Actualiza ahora tu cuenta de -nombre- y ahorra el 20% de tu suscripción mensual</h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="table-contents text-center">
+                        <div class="table-header brand-hover pbasic">
+                            <div class="package-name">
+                                <span class="white-text">Básico</span>
+                                <p class="prdesc">Para pequeños establecimientos</p>
+                                <div class="precio">
+                                  <span class="delrprice"><del>$170.000</del></span><br>
+                                  <span class="price">$136.000/mes</span>
+                                </div>
+                            </div>
+                        </div> <!-- /.table-header -->
+
+                        <div class="table-info">
+                            <ul>
+                                <li>Hasta 30 órdenes por día</li>
+                                <li>Colores y logotipo del negocio</li>
+                                <li>URL y código QR personalizados</li>
+                                <li class="refil"><br><br><br><br><br></li>
+                            </ul>
+                        </div><!-- /.table-info -->
+                        <div class="table-footer">
+                            <div class="purchase-button">
+                                <a class="btn btncta" href="#">Elegir este plan</a>
+                            </div>
+                        </div> <!-- /.table-footer -->
+                    </div> <!-- /.table-contents -->
+                </div><!-- /.pricing-table -->
+            </div><!-- /.col-md-4 -->
+
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="table-contents text-center">
+                        <div class="table-header brand-hover pmedium">
+                            <div class="package-name">
+                              <span class="white-text">Profesional</span>
+                              <p class="prdesc">Para negocios en crecimiento</p>
+                              <div class="precio">
+                                <span class="delrprice"><del>$359.000</del></span><br>
+                                <span class="price">$287.000/mes</span>
+                              </div>
+                            </div>
+                        </div> <!-- /.table-header -->
+
+                        <div class="table-info">
+                            <ul>
+                                <li>Hasta 50 órdenes por día</li>
+                                <li>Colores y logotipo del negocio</li>
+                                <li>URL y código QR personalizados</li>
+                                <li>Subir imágenes de platos</li>
+                                <li>Agregar tiempo de espera de orden</li>
+                                <li>Escoger punto de venta o domicilios</li>
+                                <li>Check órdenes despachadas</li>
+                                <br><br>
+                            </ul>
+                        </div><!-- /.table-info -->
+                        <div class="table-footer">
+                            <div class="purchase-button">
+                                <a class="btn btncta" href="#">Elegir este plan</a>
+                            </div>
+                        </div> <!-- /.table-footer -->
+                    </div> <!-- /.table-contents -->
+                </div><!-- /.pricing-table -->
+            </div><!-- /.col-md-4 -->
+
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="table-contents text-center">
+                        <div class="table-header brand-hover pfull" style="background-color:#e88a10">
+                            <div class="package-name">
+                              <span class="white-text">Empresarial</span>
+                              <p class="prdesc">Para grandes hoteles y restaurantes</p>
+                              <div class="precio">
+                                <span class="delrprice"><del>$699.000</del></span><br>
+                                <span class="price">$559.000/mes</span>
+                              </div>
+                            </div>
+                        </div> <!-- /.table-header -->
+
+                        <div class="table-info">
+                            <ul>
+                                <li>Hasta 200 órdenes por día</li>
+                                <li>Colores y logotipo del negocio</li>
+                                <li>URL y código QR personalizados</li>
+                                <li>Subir imágenes de platos</li>
+                                <li>Horario apertura y cierre de órdenes</li>
+                                <li>Limitar número de platos</li>
+                                <li>Escoger punto de venta o domicilio</li>
+                                <li>Check para órdenes despachadas</li>
+                            </ul>
+                        </div><!-- /.table-info -->
+                        <div class="table-footer">
+                            <div class="purchase-button">
+                                <a class="btn btncta" href="#">Elegir este plan</a>
+                            </div>
+                        </div> <!-- /.table-footer -->
+                    </div> <!-- /.table-contents -->
+                </div><!-- /.pricing-table -->
+            </div><!-- /.col-md-4 -->
+          </div><!-- /.row -->
+          <div class="row padding-top-50">
+            <h3 class="text-medpago">Paga fácil y rápido con tu medio de pago favorito<br><br><span>Tu cuenta se actualizará una vez confirmado el pago</span></h3>
+            <div class="col m6 offset-m3 s8 offset-s2 l4 offset-l4">
+              <img src="../assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
+            </div>
+          </div>
+          <div class="ptb-30 text-center wow fadeInUp">
+              <a href="#">Cancelar y volver a la página principal</a>
+          </div>
+          </div> <!-- /.table-footer -->
+        </div><!-- /.container -->
+    </section>
 
 
 
@@ -43,8 +158,7 @@
   <footer class="page-footer" style="background-color:#2a2730">
       <div class="footer-copyright">
           <div class="container">
-            <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="https://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
-            <span class="right">Todos los derechos reservados</span>
+            <span class="text-center">Todos los derechos reservados</span>
           </div>
       </div>
       <script type="text/javascript" src="{{url('partnerts/js/app.min.js')}}">
