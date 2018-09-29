@@ -164,6 +164,4 @@ class MenuController extends Controller
 	    	dd('Enviar una vista de publicidad si la empresa no existe..');
 	    }
 		}
-
-
 }

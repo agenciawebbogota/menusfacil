@@ -34,9 +34,10 @@
 			color:#66181a;
 			margin: 10px;
 		}
-    /* .altodes{
-      height: 50px;
-    } */
+    .altodes{
+	  height: 50px;
+	  margin-bottom: 10px;
+    }
 	</style>
 </head>
 <body>

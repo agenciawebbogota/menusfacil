@@ -32,9 +32,8 @@
         <div class="container">
           <div class="text-center mb-80 wow fadeInUp">
               <h2 class="section-title text-uppercase text-extrabold">Actualiza tu cuenta</h2>
-              <h3 class="section-sub">Actualiza ahora tu cuenta de -nombre- y ahorra el 20% de tu suscripción mensual</h3>
+              <h3 class="section-sub">Actualiza ahora tu cuenta de {{Auth::user()->name}} y ahorra el 20% de tu suscripción mensual</h3>
           </div>
-
           <div class="row">
             <div class="col-md-4">
                 <div class="pricing-table">
@@ -48,7 +47,7 @@
                                   <span class="price">$136.000/mes</span>
                                 </div>
                             </div>
-                        </div> <!-- /.table-header -->
+                        </div>
 
                         <div class="table-info">
                             <ul>
@@ -57,15 +56,30 @@
                                 <li>URL y código QR personalizados</li>
                                 <li class="refil"><br><br><br><br><br></li>
                             </ul>
-                        </div><!-- /.table-info -->
+                        </div>
                         <div class="table-footer">
                             <div class="purchase-button">
-                                <a class="btn btncta" href="#">Elegir este plan</a>
+                                <form novalidate class="md-layout" method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
+                                    <input name="merchantId"    type="hidden"  value="{{$merchanId}}">
+                                    <input name="accountId"     type="hidden"  value="{{$accoundId}}">
+                                    <input name="description"   type="hidden"  value="{{$descripcion}}">
+                                    <input name="referenceCode" type="hidden"  value="{{$PLAN1['referencia']}}" >
+                                    <input name="amount"        type="hidden"  value="{{$PLAN1['valor']}}"   >
+                                    <input name="tax"           type="hidden"  value="0"  >
+                                    <input name="taxReturnBase" type="hidden"  value="0" >
+                                    <input name="currency"      type="hidden"  value="{{$PLAN1['moneda']}}" >
+                                    <input name="signature"     type="hidden"  value="{{$PLAN1['signature']}}">
+                                    <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
+                                    <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
+                                    <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
+                                    <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
+                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                </form>
                             </div>
-                        </div> <!-- /.table-footer -->
-                    </div> <!-- /.table-contents -->
-                </div><!-- /.pricing-table -->
-            </div><!-- /.col-md-4 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-md-4">
                 <div class="pricing-table">
@@ -79,8 +93,7 @@
                                 <span class="price">$287.000/mes</span>
                               </div>
                             </div>
-                        </div> <!-- /.table-header -->
-
+                        </div>
                         <div class="table-info">
                             <ul>
                                 <li>Hasta 50 órdenes por día</li>
@@ -92,16 +105,30 @@
                                 <li>Check órdenes despachadas</li>
                                 <br><br>
                             </ul>
-                        </div><!-- /.table-info -->
+                        </div>
                         <div class="table-footer">
                             <div class="purchase-button">
-                                <a class="btn btncta" href="#">Elegir este plan</a>
+                                <form novalidate class="md-layout" method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
+                                    <input name="merchantId"    type="hidden"  value="{{$merchanId}}">
+                                    <input name="accountId"     type="hidden"  value="{{$accoundId}}">
+                                    <input name="description"   type="hidden"  value="{{$descripcion}}">
+                                    <input name="referenceCode" type="hidden"  value="{{$PLAN2['referencia']}}" >
+                                    <input name="amount"        type="hidden"  value="{{$PLAN2['valor']}}"   >
+                                    <input name="tax"           type="hidden"  value="0"  >
+                                    <input name="taxReturnBase" type="hidden"  value="0" >
+                                    <input name="currency"      type="hidden"  value="{{$PLAN2['moneda']}}" >
+                                    <input name="signature"     type="hidden"  value="{{$PLAN2['signature']}}">
+                                    <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
+                                    <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
+                                    <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
+                                    <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
+                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                </form>
                             </div>
-                        </div> <!-- /.table-footer -->
-                    </div> <!-- /.table-contents -->
-                </div><!-- /.pricing-table -->
-            </div><!-- /.col-md-4 -->
-
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-4">
                 <div class="pricing-table">
                     <div class="table-contents text-center">
@@ -114,8 +141,7 @@
                                 <span class="price">$559.000/mes</span>
                               </div>
                             </div>
-                        </div> <!-- /.table-header -->
-
+                        </div>
                         <div class="table-info">
                             <ul>
                                 <li>Hasta 200 órdenes por día</li>
@@ -127,16 +153,31 @@
                                 <li>Escoger punto de venta o domicilio</li>
                                 <li>Check para órdenes despachadas</li>
                             </ul>
-                        </div><!-- /.table-info -->
+                        </div>
                         <div class="table-footer">
                             <div class="purchase-button">
-                                <a class="btn btncta" href="#">Elegir este plan</a>
+                                <form novalidate class="md-layout" method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
+                                    <input name="merchantId"    type="hidden"  value="{{$merchanId}}">
+                                    <input name="accountId"     type="hidden"  value="{{$accoundId}}">
+                                    <input name="description"   type="hidden"  value="{{$descripcion}}">
+                                    <input name="referenceCode" type="hidden"  value="{{$PLAN3['referencia']}}" >
+                                    <input name="amount"        type="hidden"  value="{{$PLAN3['valor']}}"   >
+                                    <input name="tax"           type="hidden"  value="0"  >
+                                    <input name="taxReturnBase" type="hidden"  value="0" >
+                                    <input name="currency"      type="hidden"  value="{{$PLAN3['moneda']}}" >
+                                    <input name="signature"     type="hidden"  value="{{$PLAN3['signature']}}">
+                                    <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
+                                    <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
+                                    <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
+                                    <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
+                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                </form>
                             </div>
-                        </div> <!-- /.table-footer -->
-                    </div> <!-- /.table-contents -->
-                </div><!-- /.pricing-table -->
-            </div><!-- /.col-md-4 -->
-          </div><!-- /.row -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
           <div class="row padding-top-50">
             <h3 class="text-medpago">Paga fácil y rápido con tu medio de pago favorito<br><br><span>Tu cuenta se actualizará una vez confirmado el pago</span></h3>
             <div class="col m6 offset-m3 s8 offset-s2 l4 offset-l4">
@@ -146,15 +187,10 @@
           <div class="ptb-30 text-center wow fadeInUp">
               <a href="#">Cancelar y volver a la página principal</a>
           </div>
-          </div> <!-- /.table-footer -->
-        </div><!-- /.container -->
+          </div>
+        </div>
     </section>
-
-
-
-
     <!-- Botones flotantes con opciones -->
-
   <footer class="page-footer" style="background-color:#2a2730">
       <div class="footer-copyright">
           <div class="container">
@@ -162,7 +198,6 @@
           </div>
       </div>
       <script type="text/javascript" src="{{url('partnerts/js/app.min.js')}}">
-
       </script>
   </footer>
 </body>
