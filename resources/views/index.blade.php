@@ -583,7 +583,7 @@
                     <!--promo box center align start-->
                     <h2 class="mb-30 font-30 white-text">¿Ya cuentas con Menús Fácil y quieres agregar una sucursal de tu negocio?</h2>
                     <h3 class="mb-30 white-text ection-sub">Obtén un 30% de descuento sobre tu plan inicial con las mismas funciones para tus nuevas sucursales. Tendrás administradores independientes para cada sucursal</h3>
-                    <a href="/admin/crear-sucursal" class="btn btncta"> <span>Quiero agregar <strong>una sucursal</strong></span></a>
+                    <a href="/admin/crear-sucursal" class="btn btncta"> <span>Agrega <strong>una sucursal</strong></span></a>
                     <!--promo box center align end-->
                 </div>
             </div>
