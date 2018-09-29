@@ -396,12 +396,12 @@
 
 
 
-        <section class="padding-top-100" style="background-color:#fcf1e2">
+        <section class="padding-top-50" style="background-color:#fcf1e2">
           <div class="container">
 
                 <div class="text-center mb-50 wow fadeInUp">
-                    <h2 class="section-title text-uppercase text-extrabold">Screenshots</h2>
-                    <h3 class="section-sub">No es necesario realizar ninguna instalación, simplemente ingresando con tu usuario y contraseña tendrás acceso al módulo de administración</h3>
+                    <h2 class="section-title ptb-30 text-uppercase text-extrabold">Sin descargar Apps ni instalar software</h2>
+                    <h3 class="section-sub">Simplemente ingresando con tu usuario y contraseña tendrás acceso al módulo de administración. Tus clientes acceden desde cualquier dispositivo conectado a Internet, mediante la url personalizada para tu negocio o código QR utilizando su navegador</h3>
                 </div>
               <div class="col-md-10 col-md-offset-1 screenshot-carousel-wrapper">
 
@@ -467,7 +467,7 @@
             <div class="container">
               <div class="text-center mb-80 wow fadeInUp">
                   <h2 class="section-title text-uppercase text-extrabold">Nuestros Planes</h2>
-                  <h3 class="section-sub">Actualiza a usuario Premium y ahorra el 20% de tu suscripción mensual</h3>
+                  <h3 class="section-sub">Actualiza a usuario Premium y accede a todas las funcionalidades</h3>
               </div>
 
               <div class="row">
@@ -479,8 +479,8 @@
                                     <span class="white-text">Básico</span>
                                     <p class="prdesc">Para pequeños establecimientos</p>
                                     <div class="precio">
-                                      <span class="delrprice"><del>$170.000</del></span><br>
-                                      <span class="price">$136.000/mes</span>
+                                      <span class="delrprice">$29 USD</span><br>
+                                      <span class="price">$87.000/mes*</span>
                                     </div>
                                 </div>
                             </div> <!-- /.table-header -->
@@ -490,7 +490,8 @@
                                     <li>Hasta 30 órdenes por día</li>
                                     <li>Colores y logotipo del negocio</li>
                                     <li>URL y código QR personalizados</li>
-                                    <li class="refil"><br><br><br><br><br></li>
+                                    <li>Escoger punto de venta o domicilios</li>
+                                    <li class="refil"><br><br><br><br><br><br></li>
                                 </ul>
                             </div><!-- /.table-info -->
                         </div> <!-- /.table-contents -->
@@ -498,27 +499,29 @@
                 </div><!-- /.col-md-4 -->
 
                 <div class="col-md-4">
-                    <div class="pricing-table">
+                    <div class="pricing-table z-depth-2">
                         <div class="table-contents text-center">
                             <div class="table-header brand-hover pmedium">
                                 <div class="package-name">
                                   <span class="white-text">Profesional</span>
                                   <p class="prdesc">Para negocios en crecimiento</p>
                                   <div class="precio">
-                                    <span class="delrprice"><del>$359.000</del></span><br>
-                                    <span class="price">$287.000/mes</span>
+                                    <span class="delrprice">$57 USD</span><br>
+                                    <span class="price">$169.000/mes*</span>
                                   </div>
                                 </div>
                             </div> <!-- /.table-header -->
 
                             <div class="table-info">
                                 <ul>
-                                    <li>Hasta 50 órdenes por día</li>
+                                    <li>Hasta 100 órdenes por día</li>
                                     <li>Colores y logotipo del negocio</li>
                                     <li>URL y código QR personalizados</li>
                                     <li>Subir imágenes de platos</li>
                                     <li>Agregar tiempo de espera de orden</li>
                                     <li>Escoger punto de venta o domicilios</li>
+                                    <li>Agregar sucursales</li>
+                                    <li>Administradores independientes</li>
                                     <li>Check órdenes despachadas</li>
                                     <br>
                                 </ul>
@@ -535,21 +538,23 @@
                                   <span class="white-text">Empresarial</span>
                                   <p class="prdesc">Para grandes hoteles y restaurantes</p>
                                   <div class="precio">
-                                    <span class="delrprice"><del>$699.000</del></span><br>
-                                    <span class="price">$559.000/mes</span>
+                                    <span class="delrprice">$140 USD</span><br>
+                                    <span class="price">$420.000/mes*</span>
                                   </div>
                                 </div>
                             </div> <!-- /.table-header -->
 
                             <div class="table-info">
                                 <ul>
-                                    <li>Hasta 200 órdenes por día</li>
+                                    <li>Hasta 300 órdenes por día</li>
                                     <li>Colores y logotipo del negocio</li>
                                     <li>URL y código QR personalizados</li>
                                     <li>Subir imágenes de platos</li>
                                     <li>Horario apertura y cierre de órdenes</li>
                                     <li>Limitar número de platos</li>
                                     <li>Escoger punto de venta o domicilio</li>
+                                    <li>Agregar sucursales</li>
+                                    <li>Administradores independientes</li>
                                     <li>Check para órdenes despachadas</li>
                                 </ul>
                             </div><!-- /.table-info -->
@@ -558,6 +563,9 @@
                     </div><!-- /.pricing-table -->
                 </div><!-- /.col-md-4 -->
               </div><!-- /.row -->
+              <div class="text-center">
+                <p>*Valor en pesos colombianos. Servicio exento de IVA <i>(Artículo 476 del Estatuto tributariario colombiano)</i></p>
+              </div>
               <div class="row">
                 <div class="col m4 offset-m4 s4 offset-s2 l4 offset-l5">
                   <a href="/login" class="btn btn-prueba" style="background-color:#e88a10 !important; margin-top:20px;"> <span>Actualiza <strong>AHORA</strong></span></a>
@@ -569,11 +577,23 @@
             </div><!-- /.container -->
         </section>
 
+        <section class="ptb-30 ctabg2">
+            <div class="container">
+                <div class="text-center wow fadeInUp">
+                    <!--promo box center align start-->
+                    <h2 class="mb-30 font-30 white-text">¿Ya cuentas con Menús Fácil y quieres agregar una sucursal de tu negocio?</h2>
+                    <h3 class="mb-30 white-text ection-sub">Obtén un 30% de descuento sobre tu plan inicial con las mismas funciones para tus nuevas sucursales. Tendrás administradores independientes para cada sucursal</h3>
+                    <a href="/admin/crear-sucursal" class="btn btncta"> <span>Quiero agregar <strong>una sucursal</strong></span></a>
+                    <!--promo box center align end-->
+                </div>
+            </div>
+        </section>
+
         <section class="content-promo-box banner padding-top-100 padding-bottom-120 gray-bg" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 s12 inscsoc">
-                        <h2 class="font-30 text-extrabold mb-30 text-uppercase">Pero puedes usarlo en tu negocio<br>¡Totalmente Gratis!</h2>
+                        <h2 class="font-25 text-extrabold mb-30">¿Sabías que puedes usar Menús Fácil<br>en tu negocio Totalmente Gratis?</h2>
                         <h3>Es más...Te pagamos por usarlo</h3>
                         <p>Solo inscríbete en nuestro Programa de Socios y obten el 10% del valor mensual del plan que tus referidos paguen.</p>
                         <a href="{{url('registro/partnerts')}}" target="_blank" class="btn btncta btn-lg waves-effect waves-light"> Conviertete en <strong>Socio</strong></a>

@@ -28,7 +28,7 @@
               <h4>Tu suscripción ha sido confirmada<br>En solo unos segundos recibirás en tu correo electrónico todos los detalles de tu suscripción</h4>
           </div>
           </div>
-          
+
           <div class="follow-fb col s10 offset-s1">
             <p> <a href="https://www.facebook.com/Men%C3%BAs-F%C3%A1cil-236578603662891/" target="_blank">Síguenos en Facebook</a><br/>Encontrarás videos tutoriales, documentación y toda la información sobre como usar la mejor aplicación de gestión de menús y pedidos, Menús Fácil</p>
           </div>

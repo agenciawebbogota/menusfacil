@@ -78,10 +78,11 @@ body {
 
 /*Call to Action*/
 .ctabg{background-color:#2b2831; }
+.ctabg2{background-color:#66181b; }
 .btncta{background-color: #339642 !important;}
 /*Precios Planes*/
 .pbasic{ background-color: #2b2831; }
-.pmedium{ background-color: #66181a; }
+.pmedium{ background-color: #66181a;}
 .pfull{ background-color: #339642; }
 .precio{ padding-bottom: 20px;}
 .prdesc{text-transform: none;color:#fff;font-size:15px;line-height:normal;font-weight:300;}

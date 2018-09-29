@@ -32,7 +32,7 @@
         <div class="container">
           <div class="text-center mb-80 wow fadeInUp">
               <h2 class="section-title text-uppercase text-extrabold">Actualiza tu cuenta</h2>
-              <h3 class="section-sub">Actualiza ahora tu cuenta de {{Auth::user()->name}} y ahorra el 20% de tu suscripción mensual</h3>
+              <h3 class="section-sub">Actualiza ahora tu cuenta de {{Auth::user()->name}} y accede a todas las funciones Premium</h3>
           </div>
           <div class="row">
             <div class="col-md-4">
@@ -43,8 +43,8 @@
                                 <span class="white-text">Básico</span>
                                 <p class="prdesc">Para pequeños establecimientos</p>
                                 <div class="precio">
-                                  <span class="delrprice"><del>$170.000</del></span><br>
-                                  <span class="price">$136.000/mes</span>
+                                  <span class="delrprice">$29 USD</span><br>
+                                  <span class="price">$87.000/mes</span>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,8 @@
                                 <li>Hasta 30 órdenes por día</li>
                                 <li>Colores y logotipo del negocio</li>
                                 <li>URL y código QR personalizados</li>
-                                <li class="refil"><br><br><br><br><br></li>
+                                <li>Escoger punto de venta o domicilios</li>
+                                <li class="refil"><br><br><br><br><br><br></li>
                             </ul>
                         </div>
                         <div class="table-footer">
@@ -73,7 +74,7 @@
                                     <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
                                     <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
                                     <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
-                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                    <button class="btn btncta" type="submit" href="#">Elegir <strong>este plan</strong></button>
                                 </form>
                             </div>
                         </div>
@@ -82,15 +83,15 @@
             </div>
 
             <div class="col-md-4">
-                <div class="pricing-table">
+                <div class="pricing-table z-depth-2">
                     <div class="table-contents text-center">
                         <div class="table-header brand-hover pmedium">
                             <div class="package-name">
                               <span class="white-text">Profesional</span>
                               <p class="prdesc">Para negocios en crecimiento</p>
                               <div class="precio">
-                                <span class="delrprice"><del>$359.000</del></span><br>
-                                <span class="price">$287.000/mes</span>
+                                <span class="delrprice">$57 USD</span><br>
+                                <span class="price">$169.000/mes</span>
                               </div>
                             </div>
                         </div>
@@ -102,6 +103,8 @@
                                 <li>Subir imágenes de platos</li>
                                 <li>Agregar tiempo de espera de orden</li>
                                 <li>Escoger punto de venta o domicilios</li>
+                                <li>Agregar sucursales</li>
+                                <li>Administradores independientes</li>
                                 <li>Check órdenes despachadas</li>
                                 <br><br>
                             </ul>
@@ -122,7 +125,7 @@
                                     <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
                                     <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
                                     <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
-                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                    <button class="btn btncta" type="submit" href="#">Elegir <strong>este plan</strong></button>
                                 </form>
                             </div>
                         </div>
@@ -137,8 +140,8 @@
                               <span class="white-text">Empresarial</span>
                               <p class="prdesc">Para grandes hoteles y restaurantes</p>
                               <div class="precio">
-                                <span class="delrprice"><del>$699.000</del></span><br>
-                                <span class="price">$559.000/mes</span>
+                                <span class="delrprice">$140 USD</span><br>
+                                <span class="price">$420.000/mes</span>
                               </div>
                             </div>
                         </div>
@@ -151,6 +154,8 @@
                                 <li>Horario apertura y cierre de órdenes</li>
                                 <li>Limitar número de platos</li>
                                 <li>Escoger punto de venta o domicilio</li>
+                                <li>Agregar sucursales</li>
+                                <li>Administradores independientes</li>
                                 <li>Check para órdenes despachadas</li>
                             </ul>
                         </div>
@@ -170,7 +175,7 @@
                                     <input name="buyerEmail"    type="hidden"  value="{{Auth::user()->email}}" >
                                     <input name="responseUrl"    type="hidden"  value="{{url('confirmacion/respuesta')}}" >
                                     <input name="confirmationUrl"    type="hidden"  value="{{url('confirmacion/confirmacion')}}" >
-                                    <button class="btn btncta" type="submit" href="#">Elegir este plan</button>
+                                    <button class="btn btncta" type="submit" href="#">Elegir <strong>este plan</strong></button>
                                 </form>
                             </div>
                         </div>
@@ -179,7 +184,7 @@
             </div>
           </div>
           <div class="row padding-top-50">
-            <h3 class="text-medpago">Paga fácil y rápido con tu medio de pago favorito<br><br><span>Tu cuenta se actualizará una vez confirmado el pago</span></h3>
+            <h3 class="text-medpago">Paga fácil y rápido con tu medio de pago favorito<br><br><span>Tu cuenta se actualizará una vez confirmado el pago<br><br>Enviaremos la factura correspondiente 24 horas después de la confirmación del pago</span></h3>
             <div class="col m6 offset-m3 s8 offset-s2 l4 offset-l4">
               <img src="../assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
             </div>
