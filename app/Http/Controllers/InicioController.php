@@ -20,7 +20,7 @@ class InicioController extends Controller
           }else{
             $menus;
               $menus = User::find($usuario->id)->menus;
-            return view('usuario.index', [
+            return view('usuario.final', [
               'empresa' => $usuario,
               'menus' => $menus,
             ]);
@@ -34,13 +34,6 @@ class InicioController extends Controller
 
 // Pruebas ////////
 
-  public function diferenciaDias($inicio, $fin){
-        $inicio = strtotime($inicio);
-        $fin = strtotime($fin);
-        $dif = $fin - $inicio;
-        $diasFalt = (( ( $dif / 60 ) / 60 ) / 24);
-        return ceil($diasFalt);
-    }
   public function doc(){
     return view('doc.index');
   }

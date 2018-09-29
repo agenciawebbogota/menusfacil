@@ -23,8 +23,9 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
 // Ruta de facturacióne
-Route::get('/admin/facturacion', 'HomeController@facturacion');
-
+Route::get('/admin/facturacion', 'HomeController@facturacion')->middleware('auth');
+Route::get('/admin/crear-sucursal', 'HomeController@sucursal')->middleware('auth');
+Route::post('/admin/crear-sucursal', 'HomeController@registro')->middleware('auth');
 // Manejar la vista del usuario
 Route::get('cliente/{url}', 'InicioController@index');
 // documentación

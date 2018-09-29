@@ -53,6 +53,8 @@
       <li><div class="divider"></div></li>
       <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">attach_money</i></a></li>
       <li><div class="divider"></div></li>
+      <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">attach_money</i></a></li>
+      <li><div class="divider"></div></li>
     </ul>
     <div class="navbar-fixed">
       <nav>

@@ -26,14 +26,22 @@ class HomeController extends Controller
         return view('admin.index');
     }
 
+
+    public function sucursal(){
+        return view('auth.sucursales');
+    }
+    public function registro(Request $req){
+        
+    }
+
     public function facturacion(){
         $ApiKey = 'w3Q56suC9RD1sM8WEh5wUf75ri';
         $merchanId = 644473;
         $accoundId = 646874;
         $descripcion = 'Compras para MenusFacil.';
-        $valor1 = 136000;
-        $valor2 = 287000;
-        $valor3 = 559000;
+        $valor1 = 87000;
+        $valor2 = 169000;
+        $valor3 = 420000;
         $moneda = 'COP';
         $referencia1 = 'PAGO'.time(). rand(100,1000);
         $referencia2 = 'PAGO'.time(). rand(100,1000);
