@@ -41,16 +41,18 @@ body {
 .btn-prueba{background-color: #339642 !important;}
 .btn-conoce{background-color: #e88a10 !important;}
 .descp{ font-size: 20px; font-weight: 600;}
-/*Responsive Header*/
+
+/*Responsive*/
 @media screen and (max-width: 600px){
   .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 250px !important; margin-left: -190px !important}
   .titulo{font-size: 22px; margin-top: 60px !important;text-align: center;}
   .titulo2{margin-top: 95px !important;text-align:center;}
-  .titulo2-1{font-size: 22px;line-height: 1em;}
+  .titulo2-1{font-size: 20px;line-height: 1em;}
   .descp{ display:none; }
   .btn-prueba{margin-top:480px; }
   .btn-conoce{margin-top:500px;}
   .ipad-img{ display: none; }
+  .section-title{ font-size: 20px !important; }  
 }
 @media (min-width:640px) and (max-width:767px){
   .logo-mf{ width: 180px !important; height: 178px !important; margin-top: 220px !important; margin-left: -240px !important}
