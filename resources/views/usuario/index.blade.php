@@ -32,11 +32,10 @@
 		}
 		.deslizar{
 			color:#66181a;
-			margin: 10px;
+			margin: 150px;
 		}
     .altodes{
-	  height: 50px;
-	  margin-bottom: 10px;
+      height: 150px;
     }
 	</style>
 </head>
@@ -69,7 +68,7 @@
   												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
   											</div>
   											<div class="card-content black-text altodes">
-  												<p>{{$menu->descripcion}} ($ {{$menu->precio}})</p>
+  												<p>{{$menu->descripcion}} <br> $ {{$menu->precio}}</p>
   											</div>
   										</div>
   									</div>
