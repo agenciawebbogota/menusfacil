@@ -67,7 +67,7 @@
   												<span class="card-title">{{$menu->nombre}}</span>
   												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
   											</div>
-  											<div class="card-content black-text altodes" style="height: 150px !important">
+  											<div class="card-content black-text altodes">
   												<p>{{$menu->descripcion}} <br> $ {{$menu->precio}}</p>
   											</div>
   										</div>

@@ -20,7 +20,7 @@ class InicioController extends Controller
           }else{
             $menus;
               $menus = User::find($usuario->id)->menus;
-            return view('usuario.final', [
+            return view('usuario.index', [
               'empresa' => $usuario,
               'menus' => $menus,
             ]);
