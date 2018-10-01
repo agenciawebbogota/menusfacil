@@ -51,9 +51,9 @@
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
       <li><div class="divider"></div></li>
-      <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">attach_money</i></a></li>
+      <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">autorenew</i></a></li>
       <li><div class="divider"></div></li>
-      <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">attach_money</i></a></li>
+      <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">where_to_vote</i></a></li>
       <li><div class="divider"></div></li>
     </ul>
     <div class="navbar-fixed">
@@ -98,7 +98,7 @@
       <div class="footer-copyright">
           <div class="container">
             {{-- <span class="left"> Desarrollado por <a class="grey-text text-lighten-4" href="https://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span> --}}
-            <h6 class="center-align">Menús Fácil - Manager de Pedidos y Menús © Todos los derechos reservados</h6>
+            <h6 class="center-align">Menús Fácil - Manager de Pedidos y Menús ©2018 Todos los derechos reservados</h6>
           </div>
       </div>
   </footer>
