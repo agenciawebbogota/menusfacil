@@ -27,7 +27,6 @@
 			height:auto !important;
 			min-height: auto !important;
 			width: auto !important;
-			/* margin: 1px; */
 			padding-bottom: 10px;
 		}
 		.deslizar{
