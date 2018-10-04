@@ -3,25 +3,25 @@ new Vue({
 	el: '#sucursal',
 	data:{
 		sucursal:{
-            nombre:'',
-            url:'',
+      nombre:'',
+      url:'',
 			email:'',
-            clave:'',
-            clave_confirmacion:'',
-            user_id:'',
-            color1:'',
-            color2:'',
-            color3:''
+      clave:'',
+      clave_confirmacion:'',
+      user_id:'',
+      color1:'#2a2730',
+      color2:'#66181a',
+      color3:'#E88A10'
 		},
 		noti:{
 			nombre:'',
 			email:'',
-            clave:'',
-            clave_confirmacion:'',
+      clave:'',
+      clave_confirmacion:'',
 		}
 	},
 	created:function(){
-		
+
 	},
 	methods:{
 		validarCorreo:function(texto) {
@@ -32,8 +32,8 @@ new Vue({
 		      return false;
 		    }
 		},
-        urlLug: function(){
-            var letras = this.sucursal.nombre.split('')
+    urlLug: function(){
+      var letras = this.sucursal.nombre.split('')
 			var arrayLetras = [];
 			letras.map(function(letra){
 				if(letra.toLowerCase()=='á'){
@@ -57,14 +57,12 @@ new Vue({
 			this.sucursal.url = arrayLetras.toString().replace(/,/g,'').replace(/ /g,'-');
         },
         compararClave:function(){
-
-
             if (this.sucursal.clave != this.sucursal.clave_confirmacion) {
                 this.noti.clave = 'Las contraseñas no cohiciden.'
                 this.noti.clave_confirmacion = 'Las contraseñas no cohiciden.'
             }else{
                 this.noti.clave = ''
-                this.noti.clave_confirmacion = ''                
+                this.noti.clave_confirmacion = ''
             }
         }
     },

@@ -32,7 +32,6 @@
                             <div class="card-header">Crear Sucursal</div>
                             <div class="card-body">
                                 <form>
-                                    {{-- @csrf --}}
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de sucursal</label>
                                         <div class="col-md-6">
@@ -45,13 +44,6 @@
                                             <input id="email" type="email" v-model="sucursal.email" class="form-control" required>
                                         </div>
                                     </div>
-                                    {{-- <input id="url" type="hidden" name="url" v-model="datos.url">
-                                    <input id="color1" type="hidden"  name="color1" value="#2a2730">
-                                    <input id="color2" type="hidden"  name="color2" value="#66181a">
-                                    <input id="color3" type="hidden" name="color3" value="#E88A10"> --}}
-            
-                                    {{-- Fin --}}
-            
                                     <div class="form-group row">
                                         <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
                                         <div class="col-md-6">
@@ -93,8 +85,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="{{ url('js/axios.min.js') }}" defer></script>
   <script src="{{ url('admin/sucursales/js/app.js') }}" defer></script>
 </body>
 </html>
-
-

@@ -66,7 +66,7 @@
                             {{-- <label for="color1" class="col-md-4 col-form-label text-md-right">{{ __('Color 1') }}</label> --}}
 
                             {{-- <div class="col-md-6"> --}}
-                                <input id="color1" type="hidden" {{-- class="form-control{{ $errors->has('color1') ? ' is-invalid' : '' }}"--}} name="color1" value="#2a2730" {{--required autofocus v-model="datos.color1"--}}>
+                                <input id="color1" type="hidden"  name="color1" value="#2a2730" {{--required autofocus v-model="datos.color1"--}}>
                                 {{-- @if ($errors->has('color1'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('color1') }}</strong>
@@ -78,7 +78,7 @@
                             {{-- <label for="color2" class="col-md-4 col-form-label text-md-right">{{ __('Color 2') }}</label> --}}
 
                             {{-- <div class="col-md-6"> --}}
-                                 <input id="color2" type="hidden" {{--class="form-control{{ $errors->has('color2') ? ' is-invalid' : '' }}" required autofocus  v-model="datos.color2"--}} name="color2" value="#66181a">
+                                 <input id="color2" type="hidden" name="color2" value="#66181a">
 
                                 {{-- @if ($errors->has('color2'))
                                     <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                             {{-- <label for="color3" class="col-md-4 col-form-label text-md-right">{{ __('Color 3') }}</label> --}}
 
                             {{-- <div class="col-md-6"> --}}
-                                <input id="color3" type="hidden" {{--class="form-control{{ $errors->has('color3') ? ' is-invalid' : '' }}" required autofocus v-model="datos.color3"--}} name="color3" value="#E88A10">
+                                <input id="color3" type="hidden" name="color3" value="#E88A10">
 
                                 {{-- @if ($errors->has('color3'))
                                     <span class="invalid-feedback" role="alert">
