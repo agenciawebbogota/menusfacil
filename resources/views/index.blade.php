@@ -15,90 +15,48 @@
 
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <!-- FontAwesome CSS -->
-        <link href="{{url('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-        <!-- Material Icons CSS -->
-        <link href="{{url('assets/fonts/iconfont/material-icons.css')}}" rel="stylesheet">
-        <!-- animate CSS -->
-        <link href="{{url('assets/css/animate.min.css')}}" rel="stylesheet">
-        <!-- magnific-popup -->
-        <link href="{{url('assets/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
-        <!-- materialize -->
-        <link href="{{url('assets/materialize/css/materialize.min.css')}}" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="{{url('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-        <!-- shortcodes -->
-        <link href="{{url('assets/css/shortcodes/shortcodes.css')}}" rel="stylesheet">
-        <!-- Style CSS -->
-        <link href="{{url('style.css')}}" rel="stylesheet">
-        <!-- Creative CSS -->
-        <link href="{{url('assets/css/skins/creative.css')}}" rel="stylesheet">
-        <!-- RS5.0 Main Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/settings.css')}}">
-        <!-- RS5.0 Layers and Navigation Styles -->
-        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/layers.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{url('assets/revolution/css/navigation.css')}}">
+        <link href="/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/assets/fonts/iconfont/material-icons.css" rel="stylesheet">
+        <link href="/assets/css/animate.min.css" rel="stylesheet">
+        <link href="/assets/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="/assets/materialize/css/materialize.min.css" rel="stylesheet">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/shortcodes/shortcodes.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
+        <link href="/assets/css/skins/creative.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+        <link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+
     </head>
-
     <body id="top">
-
-      <script>
+      <!-- <script>
         fbq('track', 'Lead');
-      </script>
-
-      <!--header start-->
+      </script> -->
       <header id="header" class="tt-nav transparent-header">
-
           <div class="header-sticky light-header nav-boxed-color">
-
               <div class="container">
-
                   <div id="materialize-menu" class="menuzord">
-
-                      <!--logo start-->
                       <a href="index.html" class="logo-brand">
                           <img class="logo-dark" src="/admin/img/logo-2-menusfacil.svg" alt="logo menús fácil para móviles"/>
                       </a>
-                      {{-- <a href="index.html" class="logo-brand">
-                          <img class="logo-dark" src="{{url('assets/img/logo.png')}}" alt="Logo de MenusFacil"/>
-                          <img class="logo-light" src="{{url('assets/img/logo-white.png')}}" alt="Logo de MenusFacil"/>
-                      </a> --}}
-                      <!--logo end-->
-
-                      <!--mega menu start-->
                       <ul class="nav menuzord-menu pull-right op-nav">
                           <li class="active"><a href="#home" data-scroll>Inicio</a></li>
-{{-- <<<<<<< HEAD
-                          <li><a href="#funciones" data-scroll>Funciones</a></li>
-                          <li><a href="#aplicaciones" data-scroll>Aplicaciones</a></li>
-                          <li><a href="registro/partnerts" data-scroll>Conviertete en Socio</a></li>
-======= --}}
                           <li><a href="#funciones" class="funciones">Caracteristicas</a></li>
                           <li><a href="#planes">Planes</a></li>
-                          <li><a href="{{url('registro/partnerts')}}" target="_blank">Conviertete en socio</a></li>
+                          <li><a href="/registro/partnerts" target="_blank">Conviertete en socio</a></li>
                           <li><a class="ini-ses" href="/login">Inicia Sesion</a></li>
                           <li><a class="ini-reg" href="/register">Registrate</a></li>
                       </ul>
-                      <!--mega menu end-->
-
-                  </div>
+                    </div>
               </div>
           </div>
       </header>
-      <!--header end-->
-
-
-        <!-- start revolution slider 5.0 -->
         <section class="rev_slider_wrapper" id="home">
          <div class="rev_slider materialize-slider">
           <ul>
-
-            <!-- slide 1 start -->
             <li data-transition="fade" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/img/banner/banner-light.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="materialize Material" data-description="">
-                <!-- MAIN IMAGE -->
-                <img src="{{url('assets/img/banner-light.jpg')}}"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
-
-                <!-- LAYER NR. 1 -->
+                <img src="/assets/img/banner-light.jpg"  alt="banner menús fácil"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
                 <div class="tp-caption rev-heading text-extrabold dark-text tp-resizeme titulo"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
                     data-y="['middle','middle','top','top']" data-voffset="['-90','-120','40','40']"
@@ -115,7 +73,6 @@
                     style="z-index: 5; white-space: nowrap;"><h1>Menús Fácil es la nueva forma<br> de recibir y atender<br>los pedidos de tus clientes</h1>
                 </div>
 
-                <!-- LAYER NR. 2 -->
                 <div class="tp-caption rev-heading dark-text tp-resizeme titulo2"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
                     data-y="['middle','middle','top','top']" data-voffset="['40','-50','100','100']"
@@ -133,7 +90,6 @@
                     style="z-index: 5; white-space: nowrap;"><h2 class="titulo2-1">"Sube a la web tus Menús Fácil<br>Recibe y atiende los pedidos de tus clientes<br>Aún Más Fácil"</h2>
                 </div>
 
-                <!-- LAYER NR. 3 -->
                 <div class="tp-caption tp-resizeme rs-parallaxlevel-3"
                     data-x="['left','left','right','right']" data-hoffset="['20','20','100','0']"
                     data-y="['middle','middle','top','top']" data-voffset="['-220','-170','50','0']"
@@ -148,7 +104,6 @@
                     <div class="rs-pulse"  data-easing="Power4.easeInOut" data-zoomstart="1" data-zoomend="0.95"><img class="logo-mf" src="assets/img/logo.svg" alt="logo Menús Fácil"></div>
                 </div>
 
-                <!-- LAYER NR. 4 -->
                 <div class="tp-caption tp-resizeme dark-text"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','30','30']"
                     data-y="['middle','middle','middle','middle']" data-voffset="['250','50','-190','-190']"
@@ -166,7 +121,6 @@
                     style="z-index: 5; white-space: nowrap;"><span class="descp">Pruébalo GRATIS durante 14 días sin compromisos<br/>Sin descargas<br/>Sin tarjeta de crédito ni datos de facturación</span>
                 </div>
 
-                <!-- LAYER NR. 5 -->
                 <div class="tp-caption"
                     data-x="['left','left','center','center']" data-hoffset="['30','30','0','0']"
                     data-y="['middle','middle','middle','middle']" data-voffset="['150','170','-100','-100']"
@@ -182,7 +136,6 @@
                     <a href="/register" class="btn btn-prueba"><span>Pruebalo <strong>Gratis</strong></span></a>
                 </div>
 
-                <!-- LAYER NR. 6 -->
                 <div class="tp-caption"
                     data-x="['left','left','center','center']" data-hoffset="['250','290','0','0']"
                     data-y="['middle','middle','middle','middle']" data-voffset="['150','170','0','0']"
@@ -198,7 +151,6 @@
                     <a class="btn btn-conoce funciones"><span>Conoce <strong>las funciones</strong></span></a>
                 </div>
 
-                <!-- LAYER NR. 7 -->
                 <div class="tp-caption tp-resizeme rs-parallaxlevel-2"
                     data-x="['right','right','center','center']" data-hoffset="['-30','-30','0','0']"
                     data-y="['middle','middle','bottom','bottom']" data-voffset="['0','0','-30','-30']"
@@ -207,15 +159,10 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
-
-                        {{-- <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png"> --}}
-
-                        <div><img class="ipad-img" src="{{url('assets/img/banner/dummy.png')}}" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
-
-                        </div>
+                    <div><img class="ipad-img" src="/assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+                    </div>
                 </div>
 
-                <!-- LAYER NR. 7 -->
                 <div class="tp-caption tp-resizeme rs-parallaxlevel-6"
                     data-x="['right','right','center','center']" data-hoffset="['90','90','-70','70']"
                     data-y="['middle','middle','bottom','bottom']" data-voffset="['20','20','-30','-30']"
@@ -224,15 +171,13 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="2200"
                     style="z-index: 4;">
-                        <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
-                        </div>
+                    <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
+                    </div>
                 </div>
-
             </li>
-            <!-- slide 1 end -->
           </ul>
-         </div><!-- end revolution slider -->
-        </section><!-- end of slider wrapper -->
+         </div>
+        </section>
 
         <section class="banner-20 bg-fixed parallax-bg overlay dark-5 half-height valign-wrapper" data-stellar-background-ratio="0.5">
             <div class="valign-cell">
@@ -285,12 +230,11 @@
                       </div>
                   </div>
 
-
-                </div><!-- /.col-md-4 -->
+                </div>
 
                 <div class="col-md-4 hidden-sm hidden-xs wow fadeInUp">
                     <img class="img-responsive" src="assets/img/iphone.png" alt="Menús Fácil Módulo Administrador en Iphone">
-                </div><!-- /.col-md-4 -->
+                </div>
 
                 <div class="col-md-4 col-sm-6">
 
@@ -320,10 +264,9 @@
                           <h3>Tus clientes acceden a tus menús desde tu url personalizada o código QR</h3>
                       </div>
                   </div>
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-
-          </div><!-- /.container -->
+                </div>
+            </div>
+          </div>
         </section>
 
 
@@ -348,8 +291,8 @@
                                 <h2 class="white-text">Para Restaurantes</h2>
                                 <p class="white-text"><span style="color:#e88a10">Tus clientes consultan los menús del día y arman su pedido.</span> Funciona para domicilios o para tomar los pedidos dentro del propio establecimiento.</p>
                             </div>
-                          </div><!-- /.featured-item -->
-                      </div><!-- /.col-sm-6 -->
+                          </div>
+                      </div>
 
                       <div class="col-sm-6 mb-40">
                           <div class="featured-item feature-icon">
@@ -360,8 +303,8 @@
                                 <h2 class="white-text">Para Comidas Rápidas</h2>
                                 <p class="white-text"><span style="color:#e88a10">No dejes a tus clientes esperando un turno para tomar su orden.</span> Agiliza los pedidos con este novedoso sistema ¡Tus clientes te amarán!</p>
                             </div>
-                          </div><!-- /.featured-item -->
-                      </div><!-- /.col-sm-6 -->
+                          </div>
+                      </div>
                       <div class="col-sm-6">
                           <div class="featured-item feature-icon">
                             <div class="icon">
@@ -371,8 +314,8 @@
                                 <h2 class="white-text">Para Hoteles</h2>
                                 <p class="white-text"><span style="color:#e88a10">No molestes a tus huespedes con complejos sistemas de reservas.</span> Asegurate horas antes de cuantos huespedes tendrás en la mesa y que menú han elegido.</p>
                             </div>
-                          </div><!-- /.featured-item -->
-                      </div><!-- /.col-sm-6 -->
+                          </div>
+                      </div>
                       <div class="col-sm-6">
                           <div class="featured-item feature-icon">
                             <div class="icon">
@@ -382,13 +325,13 @@
                                 <h2 class="white-text">Para Casinos</h2>
                                 <p class="white-text"><span style="color:#e88a10">No más retrasos en las órdenes ni recursos desperdiciados.</span> El personal elige su menú y en la cocina sabrán por anticipado cuantos y cuales platos servir. </p>
                             </div>
-                          </div><!-- /.featured-item -->
-                      </div><!-- /.col-sm-6 -->
-                    </div><!-- /.row -->
-                  </div><!-- /.process-wrapper -->
+                          </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
               <div class="col-md-3 equal-height-column process-bg-wrapper">
-                <img src="{{url('assets/img/cena.jpg')}}" alt="Dueños de restaurante usando menus facil">
+                <img src="/assets/img/cena.jpg" alt="Dueños de restaurante usando menus facil">
               </div>
             </div>
           </div>
@@ -409,34 +352,27 @@
                   <div class="device">
                     <div class="screen">
 
-                      <!-- START BOOTSTRAP CAROUSEL -->
                       <div id="screenshot-carousel" class="carousel slide screenshot-carousel" data-ride="carousel">
 
-                        <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
 
                           <div class="item active">
-                            <img src="{{url('assets/img/screenshot-1.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="/assets/img/screenshot-1.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="{{url('assets/img/screenshot-3.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="/assets/img/screenshot-3.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
 
                           <div class="item">
-                            <img src="{{url('assets/img/screenshot-2.jpg')}}" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
+                            <img src="/assets/img/screenshot-2.jpg" alt="Screenshot Aplicativo Menús Fácil" title="Menús Fácil Aplicativo" />
                           </div>
-
                         </div>
-
                       </div>
-                      <!-- END BOOTSTRAP CAROUSEL -->
+                    </div>
+                  </div>
+                </div>
 
-                    </div><!-- /.screen -->
-                  </div><!-- /.device -->
-                </div><!-- /.device-mockup -->
-
-                <!-- Controls -->
                 <a class="left carousel-control z-depth-2 color2-bg" href="#screenshot-carousel" role="button" data-slide="prev">
                   <span class="fa fa-angle-left" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
@@ -454,11 +390,9 @@
         <section class="ptb-30 ctabg">
             <div class="container">
                 <div class="text-center wow fadeInUp">
-                    <!--promo box center align start-->
                     <h2 class="text-uppercase mb-30 font-30 text-extrabold white-text">Prueba GRATIS Menús Fácil en tu negocio</h2>
                     <h2 class="mb-30 white-text">Sin descargas, sin tarjeta de crédito, sin compromisos</h2>
                     <a href="/register" class="btn btncta"> <span>Comienza <strong>AHORA</strong></span></a>
-                    <!--promo box center align end-->
                 </div>
             </div>
         </section>
@@ -483,7 +417,7 @@
                                       <span class="price">$87.000/mes*</span>
                                     </div>
                                 </div>
-                            </div> <!-- /.table-header -->
+                            </div>
 
                             <div class="table-info">
                                 <ul>
@@ -493,10 +427,10 @@
                                     <li>Escoger punto de venta o domicilios</li>
                                     <li class="refil"><br><br><br><br><br><br></li>
                                 </ul>
-                            </div><!-- /.table-info -->
-                        </div> <!-- /.table-contents -->
-                    </div><!-- /.pricing-table -->
-                </div><!-- /.col-md-4 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-4">
                     <div class="pricing-table z-depth-2">
@@ -510,7 +444,7 @@
                                     <span class="price">$169.000/mes*</span>
                                   </div>
                                 </div>
-                            </div> <!-- /.table-header -->
+                            </div>
 
                             <div class="table-info">
                                 <ul>
@@ -525,10 +459,10 @@
                                     <li>Check órdenes despachadas</li>
                                     <br>
                                 </ul>
-                            </div><!-- /.table-info -->
-                        </div> <!-- /.table-contents -->
-                    </div><!-- /.pricing-table -->
-                </div><!-- /.col-md-4 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-4">
                     <div class="pricing-table">
@@ -542,7 +476,7 @@
                                     <span class="price">$420.000/mes*</span>
                                   </div>
                                 </div>
-                            </div> <!-- /.table-header -->
+                            </div>
 
                             <div class="table-info">
                                 <ul>
@@ -557,12 +491,12 @@
                                     <li>Administradores independientes</li>
                                     <li>Check para órdenes despachadas</li>
                                 </ul>
-                            </div><!-- /.table-info -->
+                            </div>
 
-                        </div> <!-- /.table-contents -->
-                    </div><!-- /.pricing-table -->
-                </div><!-- /.col-md-4 -->
-              </div><!-- /.row -->
+                        </div>
+                    </div>
+                </div>
+              </div>
               <div class="text-center">
                 <p>*Valor en pesos colombianos. Servicio exento de IVA <i>(Artículo 476 del Estatuto tributariario colombiano)</i></p>
               </div>
@@ -574,17 +508,15 @@
                   <img src="assets/img/como-pagar-menusfacil.png" alt="medios de pago menus facil" style="margin-top:30px" class="img-responsive">
                 </div>
               </div>
-            </div><!-- /.container -->
+            </div>
         </section>
 
         <section class="ptb-30 ctabg2">
             <div class="container">
                 <div class="text-center wow fadeInUp">
-                    <!--promo box center align start-->
                     <h2 class="mb-30 font-30 white-text">¿Ya cuentas con Menús Fácil y quieres agregar una sucursal de tu negocio?</h2>
                     <h3 class="mb-30 white-text ection-sub">Obtén un 30% de descuento sobre tu plan inicial con las mismas funciones para tus nuevas sucursales. Tendrás administradores independientes para cada sucursal</h3>
                     <a href="/admin/crear-sucursal" class="btn btncta"> <span>Agrega <strong>una sucursal</strong></span></a>
-                    <!--promo box center align end-->
                 </div>
             </div>
         </section>
@@ -596,35 +528,12 @@
                         <h2 class="font-25 text-extrabold mb-30">¿Sabías que puedes usar Menús Fácil<br>en tu negocio Totalmente Gratis?</h2>
                         <h3>Es más...Te pagamos por usarlo</h3>
                         <p>Solo inscríbete en nuestro Programa de Socios y obten el 10% del valor mensual del plan que tus referidos paguen.</p>
-                        <a href="{{url('registro/partnerts')}}" target="_blank" class="btn btncta btn-lg waves-effect waves-light"> Conviertete en <strong>Socio</strong></a>
+                        <a href="/registro/partnerts" target="_blank" class="btn btncta btn-lg waves-effect waves-light"> Conviertete en <strong>Socio</strong></a>
                     </div>
 
                 </div>
             </div>
         </section>
-
-        {{-- <section class="section-padding lighten-4" style="background-color:#f5f5f5;margin-top:-70px">
-            <div class="container">
-              <div class="row">
-                <div class="col l6 m6 s12 light-grey-text">
-                	<img src="assets/img/oferta-de-lanzamiento.png" width="400" height="112" alt="Oferta de lanzamiento Menús Fácil" class="img-responsive">
-                	<p style="color:#2b2831">Conviertete en Usuario Premium con suscripción mensual y disfruta de todos los beneficios que tenemos para ti:</p>
-
-                	<ul class="list-icon mb-30" style="color:#2b2831">
-                		<li><i class="material-icons">&#xE876;</i> Aplicativo con los colores y el logo de tu negocio</li>
-                		<li><i class="material-icons">&#xE876;</i> Accede a documentación exclusiva de administración y configuración</li>
-                		<li><i class="material-icons">&#xE876;</i> Obtén increíbles descuentos por pagar por adelantado</li>
-                	</ul>
-                </div><!-- /.col-md-7 -->
-
-                <div class="col l6 m6 s12">
-					         <img src="assets/img/seo-info-light.png" alt="Suscripción a Menús Fácil" class="img-responsive">
-                </div><!-- /.col-md-5 -->
-                </div><!-- /.row -->
-
-            </div><!-- /.container -->
-
-        </section> --}}
 
         <footer class="footer footer-four">
             <div class="primary-footer color1-bg text-center" style="padding-bottom:30px">
@@ -641,12 +550,12 @@
                             <img src="assets/img/logo-fondo-oscuro.svg" alt="Logo menus facil fondo oscuro">
                           </div>
                           <span class="copy-text">Menús Fácil &copy; 2018 &nbsp; | &nbsp;  Todos los derechos reservados &nbsp; | &nbsp;  Powered By <a href="http://agenciawebbogota.com/" target="_blank">Agencia Web Bogotá</a></span>
-                    </div><!-- /.col-md-12 -->
-                  </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div><!-- /.primary-footer -->
+                    </div>
+                  </div>
+                </div>
+            </div>
         </footer>
-        <!--footer 4 end-->
+
 
 
         <!-- Preloader -->
@@ -663,20 +572,19 @@
 
 
         <!-- jQuery -->
-        <script src="{{url('assets/js/jquery-2.1.3.min.js')}}"></script>
-        <script src="{{url('assets/bootstrap/js/bootstrap.min.js')}}"></script>
-        <script src="{{url('assets/materialize/js/materialize.min.js')}}"></script>
-        <script src="{{url('assets/js/jquery.easing.min.js')}}"></script>
-        <script src="{{url('assets/js/smoothscroll.min.js')}}"></script>
-        <script src="{{url('assets/js/imagesloaded.js')}}"></script>
-        <script src="{{url('assets/js/jquery.stellar.min.js')}}"></script>
-        <script src="{{url('assets/js/menuzord.js')}}"></script>
-        <script src="{{url('assets/js/equalheight.js')}}"></script>
-        <script src="{{url('assets/js/wow.min.js')}}"></script>
-        <script src="{{url('assets/js/jquery.shuffle.min.js')}}"></script>
-        <script src="{{url('assets/flexSlider/jquery.flexslider-min.js')}}"></script>
-        <script src="{{url('assets/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-        <script src="{{url('assets/js/scripts.js')}}"></script>
+        <script src="/assets/js/jquery-2.1.3.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/materialize/js/materialize.min.js"></script>
+        <script src="/assets/js/jquery.easing.min.js"></script>
+        <script src="/assets/js/smoothscroll.min.js"></script>
+        <script src="/assets/js/imagesloaded.js"></script>
+        <script src="/assets/js/jquery.stellar.min.js"></script>
+        <script src="/assets/js/menuzord.js"></script>
+        <script src="/assets/js/equalheight.js"></script>
+        <script src="/assets/js/wow.min.js"></script>
+        <script src="/assets/js/jquery.shuffle.min.js"></script>
+        <script src="/assets/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/assets/js/scripts.js"></script>
 
         <script>
             new WOW({
@@ -686,8 +594,8 @@
 
 
         <!-- RS5.0 Core JS Files -->
-        <script src="{{url('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-        <script src="{{url('assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+        <script src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
 
         <!-- RS5.0 Init  -->
         <script type="text/javascript">
@@ -724,14 +632,14 @@
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems! The following part can be removed on Server for On Demand Loading) -->
 
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-        <script type="text/javascript" src="{{url('assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+        <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 
     </body>
 

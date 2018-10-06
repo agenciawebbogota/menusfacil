@@ -28,7 +28,7 @@
     <span>Ingresa tus datos ahora y comienza a ganar dinero recomendando</span>
   </div>
   <div class="col l8 offset-l2 center-align" style="margin:-30px 0 30px 0">
-    <img src="{{url('admin/img/logo-2-menusfacil.svg')}}" alt="Menus Facil Logo" width="300px">
+    <img src="/admin/img/logo-2-menusfacil.svg" alt="Menus Facil Logo" width="300px">
   </div>
 </body>
 @endsection

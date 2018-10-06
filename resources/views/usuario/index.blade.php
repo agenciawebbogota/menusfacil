@@ -1,11 +1,11 @@
 @if ($empresa->confirmado != 'SI')
-<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <div>
     <h3 class="center-align">El cliente aún no está activo./h3>
 </div>
 
 @elseif(count($menus) < 1)
-<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <div>
     <h3 class="center-align">No hay menús disponibles en el momento</h3>
   </div>
@@ -24,17 +24,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<style media="screen">
 		.carrusel-menu{
-			height:auto !important;
 			min-height: auto !important;
 			width: auto !important;
 			padding-bottom: 10px;
 		}
 		.deslizar{
 			color:#66181a;
-			margin: 150px;
+			margin-top:0px;
 		}
     .altodes{
-      height: 150px;
+      height: 170px;
+    }
+    .imgmenu{
+      height: 170px;
+      background: red;
     }
 	</style>
 </head>
@@ -46,7 +49,7 @@
 					<a class="brand-logo center">
 						<img src="/admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
 					</a>
-		    </div>
+	     </div>
 		  </nav>
 		</div>
 		<div style="position: relative;padding-top:30px;">
@@ -62,7 +65,15 @@
   									<div class="col s12 m6 l8 offset-l2" >
   										<div class="card hoverable" style="margin-top:10px">
   											<div class="card-image">
-  												<img src="{{url('img/menu.img-1.jpg')}}">
+                          @if ($empresa->estado_empresa == 'PAGA')
+                            @if($menu->imagen == "")
+                            <img class="imgmenu" src="/img/menu.img-1.jpg">
+                            @else
+                            <img class="imgmenu" src="{{$menu->imagen}}">
+                            @endif
+        									@else
+                            <img class="imgmenu" src="/img/menu.img-1.jpg">
+                          @endif
   												<span class="card-title">{{$menu->nombre}}</span>
   												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
   											</div>
@@ -90,7 +101,7 @@
 									<table class="striped" v-if="pedido.menu_pedido.length > 0">
 										<thead >
 											<tr>
-												<th class="center-align red" colspan="2">MI SELECCIÓN</th>
+												<th class="center-align red" colspan="2">MI SELECCIONADOS</th>
 											</tr>
 										</thead>
 					         <tbody>
@@ -117,13 +128,13 @@
 					<i class="material-icons prefix">account_circle</i>
 					<input id="nombre" type="text" autocomplete="off" v-model="pedido.nombre">
 					<span v-if="noti.nombre" class="red-text text-darken-2">@{{noti.nombre}}</span>
-					<label for="nombre">Tu Nombre</label>
+					<label for="nombre">Nombre</label>
 				</div>
 				<div class="input-field col l8 s12 m8 offset-m2 offset-l2">
 					<i class="material-icons prefix">phone</i>
 					<input id="telefono" type="number" v-model="pedido.telefono">
 					<span v-if="noti.telefono" class="red-text text-darken-2">@{{noti.telefono}}</span>
-					<label for="telefono">Tu Teléfono</label>
+					<label for="telefono">Teléfono</label>
 				</div>
 				<div class="input-field col l8 s12 m8 offset-l2 m8 offset-m2">
 					<i class="material-icons prefix">edit_location</i>
@@ -163,6 +174,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-	<script type="text/javascript" src="{{url('inicio/js/app.js')}}"></script>
+	<script type="text/javascript" src="/inicio/js/app.js"></script>
 </html>
 @endif

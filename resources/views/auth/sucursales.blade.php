@@ -11,14 +11,14 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Estilos CSS -->
-    <link href="{{ url('registro/css/app.css') }}" rel="stylesheet">
+    <link href="/registro/css/app.css" rel="stylesheet">
 </head>
 <body style="background-image:url(/img/bg-register.jpg);background-repeat:no-repeat">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color:#2b2831">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{url('/admin/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="250px" class="imagen-logo img-circle img-responsive">
+                    <img src="/admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="250px" class="imagen-logo img-circle img-responsive">
                 </a>
                 <a class="btn btn-info" style="background-color:#e88911;border-color:#e88911" href="{{ url('dashboard') }}">Volver</a>
             </div>
@@ -85,7 +85,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="{{ url('js/axios.min.js') }}" defer></script>
-  <script src="{{ url('admin/sucursales/js/app.js') }}" defer></script>
+  <script src="/js/axios.min.js" defer></script>
+  <script src="/admin/sucursales/js/app.js" defer></script>
 </body>
 </html>

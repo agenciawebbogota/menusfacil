@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Inicio de Sesión | Menús Fácil</title>
-  <link href="{{ url('sesion/css/app.css') }}" rel="stylesheet">
+  <link href="/sesion/css/app.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -75,6 +75,6 @@
       </form>
     </div>
   </div>
-  <script src="{{ url('sesion/js/app.js') }}" defer></script>
+  <script src="/sesion/js/app.js" defer></script>
 </body>
 </html>
