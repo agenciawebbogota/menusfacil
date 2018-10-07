@@ -14,16 +14,69 @@ new Vue({
       color3:'#E88A10'
 		},
 		noti:{
+			autorizado:false,
 			nombre:'',
 			email:'',
       clave:'',
-      clave_confirmacion:'',
+			clave_confirmacion:'',
+			estado_error: true,
+			error:''
 		}
 	},
 	created:function(){
 
 	},
 	methods:{
+		enviarSucursal:function(){
+			if (this.sucursal.nombre.length < 4) {
+				this.noti.nombre = "El nombre debe ser superiro a 4 caracteres."
+			}else if (!this.validarCorreo(this.sucursal.email)) {
+				this.noti.email = "El correo no es válido."
+			}else if(!this.noti.autorizado){
+				// this.noti.email = "Corr"
+			}else{
+				// Enviar info
+				var url = '/admin/crear-sucursal'
+				axios.post(url, this.sucursal)
+							.then((resp)=>{
+								if (resp.data.error) {
+									if (resp.data.campo == 'url') {
+										this.noti.nombre = 'El nombre ya está en uso.'
+										// this.noti.error = resp.data.msg
+									}else if(resp.data.campo == 'email'){
+										this.noti.email = 'El email ya está en uso.'
+										this.noti.nombre = ''
+									}
+								}else{
+									this.sucursal = {
+										nombre:'',
+										url:'',
+										email:'',
+										clave:'',
+										clave_confirmacion:'',
+										color1:'#2a2730',
+										color2:'#66181a',
+										color3:'#E88A10'
+									}
+									this.noti.email = ''
+									this.noti.nombre = ''
+									this.noti.estado_error = false
+									this.noti.error = resp.data.msg
+								}
+
+
+								// (data.data.resp)
+							}).catch(function(error){
+								console.log(error);
+								
+							})
+			}
+		},
+
+
+
+
+
 		validarCorreo:function(texto) {
 			emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 		    if (emailRegex.test(texto)) {
@@ -62,7 +115,9 @@ new Vue({
                 this.noti.clave_confirmacion = 'Las contraseñas no cohiciden.'
             }else{
                 this.noti.clave = ''
-                this.noti.clave_confirmacion = ''
+								this.noti.clave_confirmacion = ''
+								
+							this.noti.autorizado = true
             }
         }
     },

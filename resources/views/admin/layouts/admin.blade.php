@@ -50,11 +50,14 @@
         <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
-      <li><div class="divider"></div></li>
-      <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">autorenew</i></a></li>
-      <li><div class="divider"></div></li>
-      <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">where_to_vote</i></a></li>
-      <li><div class="divider"></div></li>
+      @if (Auth::user()->id_admin === null)
+        <li><div class="divider"></div></li>
+        <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">autorenew</i></a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">where_to_vote</i></a></li>
+        <li><div class="divider"></div></li>
+      @endif
+      
     </ul>
     <div class="navbar-fixed">
       <nav>
