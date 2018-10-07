@@ -107,16 +107,30 @@ class MenuController extends Controller
     		$estado = 1;
     	}else{
     		$estado = 0;
-    	}
-    	$menu = Menu::where('id', $request->input('id'))->update([
-				'nombre' => $request->input('nombre'),
-				'descripcion' => $request->input('descripcion'),
-				'precio' => $request->input('precio'),
-				'estado' => $estado,
-				'adicional' => $request->input('adicional'),
-				'activo' => true,
-			]);
-		return $menu;
+		}
+		$filename = $request->imagen;
+		$publicId = null;
+		$options = [];
+		$tags = ['Menus', 'subida', 'clientes', 'MenúsFácil', 'actualización'];
+		return $request;
+		// 	\Cloudinary::config(array( 
+		// 		"cloud_name" => "menusfacil", 
+		// 		"api_key" => "182214799745955", 
+		// 		"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
+		// 	));
+		// 	$result = \Cloudinary\Uploader::upload($filename, 
+		// 		array("folder" => "menusfacil/", "overwrite" => TRUE, "width" => 800, "height" => 248, 'tags' => $tags));
+		// 	$url = $result['url'];
+		// 	$menu = Menu::where('id', $request->input('id'))->update([
+		// 		'nombre' => $request->input('nombre'),
+		// 		'descripcion' => $request->input('descripcion'),
+		// 		'precio' => $request->input('precio'),
+		// 		'estado' => $estado,
+		// 		'adicional' => $request->input('adicional'),
+		// 		'activo' => true,
+		// 		'imagen' => $url,
+		// 	]);
+		// return $menu;
     }
 
     public function delete($id){

@@ -63,25 +63,32 @@ new Vue({
 			  })
 		},
 		getImagen(e){
-
+			// console.log(e.target.files[0]);
 			this.add.imagen = e.target.files[0]
-
 			// Validar la imagen del menú
-
 			console.log(this.add.imagen);
-
 			if(this.add.imagen.size > 30000){
 				console.log('El tamaño de la imagen supera el limite permitido de 29KB, tu imagen pesa: ',this.add.imagen.size );	
 			}else{
 				console.info("Tu imagen se puede cargar, recuerda conservar las dimensiones en el diseño, ( ancho: 800px y alto:248px )")
 			}
-			
-
 			let fd = new FormData();
 			fd.append('imagen', this.add.imagen, this.add.imagen.name)
-
 			this.add.imagen = fd;
-			
+		},
+		getImagen2(e){
+			// console.log(e.target.files[0]);
+			this.update.imagen = e.target.files[0]
+			// Validar la imagen del menú
+			// console.log(this.update.imagen);
+			if(this.update.imagen.size > 30000){
+				console.log('El tamaño de la imagen supera el limite permitido de 29KB, tu imagen pesa: ',this.update.imagen.size );	
+			}else{
+				console.info("Tu imagen se puede cargar, recuerda conservar las dimensiones en el diseño, ( ancho: 800px y alto:248px )")
+			}
+			let fd = new FormData();
+			fd.append('imagen', this.update.imagen, this.update.imagen.name)
+			this.update.imagen = fd;
 		},
 		addMenu:function(){
 			if(this.add.adicional){
@@ -93,7 +100,7 @@ new Vue({
 			}else if(this.add.descripcion.length < 4 ){
 				this.noti.descripcion = 'La descripción debe ser superior a 4 caracteres.'
 				this.noti.nombre = ''
-			}else if(this.add.descripcion.length >200){
+			}else if(this.add.descripcion.length >163){
 				this.noti.descripcion = 'La descripción no debe superar los 200 caracteres'
 				this.noti.nombre = ''
 			}else if(this.add.precio.length < 3){
@@ -112,6 +119,7 @@ new Vue({
 				}else{
 					fd = this.add;
 				}
+				
 				// fd.append('precio', this.add.precio)
 				axios.post('/menus/crear',fd)
 				.then((response)=>{
@@ -162,24 +170,35 @@ new Vue({
 			}else{
 				menu.adicional = 'NO'
 			}
-			let url = '/menus/actualizar';
-			let data = {
-				nombre: menu.nombre,
-				descripcion:menu.descripcion,
-				estado:menu.estado,
-				precio:menu.precio,
-				id:menu.id,
-				adicional: menu.adicional
+			let fd;
+			if(this.update.imagen){
+				fd = this.update.imagen;
+				fd.append('nombre', this.update.nombre)
+				fd.append('descripcion', this.update.descripcion)
+				fd.append('precio', this.update.precio)
+				fd.append('adicional', this.update.adicional)
+				fd.append('estado', this.update.estado)
+			}else{
+				fd = this.update;
 			}
-			axios.put(url, data).then((resp)=>{
+
+			console.log(this.update);
+			
+			
+			let url = '/menus/actualizar';
+			axios.put(url, fd).then((resp)=>{
 				// Cerrar modal
 				let modalupdate = M.Modal.getInstance(actualizarMenu)
 				modalupdate.close()
 				M.toast({
-					html:'Se ha actualizado el menu '+"'"+data.nombre+"'.",
+					html:'Se ha actualizado el menu '+"'"+resp.nombre+"'.",
 					outDuration:1000
 				});
+				console.log(resp);
+				
 			}).catch(function (error) {
+				console.log(error);
+				
 			    M.toast({
 					html:'Hay un error en el servidor, contactanos.',
 					outDuration:1000

@@ -22,18 +22,18 @@
 			<label for="precio">Precio</label>
 		</div>
 	</div>
-	@if (Auth::user()->estado_empresa == 'PAGA')
-		
+	@if (Auth::user()->estado_empresa != 'GRATIS')
 		<div class="row">
-			<div class="input-field col s12">
-				<i class="mdi-editor-attach-money prefix"></i>
-				<input id="file" type="file" ref="file" @change="getImagen" multiple="true">
+			<div class="file-field input-field col s12">
+					<div class="btn">
+						<span>Cargar imagen</span>
+						<input type="file" @change="getImagen" accept="image/png, image/jpeg">
+					</div>
+				<input type="text" id="file" class="file-path" placeholder="Recomendamos un ancho de 800px y un alto de 248px.">
 				<span style="color:#c91e04">@{{ noti.imagen }}</span>
-				{{-- <label for="precio">Carga una imagen</label> --}}
 			</div>
 		</div>
 	@endif
-
 	<div class="row">
 		<div id="input-switches1">
 			<div class="col s12 m8 l9 section">

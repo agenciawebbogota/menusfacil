@@ -16,6 +16,18 @@
         width: 280px;
         margin: 0 auto;
     }
+  ::-webkit-input-placeholder {
+      color: black;
+    } 
+  :-moz-placeholder {
+      color: black;
+    } 
+  ::-moz-placeholder {
+      color: black;
+    } 
+  :-ms-input-placeholder {
+      color: black;
+    }
   @media screen and (min-width:320px) {
     .img-pago{
         /* width: 300px; */
