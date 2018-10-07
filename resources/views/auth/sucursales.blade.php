@@ -39,9 +39,12 @@
                         <div class="card" style="border:1px solid #2b2831;border-radius:6px">
                             <div class="card-header">Crear Sucursal</div>
                             <div class="card-body">
-                                    <div class="alert alert-success" v-if="!noti.estado_error">
-                                        <strong>Genial! </strong>@{{noti.error}}
+                                <div class="alert alert-success" v-if="!noti.estado_error">
+                                    <div v-html="noti.error">
+
                                     </div>
+                                    {{-- @{{noti.error}} --}}
+                                </div>
                                 <form @submit.prevent="enviarSucursal">
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Nombre de sucursal</label>

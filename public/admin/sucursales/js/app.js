@@ -37,8 +37,13 @@ new Vue({
 			}else{
 				// Enviar info
 				var url = '/admin/crear-sucursal'
+				this.noti.estado_error = false
+				this.noti.error = '<strong>Falta poco! </strong>Estamos verificando los datos.'
+
 				axios.post(url, this.sucursal)
 							.then((resp)=>{
+								this.noti.estado_error = true
+								this.noti.error = ''
 								if (resp.data.error) {
 									if (resp.data.campo == 'url') {
 										this.noti.nombre = 'El nombre ya está en uso.'
