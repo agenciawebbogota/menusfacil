@@ -7,10 +7,10 @@
   <title>Admin || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
+  <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
   <style media="screen">
     .img-pago{
         width: 280px;
@@ -50,6 +50,7 @@
         <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
       <li><div class="divider"></div></li>
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
+
       @if (Auth::user()->id_admin === null)
         <li><div class="divider"></div></li>
         <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">autorenew</i></a></li>
@@ -57,7 +58,7 @@
         <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">where_to_vote</i></a></li>
         <li><div class="divider"></div></li>
       @endif
-      
+
     </ul>
     <div class="navbar-fixed">
       <nav>
@@ -107,18 +108,18 @@
   @if (Auth::user()->bloqueado == 'NO')
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-    <script type="text/javascript" src="{{url('admin/js/config.js')}}"></script>
+    <script type="text/javascript" src="/admin/js/config.js"></script>
     <script type="text/javascript">
       let firebase = "empresa/<?php  echo Auth::user()->url ?>";
       let ref = db.ref(firebase);
     </script>
   @endif
 
-  <script type="text/javascript" src="{{url('admin/js/app.min.js')}}"></script>
+  <script type="text/javascript" src="/admin/js/app.min.js"></script>
 </body>
 </html>
 @else
   <title>Confirmar Cuenta || Menús Fácil</title>
-  <link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   @include('admin.includes.activar')
 @endif

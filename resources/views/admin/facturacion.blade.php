@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="csrf-token" content="IKjGR54bAHYIfZadImuhOCJF7QhLZSqXWqQGKd21">
   <link href="http://127.0.0.1:8000/partnerts/css/app.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="{{url('partnerts/css/custom.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/partnerts/css/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="{{url('admin/css/facturacion.css')}}">
-  <link href="{{url('assets/css/animate.min.css')}}" rel="stylesheet">
-  <link href="{{url('assets/materialize/css/materialize.min.css')}}" rel="stylesheet">
-  <link href="{{url('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{url('assets/css/shortcodes/shortcodes.css')}}" rel="stylesheet">
-  <link href="{{url('style.css')}}" rel="stylesheet">
-  <link href="{{url('assets/css/skins/creative.css')}}" rel="stylesheet">
-  <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
+  <link rel="stylesheet" href="/admin/css/facturacion.css">
+  <link href="/assets/css/animate.min.css" rel="stylesheet">
+  <link href="/assets/materialize/css/materialize.min.css" rel="stylesheet">
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/shortcodes/shortcodes.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+  <link href="/assets/css/skins/creative.css" rel="stylesheet">
+  <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
 </head>
 <body>
   <div>
     <div class="bgbar">
       <nav>
         <a class="brand-logo center">
-          <img src="{{url('admin/img/logo-menusfacil.svg')}}" alt="Menus Facil Logo" width="100px" class="imagen-logo">
+          <img src="/admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
         </a>
       </nav>
     </div>
@@ -202,7 +202,7 @@
             <span class="text-center">Todos los derechos reservados</span>
           </div>
       </div>
-      <script type="text/javascript" src="{{url('partnerts/js/app.min.js')}}">
+      <script type="text/javascript" src="/partnerts/js/app.min.js">
       </script>
   </footer>
 </body>

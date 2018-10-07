@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/inicio/css/app.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="icon" href="{{url('admin/img/favicon.png')}}" sizes="32x32">
+  <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
 
 </head>
 

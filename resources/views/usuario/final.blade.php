@@ -1,11 +1,11 @@
 @if ($empresa->confirmado != 'SI')
-<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <div>
     <h3 class="center-align">El cliente aún no está activo./h3>
 </div>
 
 @elseif(count($menus) < 1)
-<link href="{{url('/admin/css/app.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <div>
     <h3 class="center-align">No hay menús disponibles en el momento</h3>
   </div>
@@ -64,7 +64,7 @@
   									<div class="col s12 m6 l8 offset-l2" >
   										<div class="card hoverable" style="margin-top:10px">
   											<div class="card-image">
-  												<img src="{{url('img/menu.img-1.jpg')}}">
+  												<img src="img/menu.img-1.jpg">
   												<span class="card-title">{{$menu->nombre}}</span>
   												<a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" @click="agregarPedido({{$menu}})" data-position="left" data-tooltip="Pide uno"><i class="material-icons">add</i></a>
   											</div>
@@ -165,6 +165,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0/firebase-database.js"></script>
-	<script type="text/javascript" src="{{url('inicio/js/app.js')}}"></script>
+	<script type="text/javascript" src="/inicio/js/app.js"></script>
 </html>
 @endif

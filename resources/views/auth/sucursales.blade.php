@@ -11,7 +11,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Estilos CSS -->
-    <link href="{{ url('registro/css/app.css') }}" rel="stylesheet">
+    <link href="/registro/css/app.css" rel="stylesheet">
     <style>
         .red-text{
             color: red;
@@ -20,6 +20,7 @@
             display: none;
         }
     </style>
+
 </head>
 <body style="background-image:url(/img/bg-register.jpg);background-repeat:no-repeat">
     <div id="app" >
@@ -98,8 +99,18 @@
             
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<<<<<<< HEAD
     {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> --}}
     <script src="{{ url('admin/sucursales/js/axios.min.js') }}" defer></script>
     <script src="{{ url('admin/sucursales/js/app.js') }}" defer></script>
+=======
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/js/axios.min.js" defer></script>
+  <script src="/admin/sucursales/js/app.js" defer></script>
+>>>>>>> b6154f9200314b88cc1aeb82517ab3b66d4ca5ce
 </body>
 </html>
