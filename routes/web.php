@@ -67,5 +67,5 @@ Route::get('/registro/partnerts', 'PartnertController@indexpartnerts');
 Route::post('/registro/partnerts', 'PartnertController@create');
 Route::get('/partnerts/get', 'PartnertController@get');
 
-// Confirmación de registration
+// Confirmación de registro
 Route::get('/confimacliente/{correo}/{id}', 'InicioController@confirmacion');

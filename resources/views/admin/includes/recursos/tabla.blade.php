@@ -18,7 +18,7 @@
       <div class="col s12 m8 l9">
         <div class="switch">
           <label>
-            <input type="checkbox" v-model="menu.estado" value="menu.estado" checked="1" v-on:click="updateMenu(menu, 1)">
+            <input type="checkbox" v-model="menu.estado" v-on:click="updateMenu(menu, 1)">
             <span class="lever" style="background-color:{{Auth::user()->color3}}"></span>
           </label>
         </div>

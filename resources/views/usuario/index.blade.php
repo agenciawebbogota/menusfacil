@@ -87,8 +87,8 @@
   											<<< Desliza para ver más >>>
   										</div>
   									@endif
-  							  </div>
-  						@endif
+									</div>
+							@endif
   						@endforeach
 					</div>
 				</div>

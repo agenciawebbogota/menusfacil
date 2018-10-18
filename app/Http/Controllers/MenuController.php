@@ -103,16 +103,16 @@ class MenuController extends Controller
 	
 
     public function update(Request $request){
-    	if ($request->input('estado')) {
-    		$estado = 1;
-    	}else{
-    		$estado = 0;
-		}
-		$filename = $request->imagen;
-		$publicId = null;
-		$options = [];
-		$tags = ['Menus', 'subida', 'clientes', 'MenúsFácil', 'actualización'];
-		return $request;
+    	// if ($request->input('estado') == true) {
+    	// 	$estado = true;
+    	// }else{
+    	// 	$estado = false;
+		// }
+		// $filename = $request->imagen;
+		// $publicId = null;
+		// $options = [];
+		// $tags = ['Menus', 'subida', 'clientes', 'MenúsFácil', 'actualización'];
+		// return $request;
 		// 	\Cloudinary::config(array( 
 		// 		"cloud_name" => "menusfacil", 
 		// 		"api_key" => "182214799745955", 
@@ -121,16 +121,16 @@ class MenuController extends Controller
 		// 	$result = \Cloudinary\Uploader::upload($filename, 
 		// 		array("folder" => "menusfacil/", "overwrite" => TRUE, "width" => 800, "height" => 248, 'tags' => $tags));
 		// 	$url = $result['url'];
-		// 	$menu = Menu::where('id', $request->input('id'))->update([
-		// 		'nombre' => $request->input('nombre'),
-		// 		'descripcion' => $request->input('descripcion'),
-		// 		'precio' => $request->input('precio'),
-		// 		'estado' => $estado,
-		// 		'adicional' => $request->input('adicional'),
-		// 		'activo' => true,
-		// 		'imagen' => $url,
-		// 	]);
-		// return $menu;
+			$menu = Menu::where('id', $request->input('id'))->update([
+				'nombre' => $request->input('nombre'),
+				'descripcion' => $request->input('descripcion'),
+				'precio' => $request->input('precio'),
+				'estado' => $request->input('estado'),
+				'adicional' => $request->input('adicional'),
+				'activo' => true,
+				// 'imagen' => $url,
+			]);
+		return ['resp' => $menu];
     }
 
     public function delete($id){

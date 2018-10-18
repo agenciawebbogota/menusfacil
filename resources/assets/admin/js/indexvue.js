@@ -46,13 +46,13 @@ new Vue({
 		});
 		this.getMenus()
 		moment.locale('es');
-		this.fecha = moment().format('LL');
+		this.fecha = moment().format('LL');	
 	},
 	methods:{
 		getMenus:function(){
 			axios.get('/menus/get')
 			  .then((response) =>{
-			    this.menus = response.data.menus
+				this.menus = response.data.menus				
 			    this.total = response.data.total
 			  })
 			  .catch(function (error) {
@@ -76,20 +76,20 @@ new Vue({
 			fd.append('imagen', this.add.imagen, this.add.imagen.name)
 			this.add.imagen = fd;
 		},
-		getImagen2(e){
-			// console.log(e.target.files[0]);
-			this.update.imagen = e.target.files[0]
-			// Validar la imagen del menú
-			// console.log(this.update.imagen);
-			if(this.update.imagen.size > 30000){
-				console.log('El tamaño de la imagen supera el limite permitido de 29KB, tu imagen pesa: ',this.update.imagen.size );	
-			}else{
-				console.info("Tu imagen se puede cargar, recuerda conservar las dimensiones en el diseño, ( ancho: 800px y alto:248px )")
-			}
-			let fd = new FormData();
-			fd.append('imagen', this.update.imagen, this.update.imagen.name)
-			this.update.imagen = fd;
-		},
+		// getImagen2(e){
+		// 	// console.log(e.target.files[0]);
+		// 	this.update.imagen = e.target.files[0]
+		// 	// Validar la imagen del menú
+		// 	// console.log(this.update.imagen);
+		// 	if(this.update.imagen.size > 30000){
+		// 		console.log('El tamaño de la imagen supera el limite permitido de 29KB, tu imagen pesa: ',this.update.imagen.size );	
+		// 	}else{
+		// 		console.info("Tu imagen se puede cargar, recuerda conservar las dimensiones en el diseño, ( ancho: 800px y alto:248px )")
+		// 	}
+		// 	let fd = new FormData();
+		// 	fd.append('imagen', this.update.imagen, this.update.imagen.name)
+		// 	this.update.imagen = fd;
+		// },
 		addMenu:function(){
 			if(this.add.adicional){
 				this.add.adicional = 'SI'
@@ -153,10 +153,10 @@ new Vue({
 		},
 		updateMenu:function(menu, q){
 			if (q) {
-				if(!menu.estado){
-				menu.estado = 1
+				if(menu.estado){
+					menu.estado = false
 				}else{
-					menu.estado = 0
+					menu.estado = true
 				}
 			}else{
 				if(menu.estado){
@@ -170,32 +170,31 @@ new Vue({
 			}else{
 				menu.adicional = 'NO'
 			}
-			let fd;
-			if(this.update.imagen){
-				fd = this.update.imagen;
-				fd.append('nombre', this.update.nombre)
-				fd.append('descripcion', this.update.descripcion)
-				fd.append('precio', this.update.precio)
-				fd.append('adicional', this.update.adicional)
-				fd.append('estado', this.update.estado)
-			}else{
-				fd = this.update;
-			}
 
-			console.log(this.update);
-			
-			
+
+
+			// Aquí estamos codificando la actualización de las imagenes..
+			// let fd;
+			// if(this.update.imagen){
+			// 	fd = this.update.imagen;
+			// 	fd.append('nombre', this.update.nombre)
+			// 	fd.append('descripcion', this.update.descripcion)
+			// 	fd.append('precio', this.update.precio)
+			// 	fd.append('adicional', this.update.adicional)
+			// 	fd.append('estado', this.update.estado)
+			// }else{
+			// 	fd = this.update;
+			// }
 			let url = '/menus/actualizar';
-			axios.put(url, fd).then((resp)=>{
+			let data = menu;
+			axios.put(url, data).then((resp)=>{
 				// Cerrar modal
 				let modalupdate = M.Modal.getInstance(actualizarMenu)
 				modalupdate.close()
 				M.toast({
-					html:'Se ha actualizado el menu '+"'"+resp.nombre+"'.",
+					html:'Se ha actualizado el menu '+"'"+menu.nombre+"'.",
 					outDuration:1000
 				});
-				console.log(resp);
-				
 			}).catch(function (error) {
 				console.log(error);
 				
