@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
                 'estado'=> 1,
                 'imagen' => 'http://res.cloudinary.com/menusfacil/image/upload/v1537344219/menusfacil/htdrzlilkx93ikehylpt.jpg',
             ]);
-        })->dailyAt('13:30');
+        })->timezone('America/Bogota')->dailyAt('13:30');
     }
 
     /**
