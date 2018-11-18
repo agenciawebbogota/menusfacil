@@ -30,11 +30,11 @@ class Kernel extends ConsoleKernel
                 'nombre' => 'Lechugas de pan',
                 'descripcion' => 'Tarea Programada desde Crom',
                 'precio' => 40000,
-                'adicional' => 0,
+                'adicional' => 'NO',
                 'estado'=> 1,
                 'imagen' => 'http://res.cloudinary.com/menusfacil/image/upload/v1537344219/menusfacil/htdrzlilkx93ikehylpt.jpg',
             ]);
-        })->timezone('America/Bogota')->dailyAt('14:50');
+        })->timezone('America/Bogota')->dailyAt('15:00');
     }
 
     /**
