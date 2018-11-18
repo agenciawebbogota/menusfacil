@@ -59,13 +59,5 @@ class SuperusuarioController extends Controller
     return $usuario;
   }
 
-  public function diferenciaDias($inicio, $fin)
-  {
-    $inicio = date_format(date_create($inicio), 'Y-m-d');
-    $fin = date_format(date_create($fin), 'Y-m-d');
-    $date1 = new DateTime($inicio);
-    $date2 = new DateTime( $fin);
-    $diff = $date1->diff($date2);
-    return $diff->days;
-  }
+  
 }

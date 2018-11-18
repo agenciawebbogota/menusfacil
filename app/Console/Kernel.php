@@ -44,7 +44,7 @@ class Kernel extends ConsoleKernel
               // Controlar que sólo sea actualizado una vez al día, programar en el cliente un reloj que ejecute esta acción a las 10 am
               User::where('id', $usuario->id)->update([
                 'dias' => $nuevosdias,
-        			]);
+        	        ]);
               $dias = User::where('id','=', $usuario->id)->first()->dias;
               if($dias == 3){
                 // Notificar a todos los uausarios que le quedan tres días para que su suscripción sea bloqueada.
@@ -92,6 +92,8 @@ class Kernel extends ConsoleKernel
         })->timezone('America/Bogota')->dailyAt('16:00');
     }
 
+
+
     /**
      * Register the commands for the application.
      *
@@ -102,5 +104,19 @@ class Kernel extends ConsoleKernel
         $this->load(__DIR__.'/Commands');
 
         require base_path('routes/console.php');
+    }
+
+
+
+
+    // Otras funciones
+    public function diferenciaDias($inicio, $fin)
+    {
+        $inicio = date_format(date_create($inicio), 'Y-m-d');
+        $fin = date_format(date_create($fin), 'Y-m-d');
+        $date1 = new DateTime($inicio);
+        $date2 = new DateTime( $fin);
+        $diff = $date1->diff($date2);
+        return $diff->days;
     }
 }
