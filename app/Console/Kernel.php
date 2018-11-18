@@ -89,7 +89,7 @@ class Kernel extends ConsoleKernel
         }
       }
         // FIn de sentencias para el bloqueo de los usuarios al momento de la suscripción, sólo pasar estas instrucciones en donde se quieren ejecutar y tomar las acciones indicadas en los echos
-        })->timezone('America/Bogota')->dailyAt('16:00');
+        })->timezone('America/Bogota')->dailyAt('17:00');
     }
 
 
