@@ -190,7 +190,7 @@
             </div>
           </div>
           <div class="ptb-30 text-center wow fadeInUp">
-              <a href="http://menusfacil.com">Cancelar y volver a la página principal</a>
+          <a href="{{url('/dashboard')}}">Cancelar y volver a la página principal</a>
           </div>
           </div>
         </div>

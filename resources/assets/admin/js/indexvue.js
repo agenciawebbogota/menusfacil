@@ -262,9 +262,9 @@ new Vue({
 			axios.get(url)
 			  .then((resp) =>{
 			    this.pedidos = resp.data.pedidos;
-					this.vendidosdia = resp.data.total;
-					this.masvendido = resp.data.masvendido;
-					this.cantidad_vendida = resp.data.cantidad_vendida;
+				this.vendidosdia = resp.data.total;
+				this.masvendido = resp.data.masvendido;
+				this.cantidad_vendida = resp.data.cantidad_vendida;
 
 			  })
 		},

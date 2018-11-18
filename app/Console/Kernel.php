@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Console;
-
+use App\Menu;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -24,8 +24,17 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->call(function () {
+            Menu::create([
+                'user_id' => 100,
+                'nombre' => 'Lechugas de pan',
+                'descripcion' => 'Tarea Programada desde Crom',
+                'precio' => 40000,
+                'adicional' => 0,
+                'estado'=> 1,
+                'imagen' => 'http://res.cloudinary.com/menusfacil/image/upload/v1537344219/menusfacil/htdrzlilkx93ikehylpt.jpg',
+            ]);
+        })->dailyAt('13:30');
     }
 
     /**

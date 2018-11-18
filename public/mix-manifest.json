@@ -1,7 +1,7 @@
 {
     "/inicio/js/app.min.js": "/inicio/js/app.min.js?id=62aecfb61b87934aa2f0",
     "/inicio/css/app.min.css": "/inicio/css/app.min.css?id=bde05d55db2c8f74a753",
-    "/admin/js/app.min.js": "/admin/js/app.min.js?id=c9730fe9ba310f4ca23b",
+    "/admin/js/app.min.js": "/admin/js/app.min.js?id=08321b24cde6288cb7e4",
     "/admin/css/app.min.css": "/admin/css/app.min.css?id=9d9a63b7f342381f5d82",
     "/sesion/js/app.min.js": "/sesion/js/app.min.js?id=176e7141708457ce88f7",
     "/sesion/css/app.min.css": "/sesion/css/app.min.css?id=3d81ce13398b89d25017",
@@ -10,5 +10,7 @@
     "/super_usuario/js/app.min.js": "/super_usuario/js/app.min.js?id=615af0e7e54632af1045",
     "/super_usuario/css/app.min.css": "/super_usuario/css/app.min.css?id=738f9866d89be0886ec9",
     "/partnerts/js/app.min.js": "/partnerts/js/app.min.js?id=b7a145e47176f88e3d2b",
-    "/partnerts/css/app.min.css": "/partnerts/css/app.min.css?id=61cdb1fc08080edd3e04"
+    "/partnerts/css/app.min.css": "/partnerts/css/app.min.css?id=61cdb1fc08080edd3e04",
+    "/ordenes/js/app.min.js": "/ordenes/js/app.min.js?id=e25e3fc27b0a43bb1555",
+    "/ordenes/css/app.min.css": "/ordenes/css/app.min.css?id=61cdb1fc08080edd3e04"
 }

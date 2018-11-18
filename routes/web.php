@@ -50,6 +50,11 @@ Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middlewar
 // Pruebas
 Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
 
+// Ordenes del día
+Route::get('/admin/ordenes', function(){
+    return view('admin.ordenes');
+});
+
 
 // Rutas del Super Usuario
 Route::get('/superusuario', 'SuperusuarioController@index');
