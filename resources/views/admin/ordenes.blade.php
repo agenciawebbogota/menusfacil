@@ -8,7 +8,6 @@
   <link href="{{url('/ordenes/css/app.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="/assets/css/animate.min.css" rel="stylesheet">
   <link href="/style.css" rel="stylesheet">
   <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
   <style>
@@ -35,34 +34,38 @@
       </nav>
     </div>
     <div class="container">
-      <table class="centered striped highlight responsive-table">
+      <table class="centered striped highlight responsive-table" v-if="pedidos != false">
         <section class="center-align">
           <h1>Ordenes del día  <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="material-icons">file_download</i></a></h1>
           <span>En tiempo real   <i class="material-icons tiny">access_time</i></span>
         </section>
-        <thead v-if="pedidos != ''">
-              <tr>
-                <th>Cliente</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Correo</th>
-                <th>Menú</th>
-                <th>Oservaciones</th>
-                <th>Tiempo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(pedido, index) in pedidos">
-                <td>@{{pedido.nombre}}</td>
-                <td>@{{pedido.direccion}}</td>
-                <td>@{{pedido.telefono}}</td>
-                <td>@{{pedido.correo}}</td>
-                <td>@{{pedido.nombre_pedido}}</td>
-                <td>@{{pedido.observaciones}}</td>
-                <td><i class="material-icons tiny">access_time</i> @{{momentjs(pedido.created_at)}}</td>
-              </tr>
-            </tbody>
+        <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Dirección</th>
+              <th>Teléfono</th>
+              <th>Correo</th>
+              <th>Menú</th>
+              <th>Oservaciones</th>
+              <th>Tiempo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(pedido, index) in pedidos">
+              <td>@{{pedido.nombre}}</td>
+              <td>@{{pedido.direccion}}</td>
+              <td>@{{pedido.telefono}}</td>
+              <td>@{{pedido.correo}}</td>
+              <td>@{{pedido.nombre_pedido}}</td>
+              <td>@{{pedido.observaciones}}</td>
+              <td><i class="material-icons tiny">access_time</i> @{{momentjs(pedido.created_at)}}</td>
+            </tr>
+          </tbody>
         </table>
+    </div>
+        <div class="container center-align" v-else>
+          <h2>No hay ordes para mostrar.</h2>
+        </div>
     </main>
     <!-- Footer -->
     <footer class="page-footer" style="background-color:{{Auth::user()->color1}}">

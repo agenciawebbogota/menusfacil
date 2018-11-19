@@ -18,7 +18,6 @@ class PagoController extends Controller
         'estado_empresa' => 'PAGA',
         'dias' => $dias,
       ]);
-
       Mail::send('correos/pagorecibido', ['mensaje' => 'exito'], function($msj)
       {
         $msj->subject('Prueba de paos con PAYU');
@@ -30,7 +29,6 @@ class PagoController extends Controller
   }
 
   public function respuesta(){
-
     // var_dump($_REQUEST['response_message_pol']);
 
     // dd($_REQUEST);

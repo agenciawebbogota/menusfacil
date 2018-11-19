@@ -40,7 +40,7 @@ class SuperusuarioController extends Controller
 
 
   public function actualizardias(){
-      // 
+      return 'No hay nada por hacer, ya se programó en Cron.'; 
   }
 
   public function updateUser(Request $request){

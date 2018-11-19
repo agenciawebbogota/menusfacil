@@ -28,7 +28,6 @@ class PedidoController extends Controller
             ->select('pedidos.*', 'menus.nombre as nombre_pedido', 'menus.descripcion', 'menus.precio')
             ->orderBy('id', 'DESC')
             ->get();
-
 					// Inicio de sentencias para el calculos del menú mas vendido
 						$user_id = \Auth::id();
 						$mvendidos = DB::select("SELECT menu_pedido, COUNT(menu_pedido) cantidad
@@ -40,7 +39,6 @@ class PedidoController extends Controller
 				    $masvendido = DB::select("SELECT nombre FROM menus WHERE id=$idmvendidos ");
 
 						// Fin de instrucciones para obtener el más vendido de la semana
-
 						$total = 0;
 						$pedido = [];
 						foreach ($menus as $menu) {
@@ -50,7 +48,7 @@ class PedidoController extends Controller
 							$total = $ped->precio + $total;
 						}
 		        return(
-							[
+						[
 							'pedidos' => $menus,
 							'masvendido' => $masvendido[0]->nombre,
 							'cantidad_vendida' => $mvendidos[0]->cantidad,

@@ -1,7 +1,7 @@
 new Vue({
     el: '#ordenes',
     data:{
-        pedidos:''
+        pedidos:false
     },
     mounted(){
 		document.addEventListener('DOMContentLoaded', ()=> {
@@ -24,7 +24,10 @@ new Vue({
 			axios.get(url)
 			  .then((resp) =>{
                 this.pedidos = resp.data.pedidos;                             
-			  })
+              })
+              .catch((error=>{
+                  console.log(error);
+              }))
         },
         momentjs:function(fecha){
 			return moment(fecha).fromNow();

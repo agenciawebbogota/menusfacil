@@ -35,7 +35,7 @@ Route::get('documentacion', 'InicioController@doc');
 // Rutas de pedidos
 Route::get('pedido/menus', 'PedidoController@getMenusDia');
 Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
-Route::get('pedidos/pedidos', 'PedidoController@get');
+Route::get('/pedidos/pedidos', 'PedidoController@get');
 Route::post('/pedidos/crear', 'PedidoController@create');
 Route::get('/descarga/pedidos', 'PedidoController@pdf')->middleware('auth');
 
@@ -53,7 +53,7 @@ Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
 // Ordenes del día
 Route::get('/admin/ordenes', function(){
     return view('admin.ordenes');
-});
+})->middleware('auth');
 
 
 // Rutas del Super Usuario
