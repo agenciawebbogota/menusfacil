@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,8 +32,8 @@
         </a>
       </nav>
     </div>
-    <div class="container">
-      <table class="centered striped highlight responsive-table" v-if="pedidos != false">
+    <div class="container" v-if="pedidos != false">
+      <table class="centered striped highlight responsive-table">
         <section class="center-align">
           <h1>Ordenes del día  <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="material-icons">file_download</i></a></h1>
           <span>En tiempo real   <i class="material-icons tiny">access_time</i></span>
@@ -64,7 +63,7 @@
         </table>
     </div>
         <div class="container center-align" v-else>
-          <h2>No hay ordes para mostrar.</h2>
+          <h1>No hay ordenes para mostrar.</h1>
         </div>
     </main>
     <!-- Footer -->
