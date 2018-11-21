@@ -162,7 +162,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
-
+        LaravelQRCode\Providers\QRCodeServiceProvider::class,
     ],
 
     /*
@@ -213,7 +213,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
-
+        'QRCode' => LaravelQRCode\Facades\QRCode::class,
     ],
 
 ];

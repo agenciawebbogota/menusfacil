@@ -59,17 +59,17 @@
     },
     {
         "name": "cloudinary/cloudinary_php",
-        "version": "1.11.1",
-        "version_normalized": "1.11.1.0",
+        "version": "1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cloudinary/cloudinary_php.git",
-            "reference": "131a4fe06a1fc9d7b661cc509c4d26e6919bee55"
+            "reference": "d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/131a4fe06a1fc9d7b661cc509c4d26e6919bee55",
-            "reference": "131a4fe06a1fc9d7b661cc509c4d26e6919bee55",
+            "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7",
+            "reference": "d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7",
             "shasum": ""
         },
         "require": {
@@ -80,7 +80,7 @@
         "require-dev": {
             "phpunit/phpunit": "4.8.*"
         },
-        "time": "2018-09-12T17:03:56+00:00",
+        "time": "2018-10-11T13:21:48+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4547,5 +4547,96 @@
             "check",
             "validate"
         ]
+    },
+    {
+        "name": "werneckbh/laravel-qr-code",
+        "version": "0.1.3",
+        "version_normalized": "0.1.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/werneckbh/laravel-qr-code.git",
+            "reference": "df3875022158d0f8355f54219955e32f9a9ba080"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/werneckbh/laravel-qr-code/zipball/df3875022158d0f8355f54219955e32f9a9ba080",
+            "reference": "df3875022158d0f8355f54219955e32f9a9ba080",
+            "shasum": ""
+        },
+        "require": {
+            "werneckbh/qr-code": "^2.1"
+        },
+        "time": "2018-02-12T20:01:20+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "LaravelQRCode\\Providers\\QRCodeServiceProvider"
+                ],
+                "aliases": {
+                    "QRCode": "LaravelQRCode\\Facades\\QRCode"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "LaravelQRCode\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bruno Werneck",
+                "email": "brunovaulawerneck@gmail.com"
+            }
+        ],
+        "description": "QR Code Generator for PHP wrapper for Laravel"
+    },
+    {
+        "name": "werneckbh/qr-code",
+        "version": "2.1.15",
+        "version_normalized": "2.1.15.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/werneckbh/qr-code.git",
+            "reference": "ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/werneckbh/qr-code/zipball/ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0",
+            "reference": "ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0",
+            "shasum": ""
+        },
+        "require-dev": {
+            "khanamiryan/qrcode-detector-decoder": "^1.0",
+            "phpunit/phpunit": "^6.5"
+        },
+        "time": "2018-02-04T20:29:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/helpers/constants.php",
+                "src/helpers/functions.php"
+            ],
+            "psr-4": {
+                "QR_Code\\": "src/QR_Code/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bruno Vaula Werneck",
+                "email": "brunovaulawerneck@gmail.com"
+            }
+        ],
+        "description": "QR Code Generator for PHP"
     }
 ]

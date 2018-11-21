@@ -16,4 +16,6 @@ return array(
     'c15243c55ab4c20eff78d1e24be20dac' => $vendorDir . '/cloudinary/cloudinary_php/src/Helpers.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',
+    '601bf5295f4f86b2c9aa6885006f8ce5' => $vendorDir . '/werneckbh/qr-code/src/helpers/constants.php',
+    '550b6372332081faf3fe4980a1884cf2' => $vendorDir . '/werneckbh/qr-code/src/helpers/functions.php',
 );
