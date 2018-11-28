@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <title>Actualizar Cuenta || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="csrf-token" content="IKjGR54bAHYIfZadImuhOCJF7QhLZSqXWqQGKd21">
-  <link href="http://127.0.0.1:8000/partnerts/css/app.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/partnerts/css/app.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="/partnerts/css/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -68,6 +67,7 @@
                                     <input name="amount"        type="hidden"  value="{{$PLAN1['valor']}}"   >
                                     <input name="tax"           type="hidden"  value="0"  >
                                     <input name="taxReturnBase" type="hidden"  value="0" >
+                                    <input name="buyerFullName"           type="hidden"  value="{{Auth::user()->name}}"  >
                                     <input name="currency"      type="hidden"  value="{{$PLAN1['moneda']}}" >
                                     <input name="signature"     type="hidden"  value="{{$PLAN1['signature']}}">
                                     <input type="hidden" name="extra1" value="{{Auth::user()->id}}">
@@ -118,6 +118,7 @@
                                     <input name="referenceCode" type="hidden"  value="{{$PLAN2['referencia']}}" >
                                     <input name="amount"        type="hidden"  value="{{$PLAN2['valor']}}"   >
                                     <input name="tax"           type="hidden"  value="0"  >
+                                    <input name="buyerFullName"           type="hidden"  value="{{Auth::user()->name}}"  >
                                     <input name="taxReturnBase" type="hidden"  value="0" >
                                     <input name="currency"      type="hidden"  value="{{$PLAN2['moneda']}}" >
                                     <input name="signature"     type="hidden"  value="{{$PLAN2['signature']}}">
@@ -169,6 +170,7 @@
                                     <input name="amount"        type="hidden"  value="{{$PLAN3['valor']}}"   >
                                     <input name="tax"           type="hidden"  value="0"  >
                                     <input name="taxReturnBase" type="hidden"  value="0" >
+                                    <input name="buyerFullName"           type="hidden"  value="{{Auth::user()->name}}"  >
                                     <input name="currency"      type="hidden"  value="{{$PLAN3['moneda']}}" >
                                     <input name="signature"     type="hidden"  value="{{$PLAN3['signature']}}">
                                     <input type="hidden" name="extra1" value="{{Auth::user()->id}}">

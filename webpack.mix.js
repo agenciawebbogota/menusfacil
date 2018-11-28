@@ -10,7 +10,7 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+////Inicio
 mix.babel([
   'resources/assets/inicio/js/axios.min.js',
   'resources/assets/inicio/js/materialize.min.js',
@@ -36,6 +36,7 @@ mix.babel([
    .babel([
      'resources/assets/inicio/css/materialize.min.css',
      'resources/assets/admin/css/main.css',
+     'resources/assets/admin/css/fontawesome.css',
    ], 'public/admin/css/app.min.css');
 
 mix.babel([
@@ -52,6 +53,7 @@ mix.babel([
   'resources/assets/registro/js/registro.js',
 ], 'public/registro/js/app.min.js')
    .babel([
+     'resources/assets/admin/css/fontawesome.css',
      'resources/assets/registro/css/app.css',
    ], 'public/registro/css/app.min.css');
 
@@ -66,6 +68,7 @@ mix.babel([
    .babel([
      'resources/assets/inicio/css/materialize.min.css',
      'resources/assets/super_usuario/css/introjs.min.css',
+     'resources/assets/admin/css/fontawesome.css',
      'resources/assets/super_usuario/css/app.css',
    ], 'public/super_usuario/css/app.min.css');
 
@@ -73,13 +76,12 @@ mix.babel([
    mix.babel([
      'resources/assets/inicio/js/materialize.min.js',
       'resources/assets/inicio/js/axios.min.js',
-      // 'resources/assets/super_usuario/js/intro.min.js',
       'node_modules/vue/dist/vue.min.js',
       'resources/assets/partnerts/js/main.js',
     ], 'public/partnerts/js/app.min.js')
    .babel([
      'resources/assets/inicio/css/materialize.min.css',
-     // 'resources/assets/super_usuario/css/introjs.min.css',
+     'resources/assets/admin/css/fontawesome.css',
      'resources/assets/partnerts/css/main.css',
    ], 'public/partnerts/css/app.min.css');
 
@@ -94,8 +96,8 @@ mix.babel([
    ], 'public/ordenes/js/app.min.js')
   .babel([
     'resources/assets/inicio/css/materialize.min.css',
-    // 'resources/assets/super_usuario/css/introjs.min.css',
     'resources/assets/ordenes/css/main.css',
+    'resources/assets/admin/css/fontawesome.css',
   ], 'public/ordenes/css/app.min.css');
 
    // Personalización//////////
@@ -108,7 +110,7 @@ mix.babel([
   ], 'public/personalizar/js/app.min.js')
  .babel([
    'resources/assets/inicio/css/materialize.min.css',
-   // 'resources/assets/super_usuario/css/introjs.min.css',
+   'resources/assets/admin/css/fontawesome.css',
    'resources/assets/personalizar/css/app.css',
  ], 'public/personalizar/css/app.min.css');
 

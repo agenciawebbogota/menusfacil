@@ -6,9 +6,10 @@
       <title>Admin || Menús Fácil</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="csrf-token" content="{{ csrf_token() }}">
-      <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
+      <link href="/admin/css/app.min.css" type="text/css" rel="stylesheet" media="screen,projection">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> --}}
       <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
       <style media="screen">
          body {
@@ -40,7 +41,6 @@
          /* width: 300px; */
          }
          }
-         #slide-out{background-color: #ebebeb;}
       </style>
    </head>
    <body>
@@ -49,7 +49,7 @@
          @else
           <div id="dash">
          @endif
-         <ul id="slide-out" class="sidenav">
+         <ul id="slide-out" class="sidenav grey lighten-2">
             @if (Auth::user()->bloqueado == 'NO')
             <li>
                <div class="user-view">
@@ -60,26 +60,26 @@
             </li>
             @endif
             @if (Auth::user()->estado_empresa == 'PAGA')
-            <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
+         <li><a href="{{url('/personaliza')}}">Ver perfil<i class="fas fa-users-cog"></i></a></li>
             @endif
             <li>
                <div class="divider"></div>
             </li>
-            <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="material-icons">autorenew</i></a></li>
+            <li><a href="{{ url('admin/facturacion') }}">Actualizar Cuenta<i class="fas fa-user-plus"></i></i></a></li>
             @if (Auth::user()->id_admin === null)
             <li>
                <div class="divider"></div>
             </li>
-            <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="material-icons">where_to_vote</i></a></li>
+            <li><a href="{{ url('/admin/crear-sucursal') }}">Crear Sucursal<i class="fas fa-building"></i></a></li>
             <li>
                <div class="divider"></div>
             </li>
             @endif
-            <li><a class="sidenav-close" href="#!">Cerrar<i class="material-icons">keyboard_backspace</i></a></li>
+            <li><a class="sidenav-close" href="#!">Cerrar<i class="fas fa-backspace"></i></a></li>
             <li>
                <div class="divider"></div>
             </li>
-            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="red-text">Cerrar Sesión<i class="material-icons">power_settings_new</i></a></li>
+            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="red-text accent-4">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></a></li>
          </ul>
          <div class="navbar-fixed">
             <nav>
