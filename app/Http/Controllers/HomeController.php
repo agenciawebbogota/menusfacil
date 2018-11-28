@@ -126,4 +126,8 @@ class HomeController extends Controller
 
           ]);
     }
+
+    public function personaliza(){
+        return view('admin.personalizacion');
+    }
 }

@@ -23,9 +23,10 @@ Route::post('/cargafin', 'MenuController@cargafin');
 
 
 Auth::routes();
-
+//////Rutas del dashboard////////////
 Route::get('/dashboard', 'HomeController@index')->name('Dashboard');
-// Ruta de facturacióne
+Route::get('/personaliza', 'HomeController@personaliza')->name('Dashboard');
+// Ruta de facturación
 Route::get('/admin/facturacion', 'HomeController@facturacion');
 Route::get('/admin/crear-sucursal', 'HomeController@sucursal');
 Route::post('/admin/crear-sucursal', 'HomeController@registro');
@@ -52,34 +53,7 @@ Route::get('/historico/menus/{url}', 'MenuController@historicomenus')->middlewar
 
 // Pruebas
 // Route::get('/masvendido', 'InicioController@masvendido')->middleware('auth');
-Route::get('/prueba', function(){
 
-
-    $ruta = public_path('/admin/img/qr/luisfer.png');
-    QRCode::url('https://menusfacil.com/cliente/menus-facil')->setOutfile($ruta)->svg();
-
-
-    // return   view('correos.alcumplir29dias', [
-    //     'qr' =>  QRCode::url('https://menusfacil.com')->setSize(8)
-    //                                                 ->setMargin(2)
-    //                                                 ->svg(),
-    // ]);   
-
-
-
-       $correo = Mail::send('correos/alcumplir29dias', [
-        'url' =>  'menus-facil'
-        ], function($msj)
-        {
-            $msj->subject('Pruebas código QR');
-            $msj->to('whary11@gmail.com');
-        });
-
-        if ($correo) {
-            # code...
-            return 'Correo enviado';
-        }
-});
 
 
 // Ordenes del día

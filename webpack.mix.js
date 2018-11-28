@@ -98,6 +98,20 @@ mix.babel([
     'resources/assets/ordenes/css/main.css',
   ], 'public/ordenes/css/app.min.css');
 
+   // Personalización//////////
+   mix.babel([
+    'resources/assets/inicio/js/axios.min.js',
+    'resources/assets/admin/js/materialize.min.js',
+    'resources/assets/admin/js/moment-with-locales.min.js',
+    'node_modules/vue/dist/vue.min.js',
+    'resources/assets/personalizar/js/app.js',
+  ], 'public/personalizar/js/app.min.js')
+ .babel([
+   'resources/assets/inicio/css/materialize.min.css',
+   // 'resources/assets/super_usuario/css/introjs.min.css',
+   'resources/assets/personalizar/css/app.css',
+ ], 'public/personalizar/css/app.min.css');
+
 
 
 // Configurando babel
