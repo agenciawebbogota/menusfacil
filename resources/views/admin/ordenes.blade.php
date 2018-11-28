@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Ordenes del día || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link href="{{url('/ordenes/css/app.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href='/ordenes/css/app.min.css' type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="/style.css" rel="stylesheet">
