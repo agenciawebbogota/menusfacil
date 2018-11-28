@@ -33,7 +33,7 @@
         {{-- Contenido --}}
 
 
-<p>Aquí va el congtenido..</p>
+<p>Aquí va el contenido..</p>
 
 
 
