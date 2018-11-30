@@ -32,7 +32,7 @@
               <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}">
               <label for="email">Correo Electrónico</label>
                @if ($errors->has('email'))
-                <span class="red-text">{{ $errors->first('email') }}</span>
+                <span class="red-text" style="font-size:12px;">{{ $errors->first('email') }}</span>
               @endif
             </div>
           </div>
@@ -44,7 +44,7 @@
               <input id="password" type="password" name="password">
               <label for="password">Contraseña</label>
               @if ($errors->has('password'))
-                <span class="red-text">{{ $errors->first('password') }}</span>
+                <span class="red-text" style="font-size:12px;">{{ $errors->first('password') }}</span>
               @endif
             </div>
 

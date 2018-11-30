@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Ordenes del día || Menús Fácil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link href="{{url('/ordenes/css/app.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href='/ordenes/css/app.min.css' type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="/style.css" rel="stylesheet">
@@ -35,8 +35,12 @@
     <div class="container" v-if="pedidos != false">
       <table class="centered striped highlight responsive-table">
         <section class="center-align">
-          <h1>Ordenes del día  <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="material-icons">file_download</i></a></h1>
+          <h1>Ordenes del día
+              <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="fas fa-user-plus"></a>
+              <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="fas fa-file-excel"></i></a>
+          </h1>
           <span>En tiempo real   <i class="material-icons tiny">access_time</i></span>
+          <i class="fas fa-file-excel"></i>
         </section>
         <thead>
             <tr>

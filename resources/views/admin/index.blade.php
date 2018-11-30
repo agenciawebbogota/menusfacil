@@ -86,3 +86,6 @@
   @include('admin.includes.formularios.editarmenu')
   {{-- expr --}}
 @endsection
+@section('script')
+  <script type="text/javascript" src="/admin/js/app.min.js"></script>    
+@endsection

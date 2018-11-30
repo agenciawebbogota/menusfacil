@@ -1,0 +1,49 @@
+.pers{
+    padding: 0px 20px 0px 20px;
+}
+
+
+.titulos-pers h2{
+ text-align: center;
+ color: #373737;
+ text-transform: uppercase;
+ font-size: 38px;
+ font-weight: 700; 
+}
+.titulos-pers p{
+  text-align: center;
+  color: #373737;
+  font-size: 18px;
+}
+.btn-act{
+    background-color: #e88a10;
+}
+
+.card-nombre{
+    background-color: #66181a;
+}
+
+.logo1{
+    text-align: center;
+}
+.logo2{
+    background-color: #2b2831;
+    color: #fff;
+    text-align: center;
+}
+
+.input-files{
+    padding-top: 20px;
+}
+
+.input-image{
+    opacity: 0;
+    cursor: pointer;
+}
+.btn-act-img{
+    background-color: #e88a10;
+    margin-top: -50px;
+}
+@media (min-width:320px) and (max-width:500px){
+    .btn-act-img { margin-top:10px; }
+}
