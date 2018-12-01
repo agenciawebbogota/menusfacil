@@ -7,12 +7,11 @@
         @include('seo.google')
         @include('seo.facebook')
         <title>Menús Fácil | Nuevo Manager de Pedidos y Menús</title>
-        <link rel="shortcut icon" href="assets/img/favicon.png">
+        {{-- <link rel="shortcut icon" href="/admin/img/favicon.png"> --}}
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-57-precomposed.png">
-
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -27,6 +26,7 @@
         <link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
         <link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
         <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+        <link rel="icon" href="/admin/img/favicon.png" sizes="32x32">
 
     </head>
     <body id="top">
@@ -159,7 +159,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="1800"
                     style="z-index: 3;">
-                    <div><img class="ipad-img" src="/assets/img/banner/dummy.png" alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
+                    <div><img class="ipad-img"  alt="aplicativo menús fácil en ipad" data-lazyload="assets/img/back-image-app.png">
                     </div>
                 </div>
 
@@ -171,7 +171,7 @@
                     data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
                     data-start="2200"
                     style="z-index: 4;">
-                    <div><img class="ipad-img" src="assets/img/banner/dummy.png" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
+                    <div><img class="ipad-img" alt="aplicativo menús fácil en iphone" data-lazyload="assets/img/front-image-app.png">
                     </div>
                 </div>
             </li>

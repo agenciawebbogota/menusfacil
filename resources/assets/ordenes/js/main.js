@@ -23,7 +23,9 @@ new Vue({
             let url = '/pedidos/pedidos'
 			axios.get(url)
 			  .then((resp) =>{
-                this.pedidos = resp.data.pedidos;                             
+                this.pedidos = resp.data.pedidos;
+                console.log(this.pedidos);
+                                             
               })
               .catch((error=>{
                   console.log(error);

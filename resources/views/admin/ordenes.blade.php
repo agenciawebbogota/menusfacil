@@ -27,7 +27,7 @@
   <main id="ordenes" v-cloak>
     <div class="bgbar">
       <nav>
-        <a class="brand-logo center">
+        <a class="brand-logo center" href="/dashboard">
           <img src="/admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
         </a>
       </nav>
@@ -36,11 +36,10 @@
       <table class="centered striped highlight responsive-table">
         <section class="center-align">
           <h1>Ordenes del día
-              <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="fas fa-user-plus"></a>
-              <a href="{{url('/descarga/pedidos')}}" target="_blank" class="btn tooltipped" data-position="button" data-tooltip="Ver o imprimir pedidos" style="background-color:{{Auth::user()->color3}} !important;"><i class="fas fa-file-excel"></i></a>
+              <a href="{{url('/descarga/pedidos/pdf')}}" target="_blank" class="tooltipped red-text text-accent-2" data-position="button" data-tooltip="Ver o imprimir pedidos" ><i class="fas fa-file-pdf"></i></a>
+              <a href="{{url('/descarga/pedidos/excel')}}" target="_blank" class="tooltipped green-text" data-position="button" data-tooltip="Ver o imprimir pedidos" ><i class="fas fa-file-excel"></i></a>
           </h1>
           <span>En tiempo real   <i class="material-icons tiny">access_time</i></span>
-          <i class="fas fa-file-excel"></i>
         </section>
         <thead>
             <tr>
