@@ -163,6 +163,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
         LaravelQRCode\Providers\QRCodeServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -214,6 +215,7 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
         'QRCode' => LaravelQRCode\Facades\QRCode::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

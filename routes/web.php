@@ -41,7 +41,8 @@ Route::get('pedido/menus', 'PedidoController@getMenusDia');
 Route::get('pedido/adicionales', 'PedidoController@getAdicionalesDia');
 Route::get('/pedidos/pedidos', 'PedidoController@get');
 Route::post('/pedidos/crear', 'PedidoController@create');
-Route::get('/descarga/pedidos', 'PedidoController@pdf')->middleware('auth');
+Route::get('/descarga/pedidos/pdf', 'PedidoController@pdf')->middleware('auth');
+Route::get('/descarga/pedidos/excel', 'PedidoController@excel')->middleware('auth');
 
 // Rutas de menús
 Route::get('/menus/get', 'MenuController@index');

@@ -7,6 +7,10 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Pedido;
 use App\Menu;
+use App\Exports\PedidoExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 class PedidoController extends Controller
 {
 	public function getMenusDia(){
@@ -90,5 +94,19 @@ class PedidoController extends Controller
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view)->setPaper('a4', 'landscape');
         return $pdf->stream('Nombre_Personalizado_PDF');
-    }
+	}
+	
+	public function excel(){
+		// $ordenes = DB::table('pedidos')
+		// 			->where('pedidos.user_id', \Auth::id())
+		// 			->join('menus', 'pedidos.menu_pedido', '=', 'menus.id')
+		// 			->whereDate('pedidos.created_at', '=', Carbon::now()->format('Y-m-d'))
+		// 			->select('pedidos.*', 'menus.nombre as nombre_menu', 'menus.descripcion', 'menus.precio')
+		// 			->orderBy('id', 'ASC')
+		// 			->get();
+
+		// return Excel::download($ordenes, 'users.xlsx');
+		return Excel::download(new PedidoExport, 'ordenes.xlsx');
+
+	}
 }
