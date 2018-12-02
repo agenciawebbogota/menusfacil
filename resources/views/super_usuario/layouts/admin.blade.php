@@ -34,7 +34,11 @@
                      <a href="#"><span class="gray-text email">{{ Auth::user()->email }}</span></a>
                   </div>
                </li>
-               <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
+               <li><a href="/superusuario">Escritorio<i class="material-icons">dashboard</i></a></li>
+               <li>
+                  <div class="divider"></div>
+               </li>
+               <li><a href="/superusuario/menus">Menus<i class="material-icons">local_cafe</i></a></li>
                <li>
                   <div class="divider"></div>
                </li>
@@ -69,6 +73,10 @@
             </div>
             {{-- Contenido --}}
             @yield('contenido')
+
+
+
+
             <!-- Botones flotantes con opciones -->
             <div class="fixed-action-btn" style="bottom: 50px; right: 19px;" id="historicomnus" data-intro='Ver más opciones.' data-step="2">
                <a class="btn-floating btn-large">

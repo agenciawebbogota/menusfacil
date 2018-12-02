@@ -11,6 +11,14 @@ class Menu extends Model
     ];
 
 	
+    // public function user(){
+    //     return $this->belo('App\User');
+    // }
 
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
 }
