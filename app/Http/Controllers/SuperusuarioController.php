@@ -61,9 +61,8 @@ class SuperusuarioController extends Controller
   }
  public function menus()
  {
-
-  $menus = Menu::all()->where('id','=',  \Auth::id());
-   return view('super_usuario.menus', compact('menus'))->render();
+  $menus = Menu::with('user')->get()->where('id', '!=', \Auth::id());
+  return view('super_usuario.menus', compact('menus'))->render();
  }
   
 }
