@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
@@ -10,7 +9,10 @@ class Menu extends Model
         'nombre', 'descripcion', 'precio', 'estado', 'user_id',  'activo', 'adicional', 'imagen'
     ];
 
-	
+    public function user()
+    {
 
+        return $this->belongsTo('App\User');
+    }
 
 }

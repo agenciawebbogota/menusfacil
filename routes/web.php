@@ -65,6 +65,7 @@ Route::get('/admin/ordenes', function(){
 
 // Rutas del Super Usuario
 Route::get('/superusuario', 'SuperusuarioController@index');
+Route::get('/superusuario/menus', 'SuperusuarioController@menus');
 Route::get('/usuarios/get', 'SuperusuarioController@get');
 Route::PUT('/usuarios/actualizardias', 'SuperusuarioController@actualizardias');
 Route::PUT('/usuarios/actualizarUsuario', 'SuperusuarioController@updateUser');

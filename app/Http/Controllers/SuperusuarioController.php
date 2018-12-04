@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Menu;
 use Mail;
 use DateTime;
 
@@ -58,6 +59,10 @@ class SuperusuarioController extends Controller
     ]);
     return $usuario;
   }
-
+ public function menus()
+ {
+  $menus = Menu::with('user')->get()->where('id', '!=', \Auth::id());
+  return view('super_usuario.menus', compact('menus'))->render();
+ }
   
 }

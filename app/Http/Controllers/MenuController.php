@@ -23,22 +23,7 @@ class MenuController extends Controller
 		$options = [];
 		$tags = ['Menus', 'subida'];
 
-		// Cloudder::upload($request->input('imagen'), null, array ("public_id" => "my_dog",), ['comidas', 'servicios']);
-		// return Cloudder::getResult();
-		// \Cloudinary::config(array( 
-		// 	"cloud_name" => "menusfacil", 
-		// 	"api_key" => "182214799745955", 
-		// 	"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
-		// ));
-		// $result = \Cloudinary\Uploader::upload($filename, 
-		// 	array("folder" => "menusfacil/", "public_id" => "menusfacil".Auth::id(), "overwrite" => TRUE, "width" => 400, "height" => 300, 'tags' => $tags));
-
-		// $result = \Cloudinary\Uploader::add_tag($tags, $result['public_id'], $options = array());
-		
-
 		return($id);
-
-		// \Cloudinary::upload($filename, $publicId, $options, $tags);
 		
 	}
 
@@ -103,24 +88,6 @@ class MenuController extends Controller
 	
 
     public function update(Request $request){
-    	// if ($request->input('estado') == true) {
-    	// 	$estado = true;
-    	// }else{
-    	// 	$estado = false;
-		// }
-		// $filename = $request->imagen;
-		// $publicId = null;
-		// $options = [];
-		// $tags = ['Menus', 'subida', 'clientes', 'MenúsFácil', 'actualización'];
-		// return $request;
-		// 	\Cloudinary::config(array( 
-		// 		"cloud_name" => "menusfacil", 
-		// 		"api_key" => "182214799745955", 
-		// 		"api_secret" => "DTgYok4Pkb1eI7fmHKBmw4pOmyk" 
-		// 	));
-		// 	$result = \Cloudinary\Uploader::upload($filename, 
-		// 		array("folder" => "menusfacil/", "overwrite" => TRUE, "width" => 800, "height" => 248, 'tags' => $tags));
-		// 	$url = $result['url'];
 			$menu = Menu::where('id', $request->input('id'))->update([
 				'nombre' => $request->input('nombre'),
 				'descripcion' => $request->input('descripcion'),
@@ -142,7 +109,6 @@ class MenuController extends Controller
 		}
 
     }
-
     public function updateEstado(Request $request){
     	Menu::where('id', $request->input('id'))->update([
 			'nombre' => $request->input('nombre'),
@@ -153,7 +119,6 @@ class MenuController extends Controller
 		]);
 		return 'Se ha eliminado el Menu.';
     }
-
 
     public function pdf(){
     	$menus = Menu::all()->where('activo', 1)->where('user_id', \Auth::id());
@@ -166,16 +131,16 @@ class MenuController extends Controller
 
 		public function historicomenus($url){
 			$empresa = User::all()->where('url', $url);
-	   	if(count($empresa)){
-	   		$menus;
-	   		foreach ($empresa as  $value) {
-	   			$menus = User::find($value->id)->menus;
-	   		}
-			$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
-			return $pdf->stream('Nombre_Personalizado_PDF.pdf');
+			if(count($empresa)){
+				$menus;
+				foreach ($empresa as  $value) {
+					$menus = User::find($value->id)->menus;
+				}
+				$pdf = PDF::loadView('pdf.historicomenus', compact('menus', 'empresa'));
+				return $pdf->stream($empresa[0]->name.'.pdf');
 
-	    }else{
-	    	dd('Enviar una vista de publicidad si la empresa no existe..');
-	    }
+			}else{
+				dd('Enviar una vista de publicidad si la empresa no existe..');
+			}
 		}
 }

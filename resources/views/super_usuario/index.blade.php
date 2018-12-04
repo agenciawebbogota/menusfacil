@@ -1,3 +1,9 @@
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+
 @extends('super_usuario.layouts.admin')
 @section('contenido')
 
@@ -11,4 +17,12 @@
 {{--  Modal para la edicion de los usuarios --}}
   @include('super_usuario.includes.modals.editar')
 
+
+
+
+@endsection
+
+
+@section('script')
+  <script type="text/javascript" src="/super_usuario/js/app.min.js"></script>    
 @endsection

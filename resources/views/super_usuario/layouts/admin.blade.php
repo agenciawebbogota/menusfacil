@@ -10,9 +10,6 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link rel="icon" href="admin/img/favicon.png" sizes="32x32">
       <style media="screen">
-         [v-cloak] {
-          display: none;
-         }
          body {
           display: flex;
           min-height: 100vh;
@@ -34,7 +31,11 @@
                      <a href="#"><span class="gray-text email">{{ Auth::user()->email }}</span></a>
                   </div>
                </li>
-               <li><a href="#!">Ver perfil<i class="material-icons">face</i></a></li>
+               <li><a href="/superusuario">Escritorio<i class="material-icons">dashboard</i></a></li>
+               <li>
+                  <div class="divider"></div>
+               </li>
+               <li><a href="/superusuario/menus">Menus<i class="material-icons">local_cafe</i></a></li>
                <li>
                   <div class="divider"></div>
                </li>
@@ -52,7 +53,7 @@
                   <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}}">
                      <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger menuLateral" id="menuLateral" ><i class="material-icons large" data-intro='Menú para ver opciones del usuario.' data-step="1">menu</i></div>
                      <a class="brand-logo center">
-                     <img src="admin/img/logo-menusfacil.svg" alt="Menus Facil Logo" width="100px" class="imagen-logo">
+                     <img src="{{ url('admin/img/logo-menusfacil.svg') }}" alt="Menus Facil Logo" width="100px" class="imagen-logo">
                      </a>
                      <ul class="right hide-on-med-and-down">
                         <li>
@@ -69,6 +70,10 @@
             </div>
             {{-- Contenido --}}
             @yield('contenido')
+
+
+
+
             <!-- Botones flotantes con opciones -->
             <div class="fixed-action-btn" style="bottom: 50px; right: 19px;" id="historicomnus" data-intro='Ver más opciones.' data-step="2">
                <a class="btn-floating btn-large">
@@ -88,6 +93,6 @@
             </div>
          </div>
       </footer>
-      <script type="text/javascript" src="/super_usuario/js/app.min.js"></script>
+      @yield('script')
    </body>
 </html>
