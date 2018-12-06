@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1 style="text-align:center;">Página no encontrada.</h1>
+    <h1 style="text-align:center;">Nuestra aplicación está en modo mantenimiento.</h1>
     
 </body>
 </html>
