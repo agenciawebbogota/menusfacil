@@ -59,7 +59,7 @@
             </li>
             @endif
             @if (Auth::user()->estado_empresa == 'PAGA')
-         <li><a href="{{url('/personaliza')}}">Ver perfil<i class="fas fa-users-cog"></i></a></li>
+               <li><a href="{{url('/personaliza')}}">Ver perfil<i class="fas fa-users-cog"></i></a></li>
             @endif
             <li>
                <div class="divider"></div>

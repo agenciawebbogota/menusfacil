@@ -44,7 +44,7 @@
                 <div class="card">
                     <div class="card-content white-text card-nombre">
                         <p class="card-stats-title">Nombre del Negocio:</p>
-                        <input type="text" placeholder="Menús Fácil">
+                        <input type="text" value="{{ Auth::user()->name }}">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 <div class="card">
                     <div class="card-content white-text card-nombre">
                         <p class="card-stats-title">Color Primario:</p>
-                        <input type="text" placeholder="Rojo">
+                        <input type="text" value="{{ Auth::user()->color1 }}">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="card">
                     <div class="card-content white-text card-nombre">
                         <p class="card-stats-title">Color Secundario:</p>
-                        <input type="text" placeholder="Amarillo">
+                        <input type="text" value="{{ Auth::user()->color2 }}">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="card">
                     <div class="card-content white-text card-nombre">
                         <p class="card-stats-title">Color Terciario:</p>
-                        <input type="text" placeholder="Azul">
+                        <input type="text" value="{{ Auth::user()->color3 }}">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
@@ -81,80 +81,80 @@
         <div class="row">
             <div class="col m4 s12">
                 <div class="card">
-                    <div class="card-content logo1">
+                <div class="card-content logo1">
                         <img src="/img/logo-menusfacil.png" width="150"  height="auto" alt="">
                         <h4 class="card-title">Logo para fondo claro</h4>
-                            <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
-                            <div class="input-files">
-                                <label for="input-image" ><img src="/img/boton-upload.png"></label>
-                                <button class="btn btn-act-img">Actualizar</button>
-                                <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
-                            </div> 
-                        </div>
+                        <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
+                        <div class="input-files">
+                            <label for="input-image" ><img src="/img/boton-upload.png"></label>
+                            <button class="btn btn-act-img">Actualizar</button>
+                            <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
+                        </div> 
                     </div>
+                </div>
             </div>
             <div class="col m4 s12">
-                    <div class="card">
-                        <div class="card-content logo2">
-                            <img src="/img/logo.png" width="150"  height="auto" alt="">
-                            <h4 class="card-title">Logo para fondo oscuro</h4>
-                                <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
-                                <div class="input-files">
-                                    <label for="input-image" ><img src="/img/boton-upload.png"></label>
-                                    <button class="btn btn-act-img">Actualizar</button>
-                                    <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
-                                </div> 
-                        </div>
+                <div class="card">
+                    <div class="card-content logo2">
+                        <img src="/img/logo.png" width="150"  height="auto" alt="">
+                        <h4 class="card-title">Logo para fondo oscuro</h4>
+                        <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
+                        <div class="input-files">
+                            <label for="input-image" ><img src="/img/boton-upload.png"></label>
+                            <button class="btn btn-act-img">Actualizar</button>
+                            <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
+                        </div> 
                     </div>
+                </div>
             </div>
+
+
+
             <div class="col m4 s12">
-                    <div class="card">
-                        <div class="card-content logo1">
-                            <img src="/img/logo-menusfacil.png" width="150"  height="auto" alt="">
-                            <h4 class="card-title">Imagen de Perfil</h4>
-                                <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
-                                <div class="input-files">
-                                    <label for="input-image" ><img src="/img/boton-upload.png"></label>
-                                    <button class="btn btn-act-img">Actualizar</button>
-                                    <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
-                                </div> 
-                        </div>
+                <div class="card">
+                    <div class="card-content logo1">
+                        <img src="/img/logo-menusfacil.png" width="150"  height="auto" alt="">
+                        <h4 class="card-title">Imagen de Perfil</h4>
+                        <p class="card-text">200 x 200 Formatos admitidos: .svg .png .jpg</p>
+                        <div class="input-files">
+                            <label for="input-image" ><img src="/img/boton-upload.png"></label>
+                            <button class="btn btn-act-img">Actualizar</button>
+                            <input type="file" class="input-image" id="input-image" accept="image/png, .jpeg, .jpg, image/gif">
+                        </div> 
                     </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-                <div class="card col m4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card">
                         <div class="card-content">
                             <p class="card-stats-title">Código QR único del negocio</p>
-                            <img src="/img/qr.png" width="200" alt="">
+                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(350)->generate(url('cliente/'.Auth::user()->url))) !!} " class="materialboxed">
                         </div>
+                        
                     </div>
-
-            <div class="card col m4">
-                <div class="card-content">
-                    <p class="card-stats-title">URL única del negocio</p>
-                    <p>https://menusfacil.com/cliente/menus-facil</p>
                 </div>
-                <div class="card-content">
-                        <p class="card-stats-title">Correo electrónico Registrado</p>
-                        <p>app.menusfacil@gmail.com</p>
-                    </div>
-                    <div class="card-content">
+                <div class="col s12 m12">
+                    <div class="card">
+                        <div class="card-content">
                             <p class="card-stats-title">URL única del negocio</p>
-                            <p>https://menusfacil.com/cliente/menus-facil</p>
+                        <p>{{ url(Auth::user()->url) }}</p>
+                        {{-- </div>
+                        <div class="card-content"> --}}
+                            <p class="card-stats-title">Correo electrónico Registrado</p>
+                            <p>{{Auth::user()->email}}</p>
+                        {{-- </div>
+                        <div class="card-content"> --}}
+                            <p class="card-stats-title">URL única del negocio</p>
+                            <a href="{{ url('cliente/'.Auth::user()->url) }}" target="_blank">{{ url('cliente/'.Auth::user()->url) }}</a>
                         </div>
+                    </div>
+                    
+                </div>
             </div>
-            
-
-
         </div>
-
-
-
-
-
-
-
 </section>
 
 
@@ -168,5 +168,12 @@
     </footer>
     </main>
     <script type="text/javascript" src="/personalizar/js/app.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, {});
+        });
+    
+    </script>
 </body>
 </html>
