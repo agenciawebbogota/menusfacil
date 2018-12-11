@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->call(function () {
             // // Inicio de sentencias para el bloqueo de los usuarios al momento de la suscripción, excluimos todos los usuarios SUPERUSUARIOS.
-            $usuarios = User::all()->where('tipo_usuario','!=', 'SUPERUSUARIO');
+            // $usuarios = User::all()->where('tipo_usuario','!=', 'SUPERUSUARIO');
             // foreach ($usuarios as $usuario) {
             //     // Verificar si el usuario está bloqueado
             //     if($usuario->bloqueado == "SI"){
@@ -90,18 +90,13 @@ class Kernel extends ConsoleKernel
             // }
 
 
-            Mail::send('correos/alcumplir11dias', [
-                            'usuario' => $usuarios[0],
-                            'dias' => 10,
-                            ], function($msj)
-                            {
-                            $msj->subject('Recordatorio Ménus Fácil');
-                            $msj->to('whary11@gmail.com');
-                            $msj->bcc(['whary11@gmail.com']);
-                            });
+            User::where('id', 1)->update([
+                            'tipo_usuario' => 'SUPERUSUARIO',
+                            'dias' => 50,
+                            ]);
 
             // Definir el horario y zona de ejecución
-        })->timezone('America/Bogota')->dailyAt('21:55');
+        })->timezone('America/Bogota')->dailyAt('22:01');
     }
 
     /**
