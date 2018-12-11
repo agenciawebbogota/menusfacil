@@ -101,7 +101,7 @@ class Kernel extends ConsoleKernel
                             });
 
             // Definir el horario y zona de ejecución
-        })->timezone('America/Bogota')->dailyAt('21:53');
+        })->timezone('America/Bogota')->dailyAt('21:55');
     }
 
     /**
