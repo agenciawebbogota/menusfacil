@@ -1,7 +1,7 @@
 @if ($empresa->confirmado != 'SI')
 <link href="/admin/css/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   <div>
-    <h3 class="center-align">El cliente aún no está activo./h3>
+    <h3 class="center-align">El cliente aún no está activo.</h3>
 </div>
 
 @elseif(count($menus) < 1)

@@ -111,6 +111,11 @@ p {
 											<table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                         <tbody>
                           <tr>
+                            <td aling="center">
+                                <h5>Código QR para tus clientes</h5>
+                                <img src="{!!$message->embedData(QrCode::format('png')->size(350)->generate(url('cliente/'.$user->url)), 'QrCode.png', 'image/png')!!}"> --}}
+                            </td>
+                            <div style="display:block;">
                             <td align="center"><table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                                 <tr>
                                   <td height="60" align="center" bgcolor="#e88a10" style="border-radius: 6px;padding:10px">
@@ -119,7 +124,8 @@ p {
 																	</td>
 																	<br><br>
                                 </tr>
-                              </table></td>
+                            </td>
+                          </div>
                           </tr>
 													<tr>
 														<td style="padding-top:20px">
@@ -128,10 +134,10 @@ p {
 													</tr>
                         </tbody>
                       </table>
-											{{-- <p>Link para pedidos: {{ url("/empresa/".$url) }}</p>
-                      <p>Usuario: {{$email}}</p>
-                      <p>Contraseña: ******</p>
-                      <p>Correo electrónico: {{$email}}</p> --}}
+											<p>Link para pedidos: {{ url("/cliente/".$user->url) }}</p>
+                      <p>Usuario: {{$user->email}}</p>
+                      {{-- <p>Contraseña: ******</p> --}}
+                      <p>Correo electrónico: {{$user->email}}</p>
                       <br/>
                       <br/>
 

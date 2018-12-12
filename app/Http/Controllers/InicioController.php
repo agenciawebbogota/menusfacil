@@ -53,4 +53,23 @@ class InicioController extends Controller
       return abort(404);
     }
   }
+
+
+
+
+
+
+
+
+
+  public function prueba(){
+    Mail::send('correos/alregistrarse1', ['user' => 'algo'], function($msj)
+      {
+        $msj->subject('Por favor confirma tu suscripción a Menús Fácil.');
+        $msj->to('whary11@gmail.com');
+        // $msj->bcc(['app.menusfacil@gmail.com']);
+      });
+
+      return 'Mensaje enviado con éxito';
+  }
 }

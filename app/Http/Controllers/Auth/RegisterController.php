@@ -66,7 +66,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
       $this->email = $data['email'];
       $partnert;
       if($data['partnert_id'] == ''){
@@ -85,13 +84,12 @@ class RegisterController extends Controller
           'dias' => 14,
           'partnert_id' => $partnert,
         ]);
-        Mail::send('correos/alregistrarse', ['user' => $user], function($msj)
+        Mail::send('correos/alregistrarse1', ['user' => $user], function($msj)
         {
           $msj->subject('Por favor confirma tu suscripción a Menús Fácil.');
           $msj->to($this->email);
-          $msj->bcc(['app.menusfacil@gmail.com']);
+          // $msj->bcc(['app.menusfacil@gmail.com']);
         });
-
         return $user;
     }
 

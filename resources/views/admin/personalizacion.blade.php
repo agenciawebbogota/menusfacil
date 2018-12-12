@@ -127,16 +127,18 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col s12 m12">
+                <div class="col s12 m6 offset-m3">
                     <div class="card">
                         <div class="card-content">
-                            <p class="card-stats-title">Código QR único del negocio</p>
-                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(350)->generate(url('cliente/'.Auth::user()->url))) !!} " class="materialboxed">
+                            <p class="card-stats-title center-align">Código QR único del negocio</p>
+                            <center>
+                                <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(350)->generate(url('cliente/'.Auth::user()->url))) !!} ">
+                            </center>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col s12 m12">
+                <div class="col s12 m8 offset-m2">
                     <div class="card">
                         <div class="card-content">
                             <p class="card-stats-title">URL única del negocio</p>
@@ -168,12 +170,5 @@
     </footer>
     </main>
     <script type="text/javascript" src="/personalizar/js/app.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.materialboxed');
-            var instances = M.Materialbox.init(elems, {});
-        });
-    
-    </script>
 </body>
 </html>

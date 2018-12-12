@@ -82,3 +82,9 @@ Route::get('/partnerts/get', 'PartnertController@get');
 
 // Confirmación de registro
 Route::get('/confimacliente/{correo}/{id}', 'InicioController@confirmacion');
+
+
+// Pruebas
+Route::get('/prueba', 'InicioController@prueba');
+
+Route::get('/email', [ 'as' => 'email', 'uses' => 'EmailController@index' ]);

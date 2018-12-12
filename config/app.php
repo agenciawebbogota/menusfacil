@@ -164,6 +164,7 @@ return [
         JD\Cloudder\CloudderServiceProvider::class,
         LaravelQRCode\Providers\QRCodeServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Themsaid\MailPreview\MailPreviewServiceProvider::class,
     ],
 
     /*
@@ -216,6 +217,7 @@ return [
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
         'QRCode' => LaravelQRCode\Facades\QRCode::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    
     ],
 
 ];
