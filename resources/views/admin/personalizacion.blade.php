@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Actualizar Cuenta || Menús Fácil</title>
+  <title>Personalizar Cuenta || Menús Fácil</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -21,7 +22,7 @@
   </style>
 </head>
 <body>
-    <main class="">
+    <main class="app">
       <div>
       <nav>
         <a class="brand-logo center">
@@ -44,34 +45,34 @@
                 <div class="card">
                     <div class="card-content white-text card-nombre">
                         <p class="card-stats-title">Nombre del Negocio:</p>
-                        <input type="text" value="{{ Auth::user()->name }}">
+                        <input style="color:white" type="text" value="{{ Auth::user()->name }}">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
             </div>
             <div class="col s12 m6 l3">
                 <div class="card">
-                    <div class="card-content white-text card-nombre">
+                <div class="card-content white-text card-nombre" :style="{background:colores.a}">
                         <p class="card-stats-title">Color Primario:</p>
-                        <input type="text" value="{{ Auth::user()->color1 }}">
+                        <input style="color:white" type="text" v-model="colores.a">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
             </div>
             <div class="col s12 m6 l3">
                 <div class="card">
-                    <div class="card-content white-text card-nombre">
+                    <div class="card-content white-text card-nombre" :style="{background:colores.b}">
                         <p class="card-stats-title">Color Secundario:</p>
-                        <input type="text" value="{{ Auth::user()->color2 }}">
+                        <input style="color:white" type="text" v-model="colores.b">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
             </div>
             <div class="col s12 m6 l3">
                 <div class="card">
-                    <div class="card-content white-text card-nombre">
+                    <div class="card-content white-text card-nombre" :style="{background:colores.c}">
                         <p class="card-stats-title">Color Terciario:</p>
-                        <input type="text" value="{{ Auth::user()->color3 }}">
+                        <input style="color:white" type="text" v-model="colores.c">
                         <button class="btn btn-act">Actualizar</button>                       
                     </div>
                 </div>
@@ -125,17 +126,16 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div>
             <div class="row">
-                <div class="col s12 m6 offset-m3">
+                <div class="col s12 m8 l8 offset-m3 offset-l2">
                     <div class="card">
                         <div class="card-content">
                             <p class="card-stats-title center-align">Código QR único del negocio</p>
                             <center>
-                                <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(350)->generate(url('cliente/'.Auth::user()->url))) !!} ">
+                                <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate(url('cliente/'.Auth::user()->url))) !!} ">
                             </center>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col s12 m8 offset-m2">
@@ -143,12 +143,8 @@
                         <div class="card-content">
                             <p class="card-stats-title">URL única del negocio</p>
                         <p>{{ url(Auth::user()->url) }}</p>
-                        {{-- </div>
-                        <div class="card-content"> --}}
                             <p class="card-stats-title">Correo electrónico Registrado</p>
                             <p>{{Auth::user()->email}}</p>
-                        {{-- </div>
-                        <div class="card-content"> --}}
                             <p class="card-stats-title">URL única del negocio</p>
                             <a href="{{ url('cliente/'.Auth::user()->url) }}" target="_blank">{{ url('cliente/'.Auth::user()->url) }}</a>
                         </div>
@@ -158,9 +154,6 @@
             </div>
         </div>
 </section>
-
-
-
     <footer class="page-footer" style="background-color:#2a2730">
         <div class="footer-copyright">
             <div class="container">
@@ -169,6 +162,9 @@
         </div>
     </footer>
     </main>
+    <script>
+     let user = <?php  echo Auth::user() ?>;
+    </script>
     <script type="text/javascript" src="/personalizar/js/app.min.js"></script>
 </body>
 </html>
