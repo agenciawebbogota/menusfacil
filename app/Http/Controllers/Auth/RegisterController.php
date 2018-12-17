@@ -88,7 +88,7 @@ class RegisterController extends Controller
         {
           $msj->subject('Por favor confirma tu suscripción a Menús Fácil.');
           $msj->to($this->email);
-          // $msj->bcc(['app.menusfacil@gmail.com']);
+          $msj->bcc(['app.menusfacil@gmail.com']);
         });
         return $user;
     }
