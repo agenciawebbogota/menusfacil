@@ -112,8 +112,8 @@ p {
 
                 <table class="one-column" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing:0; border-left:1px solid #e8e7e5; border-right:1px solid #e8e7e5; border-bottom:1px solid #e8e7e5; border-top:1px solid #e8e7e5" bgcolor="#FFFFFF">
                   <tr>
-                    <td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>¡Casi estamos listos!</strong></p>
-                      <p style="font-size:16px; text-align:left; line-height:22px ">Confirma tu suscripción a Menús Fácil para comenzar a disfrutar de tu periodo gratuito:</p>
+                    <td align="left" style="padding:50px"><p style="color:#2b2831; font-size:24px; text-align:left; font-family: Verdana, Geneva, sans-serif"><strong>¡Estamos listos!</strong></p>
+                      <p style="font-size:16px; text-align:left; line-height:22px ">Ya disfrutar de tu periodo gratuito:</p>
 											<table border="0" align="left" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
                         <tbody>
                           <tr>
@@ -131,7 +131,7 @@ p {
                           </tr>
 													<tr>
 														<td style="padding-top:20px">
-															<p>Luego de confirmar tus suscripción recibirás un correo con tus datos de acceso y todas las instrucciones para implementar con éxito Menús Fácil en tu negocio.</p>
+															<p>Recuerde que tiene todo un equi profesional a su disposición para brindarle toda la ayuda necesaria.</p>
 														</td>
 													</tr>
                         </tbody>

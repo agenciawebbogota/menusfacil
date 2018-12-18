@@ -102,7 +102,6 @@ p {
                       <p>Correo: {{$user->email}}</p>
                       <p>Partnert: {{$user->partnert_id}}</p>
                       <br />
-                      </p>
                   </tr>
                 </table>
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-bottom: 30px">
