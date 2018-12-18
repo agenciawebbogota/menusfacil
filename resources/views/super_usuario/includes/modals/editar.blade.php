@@ -42,17 +42,17 @@
           </div>
           <div class="input-field col s12 m6">
             Color 1
-            <input id="color1" type="text"  data-length="10" v-model="update.color1" disabled>
+            <input id="color1" type="text"  data-length="10" v-model="update.color1">
             <div :style="{background:update.color1}" style="width:200px;height:3px;"></div>
           </div>
           <div class="input-field col s12 m6">
             Color 2
-            <input id="color2" type="text" data-length="10" v-model="update.color2" disabled>
+            <input id="color2" type="text" data-length="10" v-model="update.color2">
             <div :style="{background:update.color2}" style="width:200px;height:3px;"></div>
           </div>
           <div class="input-field col s12 m6">
             Color 3
-            <input id="color3" type="text" data-length="10" v-model="update.color3" disabled>
+            <input id="color3" type="text" data-length="10" v-model="update.color3">
             <div :style="{background:update.color3}" style="width:200px;height:3px;"></div>
           </div>
 

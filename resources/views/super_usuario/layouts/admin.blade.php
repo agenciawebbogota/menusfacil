@@ -50,7 +50,7 @@
             </ul>
             <div class="navbar-fixed">
                <nav>
-                  <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}}">
+                  <div class="nav-wrapper" style="background-color:{{Auth::user()->color1}} !important;">
                      <div href="#" data-target="slide-out" style="cursor: pointer;" class="sidenav-trigger menuLateral" id="menuLateral" ><i class="material-icons large" data-intro='Menú para ver opciones del usuario.' data-step="1">menu</i></div>
                      <a class="brand-logo center">
                      <img src="{{ url('admin/img/logo-menusfacil.svg') }}" alt="Menus Facil Logo" width="200px" class="imagen-logo">

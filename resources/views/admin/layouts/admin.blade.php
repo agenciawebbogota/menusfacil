@@ -110,6 +110,8 @@
             <i class="material-icons" style="background-color:{{Auth::user()->color2}};">add</i>
             </a>
             <ul>
+               <li><a href="mailto:info@menusfacil.com" style="background-color:{{Auth::user()->color2}};" target="_blank"class="btn-floating tooltipped" data-position="left" data-tooltip="Soporte"><i class="fas fa-life-ring"></i></a></li>
+               <li><a href="/documentacion" style="background-color:{{Auth::user()->color1}};" target="_blank"class="btn-floating tooltipped" data-position="left" data-tooltip="Documentación"><i class="fas fa-book"></i></a></li>
                <li><a href="{{url('/historico/menus/'.Auth::user()->url)}}" target="_blank"class="btn-floating green tooltipped" data-position="left" data-tooltip="Historico menús"><i class="material-icons">content_paste</i></a></li>
             </ul>
          </div>
