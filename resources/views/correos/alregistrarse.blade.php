@@ -113,7 +113,7 @@ p {
                           <tr>
                             <td aling="center">
                                 {{-- <h5>Código QR para tus clientes</h5>
-                                <img src="{!!$message->embedData(QrCode::format('png')->size(350)->generate(url('cliente/'.$user->url)), 'QrCode.png', 'image/png')!!}"> --}} --}}
+                                <img src="{!!$message->embedData(QrCode::format('png')->size(350)->generate(url('cliente/'.$user->url)), 'QrCode.png', 'image/png')!!}"> --}}
                             </td>
                             <div style="display:block;">
                             <td align="center"><table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
