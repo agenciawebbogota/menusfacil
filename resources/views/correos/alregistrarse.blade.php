@@ -117,14 +117,13 @@ p {
                             </td>
                             <div style="display:block;">
                             <td align="center"><table border="0" cellpadding="0" cellspacing="0" style="Margin:0 auto;">
-                                <tr>
-                                  <td>
-                                    <a class="confirma" href="{{url("/confimacliente/$user->email/$user->id")}}">Confirma tu cuenta aquí</a>
-                                  </td>
-                                  <br><br>
-                                  
-                                </tr>
+                                
                             </td>
+                            <tr>
+                              <td>
+                                <a class="confirma" href="{{url("/confimacliente/$user->email/$user->id")}}">Confirma tu cuenta aquí</a>
+                              </td>
+                            </tr>
                           </div>
                           </tr>
 													<tr>

@@ -36,16 +36,19 @@ class InicioController extends Controller
     return view('doc.index');
   }
 // Funció para confirmación de los usuarios vía email
+  public $email;
   public function confirmacion($correo, $id){
     $user = User::all()->where('id', $id)->where('email', $correo)->first();
     if($user->confirmado == 'NO'){
       $userupdate = User::where('id', $user->id)->update([
         'confirmado' => 'SI'
       ]);
+
+      $this->email = $user->email;
       Mail::send('correos/alregistrarse1', ['user' => $user], function($msj)
       {
         $msj->subject('Todo listo');
-        $msj->to($user->email);
+        $msj->to($this->email);
         $msj->bcc(['app.menusfacil@gmail.com']);
       });
       return view('usuario.confirmacion', ['user' => $user]);
