@@ -1,6 +1,6 @@
 <div id="actualizarUser" class="modal modal-fixed-footer" >
     <div class="modal-content">
-    <h4 class="center-align">Editar Usiario</h4>
+    <h4 class="center-align">Editar Usuario</h4>
       <div class="row">
       <form class="col s12" @submit.prevent="actualizarUser()">
         <div class="row">
