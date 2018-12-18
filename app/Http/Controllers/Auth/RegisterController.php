@@ -84,7 +84,7 @@ class RegisterController extends Controller
           'dias' => 14,
           'partnert_id' => $partnert,
         ]);
-        Mail::send('correos/alregistrarse1', ['user' => $user], function($msj)
+        Mail::send('correos/alregistrarse', ['user' => $user], function($msj)
         {
           $msj->subject('Por favor confirma tu suscripción a Menús Fácil.');
           $msj->to($this->email);

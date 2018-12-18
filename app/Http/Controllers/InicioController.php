@@ -42,10 +42,11 @@ class InicioController extends Controller
       $userupdate = User::where('id', $user->id)->update([
         'confirmado' => 'SI'
       ]);
-      Mail::send('correos/confirmacionsuscripcion', ['user' => $user], function($msj)
+      Mail::send('correos/alregistrarse1', ['user' => $user], function($msj)
       {
-        $msj->subject('Notificar a usuario Menús Fácil.');
-        $msj->to('app.menusfacil@gmail.com');
+        $msj->subject('Todo listo');
+        $msj->to($user->email);
+        $msj->bcc(['app.menusfacil@gmail.com']);
       });
       return view('usuario.confirmacion', ['user' => $user]);
     }else{
