@@ -122,11 +122,11 @@ p {
                                   <img src="{!!$message->embedData(QrCode::format('png')->size(350)->generate(url('cliente/'.$user->url)), 'QrCode.png', 'image/png')!!}">
                                   <br><br>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                   <td>
                                     <a class="confirma" href="{{url("/confimacliente/$user->email/$user->id")}}">Confirma tu cuenta aquí</a>
                                   </td>
-                                </tr>
+                                </tr> --}}
                               </table>
                           </tr>
 													<tr>
@@ -142,7 +142,7 @@ p {
                       <p>Correo electrónico: {{$user->email}}</p>
                       <br/>
                       <br/>
-                      
+
 
                   </tr>
                 </table>
